@@ -25,6 +25,7 @@ import {
   InputGroupButton,
   InputGroupInput,
 } from "@/components/ui/input-group.tsx";
+import { useIsMobile } from "@/hooks/use-mobile.ts";
 import { botStatusQueryOptions } from "@/lib/bot-status-query.ts";
 import type { GenerateAccountsMode, ProfileAccount } from "@/lib/types.ts";
 import { applyGeneratedAccounts, hasInstancePermission } from "@/lib/utils.tsx";
@@ -41,6 +42,7 @@ function shuffle<T>(values: T[]): void {
 
 export default function ControlsMenu() {
   const { t } = useTranslation("common");
+  const isMobile = useIsMobile();
   const { instanceInfoQueryOptions, metricsQueryOptions } = useRouteContext({
     from: "/_dashboard/instance/$instance",
     select: (context) => ({
@@ -248,8 +250,17 @@ export default function ControlsMenu() {
 
   return (
     <>
-      <ButtonGroup className="flex-wrap">
-        <InputGroup className="w-36">
+      {/*
+        ButtonGroup joins its children's borders, so a wrapped horizontal group
+        leaves half-rounded buttons stranded on their own rows — which is what
+        happened at phone widths. Stacking vertically keeps the joins correct
+        and gives full-width touch targets.
+      */}
+      <ButtonGroup
+        orientation={isMobile ? "vertical" : "horizontal"}
+        className={isMobile ? "w-full" : "flex-wrap"}
+      >
+        <InputGroup className={isMobile ? "w-full" : "w-36"}>
           <InputGroupInput
             type="number"
             min={1}

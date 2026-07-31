@@ -27,15 +27,36 @@ html.native-app [vaul-drawer-wrapper] {
   padding-right: var(--safe-right);
 }
 
-/* Overlays are portalled outside the shell, so they need the insets too. */
-html.native-app [data-radix-popper-content-wrapper],
+/*
+ * Overlays are portalled outside the app shell, so they do not inherit its
+ * safe-area padding and have to be inset individually.
+ *
+ * The mobile sidebar is a Sheet whose data-slot is overridden to "sidebar",
+ * so it is NOT matched by [data-slot="sheet-content"] and needs its own
+ * selector — without it the nav's first entry sits under the status bar.
+ */
 html.native-app [data-slot="sheet-content"],
-html.native-app [data-vaul-drawer] {
+html.native-app [data-slot="sidebar"][data-mobile="true"] {
+  padding-top: var(--safe-top);
   padding-bottom: var(--safe-bottom);
 }
 
-html.native-app [data-slot="sheet-content"] {
+/* vaul drawers are edge-anchored; only the anchored edge needs insetting. */
+html.native-app
+[data-slot="drawer-content"][data-vaul-drawer-direction="bottom"] {
+  padding-bottom: var(--safe-bottom);
+}
+
+html.native-app [data-slot="drawer-content"][data-vaul-drawer-direction="top"] {
   padding-top: var(--safe-top);
+}
+
+/*
+ * Centred dialogs are not edge-anchored, but a tall one can still run past the
+ * status bar or the gesture bar, so cap them to the usable height.
+ */
+html.native-app [data-slot="dialog-content"] {
+  max-height: calc(100dvh - var(--safe-top) - var(--safe-bottom) - 2rem);
 }
 
 /*
@@ -104,4 +125,60 @@ html.native-app .overflow-auto {
 /* Lift sticky bottom-anchored UI above the software keyboard. */
 html.native-app [data-mobile-keyboard-aware="true"] {
   padding-bottom: calc(var(--keyboard-height) + var(--safe-bottom));
+}
+
+/*
+ * Script editor (React Flow) touch targets.
+ *
+ * Keyed on pointer:coarse rather than html.native-app so a phone browser gets
+ * the same treatment. The defaults are tuned for a mouse: connection handles
+ * are 6px, which is far below the ~44px a fingertip can reliably hit, making
+ * edges close to impossible to draw by touch.
+ */
+@media (pointer: coarse) {
+  /*
+   * The visible dot is left alone on purpose: the node components set its
+   * width, height and border-radius inline, because the shape encodes the
+   * port's type. Overriding that with !important would flatten a deliberate
+   * piece of visual language — and inline styles are the reason a plain
+   * width/height rule here would have no effect at all.
+   *
+   * Instead the *hit area* is grown past the dot. React Flow anchors edges to
+   * the handle's centre, so this changes nothing about layout or geometry.
+   *
+   * The inset is asymmetric by necessity: ports stack vertically about 24px
+   * apart, so a uniform 44px target would overlap its neighbours and connect
+   * the wrong port. Vertically it stays within the row pitch; horizontally,
+   * where there is no neighbour, it reaches out toward the canvas — the
+   * direction you actually drag a connection.
+   */
+  .react-flow__handle::after {
+    content: "";
+    position: absolute;
+    inset: -8px -16px;
+  }
+
+  .react-flow__controls-button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .react-flow__controls-button svg {
+    max-width: 1rem;
+    max-height: 1rem;
+  }
+
+  /* Wider hit area for selecting and reconnecting edges. */
+  .react-flow__edge .react-flow__edge-interaction {
+    stroke-width: 24;
+  }
+}
+
+/*
+ * The editor canvas must own its gestures: without this the WebView treats a
+ * pan as a page scroll and the canvas barely moves.
+ */
+html.native-app .react-flow__pane,
+html.native-app .react-flow__viewport {
+  touch-action: none;
 }

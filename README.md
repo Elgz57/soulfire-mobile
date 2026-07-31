@@ -87,8 +87,19 @@ already branch on `useIsMobile()`. The changes here are the native layer:
   would drop every open gRPC stream), 44px touch targets, and a 16px input font on iOS to
   stop focus-zoom. All scoped to `html.native-app`.
 - `src/components/cleartext-warning.tsx` — warns when a server address is plain HTTP
+- `src/components/close-sidebar-on-navigate.tsx` — dismisses the sidebar sheet on every
+  route change. On desktop the sidebar is a persistent column so upstream never needed to;
+  on mobile it covered the screen the user had just navigated to.
 - TanStack devtools are gated to dev builds; upstream renders them unconditionally, which
   put a floating badge over the bottom-right of the screen.
+- Script editor touch handling: the minimap is hidden (a fixed 200x150 overlay is a large
+  share of a phone screen and too small to navigate with), zoom and interaction-lock
+  controls are dropped in favour of pinch-to-zoom, `nodeDragThreshold` is raised to 8px so
+  a tap selects instead of nudging a node, and connection handles get a much larger hit
+  area. The visible handle dot is deliberately unchanged — its size and shape encode the
+  port type, and the node components set both inline.
+- Control button groups stack vertically on mobile. `ButtonGroup` joins its children's
+  borders, so wrapping left half-rounded buttons stranded on their own rows.
 
 ## Cleartext HTTP
 

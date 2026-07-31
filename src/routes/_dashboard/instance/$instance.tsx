@@ -18,6 +18,7 @@ import {
 } from "@soulfiremc/sdk/generated/soulfire/instance_pb";
 import { type QueryClient, queryOptions } from "@tanstack/react-query";
 import { CatchBoundary, createFileRoute, Outlet } from "@tanstack/react-router";
+import { CloseSidebarOnNavigate } from "@/components/close-sidebar-on-navigate.tsx";
 import { ErrorComponent } from "@/components/error-component.tsx";
 import { InstanceSidebar } from "@/components/nav/instance/instance-sidebar.tsx";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar.tsx";
@@ -220,6 +221,7 @@ function InstanceLayout() {
 
   return (
     <SidebarProvider defaultOpen={defaultOpen} className="min-h-0 flex-1">
+      <CloseSidebarOnNavigate />
       <InstanceSidebar />
       <TooltipProvider delay={500}>
         <SidebarInset>

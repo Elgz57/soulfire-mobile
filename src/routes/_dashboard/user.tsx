@@ -1,4 +1,5 @@
 import { CatchBoundary, createFileRoute, Outlet } from "@tanstack/react-router";
+import { CloseSidebarOnNavigate } from "@/components/close-sidebar-on-navigate.tsx";
 import { ErrorComponent } from "@/components/error-component.tsx";
 import { UserSidebar } from "@/components/nav/user/user-sidebar.tsx";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar.tsx";
@@ -17,6 +18,7 @@ function UserLayout() {
 
   return (
     <SidebarProvider defaultOpen={defaultOpen} className="min-h-0 flex-1">
+      <CloseSidebarOnNavigate />
       <UserSidebar />
       <TooltipProvider delay={500}>
         <SidebarInset>

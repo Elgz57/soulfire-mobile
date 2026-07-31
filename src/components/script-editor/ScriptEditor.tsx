@@ -12,6 +12,7 @@ import {
 } from "@xyflow/react";
 import { useTheme } from "next-themes";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile.ts";
 import { handleNativeCopy, handleNativePaste } from "@/lib/script-clipboard";
 import { useScriptEditorStore } from "@/stores/script-editor-store.ts";
 import { createConnectionValidator, edgeTypes } from "./edges";
@@ -32,6 +33,7 @@ interface NodeContextMenuState {
 
 export function ScriptEditor() {
   const { resolvedTheme } = useTheme();
+  const isMobile = useIsMobile();
   const containerRef = useRef<HTMLDivElement>(null);
   const [reactFlowInstance, setReactFlowInstance] =
     useState<ReactFlowInstance | null>(null);
@@ -799,10 +801,16 @@ export function ScriptEditor() {
           onReconnectEnd={handleReconnectEnd}
           colorMode={(resolvedTheme as ColorMode) ?? "dark"}
           fitView
+          fitViewOptions={isMobile ? { padding: 0.25 } : undefined}
           minZoom={0.1}
           snapToGrid
           snapGrid={[16, 16]}
           deleteKeyCode={null}
+          // A finger is far less precise than a cursor, so a tap meant to
+          // select a node would instead nudge it a few pixels and mark the
+          // script dirty. Requiring 8px of travel before a drag starts keeps
+          // tap-to-select and drag-to-move distinct on touch.
+          nodeDragThreshold={isMobile ? 8 : undefined}
           proOptions={{ hideAttribution: true }}
         >
           <Background
@@ -811,8 +819,20 @@ export function ScriptEditor() {
             size={1}
             color="var(--muted-foreground)"
           />
-          <Controls />
-          <MiniMap zoomable pannable />
+          <Controls
+            // Zoom controls are redundant next to pinch-to-zoom, and the
+            // interaction lock is a trap on touch: it silently disables
+            // panning with no obvious way back.
+            showZoom={!isMobile}
+            showInteractive={!isMobile}
+            orientation={isMobile ? "horizontal" : "vertical"}
+          />
+          {/*
+            The minimap is a fixed 200x150 overlay. On a phone that covers a
+            large share of the canvas while being too small to navigate with,
+            so it is desktop-only.
+          */}
+          {!isMobile && <MiniMap zoomable pannable />}
         </ReactFlow>
       </NodeEditingProvider>
 
