@@ -841,7 +841,14 @@ function ScriptEditorContent() {
             <ScriptEditor />
           </div>
 
-          {/* Floating action buttons */}
+          {/*
+            Floating action buttons. Deliberately no safe-area offset here:
+            these are absolutely positioned inside the app shell, which
+            already carries padding-bottom: var(--safe-bottom), so adding it
+            again double-counts the inset and floats them too high. Only
+            position: fixed elements (see QuickAddMenu) escape that padding
+            and have to inset themselves.
+          */}
           <div className="absolute bottom-4 right-4 z-10 flex flex-col gap-2">
             <Button
               size="icon"

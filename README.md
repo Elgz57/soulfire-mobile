@@ -116,6 +116,18 @@ already branch on `useIsMobile()`. The changes here are the native layer:
   port type, and the node components set both inline.
 - Control button groups stack vertically on mobile. `ButtonGroup` joins its children's
   borders, so wrapping left half-rounded buttons stranded on their own rows.
+- `QuickAddMenu` is touch-aware. It opens from `onPaneContextMenu`, and on a touch screen a
+  long-press fires `contextmenu` — so it appears whenever you hold a finger on the canvas.
+  It no longer auto-focuses its search field there (that threw the keyboard over the node
+  list), its keyboard-shortcut footer is hidden, and it lifts by
+  `--keyboard-height` + `--safe-bottom` with `dvh` sizing, since it is `position: fixed` and
+  therefore escapes the app shell's safe-area padding.
+
+**Which elements need a safe-area offset:** only `position: fixed` ones. The app shell
+already carries `padding-bottom: var(--safe-bottom)`, so absolutely-positioned children
+inside it — the script editor's floating action buttons, React Flow's own controls — are
+already clear of the gesture bar. Adding the inset to those double-counts it and floats
+them visibly too high.
 
 ## Cleartext HTTP
 

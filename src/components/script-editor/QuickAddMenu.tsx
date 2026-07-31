@@ -47,9 +47,16 @@ export function QuickAddMenu() {
       setSearch("");
       setSelectedIndex(0);
       setExpandedCategory(null);
-      setTimeout(() => inputRef.current?.focus(), 0);
+      // Not on touch. This menu also opens from a long-press on the canvas
+      // (a long-press fires contextmenu), and auto-focusing the search field
+      // there throws the software keyboard over the node list the user was
+      // trying to read. On a phone the list is the point; searching is
+      // opt-in by tapping the field.
+      if (!isMobile) {
+        setTimeout(() => inputRef.current?.focus(), 0);
+      }
     }
-  }, [quickAddMenu]);
+  }, [quickAddMenu, isMobile]);
 
   // Filter nodes based on search and compatibility with source socket
   const filteredNodes = useMemo(() => {
@@ -226,7 +233,21 @@ export function QuickAddMenu() {
         )}
         style={
           isMobile
-            ? { maxHeight: "50vh" }
+            ? {
+                // This panel is bottom-anchored and auto-focuses its search
+                // input, so on a phone the software keyboard slides up over
+                // it. Lifting it by the keyboard height keeps the field and
+                // the results visible, and the safe-area inset keeps it clear
+                // of the gesture bar. Both vars fall back to 0px outside the
+                // native shell.
+                bottom:
+                  "calc(1rem + var(--safe-bottom, 0px) + var(--keyboard-height, 0px))",
+                // dvh rather than vh: the visual viewport shrinks when the
+                // keyboard is up, and 50vh would keep measuring the full
+                // screen and overflow off the top.
+                maxHeight:
+                  "min(50dvh, calc(100dvh - var(--keyboard-height, 0px) - 7rem))",
+              }
             : {
                 left: quickAddMenu.screenPosition.x,
                 top: quickAddMenu.screenPosition.y,
@@ -260,7 +281,8 @@ export function QuickAddMenu() {
         </div>
 
         {/* Node list */}
-        <ScrollArea className={isMobile ? "max-h-[40vh]" : "h-[300px]"}>
+        {/* dvh so the list shrinks with the keyboard instead of overflowing. */}
+        <ScrollArea className={isMobile ? "max-h-[40dvh]" : "h-[300px]"}>
           <div className="p-1">
             {flatList.length === 0 ? (
               <Empty className="border-0 p-4">
@@ -333,16 +355,22 @@ export function QuickAddMenu() {
           </div>
         </ScrollArea>
 
-        {/* Footer hint */}
-        <div className="flex items-center gap-1 border-t px-2 py-1.5 text-xs text-muted-foreground">
-          <ArrowUpIcon className="size-3" />
-          <ArrowDownIcon className="size-3" />
-          <span>Navigate</span>
-          <span className="mx-1">•</span>
-          <span>Enter Select</span>
-          <span className="mx-1">•</span>
-          <span>Esc Close</span>
-        </div>
+        {/*
+          Footer hint. Hidden on touch: arrow keys, Enter and Esc are all
+          keyboard-only, so on a phone this row is unusable advice taking up
+          space in an already short panel.
+        */}
+        {!isMobile && (
+          <div className="flex items-center gap-1 border-t px-2 py-1.5 text-xs text-muted-foreground">
+            <ArrowUpIcon className="size-3" />
+            <ArrowDownIcon className="size-3" />
+            <span>Navigate</span>
+            <span className="mx-1">•</span>
+            <span>Enter Select</span>
+            <span className="mx-1">•</span>
+            <span>Esc Close</span>
+          </div>
+        )}
       </div>
     </>
   );
