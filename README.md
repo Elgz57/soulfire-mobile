@@ -86,10 +86,26 @@ already branch on `useIsMobile()`. The changes here are the native layer:
 - `src/mobile.css` — safe-area insets, overscroll/pull-to-refresh suppression (a reload
   would drop every open gRPC stream), 44px touch targets, and a 16px input font on iOS to
   stop focus-zoom. All scoped to `html.native-app`.
+
+  Insets read `var(--safe-area-inset-*)` first and fall back to
+  `env(safe-area-inset-*)`. This matters: **Android never populates `env(safe-area-inset-*)`**.
+  Capacitor 8's SystemBars plugin instead sets `--safe-area-inset-*` as inline styles on
+  `<html>` from a `WindowInsets` listener (`insetsHandling: "css"`, its default). Reading
+  only `env()` makes every inset silently resolve to 0 on Android, which is exactly how the
+  status bar ended up overlapping the sidebar. Note also that the mobile sidebar is a Sheet
+  that overrides `data-slot` to `"sidebar"`, so it needs its own selector rather than being
+  covered by `[data-slot="sheet-content"]`.
+
+  Do not call `StatusBar.setOverlaysWebView({ overlay: true })` here. Capacitor 8 already
+  manages edge-to-edge and reports the resulting insets; forcing overlay mode only pushes
+  content under the status bar.
 - `src/components/cleartext-warning.tsx` — warns when a server address is plain HTTP
-- `src/components/close-sidebar-on-navigate.tsx` — dismisses the sidebar sheet on every
-  route change. On desktop the sidebar is a persistent column so upstream never needed to;
-  on mobile it covered the screen the user had just navigated to.
+- The mobile sidebar closes when a link inside it is tapped (capture-phase handler in
+  `ui/sidebar.tsx`), plus `src/components/close-sidebar-on-navigate.tsx` as a route-change
+  safety net. On desktop the sidebar is a persistent column so upstream never needed to
+  dismiss it; on mobile it covered the screen the user had just navigated to. The
+  interaction handler is the primary mechanism because the route-change effect alone
+  shipped and still left the sheet open on a real device.
 - TanStack devtools are gated to dev builds; upstream renders them unconditionally, which
   put a floating badge over the bottom-right of the screen.
 - Script editor touch handling: the minimap is hidden (a fixed 200x150 overlay is a large

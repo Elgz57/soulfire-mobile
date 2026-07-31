@@ -198,7 +198,28 @@ function Sidebar({
             <SheetTitle>Sidebar</SheetTitle>
             <SheetDescription>Displays the mobile sidebar.</SheetDescription>
           </SheetHeader>
-          <div className="flex h-full w-full flex-col">{children}</div>
+          {/*
+            Closes the sheet as soon as a navigation target inside it is
+            tapped. There is also a route-change effect
+            (CloseSidebarOnNavigate), but that one shipped and still left the
+            sheet open on a real device, so this handles the interaction
+            directly instead of inferring it from router state.
+
+            Capture phase, so it still runs if a link's own handler stops
+            propagation. Anything that is not a link — a collapsible section
+            header, the user menu trigger — deliberately leaves it open.
+          */}
+          <div
+            className="flex h-full w-full flex-col"
+            onClickCapture={(event) => {
+              const target = event.target as HTMLElement | null;
+              if (target?.closest("a[href]") != null) {
+                setOpenMobile(false);
+              }
+            }}
+          >
+            {children}
+          </div>
         </SheetContent>
       </Sheet>
     );

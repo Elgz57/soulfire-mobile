@@ -119,14 +119,10 @@ export async function initMobile(): Promise<void> {
   watchThemeChanges();
   await syncStatusBarToTheme();
 
-  try {
-    // Draw behind the status bar so the app is edge-to-edge; the safe-area
-    // padding in mobile.css keeps content clear of it.
-    await StatusBar.setOverlaysWebView({ overlay: true });
-  } catch {
-    // Android 15+ enforces edge-to-edge and may reject this call; the layout
-    // already accounts for the insets either way.
-  }
+  // Deliberately no setOverlaysWebView() call. Capacitor 8 already manages
+  // edge-to-edge on Android and reports the resulting insets to CSS via its
+  // SystemBars plugin; forcing overlay mode here pushed content under the
+  // status bar while adding nothing the framework does not already do.
 
   try {
     await SplashScreen.hide();
