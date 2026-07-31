@@ -1,0 +1,128 @@
+{
+  "overview": {
+    "welcome": "Bem-vindo de volta, {{name}} 🧙",
+    "serverMetrics": {
+      "sectionTitle": "Métricas do Servidor",
+      "summary": {
+        "cpu": "CPU",
+        "heapUsed": "Heap Usada",
+        "threads": "Threads",
+        "botsOnline": "Bots Online",
+        "uptime": "Tempo de atividade"
+      },
+      "cpuUsage": {
+        "title": "Uso da CPU (%)"
+      },
+      "memoryUsage": {
+        "title": "Memória Heap (MB)"
+      },
+      "threadCount": {
+        "title": "Contagem de Threads"
+      },
+      "aggregateBots": {
+        "title": "Bots Online (Todas as Instâncias)"
+      }
+    },
+    "instancesChart": {
+      "title": "Total de instâncias neste servidor",
+      "instances": "Instâncias",
+      "label": {
+        "state": "Estado",
+        "active": "Ativo",
+        "stopped": "Interrompido",
+        "other": "Outro"
+      }
+    },
+    "usersChart": {
+      "title": "Total de usuários neste servidor",
+      "users": "Usuários",
+      "label": {
+        "role": "Função",
+        "user": "Usuário",
+        "admin": "Administrador",
+        "other": "Outro"
+      }
+    }
+  },
+  "users": {
+    "filterPlaceholder": "Filtrar usuários...",
+    "baseUserDialog": {
+      "form": {
+        "username": {
+          "min": "O nome de usuário deve ter pelo menos 3 caracteres",
+          "max": "Nomes de usuário devem ter no máximo 32 caracteres",
+          "regex": "Nomes de usuário devem ter letras minúsculas, começar com um caractere alfanumérico, seguido de caracteres alfanuméricos ou hifens e terminar com um caractere alfanumérico.",
+          "label": "Usuário",
+          "placeholder": "Digite seu usuário",
+          "description": "Um nome de usuário exclusivo que identifica o usuário"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "Digite o e-mail",
+          "description": "O endereço de e-mail do usuário utilizado para notificações e login"
+        },
+        "role": {
+          "label": "Função",
+          "description": "O papel do usuário. Administradores podem gerenciar usuários e todas as instâncias. Usuários podem gerenciar apenas suas próprias instâncias.",
+          "user": "Usuário",
+          "admin": "Administrador"
+        }
+      }
+    },
+    "addUserDialog": {
+      "title": "Adicionar um novo usuário",
+      "description": "Adicione um novo usuário a este servidor",
+      "form": {
+        "cancel": "Cancelar",
+        "add": "Adicionar usuário"
+      }
+    },
+    "updateUserDialog": {
+      "title": "Atualizar usuário",
+      "description": "Atualize as informações do usuário",
+      "form": {
+        "cancel": "Cancelar",
+        "update": "Atualizar usuário"
+      }
+    },
+    "addToast": {
+      "loading": "Adicionando usuário...",
+      "success": "Usuário adicionado!",
+      "error": "Falha ao adicionar usuário"
+    },
+    "updateToast": {
+      "loading": "Atualizando usuário...",
+      "success": "Usuário atualizado!",
+      "error": "Falha ao atualizar usuário"
+    },
+    "removeToast": {
+      "loading": "Removendo usuários...",
+      "success": "Usuários removidos!",
+      "error": "Falha ao remover usuários"
+    },
+    "invalidateToast": {
+      "loading": "Encerrando sessões dos usuários...",
+      "success": "Sessões dos usuários encerradas!",
+      "error": "Falha ao encerrar sessões dos usuários"
+    },
+    "table": {
+      "username": "Usuário",
+      "email": "E-mail",
+      "role": "Função",
+      "createdAt": "Criado",
+      "minIssuedAt": "Login Mínimo",
+      "actions": "Ações",
+      "searchUsernames": "Pesquisar nomes de usuário...",
+      "searchEmails": "Pesquisar e-mails...",
+      "searchCreatedAts": "Pesquisar datas de criação...",
+      "searchMinIssuedAts": "Pesquisar datas mínimas de emissão..."
+    },
+    "removeSelectedTooltip": "Remover usuários selecionados",
+    "logOutSelectedTooltip": "Desconectar usuários selecionados",
+    "contextMenu": {
+      "editUser": "Editar usuário",
+      "impersonate": "Personificar",
+      "copyUserId": "Copiar ID do usuário"
+    }
+  }
+}

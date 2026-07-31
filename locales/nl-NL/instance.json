@@ -1,0 +1,468 @@
+{
+  "proxy": {
+    "getProxies": "Proxies ophalen",
+    "addProxies": "Proxies toevoegen",
+    "filterPlaceholder": "Proxies filteren...",
+    "listImportToast": {
+      "loading": "Proxies importeren...",
+      "success": "{{count}} proxies geïmporteerd!",
+      "error": "Importeren van proxies mislukt",
+      "noProxies": "Geen proxies om te importeren"
+    },
+    "import": {
+      "proxyType": "Proxytype",
+      "http": "HTTP",
+      "socks4": "SOCKS4",
+      "socks5": "SOCKS5",
+      "uri": "URI",
+      "dialog": {
+        "title": "Importeer {{type}} proxies",
+        "description": "Plak hier je proxies, één per regel"
+      }
+    },
+    "removeToast": {
+      "loading": "Proxies worden verwijderd...",
+      "success": "{{count}} proxies verwijderd!",
+      "error": "Verwijderen van proxies mislukt"
+    },
+    "checkToast": {
+      "loading": "Proxies worden gecontroleerd... {{checked}}/{{total}} (Succes: {{success}} Mislukt: {{failed}})",
+      "success": "{{count}} defecte proxies verwijderd!",
+      "error": "Controleren van proxies mislukt"
+    },
+    "checkDialog": {
+      "title": "Proxies controleren",
+      "description": "Je staat op het punt om {{count}} proxies te controleren. Ongeldige proxies worden automatisch verwijderd.",
+      "confirm": "Controle starten"
+    },
+    "invalidFormat": "Ongeldig proxyformaat",
+    "table": {
+      "type": "Type",
+      "address": "Adres",
+      "username": "Gebruikersnaam",
+      "password": "Wachtwoord",
+      "searchAddresses": "Adressen zoeken...",
+      "searchUsernames": "Gebruikersnamen zoeken...",
+      "searchPasswords": "Wachtwoorden zoeken..."
+    },
+    "removeSelectedTooltip": "Geselecteerde proxies verwijderen",
+    "exportSelectedTooltip": "Geselecteerde proxies exporteren",
+    "checkSelectedTooltip": "Geselecteerde proxies controleren",
+    "contextMenu": {
+      "copyAddress": "Adres kopiëren",
+      "copyUsername": "Gebruikersnaam kopiëren",
+      "copyPassword": "Wachtwoord kopiëren",
+      "deleteProxy": "Proxy verwijderen"
+    },
+    "postImportCheckDialog": {
+      "title": "Proxies controleren?",
+      "description": "Je hebt zojuist {{count}} proxies geïmporteerd. Wil je ze nu controleren? Ongeldige proxies worden automatisch verwijderd.",
+      "confirm": "Proxies controleren",
+      "skip": "Overslaan"
+    },
+    "export": {
+      "format": "Exportformaat",
+      "uri": "URI-formaat (alle typen)",
+      "http": "Alleen HTTP (vlak)",
+      "socks4": "Alleen SOCKS4 (vlak)",
+      "socks5": "Alleen SOCKS5 (vlak)",
+      "noProxies": "Geen proxies om te exporteren"
+    }
+  },
+  "account": {
+    "getAccounts": "Accounts ophalen",
+    "addAccounts": "Accounts toevoegen",
+    "generateAccounts": "Accounts genereren",
+    "filterPlaceholder": "Accounts filteren...",
+    "listImportToast": {
+      "loading": "Accounts worden geïmporteerd... {{checked}}/{{total}} (Succes: {{success}} Mislukt: {{failed}})",
+      "allFailed": "Importeren van accounts mislukt.",
+      "someFailed": "{{count}} accounts geïmporteerd, importeren van {{failed}} accounts mislukt.",
+      "noneFailed": "{{count}} accounts geïmporteerd!",
+      "error": "Importeren van accounts mislukt.",
+      "noAccounts": "Geen accounts om te importeren"
+    },
+    "unknownError": "Onbekende fout",
+    "deviceCodeImportToast": {
+      "loading": "Account wordt geïmporteerd...",
+      "success": "Account geïmporteerd!",
+      "error": "Importeren van account mislukt"
+    },
+    "generate": {
+      "title": "Offline accounts genereren",
+      "description": "Genereer offline Java-accounts met een aangepast naampatroon.",
+      "amount": "Aantal",
+      "nameFormat": "Naamformaat",
+      "nameFormatHelp": "Gebruik %d als placeholder voor het accountnummer (bijvoorbeeld: Bot_%d wordt Bot_1, Bot_2, enz.)",
+      "mode": "Bestaande accounts",
+      "modeHelp": "Kies hoe je omgaat met bestaande accounts:\n\n• Negeer bestaanden: Genereert alleen accounts met namen die nog niet bestaan. Alle bestaande accounts blijven ongewijzigd.\n\n• Vervang bestaanden: Genereert alle accounts en vervangt bestaande accounts met dezelfde UUID. Andere accounts blijven behouden.\n\n• Alles vervangen: Verwijdert ALLE bestaande accounts en vervangt ze door de gegenereerde accounts.",
+      "modeIgnoreExisting": "Bestaanden negeren",
+      "modeReplaceExisting": "Bestaanden vervangen",
+      "modeReplaceAll": "Alles vervangen",
+      "submit": "Genereren",
+      "generating": "Bezig met genereren...",
+      "progress": "Accounts worden gegenereerd... {{checked}}/{{total}} (Succes: {{success}} Mislukt: {{failed}})",
+      "success": "{{count}} accounts gegenereerd!",
+      "allFailed": "Kon geen enkele account genereren",
+      "allExist": "Alle gebruikersnamen bestaan al. Schakel 'Bestaande accounts overschrijven' in om ze opnieuw te genereren.",
+      "error": "Aanmaken van accounts mislukt",
+      "invalidAmount": "Voer een geldig aantal in (minimaal 1)",
+      "missingPlaceholder": "Naamformaat moet een %d placeholder bevatten"
+    },
+    "import": {
+      "javaEdition": "Java-editie",
+      "bedrockEdition": "Bedrock-editie",
+      "offline": "Offline",
+      "microsoftCredentials": "Microsoft-gegevens",
+      "microsoftDeviceCode": "Microsoft-apparaatcode",
+      "microsoftRefreshToken": "Microsoft-vernieuwingstoken",
+      "microsoftCookies": "Microsoft-cookies",
+      "microsoftAccessToken": "Microsoft-toegangstoken",
+      "altProviders": "Alternatieve providers",
+      "dialog": {
+        "title": "Importeer {{type}} accounts",
+        "description": "Plak hier je accounts, één per regel"
+      }
+    },
+    "removeToast": {
+      "loading": "Accounts worden verwijderd...",
+      "success": "{{count}} accounts verwijderd!",
+      "error": "Verwijderen van accounts mislukt"
+    },
+    "table": {
+      "type": "Type",
+      "profileId": "UUID",
+      "lastKnownName": "Gebruikersnaam",
+      "searchProfileIds": "Profiel-ID&#39;s zoeken...",
+      "searchLastKnownNames": "Laatste bekende namen zoeken...",
+      "actions": "Acties"
+    },
+    "removeSelectedTooltip": "Geselecteerde accounts verwijderen",
+    "contextMenu": {
+      "openConfig": "Config openen",
+      "openMetadata": "Metadata openen",
+      "copyProfileId": "Profiel-ID kopiëren",
+      "copyUsername": "Gebruikersnaam kopiëren"
+    },
+    "config": {
+      "title": "{{name}} configureren",
+      "description": "Stel per-bot instellingen in voor dit account",
+      "openButton": "Account configureren",
+      "pageTitle": "{{name}} - {{page}} Instellingen",
+      "noSettings": "Geen instellingen beschikbaar voor deze pagina"
+    },
+    "deviceCodeConfirmDialog": {
+      "title": "Authenticatie met apparaatgecode",
+      "description": "Configureer de opties voordat je de apparaatcodeprocedure start.",
+      "start": "Authenticatie starten"
+    },
+    "deviceCodeDialog": {
+      "title": "Authenticatie met apparaatgecode",
+      "description": "Meld je aan met je Microsoft-account om deze te koppelen.",
+      "openInBrowser": "Openen in browser",
+      "orManually": "Of voer de code handmatig in",
+      "codeLabel": "Je code",
+      "urlLabel": "Ga naar"
+    },
+    "ravealts": {
+      "button": "Ravealts",
+      "title": "Koop accounts via Ravealts",
+      "description": "Koop Minecraft-accounts met je Ravealts API-sleutel.",
+      "apiKeyLabel": "API-sleutel",
+      "apiKeyPlaceholder": "Voer je Ravealts API-sleutel in",
+      "validate": "Valideren",
+      "validating": "Bezig met valideren...",
+      "keyValid": "Sleutel gevalideerd",
+      "keyInvalid": "Ongeldige API-sleutel",
+      "credits": "Credits: {{credits}}",
+      "stockTitle": "Beschikbare voorraad",
+      "noStock": "Geen accounts op voorraad",
+      "accountType": "Accounttype",
+      "amount": "Aantal (1-10)",
+      "purchase": "Kopen & Importeren",
+      "purchasing": "Bezig met kopen...",
+      "purchaseSuccess": "{{count}} accounts gekocht, aan het importeren...",
+      "purchaseError": "Aankoop mislukt: {{message}}",
+      "networkError": "Kan geen verbinding maken met Ravealts API",
+      "outOfStock": "Geselecteerd type is niet op voorraad",
+      "insufficientBalance": "Onvoldoende credits",
+      "rateLimited": "Te veel verzoeken, probeer het later opnieuw"
+    },
+    "metadata": {
+      "openButton": "Metadata bewerken",
+      "title": "Metadata: {{name}}",
+      "description": "Beheer persistente metadata-items voor dit account. Elk item heeft een namespace, sleutel en JSON-waarde.",
+      "namespacePlaceholder": "Namespace",
+      "keyPlaceholder": "Sleutel",
+      "valuePlaceholder": "Waarde (JSON)",
+      "noEntries": "Geen metadata-items. Voeg er hierboven één toe.",
+      "addSuccess": "Item toegevoegd",
+      "addError": "Toevoegen van item mislukt",
+      "updateError": "Bijwerken van item mislukt",
+      "deleteSuccess": "Item verwijderd",
+      "deleteError": "Verwijderen van item mislukt",
+      "duplicateError": "Er bestaat al een item met deze namespace en sleutel",
+      "invalidJson": "Ongeldige JSON-waarde"
+    }
+  },
+  "instanceMetadata": {
+    "title": "Instance Metadata",
+    "description": "Beheer permanente metadata-items voor deze instantie. Elk item heeft een namespace, sleutel en JSON-waarde.",
+    "namespacePlaceholder": "Namespace",
+    "keyPlaceholder": "Sleutel",
+    "valuePlaceholder": "Waarde (JSON)",
+    "noEntries": "Geen metadata-items. Voeg er hierboven één toe.",
+    "addSuccess": "Item toegevoegd",
+    "addError": "Toevoegen van item mislukt",
+    "updateError": "Bijwerken van item mislukt",
+    "deleteSuccess": "Item verwijderd",
+    "deleteError": "Verwijderen van item mislukt",
+    "duplicateError": "Er bestaat al een item met deze namespace en sleutel",
+    "invalidJson": "Ongeldige JSON-waarde"
+  },
+  "bots": {
+    "searchPlaceholder": "Bots zoeken...",
+    "onlineCount": "{{online}} online / {{total}} totaal",
+    "noBots": "Geen bots geconfigureerd. Voeg accounts toe via de pagina Accountinstellingen.",
+    "noBotsFound": "Geen bots gevonden die overeenkomen met je zoekopdracht.",
+    "loadingMore": "Meer laden...",
+    "showingCount": "Toont {{loaded}} van {{total}}",
+    "allLoaded": "Alle {{total}} bots geladen",
+    "online": "Online",
+    "offline": "Offline",
+    "notJoined": "Niet Deelnomen",
+    "backToBots": "Terug naar Bots",
+    "comingSoon": "Binnenkort beschikbaar",
+    "terminalPanel": {
+      "title": "Bot Terminal"
+    },
+    "positionPanel": {
+      "title": "Positie & Rotatie",
+      "position": "Positie",
+      "rotation": "Rotatie",
+      "offline": "Bot is offline. Positiegegevens zijn alleen beschikbaar wanneer de bot is verbonden."
+    },
+    "chatPanel": {
+      "title": "Chatberichten",
+      "description": "Chatberichten van deze bot verschijnen hier in een toekomstige update."
+    },
+    "commandPanel": {
+      "title": "Botcommando's",
+      "placeholder": "Stuur een commando naar deze bot...",
+      "description": "Bot-specifieke commando's zullen beschikbaar zijn in een toekomstige update."
+    },
+    "povPanel": {
+      "title": "Bot POV",
+      "capture": "Vastleggen",
+      "refresh": "Vernieuwen",
+      "auto": "Auto",
+      "startAutoRefresh": "Automatisch vernieuwen starten (interval van 1 seconde)",
+      "stopAutoRefresh": "Automatisch vernieuwen stoppen",
+      "clickToCapture": "Klik op Vastleggen om het perspectief van de bot weer te geven",
+      "offline": "Bot is offline. POV-weergave is alleen beschikbaar wanneer de bot is verbonden."
+    },
+    "statsPanel": {
+      "title": "Botstatistieken",
+      "health": "Gezondheid",
+      "food": "Voedsel",
+      "saturation": "Verzadiging",
+      "experience": "Ervaring",
+      "level": "Niveau",
+      "toNextLevel": "tot volgend niveau",
+      "gameMode": "Spelmodus",
+      "survival": "Overleven",
+      "creative": "Creatief",
+      "adventure": "Avontuur",
+      "spectator": "Toeschouwer",
+      "unknown": "Onbekend",
+      "offline": "Bot is offline. Statistieken zijn alleen beschikbaar wanneer de bot is verbonden."
+    },
+    "inventoryPanel": {
+      "title": "Inventaris",
+      "hotbar": "Snelle balk",
+      "main": "Hoofd Inventaris",
+      "items": "items",
+      "carrying": "Draagt",
+      "dropOne": "Laat Eén Vallen",
+      "dropAll": "Laat Alles Vallen",
+      "closeContainer": "Sluiten",
+      "clickHint": "Linkermuisklik: oppakken/plaatsen | Rechtermuisklik: helft/één | Shift+klik: snel verplaatsen | Middelste muisklik: hotbar-slot selecteren",
+      "offline": "Bot is offline. Inventaris is alleen beschikbaar wanneer de bot is verbonden.",
+      "buttons": {
+        "stonecutterRecipes": "Recepten",
+        "enchantments": "Betoveringen",
+        "patterns": "Patronen",
+        "trades": "Handelen",
+        "beaconEffects": "Baken-effecten",
+        "crafterSlots": "Slotbediening",
+        "lecternControls": "Boekbediening",
+        "actions": "Acties"
+      },
+      "textInput": {
+        "title": "Tekstinvoer",
+        "anvilRename": "Item hernoemen"
+      },
+      "bookPages": {
+        "title": "Boekinhoud",
+        "emptyPage": "(Lege pagina)",
+        "pageIndicator": "Pagina {{current}} van {{total}}"
+      }
+    },
+    "visualPanel": {
+      "title": "Botweergave",
+      "compass": "Kijkrichting",
+      "lookDirection": "Kijkhoek",
+      "lookingUp": "Kijkt omhoog",
+      "lookingDown": "Kijkt omlaag",
+      "lookingStraight": "Kijkt recht vooruit",
+      "worldInfo": "Wereldinformatie",
+      "dimension": "Dimensie",
+      "biome": "Biome",
+      "offline": "Bot is offline. Visuele data is alleen beschikbaar wanneer de bot is verbonden."
+    },
+    "actionsPanel": {
+      "title": "Botacties",
+      "leftClick": "Linkermuisklik",
+      "rightClick": "Rechtermuisklik",
+      "leftClickDescription": "Entiteit aanvallen of blok breken",
+      "rightClickDescription": "Item gebruiken of interactie",
+      "offline": "Bot is offline. Acties zijn alleen beschikbaar wanneer de bot is verbonden."
+    },
+    "movementPanel": {
+      "title": "Bewegingsbediening",
+      "movement": "Beweging (WASD)",
+      "forward": "Vooruit gaan (W)",
+      "backward": "Achteruit gaan (S)",
+      "left": "Opzij naar links (A)",
+      "right": "Opzij naar rechts (D)",
+      "jump": "Springen",
+      "sneak": "Sluipen",
+      "sprint": "Rennen",
+      "stop": "Stoppen",
+      "rotation": "Kijkrichting",
+      "lookUp": "Omhoog kijken",
+      "lookDown": "Omlaag kijken",
+      "lookLeft": "Links kijken",
+      "lookRight": "Rechts kijken",
+      "offline": "Bot is offline. Bewegingsbediening is alleen beschikbaar wanneer de bot is verbonden."
+    },
+    "dialogPanel": {
+      "title": "Serverdialoog",
+      "noDialog": "Er wordt momenteel geen serverdialoog weergegeven.",
+      "dialogType": "Type",
+      "dialogId": "Dialoog-ID",
+      "notice": "Melding",
+      "confirmation": "Bevestiging",
+      "multiAction": "Meervoudige actie",
+      "serverLinks": "Serverlinks",
+      "dialogList": "Dialooglijst",
+      "unknownType": "Onbekend",
+      "dismiss": "Sluiten",
+      "submit": "Verzenden",
+      "offline": "Bot is offline. Dialogen zijn alleen beschikbaar wanneer de bot is verbonden."
+    }
+  },
+  "scripts": {
+    "title": "Visuele scripts",
+    "description": "Maak automatiseringsscripts met behulp van een visuele, op knooppunten gebaseerde editor.",
+    "experimentalTitle": "Experimentele functie",
+    "experimentalWarning": "Deze functie is experimenteel. Er kunnen in de toekomst ingrijpende wijzigingen zijn en bestaande scripts kunnen hierdoor niet meer werken. Gebruik met voorzichtigheid.",
+    "createScript": "Script aanmaken",
+    "createScriptTitle": "Nieuw script aanmaken",
+    "createScriptDescription": "Maak een nieuw visueel script voor deze instantie. Scripts kunnen botacties automatiseren en reageren op gebeurtenissen.",
+    "scriptName": "Scriptnaam",
+    "scriptNamePlaceholder": "Voer scriptnaam in...",
+    "scriptDescription": "Beschrijving",
+    "scriptDescriptionPlaceholder": "Beschrijf wat dit script doet...",
+    "create": "Aanmaken",
+    "createSuccess": "Script succesvol aangemaakt",
+    "createError": "Aanmaken van script mislukt",
+    "noScripts": "Nog geen scripts",
+    "noScriptsDescription": "Maak je eerste script om botacties te automatiseren met de visuele knooppunteneditor.",
+    "createFirstScript": "Maak je eerste script",
+    "running": "Draait",
+    "paused": "Gepauzeerd",
+    "nodes": "knooppunten",
+    "noDescription": "Geen beschrijving",
+    "edit": "Bewerken",
+    "pause": "Pauzeren",
+    "pauseSuccess": "Script gepauzeerd",
+    "pauseError": "Pauzeren van script mislukt",
+    "resume": "Hervatten",
+    "resumeSuccess": "Script hervat",
+    "resumeError": "Hervatten van script mislukt",
+    "delete": "Verwijderen",
+    "deleteSuccess": "Script succesvol verwijderd",
+    "deleteError": "Verwijderen van script mislukt",
+    "saveSuccess": "Script succesvol opgeslagen",
+    "saveError": "Opslaan van script mislukt",
+    "activateSuccess": "Script geactiveerd",
+    "activateError": "Script activeren mislukt",
+    "deactivateSuccess": "Script gedeactiveerd",
+    "untitledScript": "Naamloos script",
+    "saveFirstBeforeActivating": "Sla het script eerst op voordat je het activeert",
+    "activating": "Script wordt geactiveerd...",
+    "activated": "Script geactiveerd",
+    "executionCompleted": "Script voltooid",
+    "executionCompletedSuccess": "Script succesvol voltooid",
+    "deactivated": "Script gedeactiveerd",
+    "deactivatedByUser": "Script gedeactiveerd door gebruiker",
+    "executionFailed": "Scriptuitvoering mislukt",
+    "executionError": "Uitvoeringsfout: {{error}}",
+    "nodeStarted": "Knooppunt gestart: {{nodeId}}",
+    "nodeCompleted": "Knooppunt voltooid: {{nodeId}}",
+    "nodeError": "Knooppuntfout: {{error}}",
+    "contextMenu": {
+      "edit": "Script bewerken",
+      "pause": "Pauzeren",
+      "resume": "Hervatten",
+      "delete": "Script verwijderen",
+      "copyScriptName": "Scriptnaam kopiëren",
+      "copyScriptId": "Script-ID kopiëren"
+    },
+    "editor": {
+      "toolbar": {
+        "backToScripts": "Terug naar scripts",
+        "save": "Opslaan",
+        "saveTooltip": "Script opslaan",
+        "resume": "Hervatten",
+        "resumeTooltip": "Hervat uitvoer van script",
+        "pause": "Pauzeren",
+        "pauseTooltip": "Onderbreek scriptexecutie",
+        "unsaved": "Niet opgeslagen",
+        "clearCanvas": "Canvas wissen",
+        "zoomIn": "Inzoomen",
+        "zoomOut": "Uitzoomen",
+        "fit": "Passend maken",
+        "export": "Script exporteren",
+        "import": "Script importeren",
+        "exportSuccess": "Script succesvol geëxporteerd",
+        "importSuccess": "Script succesvol geïmporteerd",
+        "importError": "Importeren van script mislukt"
+      },
+      "palette": {
+        "title": "Knooppuntpalet",
+        "search": "Zoek knooppunten..."
+      },
+      "logs": {
+        "title": "Uitvoeringslogboeken",
+        "clearTitle": "Logboeken wissen",
+        "noLogs": "Nog geen logboeken. Voer het script uit om uitvoeringslogboeken te zien.",
+        "entries_one": "{{count}} item",
+        "entries_other": "{{count}} items"
+      },
+      "contextMenu": {
+        "duplicate": "Dupliceren",
+        "rename": "Hernoemen",
+        "disconnectAll": "Alles loskoppelen",
+        "collapse": "Samenvouwen",
+        "expand": "Uitvouwen",
+        "mute": "Dempen",
+        "unmute": "Demping opheffen",
+        "showPreview": "Voorbeeld weergeven",
+        "hidePreview": "Voorbeeld verbergen",
+        "delete": "Verwijderen"
+      }
+    }
+  }
+}

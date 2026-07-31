@@ -1,0 +1,467 @@
+{
+  "proxy": {
+    "getProxies": "รับพร็อกซี",
+    "addProxies": "เพิ่มพร็อกซี",
+    "filterPlaceholder": "กรองพร็อกซี...",
+    "listImportToast": {
+      "loading": "กำลังนำเข้าพร็อกซี...",
+      "success": "นำเข้าพร็อกซีแล้ว {{count}} รายการ!",
+      "error": "ไม่สามารถนำเข้าพร็อกซีได้",
+      "noProxies": "ไม่มีพร็อกซีให้นำเข้า"
+    },
+    "import": {
+      "proxyType": "ประเภทพร็อกซี",
+      "http": "HTTP",
+      "socks4": "SOCKS4",
+      "socks5": "SOCKS5",
+      "uri": "URI",
+      "dialog": {
+        "title": "นำเข้าพร็อกซี {{type}}",
+        "description": "วางพร็อกซีของคุณที่นี่ ทีละบรรทัด"
+      }
+    },
+    "removeToast": {
+      "loading": "กำลังลบพร็อกซี...",
+      "success": "ลบพร็อกซีแล้ว {{count}} รายการ!",
+      "error": "ไม่สามารถลบพร็อกซีได้"
+    },
+    "checkToast": {
+      "loading": "กำลังตรวจสอบพร็อกซี... {{checked}}/{{total}} (สำเร็จ: {{success}} ล้มเหลว: {{failed}})",
+      "success": "ลบพร็อกซีที่เสียแล้ว {{count}} รายการ!",
+      "error": "ไม่สามารถตรวจสอบพร็อกซีได้"
+    },
+    "checkDialog": {
+      "title": "ตรวจสอบพร็อกซี",
+      "description": "คุณกำลังจะตรวจสอบพร็อกซี {{count}} รายการ พร็อกซีที่ไม่ถูกต้องจะถูกลบโดยอัตโนมัติ",
+      "confirm": "เริ่มตรวจสอบ"
+    },
+    "invalidFormat": "รูปแบบพร็อกซีไม่ถูกต้อง",
+    "table": {
+      "type": "ประเภท",
+      "address": "ที่อยู่",
+      "username": "ชื่อผู้ใช้",
+      "password": "รหัสผ่าน",
+      "searchAddresses": "ค้นหาที่อยู่...",
+      "searchUsernames": "ค้นหาชื่อผู้ใช้...",
+      "searchPasswords": "ค้นหารหัสผ่าน..."
+    },
+    "removeSelectedTooltip": "ลบพร็อกซีที่เลือก",
+    "exportSelectedTooltip": "ส่งออกพร็อกซีที่เลือกไว้แล้ว",
+    "checkSelectedTooltip": "ตรวจสอบพร็อกซีที่เลือก",
+    "contextMenu": {
+      "copyAddress": "คัดลอกที่อยู่",
+      "copyUsername": "คัดลอกชื่อผู้ใช้",
+      "copyPassword": "คัดลอกรหัสผ่าน",
+      "deleteProxy": "ลบ Proxy"
+    },
+    "postImportCheckDialog": {
+      "title": "ตรวจสอบพร็อกซีหรือไม่?",
+      "description": "คุณเพิ่งนำเข้า {{count}} พร็อกซี ต้องการตรวจสอบตอนนี้หรือไม่? พร็อกซีที่ไม่ถูกต้องจะถูกลบออกโดยอัตโนมัติ",
+      "confirm": "ตรวจสอบพร็อกซี",
+      "skip": "ข้าม"
+    },
+    "export": {
+      "format": "รูปแบบการส่งออก",
+      "uri": "รูปแบบ URI (ทุกประเภท)",
+      "http": "HTTP เท่านั้น (แบบเรียบ)",
+      "socks4": "SOCKS4 เท่านั้น (แบบเรียบ)",
+      "socks5": "SOCKS5 เท่านั้น (แบบเรียบ)",
+      "noProxies": "ไม่มีพร็อกซีให้ส่งออก"
+    }
+  },
+  "account": {
+    "getAccounts": "รับไอดี",
+    "addAccounts": "เพิ่มไอดี",
+    "generateAccounts": "สร้างไอดี",
+    "filterPlaceholder": "กรองไอดี...",
+    "listImportToast": {
+      "loading": "กำลังนำเข้าไอดี... {{checked}}/{{total}} (สำเร็จ: {{success}} ล้มเหลว: {{failed}})",
+      "allFailed": "ไม่สามารถนำเข้าไอดีใดๆ ได้เลย",
+      "someFailed": "นำเข้าไอดีแล้ว {{count}} รายการ, ไม่สามารถนำเข้าได้ {{failed}} รายการ",
+      "noneFailed": "นำเข้าไอดีแล้ว {{count}} รายการ!",
+      "error": "ไม่สามารถนำเข้าไอดีได้",
+      "noAccounts": "ไม่มีไอดีให้นำเข้า"
+    },
+    "unknownError": "ข้อผิดพลาดที่ไม่ทราบสาเหตุ",
+    "deviceCodeImportToast": {
+      "loading": "กำลังนำเข้าไอดี...",
+      "success": "นำเข้าไอดีเรียบร้อย!",
+      "error": "ไม่สามารถนำเข้าไอดีได้"
+    },
+    "generate": {
+      "title": "สร้างไอดีออฟไลน์",
+      "description": "สร้างไอดี Java แบบออฟไลน์ ด้วยรูปแบบชื่อที่กำหนดเอง",
+      "amount": "จำนวน",
+      "nameFormat": "รูปแบบชื่อ",
+      "nameFormatHelp": "ใช้ %d เป็นตำแหน่งตัวเลขในชื่อ (เช่น Bot_%d จะกลายเป็น Bot_1, Bot_2 เป็นต้น)",
+      "mode": "บัญชีที่มีอยู่แล้ว",
+      "modeHelp": "เลือกวิธีจัดการกับบัญชีที่มีอยู่แล้ว:\n\n• ไม่สนใจบัญชีที่มีอยู่: สร้างแต่บัญชีที่ยังไม่มีชื่อในระบบเท่านั้น บัญชีเดิมทั้งหมดยังคงอยู่เหมือนเดิม\n\n• แทนที่บัญชีที่มีอยู่: สร้างบัญชีทั้งหมดโดยแทนที่บัญชีที่มี UUID เดิม ส่วนบัญชีอื่น ๆ จะยังอยู่\n\n• แทนที่ทั้งหมด: ลบบัญชีเดิมทั้งระบบ และแทนที่ด้วยบัญชีที่สร้างใหม่ทั้งหมด",
+      "modeIgnoreExisting": "ไม่สนใจบัญชีที่มีอยู่",
+      "modeReplaceExisting": "แทนที่บัญชีที่มีอยู่",
+      "modeReplaceAll": "แทนที่ทั้งหมด",
+      "submit": "สร้าง",
+      "generating": "กำลังสร้าง...",
+      "progress": "กำลังสร้างไอดี... {{checked}}/{{total}} (สำเร็จ: {{success}} ล้มเหลว: {{failed}})",
+      "success": "สร้างไอดีแล้ว {{count}} รายการ!",
+      "allFailed": "ไม่สามารถสร้างไอดีใดๆ ได้เลย",
+      "allExist": "ชื่อผู้ใช้ทั้งหมดมีอยู่แล้ว กรุณาเปิดใช้งาน 'เขียนทับบัญชีที่มีอยู่' เพื่อสร้างใหม่อีกครั้ง",
+      "error": "ไม่สามารถสร้างไอดีได้",
+      "invalidAmount": "กรุณาใส่จำนวนที่ถูกต้อง (อย่างน้อย 1)",
+      "missingPlaceholder": "รูปแบบชื่อจำเป็นต้องมี %d อยู่ด้วย"
+    },
+    "import": {
+      "javaEdition": "Java Edition",
+      "bedrockEdition": "Bedrock Edition",
+      "offline": "ออฟไลน์",
+      "microsoftCredentials": "ข้อมูลบัญชี Microsoft",
+      "microsoftDeviceCode": "รหัสอุปกรณ์ Microsoft",
+      "microsoftRefreshToken": "โทเค็นรีเฟรชของ Microsoft",
+      "microsoftCookies": "คุกกี้ Microsoft",
+      "microsoftAccessToken": "โทเค็นเข้าถึงของ Microsoft",
+      "altProviders": "ผู้ให้บริการสำรอง",
+      "dialog": {
+        "title": "นำเข้าไอดี {{type}}",
+        "description": "วางไอดีของคุณที่นี่ ทีละบรรทัด"
+      }
+    },
+    "removeToast": {
+      "loading": "กำลังลบไอดี...",
+      "success": "ลบไอดีแล้ว {{count}} รายการ!",
+      "error": "ไม่สามารถลบไอดีได้"
+    },
+    "table": {
+      "type": "ประเภท",
+      "profileId": "UUID",
+      "lastKnownName": "ชื่อผู้ใช้",
+      "searchProfileIds": "ค้นหาไอดีโปรไฟล์...",
+      "searchLastKnownNames": "ค้นหาชื่อที่ทราบล่าสุด...",
+      "actions": "การดำเนินการ"
+    },
+    "removeSelectedTooltip": "ลบบัญชีที่เลือก",
+    "contextMenu": {
+      "openConfig": "เปิดการตั้งค่า",
+      "openMetadata": "เปิดข้อมูลเมตา",
+      "copyProfileId": "คัดลอกโปรไฟล์ ID",
+      "copyUsername": "คัดลอกชื่อผู้ใช้"
+    },
+    "config": {
+      "title": "กำหนดค่า {{name}}",
+      "description": "กำหนดค่าบ็อตแต่ละตัวสำหรับบัญชีนี้",
+      "openButton": "กำหนดค่าบัญชี",
+      "pageTitle": "{{name}} - การตั้งค่า {{page}}",
+      "noSettings": "ไม่มีการตั้งค่าสำหรับหน้านี้"
+    },
+    "deviceCodeConfirmDialog": {
+      "title": "การยืนยันตัวตนด้วยรหัสอุปกรณ์",
+      "description": "กำหนดค่าตัวเลือกก่อนเริ่มกระบวนการยืนยันโค้ดบนอุปกรณ์.",
+      "start": "เริ่มการยืนยันตัวตน"
+    },
+    "deviceCodeDialog": {
+      "title": "การยืนยันตัวตนด้วยรหัสอุปกรณ์",
+      "description": "ลงชื่อเข้าใช้ด้วยบัญชี Microsoft ของคุณเพื่อเชื่อมโยงบัญชีนี้",
+      "openInBrowser": "เปิดในเบราว์เซอร์",
+      "orManually": "หรือกรอกรหัสด้วยตนเอง",
+      "codeLabel": "รหัสของคุณ",
+      "urlLabel": "ไปที่"
+    },
+    "ravealts": {
+      "button": "Ravealts",
+      "title": "ซื้อบัญชีผ่าน Ravealts",
+      "description": "ซื้อบัญชี Minecraft โดยใช้คีย์ API ของคุณจาก Ravealts.",
+      "apiKeyLabel": "คีย์ API",
+      "apiKeyPlaceholder": "กรอกคีย์ API ของ Ravealts ของคุณ",
+      "validate": "ตรวจสอบความถูกต้อง",
+      "validating": "กำลังตรวจสอบ...",
+      "keyValid": "ตรวจสอบคีย์แล้ว",
+      "keyInvalid": "คีย์ API ไม่ถูกต้อง",
+      "credits": "เครดิต: {{credits}}",
+      "stockTitle": "สินค้าคงเหลือ",
+      "noStock": "ไม่มีบัญชีในสต็อก",
+      "accountType": "ประเภทบัญชี",
+      "amount": "จำนวน (1-10)",
+      "purchase": "ซื้อและนำเข้า",
+      "purchasing": "กำลังซื้อ...",
+      "purchaseSuccess": "ซื้อบัญชีแล้ว {{count}} รายการ กำลังนำเข้า...",
+      "purchaseError": "การซื้อไม่สำเร็จ: {{message}}",
+      "networkError": "ไม่สามารถเชื่อมต่อกับ Ravealts API ได้",
+      "outOfStock": "ประเภทที่เลือกหมดสต็อก",
+      "insufficientBalance": "เครดิตไม่เพียงพอ",
+      "rateLimited": "ถูกจำกัดอัตรา กรุณาลองใหม่ภายหลัง"
+    },
+    "metadata": {
+      "openButton": "แก้ไข Metadata",
+      "title": "Metadata: {{name}}",
+      "description": "จัดการรายการข้อมูลเมตาที่ถาวรสำหรับบัญชีนี้ แต่ละรายการมี namespace, คีย์ และค่าเป็น JSON.",
+      "namespacePlaceholder": "เนมสเปซ",
+      "keyPlaceholder": "คีย์",
+      "valuePlaceholder": "ค่า (JSON)",
+      "noEntries": "ไม่มีรายการข้อมูลเมตา กรุณาเพิ่มรายการด้านบน",
+      "addSuccess": "เพิ่มรายการแล้ว",
+      "addError": "ไม่สามารถเพิ่มรายการได้",
+      "updateError": "ไม่สามารถอัปเดตรายการได้",
+      "deleteSuccess": "ลบรายการเรียบร้อยแล้ว",
+      "deleteError": "ลบรายการไม่สำเร็จ",
+      "duplicateError": "มีรายการที่ใช้ namespace และคีย์นี้อยู่แล้ว",
+      "invalidJson": "ค่า JSON ไม่ถูกต้อง"
+    }
+  },
+  "instanceMetadata": {
+    "title": "เมทาดาท-instance",
+    "description": "จัดการรายการเมทาดาทาถาวรสำหรับอินสแตนซ์นี้ แต่ละรายการจะมีเนมสเปซ คีย์ และค่า JSON",
+    "namespacePlaceholder": "เนมสเปซ",
+    "keyPlaceholder": "คีย์",
+    "valuePlaceholder": "ค่า (JSON)",
+    "noEntries": "ไม่มีรายการข้อมูลเมตา กรุณาเพิ่มรายการด้านบน",
+    "addSuccess": "เพิ่มรายการแล้ว",
+    "addError": "ไม่สามารถเพิ่มรายการได้",
+    "updateError": "ไม่สามารถอัปเดตรายการได้",
+    "deleteSuccess": "ลบรายการเรียบร้อยแล้ว",
+    "deleteError": "ลบรายการไม่สำเร็จ",
+    "duplicateError": "มีรายการที่ใช้ namespace และคีย์นี้อยู่แล้ว",
+    "invalidJson": "ค่า JSON ไม่ถูกต้อง"
+  },
+  "bots": {
+    "searchPlaceholder": "ค้นหาบ็อต...",
+    "onlineCount": "{{online}} ออนไลน์ / {{total}} ทั้งหมด",
+    "noBots": "ไม่มีบอทที่ถูกตั้งค่า เพิ่มบัญชีจากหน้าการตั้งค่าบัญชีผู้ใช้",
+    "noBotsFound": "ไม่พบบอทที่ตรงกับการค้นหาของคุณ",
+    "loadingMore": "กำลังโหลดเพิ่มเติม...",
+    "showingCount": "แสดง {{loaded}} จากทั้งหมด {{total}} ",
+    "allLoaded": "บอท {{total}} ทั้งหมดถูกโหลดแล้ว",
+    "online": "ออนไลน์",
+    "offline": "ออฟไลน์",
+    "notJoined": "ยังไม่ได้เข้าร่วม",
+    "backToBots": "กลับไปที่บอท",
+    "comingSoon": "เร็วๆ นี้",
+    "terminalPanel": {
+      "title": "เทอร์มินัลบอท"
+    },
+    "positionPanel": {
+      "title": "ตำแหน่ง & การหมุน",
+      "position": "ตำแหน่ง",
+      "rotation": "การหมุน",
+      "offline": "บอทออฟไลน์ ข้อมูลตำแหน่งจะแสดงเฉพาะเมื่อบอทเชื่อมต่อแล้วเท่านั้น"
+    },
+    "chatPanel": {
+      "title": "ข้อความแชท",
+      "description": "ข้อความแชทจากบอทนี้จะแสดงที่นี่ในการอัปเดตถัดไป"
+    },
+    "commandPanel": {
+      "title": "คำสั่งบอท",
+      "placeholder": "ส่งคำสั่งไปยังบอทนี้...",
+      "description": "คำสั่งที่ใช้เฉพาะบอทนี้จะพร้อมใช้งานในการอัปเดตถัดไป"
+    },
+    "povPanel": {
+      "title": "มุมมองบอท",
+      "capture": "จับภาพ",
+      "refresh": "รีเฟรช",
+      "auto": "อัตโนมัติ",
+      "startAutoRefresh": "เริ่มรีเฟรชอัตโนมัติ (ทุก 1 วินาที)",
+      "stopAutoRefresh": "หยุดรีเฟรชอัตโนมัติ",
+      "clickToCapture": "คลิกที่ปุ่มจับภาพเพื่อแสดงมุมมองของบอท",
+      "offline": "บอทออฟไลน์ การแสดงมุมมองจะสามารถใช้ได้เมื่อบอทเชื่อมต่อเท่านั้น"
+    },
+    "statsPanel": {
+      "title": "สถิติบอท",
+      "health": "พลังชีวิต",
+      "food": "อาหาร",
+      "saturation": "ค่าความอิ่ม",
+      "experience": "ค่าประสบการณ์",
+      "level": "เลเวล",
+      "toNextLevel": "จนถึงเลเวลถัดไป",
+      "gameMode": "โหมดเกม",
+      "survival": "เอาชีวิตรอด",
+      "creative": "โหมดสร้างสรรค์",
+      "adventure": "ผจญภัย",
+      "spectator": "ผู้ชม",
+      "unknown": "ไม่ทราบ",
+      "offline": "บอทออฟไลน์ สถิติจะสามารถดูได้เมื่อบอทเชื่อมต่อเท่านั้น"
+    },
+    "inventoryPanel": {
+      "title": "อินเวนทอรี",
+      "hotbar": "แถบร้อน",
+      "main": "ช่องเก็บของหลัก",
+      "items": "ไอเทม",
+      "carrying": "ถืออยู่",
+      "dropOne": "ทิ้งทีละชิ้น",
+      "dropAll": "ทิ้งทั้งหมด",
+      "closeContainer": "ปิด",
+      "clickHint": "คลิกซ้าย: หยิบ/วาง | คลิกขวา: ครึ่ง/หนึ่ง | Shift+คลิก: ย้ายเร็ว | คลิกกลาง: เลือกช่องด่วน",
+      "offline": "บอทออฟไลน์ ช่องเก็บของจะเปิดได้เมื่อบอทเชื่อมต่อเท่านั้น",
+      "buttons": {
+        "stonecutterRecipes": "สูตรคราฟต์",
+        "enchantments": "เวทมนตร์เสริม",
+        "patterns": "ลวดลาย",
+        "trades": "การค้า",
+        "beaconEffects": "เอฟเฟกต์บีคอน",
+        "crafterSlots": "ควบคุมช่อง",
+        "lecternControls": "ควบคุมหนังสือ",
+        "actions": "การดำเนินการ"
+      },
+      "textInput": {
+        "title": "กรอกข้อความ",
+        "anvilRename": "เปลี่ยนชื่อไอเทม"
+      },
+      "bookPages": {
+        "title": "เนื้อหาหนังสือ",
+        "emptyPage": "(หน้าว่าง)",
+        "pageIndicator": "หน้า {{current}} จาก {{total}}"
+      }
+    },
+    "visualPanel": {
+      "title": "มุมมองบอท",
+      "compass": "ทิศทางที่หันหน้า",
+      "lookDirection": "มุมมองที่มอง",
+      "lookingUp": "กำลังมองขึ้น",
+      "lookingDown": "กำลังมองลง",
+      "lookingStraight": "กำลังมองตรง",
+      "worldInfo": "ข้อมูลโลก",
+      "dimension": "มิติ",
+      "biome": "ไบโอม",
+      "offline": "บอทออฟไลน์ ข้อมูลภาพจะดูได้เมื่อบอทเชื่อมต่อเท่านั้น"
+    },
+    "actionsPanel": {
+      "title": "การกระทำของบอท",
+      "leftClick": "คลิกซ้าย",
+      "rightClick": "คลิกขวา",
+      "leftClickDescription": "โจมตีเอนทิตี้หรือทำลายบล็อก",
+      "rightClickDescription": "ใช้ไอเทมหรือโต้ตอบ",
+      "offline": "บอทออฟไลน์ การกระทำจะใช้ได้ต่อเมื่อบอทเชื่อมต่ออยู่เท่านั้น"
+    },
+    "movementPanel": {
+      "title": "การควบคุมการเคลื่อนไหว",
+      "movement": "การเคลื่อนไหว (WASD)",
+      "forward": "เดินหน้า (W)",
+      "backward": "ถอยหลัง (S)",
+      "left": "เลื่อนไปทางซ้าย (A)",
+      "right": "เลื่อนไปทางขวา (D)",
+      "jump": "กระโดด",
+      "sneak": "ย่อง",
+      "sprint": "วิ่งเร็ว",
+      "stop": "หยุด",
+      "rotation": "ปรับมุมมอง",
+      "lookUp": "มองขึ้น",
+      "lookDown": "มองลง",
+      "lookLeft": "มองซ้าย",
+      "lookRight": "มองขวา",
+      "offline": "บอทออฟไลน์ การควบคุมการเคลื่อนไหวจะใช้ได้ต่อเมื่อบอทเชื่อมต่ออยู่เท่านั้น"
+    },
+    "dialogPanel": {
+      "title": "หน้าต่างโต้ตอบเซิร์ฟเวอร์",
+      "noDialog": "ขณะนี้ไม่มีหน้าต่างโต้ตอบเซิร์ฟเวอร์แสดงอยู่",
+      "dialogType": "ประเภท",
+      "dialogId": "รหัสการสนทนา",
+      "notice": "แจ้งเตือน",
+      "confirmation": "ยืนยัน",
+      "multiAction": "การกระทำหลายรายการ",
+      "serverLinks": "ลิงก์เซิร์ฟเวอร์",
+      "dialogList": "รายการสนทนา",
+      "unknownType": "ไม่ทราบ",
+      "dismiss": "ปิดหน้าต่าง",
+      "submit": "ส่ง",
+      "offline": "บอทออฟไลน์ หน้าต่างโต้ตอบจะใช้ได้ต่อเมื่อบอทเชื่อมต่ออยู่เท่านั้น"
+    }
+  },
+  "scripts": {
+    "title": "สคริปต์แบบภาพ",
+    "description": "สร้างสคริปต์อัตโนมัติด้วยตัวแก้ไขแบบโหนดภาพ",
+    "experimentalTitle": "ฟีเจอร์ทดลองใช้งาน",
+    "experimentalWarning": "ฟีเจอร์นี้เป็นฟีเจอร์ทดลอง อาจมีการเปลี่ยนแปลงที่สำคัญในอนาคตและสคริปต์ที่มีอยู่อาจหยุดทำงานได้ กรุณาใช้งานด้วยความระมัดระวัง",
+    "createScript": "สร้างสคริปต์",
+    "createScriptTitle": "สร้างสคริปต์ใหม่",
+    "createScriptDescription": "สร้างสคริปต์ภาพใหม่สำหรับอินสแตนซ์นี้ สคริปต์สามารถทำให้อัตโนมัติและตอบสนองต่อเหตุการณ์",
+    "scriptName": "ชื่อสคริปต์",
+    "scriptNamePlaceholder": "ใส่ชื่อสคริปต์...",
+    "scriptDescription": "คำอธิบาย",
+    "scriptDescriptionPlaceholder": "อธิบายว่าสคริปต์นี้ทำอะไร...",
+    "create": "สร้าง",
+    "createSuccess": "สร้างสคริปต์สำเร็จ",
+    "createError": "สร้างสคริปต์ไม่สำเร็จ",
+    "noScripts": "ยังไม่มีสคริปต์",
+    "noScriptsDescription": "สร้างสคริปต์แรกของคุณเพื่อทำให้งานบอทเป็นอัตโนมัติด้วยตัวแก้ไขแบบโหนดภาพ",
+    "createFirstScript": "สร้างสคริปต์แรกของคุณ",
+    "running": "กำลังทำงาน",
+    "paused": "หยุดชั่วคราว",
+    "nodes": "โหนด",
+    "noDescription": "ไม่มีคำอธิบาย",
+    "edit": "แก้ไข",
+    "pause": "หยุดชั่วคราว",
+    "pauseSuccess": "หยุดสคริปต์ชั่วคราวแล้ว",
+    "pauseError": "ไม่สามารถหยุดสคริปต์ชั่วคราวได้",
+    "resume": "ดำเนินการต่อ",
+    "resumeSuccess": "ทำงานสคริปต์ต่อแล้ว",
+    "resumeError": "ไม่สามารถทำงานสคริปต์ต่อได้",
+    "delete": "ลบ",
+    "deleteSuccess": "ลบสคริปต์เรียบร้อยแล้ว",
+    "deleteError": "ลบสคริปต์ไม่สำเร็จ",
+    "saveSuccess": "บันทึกสคริปต์สำเร็จ",
+    "saveError": "บันทึกสคริปต์ไม่สำเร็จ",
+    "activateSuccess": "สคริปต์เปิดใช้งานแล้ว",
+    "activateError": "ไม่สามารถเปิดใช้งานสคริปต์ได้",
+    "deactivateSuccess": "สคริปต์ถูกปิดการใช้งานแล้ว",
+    "untitledScript": "สคริปต์ไม่มีชื่อ",
+    "saveFirstBeforeActivating": "โปรดบันทึกสคริปต์ก่อนเปิดใช้งาน",
+    "activating": "กำลังเปิดใช้งานสคริปต์...",
+    "activated": "สคริปต์เปิดใช้งานแล้ว",
+    "executionCompleted": "สคริปต์เสร็จสิ้นแล้ว",
+    "executionCompletedSuccess": "สคริปต์เสร็จสิ้นสำเร็จ",
+    "deactivated": "สคริปต์ถูกปิดการใช้งานแล้ว",
+    "deactivatedByUser": "สคริปต์ถูกปิดใช้งานโดยผู้ใช้",
+    "executionFailed": "การทำงานของสคริปต์ล้มเหลว",
+    "executionError": "ข้อผิดพลาดขณะรัน: {{error}}",
+    "nodeStarted": "เริ่มโหนด: {{nodeId}}",
+    "nodeCompleted": "โหนดเสร็จสิ้น: {{nodeId}}",
+    "nodeError": "ข้อผิดพลาดโหนด: {{error}}",
+    "contextMenu": {
+      "edit": "แก้ไขสคริปต์",
+      "pause": "หยุดชั่วคราว",
+      "resume": "ดำเนินการต่อ",
+      "delete": "ลบสคริปต์",
+      "copyScriptName": "คัดลอกชื่อสคริปต์",
+      "copyScriptId": "คัดลอก Script ID"
+    },
+    "editor": {
+      "toolbar": {
+        "backToScripts": "กลับไปที่สคริปต์",
+        "save": "บันทึก",
+        "saveTooltip": "บันทึกสคริปต์",
+        "resume": "ดำเนินการต่อ",
+        "resumeTooltip": "ดำเนินการสคริปต์ต่อ",
+        "pause": "หยุดชั่วคราว",
+        "pauseTooltip": "หยุดการทำงานของสคริปต์ชั่วคราว",
+        "unsaved": "ยังไม่ได้บันทึก",
+        "clearCanvas": "ล้างผืนผ้าใบ",
+        "zoomIn": "ขยายเข้า",
+        "zoomOut": "ย่อออก",
+        "fit": "พอดีหน้าจอ",
+        "export": "ส่งออกสคริปต์",
+        "import": "นำเข้าสคริปต์",
+        "exportSuccess": "ส่งออกสคริปต์สำเร็จแล้ว",
+        "importSuccess": "นำเข้าสคริปต์สำเร็จแล้ว",
+        "importError": "นำเข้าสคริปต์ไม่สำเร็จ"
+      },
+      "palette": {
+        "title": "พาเลตต์โหนด",
+        "search": "ค้นหาโหนด..."
+      },
+      "logs": {
+        "title": "บันทึกการทำงาน",
+        "clearTitle": "ล้างบันทึก",
+        "noLogs": "ยังไม่มีบันทึก รันสคริปต์เพื่อดูบันทึก",
+        "entries_other": "{{count}} รายการ"
+      },
+      "contextMenu": {
+        "duplicate": "ทำซ้ำ",
+        "rename": "เปลี่ยนชื่อ",
+        "disconnectAll": "ตัดการเชื่อมต่อทั้งหมด",
+        "collapse": "ย่อ",
+        "expand": "ขยาย",
+        "mute": "ปิดเสียง",
+        "unmute": "เปิดเสียง",
+        "showPreview": "แสดงตัวอย่าง",
+        "hidePreview": "ซ่อนตัวอย่าง",
+        "delete": "ลบ"
+      }
+    }
+  }
+}

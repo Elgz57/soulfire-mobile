@@ -1,0 +1,540 @@
+{
+  "locale": "Locael",
+  "close": "Cloes",
+  "cancel": "cancel k?",
+  "save": "SAEV",
+  "saving": "SAEVIN...",
+  "error": {
+    "noAddressOrToken": "No servr addres or token findz",
+    "page": {
+      "title": "Ewwow",
+      "description": "Error happen when i try give you page. You can see whay in the consol.",
+      "logOut": "Walk out",
+      "reloadPage": "Spin paeg",
+      "showDetails": "Sho detalez"
+    },
+    "connectionFailed": "Cunnection unsuccessful."
+  },
+  "notFound": {
+    "page": {
+      "title": "Nuh Found",
+      "description": "Ma can't find your page",
+      "logOut": "Walk out",
+      "reloadPage": "Spin paeg"
+    }
+  },
+  "pending": {
+    "connecting": "Catwalking..."
+  },
+  "dialog": {
+    "about": {
+      "title": "Who SoulFire",
+      "description": "I zee vawiant {{version}} of SoulFire cwient.",
+      "type": "Tyep",
+      "value": "Value",
+      "fields": {
+        "serverVersion": "Servur Verzhun",
+        "serverCommit": "Servur Commitz",
+        "serverBranch": "Servur Brancheh",
+        "minecraftVersion": "Minecraft Verzhun",
+        "operatingSystem": "Operatin Sistem",
+        "platform": "Platform",
+        "locale": "Locael",
+        "architecture": "Architecchur",
+        "environment": "Environment",
+        "browser": "Browsr"
+      },
+      "close": "Cloes"
+    },
+    "createInstance": {
+      "title": "Creaet nu instanec",
+      "description": "Instances ned friendly namez 4 u 2 distinguish dem. Srsly It can bees any naym u wantz, 4 exampel, \"mah Minecraft Bot\".",
+      "form": {
+        "friendlyName": {
+          "label": "Friendly naym",
+          "placeholder": "Mah Minecraft Bot",
+          "description": "Teh naym u wantz 2 giv 2 dis instanec.",
+          "min": "Teh friendly naym must bees at least 3 characterz long.",
+          "max": "Teh friendly naym must bees at most 32 characterz long.",
+          "regex": "Friendly naym only haz letterz, numberz, an spacez, kthx"
+        },
+        "cancel": "cancel k?",
+        "create": "Makee Makee"
+      },
+      "createToast": {
+        "loading": "Creatin instanec...",
+        "success": "Instanec creatd successfully",
+        "error": "Faild 2 creaet instanec"
+      }
+    },
+    "import": {
+      "main": {
+        "fromFile": "Frum fiel",
+        "fromUrl": "Frum URL",
+        "firstClipboardItem": "U had multipel itemz in teh clipboard, only usin furst wan.",
+        "fromClipboard": "Frum clipboard",
+        "textarea": {
+          "placeholder": "Give taxt here...",
+          "submit": "Load form taxt"
+        }
+      },
+      "url": {
+        "description": "Loadin frum URL will mak teh SoulFire servr mak git request 2 teh target servr an ues teh respones as teh daat.",
+        "form": {
+          "url": {
+            "placeholder": "Put URL hah...",
+            "empty": "Plez give valid URL"
+          }
+        },
+        "submit": "Load form URL",
+        "toast": {
+          "loading": "Dawnloadin data...",
+          "success": "Data lodaded!",
+          "error": "Teh download failed"
+        }
+      }
+    }
+  },
+  "commandInput": {
+    "placeholder": "Entah teh command (type 'help' if yar confoosed)",
+    "emptySuggestions": "Typz to get sugjestshunz or smash Tab, kthx.",
+    "noSuggestions": "No sugjestshunz r here, sry."
+  },
+  "controls": {
+    "start": "Strat",
+    "resume": "Resoome",
+    "pause": "Pawse",
+    "stop": "Stawp",
+    "startToast": {
+      "loading": "Startin seshun...",
+      "success": "Seshun strated succesfully!",
+      "error": "Fialed tu strat seshun"
+    },
+    "resumeToast": {
+      "loading": "Resoomin seshun...",
+      "success": "Seshun resoomed pawfectly!",
+      "error": "Fialed tu resoom seshun"
+    },
+    "pauseToast": {
+      "loading": "Pawsin seshun...",
+      "success": "Seshun pawzed, gud job!",
+      "error": "Oops, can no pawz seshun :("
+    },
+    "stopToast": {
+      "loading": "Stoppin seshun...",
+      "success": "Seshun stopped, yaaay!",
+      "error": "Can no stop seshun, halp!"
+    },
+    "accountWarning": {
+      "noAccountsTitle": "No Akownz Setted Up",
+      "noAccountsDescription": "U needz tu import accountz b4 startin seshun. U asked for {{required}} kittehbotz.",
+      "notEnoughTitle": "Not Enuf Akownz",
+      "notEnoughDescription": "U wantd {{required}} botz but hav only {{available}} akownz imported.",
+      "hint": "U can make offlain akownz or import frum teh Akown Settin'z page.",
+      "continueWithExisting": "Continue wif {{count}} akownz",
+      "generateAccounts": "Genurayt Accountz!"
+    }
+  },
+  "icon": {
+    "invalidName": "Invalid ikon naym: {{name}}"
+  },
+  "dataTable": {
+    "noResults": "Nu results.",
+    "rowsSelected": "{{amount}} ov {{total}} row(s) selekted",
+    "rowsPerPage": "Rowz per page",
+    "currentPage": "Page {{page}} ov {{total}}",
+    "goFirst": "Go to furst page",
+    "goPrevious": "Go to previous page",
+    "goNext": "Go to next page",
+    "goLast": "Go to last page",
+    "selectAll": "Selecc all",
+    "selectRow": "Selekt row",
+    "selected": "{{count}} selektid",
+    "clearSelection": "Cler selekshun",
+    "escape": "Esc",
+    "filter": "FILTUR",
+    "filters": "FILTRZ",
+    "noFiltersApplied": "No filturz applyd",
+    "modifyFilters": "Modifi filtrz 2 refinez ur rowz.",
+    "addFilters": "Ad filtrz 2 refinez ur rowz.",
+    "addFilter": "Ad filtur",
+    "resetFilters": "Reset filturz",
+    "reset": "RESET",
+    "where": "WHAR",
+    "selectField": "Selekt field",
+    "searchFields": "Serch fields...",
+    "noFieldsFound": "No fields founded.",
+    "enterValue": "Enters a valu...",
+    "enterValueShort": "Enter valu...",
+    "true": "Troo",
+    "false": "Falsies",
+    "selectOption": "Selekt opshun...",
+    "selectOptions": "Selekt opshuns...",
+    "searchOptions": "Serch opshuns...",
+    "noOptionsFound": "No opshuns founded.",
+    "pickDateShort": "Pick date...",
+    "typeToFilter": "Type 2 ad filtur...",
+    "filterByValue": "Filtur by \"{{value}}\"",
+    "view": "VYOO",
+    "searchColumns": "Serch columz...",
+    "noColumnsFound": "No columz founded.",
+    "toggleColumns": "Toggle columz",
+    "sort": "SORT",
+    "sortBy": "Sort by",
+    "noSortingApplied": "No sorting applyd",
+    "modifySorting": "Modifi sorting 2 organiz ur rowz.",
+    "addSorting": "Ad sorting 2 organiz ur rowz.",
+    "addSort": "Ad sort",
+    "resetSorting": "Reset sorting",
+    "columnHeader": {
+      "asc": "Asc",
+      "desc": "Desc",
+      "reset": "RESET",
+      "hide": "HIED"
+    },
+    "operators": {
+      "iLike": "Kontains",
+      "notILike": "DuZ not kontain",
+      "eq": "Iz",
+      "ne": "Iz not",
+      "isEmpty": "Iz empty",
+      "isNotEmpty": "Iz not empty",
+      "lt": "Iz less dan",
+      "lte": "Iz less dan or eequalz 2",
+      "gt": "Iz gr8er dan",
+      "gte": "Iz gr8er dan or eequalz 2",
+      "isBetween": "Iz betweenz",
+      "isRelativeToToday": "Iz rel8iv 2 2day",
+      "ltDate": "Iz b4",
+      "gtDate": "Iz afta",
+      "lteDate": "Iz on or b4",
+      "gteDate": "Iz on or afta",
+      "inArray": "Haz any uv",
+      "notInArray": "Haz nun uv"
+    },
+    "sortOrders": {
+      "asc": "Asc",
+      "desc": "Desc"
+    }
+  },
+  "pluginCard": {
+    "version": "Vurshun: {{version}}",
+    "author": "Author: {{author}}",
+    "license": "License: {{license}}",
+    "website": "Website"
+  },
+  "settingsPage": {
+    "namespacesNotFound": "Settingz naymespaces not finded",
+    "stringList": {
+      "placeholder": "Add new entry...",
+      "add": "Put stuff",
+      "remove": "Exit stuff"
+    },
+    "invalidNumberToast": {
+      "title": "Dats Invalid Number!",
+      "description": "Da valyo must be btw {{min}} an {{max}}"
+    }
+  },
+  "terminal": {
+    "noLogs": "🧙 It lookz lyk no logz 2 show; go rayn sum commanz!",
+    "demo-1": "Herro, demo mode! 🧪",
+    "demo-2": "Dis iz read-only SoulFire thingy",
+    "demo-3": "Check awt all teh menuz an fun stuff befur puttin SoulFire on ur blockz :D",
+    "demo-4": "If u wanna meow, hopz on our Discord: https://soulfiremc.com/discord"
+  },
+  "uiBreadcrumb": {
+    "more": "More"
+  },
+  "uiDialog": {
+    "close": "Cloes"
+  },
+  "uiSheet": {
+    "close": "Cloes"
+  },
+  "uiSidebar": {
+    "toggle": "Toggle Sidebar"
+  },
+  "castMenu": {
+    "title": "Cast",
+    "disconnected": "Disconectd frum {{device}}",
+    "alreadyConnected": "You alreddy connekted to {{device}}",
+    "connectToast": {
+      "loading": "Connektin to {{device}}...",
+      "success": "Connekted to {{device}}",
+      "error": "Faild 2 connekt to {{device}}"
+    },
+    "noDevices": "No devisez foundz",
+    "broadcastLabel": "Broadcast test",
+    "broadcastToast": {
+      "loading": "Broadcastin messige...",
+      "success": "Messige broadcasted!",
+      "error": "Failed 2 broadcast messige"
+    }
+  },
+  "instanceSidebar": {
+    "readDocumentation": "Reed dokumentashun",
+    "backToDashboard": "Bak 2 dashboard",
+    "deleteToast": {
+      "loading": "Deletin instance...",
+      "success": "Instance deleted",
+      "error": "Faild 2 delet instance"
+    },
+    "instancesGroup": "Instances",
+    "createInstance": "Creeate Instance",
+    "loadProfileToast": {
+      "loading": "Loadin profile...",
+      "success": "Profile loaded",
+      "error": "Faild 2 load profile"
+    },
+    "loadProfile": "Load Profile",
+    "loadFromFile": "Load frum file",
+    "profileSaved": "Profile saved",
+    "saveProfile": "Save Profile",
+    "deleteInstance": "Deleet Instance",
+    "controlsGroup": "Controlz",
+    "overview": "Ovarview",
+    "terminal": "Termenawl",
+    "bots": "BOTZ",
+    "audit-log": "Audit Log",
+    "settingsGroup": "Settingz",
+    "extensionsGroup": "EXTENSCHUNZ",
+    "botSettings": "Bot Settingz",
+    "accountSettings": "Account Settingz",
+    "metaSettings": "Instance Settingz",
+    "proxySettings": "Proxy Settingz",
+    "aiSettings": "AI Settingz",
+    "pathfindingSettings": "Pathfindin Settin'z",
+    "discoverPlugins": "Plugins",
+    "instanceScripts": "Scriptz"
+  },
+  "userSidebar": {
+    "readDocumentation": "Reed dokumentashun",
+    "userGroup": "Uzer",
+    "instances": "Instances",
+    "access": "Akcess",
+    "createInstance": "Creeate Instance",
+    "settings": "Settingz",
+    "adminGroup": "Admin",
+    "adminOverview": "Ovarview",
+    "adminLogs": "LOGZ",
+    "adminTerminal": "Termenawl",
+    "users": "Hoomans",
+    "adminScripts": "Scriptz",
+    "serverSettings": "Server Settingz",
+    "devSettings": "Dev Settingz",
+    "theme": {
+      "title": "Theme",
+      "system": "Sistem",
+      "light": "Lite",
+      "dark": "Dark"
+    },
+    "terminal": {
+      "title": "Termenawl"
+    },
+    "configDir": "Config direktery",
+    "dataDir": "Data direktery",
+    "about": "Aboutz",
+    "logOut": "Walk out",
+    "logOutToast": {
+      "loading": "Loggin owt...",
+      "success": "Logged owt",
+      "error": "Faild 2 log owt"
+    },
+    "exit": "Exitz",
+    "stopImpersonating": "Stop im-pur-sonatin",
+    "helpTranslate": "Halp translayt SoulFire"
+  },
+  "sidebar": {
+    "documentation": "Documentashun",
+    "supportSoulFire": "Buy me coffeez",
+    "discord": "Discord"
+  },
+  "breadcrumbs": {
+    "admin": "Admin",
+    "settings": "Settingz",
+    "controls": "Controlz",
+    "extensions": "EXTENSCHUNZ",
+    "bots": "BOTZ"
+  },
+  "noInstancesFound": "No instancez founded",
+  "pageName": {
+    "terminal": "Termenawl",
+    "logs": "LOGZ",
+    "audit-log": "Audit Log",
+    "bots": "BOTZ",
+    "botDetail": "BOT DTAILZ",
+    "instances": "Instances",
+    "access": "Akcess",
+    "settings": "Settingz",
+    "proxySettings": "Proxy Settingz",
+    "overview": "Ovarview",
+    "users": "Hoomans",
+    "accountSettings": "Account Settingz",
+    "metaSettings": "Instance Settingz",
+    "discoverPlugins": "Plugins",
+    "adminScripts": "Scriptz",
+    "instanceScripts": "Scriptz"
+  },
+  "access": {
+    "webdav": {
+      "title": "WebDAV Akcess",
+      "description": "SoulFire lets u akcess instance, scriptz an stuff wif WebDAV proto-kol.",
+      "publicAddress": "Public WebDAV Adress",
+      "personalToken": "Pursonal WebDAV Token",
+      "securityWarning": "Ur pursonal WebDAV Token iz srs biznes. Don't gives it 2 anycat. It makez u log in, so yus it as WebDAV passwurd. Username izn't needed, but put whateever (ex. 'soulfire').",
+      "addressDescription": "Dis iz teh adress you need 2 get ur filez. Sometimes u use dav:// or davs:// instead ov http(s)://."
+    },
+    "api": {
+      "title": "API Akcess",
+      "description": "SoulFire's gRPC HTTP API lets u play wif ur instancez using cheezburgerz... we mean, web reqwests.",
+      "publicAddress": "Public API Adress",
+      "personalToken": "Pursonal API Token",
+      "securityWarning": "Ur pursonal API Token iz srs biznes. Don't givz to anycat. Iz for ur API only.",
+      "addressDescription": "Dis iz da adress to yo API."
+    },
+    "token": {
+      "generate": "Genrate Token",
+      "placeholder": "Clik 'Genrate Token' belowz",
+      "generating": "Genrating token...",
+      "success": "Token made'd successfulleh",
+      "error": "Faild 2 genrate token",
+      "copy": "Coppy Token"
+    },
+    "address": {
+      "copy": "Coppy Adress"
+    },
+    "documentation": "Documentashun",
+    "howToConnect": "How 2 connekt"
+  },
+  "uploadToMcLogs": "Uplod to mclo.gs",
+  "mcLogsUpload": {
+    "loading": "Uplodin to mclo.gs...",
+    "success": "Uploded to mclo.gs! Seez it heer: {{url}}",
+    "error": "Uplod to mclo.gs FAILED!"
+  },
+  "searchWithGoogle": "Seerch wit Google",
+  "copyToClipboard": "Copyz to clipbored",
+  "clipboardCopy": {
+    "loading": "Copyin to clipbored...",
+    "success": "Copied \"{{content}}\" to clipbored",
+    "error": "Copyz to clipbored FAILED!"
+  },
+  "userSettings": {
+    "avatar": {
+      "title": "Avatarr",
+      "description": "Ur usah avatarr iz based on ur akount email adress. U kin changez avatarr 4 ur email adress at",
+      "gravatar": "Gravataar"
+    },
+    "username": {
+      "uiName": "Usernamez",
+      "description": "Ur usahname iz used 2 identifi u in teh UI an in logz."
+    },
+    "email": {
+      "uiName": "EMAYL",
+      "description": "Ur email iz used 4 login an notifikashunz."
+    }
+  },
+  "auditLog": {
+    "filterPlaceholder": "Filter audit logz...",
+    "user": "Uzer",
+    "action": "Akshun",
+    "type": "Tyep",
+    "timestamp": "Timestamp",
+    "searchUsers": "Serch usahs...",
+    "searchTimestamps": "Serch timez stampz...",
+    "executedCommand": "Did command: {{data}}",
+    "contextMenu": {
+      "copyUsername": "Copy Usernamez",
+      "copyCommand": "Copy Commandz"
+    }
+  },
+  "toggleTheme": "Toggle thiem",
+  "pickADate": "Pickz a datez",
+  "scripts": {
+    "filterPlaceholder": "Filter scriptz...",
+    "baseScriptDialog": {
+      "form": {
+        "scriptName": {
+          "min": "Script naymz need b at leest 3 letturz",
+          "max": "Script naymz can be 32 letterz max",
+          "regex": "Script names haz 2 be only smol letterz, start wif one lettur or numb, then letturz/numbz/dashz, an end wif lettur or numb.",
+          "label": "Naym",
+          "placeholder": "Mah Script",
+          "description": "Da naym of da script."
+        },
+        "elevatedPermissions": {
+          "label": "Elevatid Permishunz",
+          "description": "If script shud run like boss. Only admins can cheez this."
+        }
+      }
+    },
+    "addScriptDialog": {
+      "title": "Add new script",
+      "description": "Scriptz r smol codez runnin on da SoulFire servr. U ken do automate stuff, custom fun, much wow.",
+      "form": {
+        "cancel": "cancel k?",
+        "add": "Put stuff"
+      }
+    },
+    "updateScriptDialog": {
+      "title": "Uppdate script",
+      "description": "Uppdate informations of da script.",
+      "form": {
+        "cancel": "cancel k?",
+        "update": "Uppdate"
+      }
+    },
+    "removeToast": {
+      "loading": "Remooving scriptz...",
+      "success": "Scriptz remooved!",
+      "error": "Faild 2 remoove scriptz"
+    },
+    "addToast": {
+      "loading": "Addin script...",
+      "success": "Script added!",
+      "error": "Faild 2 add script"
+    },
+    "updateToast": {
+      "loading": "Uppdating script...",
+      "success": "Scriptz updated!",
+      "error": "Faild 2 uppdate script"
+    },
+    "restartToast": {
+      "loading": "Restarrting script...",
+      "success": "Scriptz restarted!",
+      "error": "Faild 2 restarrt script"
+    },
+    "table": {
+      "type": "Tyep",
+      "scriptName": "Naym",
+      "language": "Langwage",
+      "elevatedPermissions": "Elevatid Permishunz",
+      "createdAt": "Makd",
+      "actions": "Akshuns"
+    },
+    "globalScript": "Globel",
+    "instanceScript": "Inztanz"
+  },
+  "contextMenu": {
+    "instance": {
+      "goToInstance": "Go tu Instanz",
+      "copyInstanceId": "Copy Instunce IDZ",
+      "copyInstanceName": "Copy Instunce Naym",
+      "deleteInstance": "Deleet Instance"
+    },
+    "bot": {
+      "goToBot": "Go tu Bot",
+      "copyUsername": "Copy Usernamez",
+      "copyUuid": "Copy UUIDZ",
+      "copyCoordinates": "Copy Ceewrdinaytz"
+    },
+    "plugin": {
+      "enable": "Enablez",
+      "disable": "Disablez",
+      "openSettings": "Open Settingz",
+      "copyPluginName": "Copy Plugun Naym",
+      "copyVersion": "Copy Verzshun",
+      "openWebsite": "Open Websyte"
+    }
+  }
+}

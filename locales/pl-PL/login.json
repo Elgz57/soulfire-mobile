@@ -1,0 +1,110 @@
+{
+  "header": {
+    "image": {
+      "alt": "Logo SoulFire"
+    },
+    "title": "SoulFire"
+  },
+  "newUser": "Nowy w SoulFire? Polecamy zapoznać się z <a>przewodnikiem dla początkujących</a>.",
+  "connect": {
+    "title": "Połącz z serwerem SoulFire",
+    "description": "Wybierz typ serwera SoulFire, z którym chcesz się połączyć.",
+    "integrated": {
+      "title": "Serwer zintegrowany (lokalny)",
+      "description": "Uruchamia serwer SoulFire na twoim komputerze. Konfiguracja jest automatyczna i nie wymaga żadnych ustawień. (Wymaga aplikacji Desktop/Android)"
+    },
+    "dedicated": {
+      "title": "Serwer dedykowany (zdalny)",
+      "description": "Łączy się ze zdalną instancją serwera SoulFire. Będziesz musiał podać adres i token serwera."
+    },
+    "demo": {
+      "title": "Serwer demonstracyjny",
+      "description": "Symuluje serwer wirtualny z danymi demonstracyjnymi. Ten serwer jest tylko do odczytu i nie możesz w nim wprowadzać żadnych zmian."
+    }
+  },
+  "integrated": {
+    "preparing": "Przygotowywanie do uruchomienia zintegrowanego serwera...",
+    "toast": {
+      "loading": "Uruchamianie serwera zintegrowanego...",
+      "success": "Zintegrowany serwer uruchomiony w {{time}} s",
+      "error": "Nie udało się uruchomić serwera zintegrowanego"
+    },
+    "retry": "Ponów próbę",
+    "reset": {
+      "button": "Zresetuj dane",
+      "loading": "Resetowanie danych SoulFire...",
+      "success": "Dane SoulFire zostały zresetowane. Spróbuj ponownie uruchomić.",
+      "error": "Nie udało się zresetować danych SoulFire"
+    },
+    "description": "Zintegrowany serwer działa lokalnie na Twoim komputerze. W razie potrzeby skonfiguruj poniżej argumenty uruchamiania Javy.",
+    "form": {
+      "jvmArgs": {
+        "title": "Argumenty JVM",
+        "description": "Argumenty Java VM dla SoulFire. Aby użyć 4GB RAM, dodaj <bold>-Xmx4G</bold>. Domyślnie ustawione jest 25% Twojego RAM-u.",
+        "placeholder": "Twoje argumenty JVM tutaj"
+      },
+      "back": "Wróć",
+      "start": "Rozpocznij"
+    },
+    "mobile": {
+      "description": "Aby uruchomić zintegrowany serwer na urządzeniu mobilnym, musisz wykonać kilka ręcznych kroków.",
+      "form": {
+        "termuxCommand": {
+          "title": "Polecenie Termux",
+          "description": "Zainstaluj <a>aplikację Termux</a>, a następnie uruchom to polecenie w Termuxie, aby zainstalować serwer SoulFire. Następnie będziesz musiał uruchomić polecenie <copy>generate-token api</copy>, aby wygenerować token. Później wprowadź token poniżej."
+        },
+        "token": {
+          "title": "Token",
+          "description": "Token do uwierzytelniania z lokalnym serwerem.",
+          "placeholder": "Tajny token"
+        },
+        "back": "Wróć",
+        "connect": "Połącz"
+      }
+    }
+  },
+  "dedicated": {
+    "description": "Umieść adres i token serwera SoulFire, z którym chcesz się połączyć.",
+    "toast": {
+      "loading": "Łączenie z serwerem...",
+      "success": "Połączono z serwerem",
+      "error": "Nie udało się połączyć z serwerem"
+    },
+    "form": {
+      "address": {
+        "title": "Adres",
+        "description": "Adres twojego serwera SoulFire.",
+        "placeholder": "http://localhost:38765"
+      },
+      "token": {
+        "title": "Token",
+        "placeholder": "Tajny token",
+        "description": "Token do uwierzytelniania z serwerem."
+      },
+      "email": {
+        "title": "E-mail",
+        "placeholder": "root@soulfiremc.com",
+        "description": "E-mail twojego konta SoulFire."
+      },
+      "back": "Wróć",
+      "useToken": "Użyj tokena",
+      "useEmail": "Użyj e-maila",
+      "login": "Zaloguj się"
+    }
+  },
+  "emailCode": {
+    "description": "Jeśli posiadasz konto, wysłaliśmy kod do <bold>{{email}}</bold>. Wprowadź go poniżej.",
+    "toast": {
+      "loading": "Sprawdzanie kodu...",
+      "success": "Zalogowano",
+      "error": "Kod jest nieprawidłowy"
+    },
+    "back": "Wróć"
+  },
+  "footer": {
+    "version": "Klient SoulFire {{version}} - {{environment}}",
+    "preview": "Szukasz podglądu?",
+    "production": "Szukasz wersji produkcyjnej?",
+    "helpTranslate": "Przetłumacz SoulFire"
+  }
+}

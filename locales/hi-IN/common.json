@@ -1,0 +1,540 @@
+{
+  "locale": "लोकैल",
+  "close": "बंद करें",
+  "cancel": "रद्द करें",
+  "save": "सहेजें",
+  "saving": "सहेजा जा रहा है...",
+  "error": {
+    "noAddressOrToken": "कोई सर्वर पता या टोकन नहीं मिला",
+    "page": {
+      "title": "त्रुटि",
+      "description": "पृष्ठ लोड करने की कोशिश करते समय एक त्रुटि हुई। अधिक जानकारी कंसोल में मिल सकती है।",
+      "logOut": "लॉग आउट करें",
+      "reloadPage": "पृष्ठ पुनः लोड करें",
+      "showDetails": "विवरण दिखाएँ"
+    },
+    "connectionFailed": "SoulFire सर्वर से कनेक्शन विफल रहा।"
+  },
+  "notFound": {
+    "page": {
+      "title": "नहीं मिला",
+      "description": "इस स्थान पर कोई पृष्ठ नहीं मिला",
+      "logOut": "लॉग आउट करें",
+      "reloadPage": "पृष्ठ पुनः लोड करें"
+    }
+  },
+  "pending": {
+    "connecting": "कनेक्ट हो रहा है..."
+  },
+  "dialog": {
+    "about": {
+      "title": "SoulFire के बारे में",
+      "description": "आप SoulFire क्लाइंट का संस्करण {{version}} चला रहे हैं।",
+      "type": "प्रकार",
+      "value": "मान",
+      "fields": {
+        "serverVersion": "सर्वर संस्करण",
+        "serverCommit": "सर्वर कमिट",
+        "serverBranch": "सर्वर ब्रांच",
+        "minecraftVersion": "माइनक्राफ्ट संस्करण",
+        "operatingSystem": "ऑपरेटिंग सिस्टम",
+        "platform": "प्लेटफ़ॉर्म",
+        "locale": "लोकैल",
+        "architecture": "आर्किटेक्चर",
+        "environment": "पर्यावरण",
+        "browser": "ब्राउज़र"
+      },
+      "close": "बंद करें"
+    },
+    "createInstance": {
+      "title": "नई इंस्टेंस बनाएँ",
+      "description": "इंस्टेंस को पहचानने के लिए आपको मित्रवत नाम की आवश्यकता होती है। यह कोई भी नाम हो सकता है, उदाहरण के लिए, \"मेरा Minecraft बॉट\"।",
+      "form": {
+        "friendlyName": {
+          "label": "मित्रवत नाम",
+          "placeholder": "मेरा Minecraft बॉट",
+          "description": "इस इंस्टेंस को आप कौन सा नाम देना चाहते हैं।",
+          "min": "मित्रवत नाम कम से कम 3 अक्षर लंबा होना चाहिए।",
+          "max": "मित्रवत नाम अधिकतम 32 अक्षर लंबा हो सकता है।",
+          "regex": "मित्रवत नाम में केवल अक्षर, संख्याएँ और स्पेस हो सकते हैं"
+        },
+        "cancel": "रद्द करें",
+        "create": "बनाएँ"
+      },
+      "createToast": {
+        "loading": "इंस्टेंस बन रहा है...",
+        "success": "इंस्टेंस सफलतापूर्वक बनाया गया",
+        "error": "इंस्टेंस बनाना विफल"
+      }
+    },
+    "import": {
+      "main": {
+        "fromFile": "फ़ाइल से",
+        "fromUrl": "URL से",
+        "firstClipboardItem": "क्लिपबोर्ड में कई आइटम थे, केवल पहला उपयोग किया जा रहा है।",
+        "fromClipboard": "क्लिपबोर्ड से",
+        "textarea": {
+          "placeholder": "यहाँ पाठ डालें...",
+          "submit": "पाठ से लोड करें"
+        }
+      },
+      "url": {
+        "description": "URL से लोड करने पर SoulFire सर्वर लक्षित सर्वर के लिए GET अनुरोध करेगा और उसके उत्तर को डेटा के रूप में उपयोग करेगा।",
+        "form": {
+          "url": {
+            "placeholder": "यहाँ URL डालें...",
+            "empty": "कृपया एक वैध URL दर्ज करें"
+          }
+        },
+        "submit": "URL से लोड करें",
+        "toast": {
+          "loading": "डेटा डाउनलोड हो रहा है...",
+          "success": "डेटा लोड हो गया!",
+          "error": "डेटा डाउनलोड करने में विफल"
+        }
+      }
+    }
+  },
+  "commandInput": {
+    "placeholder": "कमान्ड दर्ज करें (सूची के लिए 'help' टाइप करें)",
+    "emptySuggestions": "सुझाव प्राप्त करने के लिए टाइप करें या Tab दबाएँ।",
+    "noSuggestions": "कोई सुझाव उपलब्ध नहीं हैं।"
+  },
+  "controls": {
+    "start": "प्रारंभ करें",
+    "resume": "फिर से शुरू करें",
+    "pause": "रोकें",
+    "stop": "बंद करें",
+    "startToast": {
+      "loading": "सत्र शुरू हो रहा है...",
+      "success": "सत्र सफलतापूर्वक शुरू हुआ",
+      "error": "सत्र शुरू करने में विफल"
+    },
+    "resumeToast": {
+      "loading": "सत्र फिर से चालू हो रहा है...",
+      "success": "सत्र सफलतापूर्वक फिर से चालू हुआ",
+      "error": "सत्र फिर से चालू करने में विफल"
+    },
+    "pauseToast": {
+      "loading": "सत्र रोक रहा है...",
+      "success": "सत्र सफलतापूर्वक रोक दिया गया है",
+      "error": "सत्र को रोकने में विफल"
+    },
+    "stopToast": {
+      "loading": "सत्र को रोका जा रहा है...",
+      "success": "सत्र सफलतापूर्वक बंद किया गया",
+      "error": "सत्र बंद करने में विफल"
+    },
+    "accountWarning": {
+      "noAccountsTitle": "कोई अकाउंट कॉन्फ़िगर नहीं किया गया",
+      "noAccountsDescription": "सत्र शुरू करने से पहले आपको खाते आयात करने होंगे। आपने {{required}} बॉट्स का अनुरोध किया है।",
+      "notEnoughTitle": "पर्याप्त अकाउंट्स नहीं",
+      "notEnoughDescription": "आपने {{required}} बॉट्स का अनुरोध किया लेकिन केवल {{available}} अकाउंट्स इंपोर्ट किए गए हैं।",
+      "hint": "आप ऑफ़लाइन अकाउंट्स जेनरेट कर सकते हैं या अकाउंट सेटिंग्स पेज से अकाउंट्स इंपोर्ट कर सकते हैं।",
+      "continueWithExisting": "{{count}} अकाउंट्स के साथ जारी रखें",
+      "generateAccounts": "खाते जनरेट करें"
+    }
+  },
+  "icon": {
+    "invalidName": "अमान्य आइकन नाम: {{name}}"
+  },
+  "dataTable": {
+    "noResults": "कोई परिणाम नहीं।",
+    "rowsSelected": "{{amount}} में से {{total}} पंक्ति{one} चुनी गई है|{other} चुनी गई हैं",
+    "rowsPerPage": "प्रति पृष्ठ पंक्तियाँ",
+    "currentPage": "पृष्ठ {{page}}/{{total}}",
+    "goFirst": "पहला पृष्ठ पर जाएँ",
+    "goPrevious": "पिछला पृष्ठ पर जाएँ",
+    "goNext": "अगला पृष्ठ पर जाएँ",
+    "goLast": "आखिरी पृष्ठ पर जाएँ",
+    "selectAll": "सभी चुनें",
+    "selectRow": "पंक्ति चुनें",
+    "selected": "{count} चयनित",
+    "clearSelection": "चयन साफ़ करें",
+    "escape": "Esc",
+    "filter": "फ़िल्टर",
+    "filters": "फ़िल्टर",
+    "noFiltersApplied": "कोई फ़िल्टर लागू नहीं किया गया",
+    "modifyFilters": "अपनी पंक्तियों को परिष्कृत करने के लिए फ़िल्टर बदलें।",
+    "addFilters": "अपनी पंक्तियों को परिष्कृत करने के लिए फ़िल्टर जोड़ें।",
+    "addFilter": "फ़िल्टर जोड़ें",
+    "resetFilters": "फ़िल्टर रीसेट करें",
+    "reset": "रीसेट करें",
+    "where": "जहां",
+    "selectField": "फ़ील्ड चुनें",
+    "searchFields": "फ़ील्ड खोजें...",
+    "noFieldsFound": "कोई फ़ील्ड नहीं मिला।",
+    "enterValue": "कोई मान दर्ज करें...",
+    "enterValueShort": "मान दर्ज करें...",
+    "true": "सत्य",
+    "false": "असत्य",
+    "selectOption": "विकल्प चुनें...",
+    "selectOptions": "विकल्प चुनें...",
+    "searchOptions": "विकल्प खोजें...",
+    "noOptionsFound": "कोई विकल्प नहीं मिला।",
+    "pickDateShort": "तारीख़ चुनें...",
+    "typeToFilter": "फ़िल्टर जोड़ने के लिए टाइप करें...",
+    "filterByValue": "\"{value}\" द्वारा फ़िल्टर करें",
+    "view": "देखें",
+    "searchColumns": "कॉलम खोजें...",
+    "noColumnsFound": "कोई कॉलम नहीं मिला।",
+    "toggleColumns": "कॉलम टॉगल करें",
+    "sort": "छाँटें",
+    "sortBy": "इसके अनुसार छाँटें",
+    "noSortingApplied": "कोई छँटाई लागू नहीं की गई",
+    "modifySorting": "अपनी पंक्तियों को व्यवस्थित करने के लिए छँटाई बदलें।",
+    "addSorting": "अपनी पंक्तियों को व्यवस्थित करने के लिए छँटाई जोड़ें।",
+    "addSort": "छँटाई जोड़ें",
+    "resetSorting": "छँटाई रीसेट करें",
+    "columnHeader": {
+      "asc": "आरोही",
+      "desc": "अवरोही",
+      "reset": "रीसेट करें",
+      "hide": "छिपाएँ"
+    },
+    "operators": {
+      "iLike": "शामिल है",
+      "notILike": "शामिल नहीं है",
+      "eq": "है",
+      "ne": "नहीं है",
+      "isEmpty": "खाली है",
+      "isNotEmpty": "खाली नहीं है",
+      "lt": "से कम है",
+      "lte": "या उसके बराबर है",
+      "gt": "से अधिक है",
+      "gte": "या उससे अधिक है",
+      "isBetween": "के बीच है",
+      "isRelativeToToday": "आज की तुलना में सापेक्ष है",
+      "ltDate": "पहले है",
+      "gtDate": "बाद है",
+      "lteDate": "या उससे पहले है",
+      "gteDate": "या उससे बाद है",
+      "inArray": "इनमें से कोई है",
+      "notInArray": "इनमें से कोई नहीं है"
+    },
+    "sortOrders": {
+      "asc": "आरोही",
+      "desc": "अवरोही"
+    }
+  },
+  "pluginCard": {
+    "version": "संस्करण: {{version}}",
+    "author": "लेखक: {{author}}",
+    "license": "लाइसेंस: {{license}}",
+    "website": "वेबसाइट"
+  },
+  "settingsPage": {
+    "namespacesNotFound": "सेटिंग्स नामस्पेस नहीं मिला",
+    "stringList": {
+      "placeholder": "नया प्रविष्टि जोड़ें...",
+      "add": "जोड़ें",
+      "remove": "हटाएँ"
+    },
+    "invalidNumberToast": {
+      "title": "अमान्य संख्या!",
+      "description": "मान {{min}} से {{max}} के बीच होना चाहिए"
+    }
+  },
+  "terminal": {
+    "noLogs": "🧙 ऐसा लगता है कि दिखाने के लिए कोई लॉग नहीं हैं; कुछ कमांड चलाएँ!",
+    "demo-1": "डेमो मोड में स्वागत है! 🧪",
+    "demo-2": "यह SoulFire का केवल-पढ़ने के लिए इंस्टेंस है",
+    "demo-3": "स्थापित करने से पहले सभी मेनू और फ़ीचर देख लें :D",
+    "demo-4": "अगर आप हमसे जुड़ना चाहते हैं, तो हमारे Discord सर्वर से जुड़े: https://soulfiremc.com/discord"
+  },
+  "uiBreadcrumb": {
+    "more": "और अधिक"
+  },
+  "uiDialog": {
+    "close": "बंद करें"
+  },
+  "uiSheet": {
+    "close": "बंद करें"
+  },
+  "uiSidebar": {
+    "toggle": "साइडबार टॉगल करें"
+  },
+  "castMenu": {
+    "title": "कास्ट",
+    "disconnected": "{{device}} से डिस्कनेक्ट किया गया",
+    "alreadyConnected": "पहले से ही {{device}} से जुड़ा हुआ है",
+    "connectToast": {
+      "loading": "{{device}} से कनेक्ट हो रहा है...",
+      "success": "{{device}} से जुड़ गया",
+      "error": "{{device}} से कनेक्ट करने में विफल"
+    },
+    "noDevices": "कोई डिवाइस नहीं मिला",
+    "broadcastLabel": "प्रसारण परीक्षण",
+    "broadcastToast": {
+      "loading": "संदेश प्रसारित हो रहा है...",
+      "success": "संदेश प्रसारित हुआ!",
+      "error": "संदेश प्रसारित करने में विफल"
+    }
+  },
+  "instanceSidebar": {
+    "readDocumentation": "दस्तावेज़ पढ़ें",
+    "backToDashboard": "डैशबोर्ड पर वापस जाएँ",
+    "deleteToast": {
+      "loading": "इंस्टेंस हटाई जा रही है...",
+      "success": "इंस्टेंस हटाई गई",
+      "error": "इंस्टेंस हटाने में विफल"
+    },
+    "instancesGroup": "इंस्टेंस",
+    "createInstance": "इंस्टेंस बनाएँ",
+    "loadProfileToast": {
+      "loading": "प्रोफ़ाइल लोड हो रहा है...",
+      "success": "प्रोफ़ाइल लोड हुआ",
+      "error": "प्रोफ़ाइल लोड करने में विफल"
+    },
+    "loadProfile": "प्रोफ़ाइल लोड करें",
+    "loadFromFile": "फ़ाइल से लोड करें",
+    "profileSaved": "प्रोफ़ाइल सहेजी गई",
+    "saveProfile": "प्रोफ़ाइल सहेजें",
+    "deleteInstance": "इंस्टेंस हटाएँ",
+    "controlsGroup": "नियंत्रण",
+    "overview": "अवलोकन",
+    "terminal": "टर्मिनल",
+    "bots": "बॉट्स",
+    "audit-log": "ऑडिट लॉग",
+    "settingsGroup": "सेटिंग्स",
+    "extensionsGroup": "एक्सटेंशनस्",
+    "botSettings": "बॉट सेटिंग्स",
+    "accountSettings": "अकाउंट सेटिंग्स",
+    "metaSettings": "इंस्टेंस सेटिंग्स",
+    "proxySettings": "प्रॉक्सी सेटिंग्स",
+    "aiSettings": "एआई सेटिंग्स",
+    "pathfindingSettings": "पाथफाइंडिंग सेटिंग्स",
+    "discoverPlugins": "प्लगइन्स",
+    "instanceScripts": "स्क्रिप्ट्स"
+  },
+  "userSidebar": {
+    "readDocumentation": "दस्तावेज़ पढ़ें",
+    "userGroup": "उपयोगकर्ता",
+    "instances": "इंस्टेंस",
+    "access": "पहुँच",
+    "createInstance": "इंस्टेंस बनाएँ",
+    "settings": "सेटिंग्स",
+    "adminGroup": "प्रशासक",
+    "adminOverview": "अवलोकन",
+    "adminLogs": "लॉग्स",
+    "adminTerminal": "टर्मिनल",
+    "users": "उपयोगकर्ता",
+    "adminScripts": "स्क्रिप्ट्स",
+    "serverSettings": "सर्वर सेटिंग्स",
+    "devSettings": "डेव सेटिंग्स",
+    "theme": {
+      "title": "थीम",
+      "system": "सिस्टम",
+      "light": "हल्का",
+      "dark": "डार्क"
+    },
+    "terminal": {
+      "title": "टर्मिनल"
+    },
+    "configDir": "कॉन्फ़िग डायरेक्टरी",
+    "dataDir": "डाटा डायरेक्टरी",
+    "about": "के बारे में",
+    "logOut": "लॉग आउट करें",
+    "logOutToast": {
+      "loading": "लॉग आउट किया जा रहा है...",
+      "success": "लॉग आउट किया गया",
+      "error": "लॉग आउट करने में विफल"
+    },
+    "exit": "बाहर निकलें",
+    "stopImpersonating": "प्रतिरूपण रोकें",
+    "helpTranslate": "SoulFire का अनुवाद करें"
+  },
+  "sidebar": {
+    "documentation": "दस्तावेज़ीकरण",
+    "supportSoulFire": "मुझे कॉफ़ी खरीदें",
+    "discord": "Discord"
+  },
+  "breadcrumbs": {
+    "admin": "प्रशासक",
+    "settings": "सेटिंग्स",
+    "controls": "नियंत्रण",
+    "extensions": "एक्सटेंशनस्",
+    "bots": "बॉट्स"
+  },
+  "noInstancesFound": "कोई इंस्टेंस नहीं मिला",
+  "pageName": {
+    "terminal": "टर्मिनल",
+    "logs": "लॉग्स",
+    "audit-log": "ऑडिट लॉग",
+    "bots": "बॉट्स",
+    "botDetail": "बॉट विवरण",
+    "instances": "इंस्टेंस",
+    "access": "पहुँच",
+    "settings": "सेटिंग्स",
+    "proxySettings": "प्रॉक्सी सेटिंग्स",
+    "overview": "अवलोकन",
+    "users": "उपयोगकर्ता",
+    "accountSettings": "अकाउंट सेटिंग्स",
+    "metaSettings": "इंस्टेंस सेटिंग्स",
+    "discoverPlugins": "प्लगइन्स",
+    "adminScripts": "स्क्रिप्ट्स",
+    "instanceScripts": "स्क्रिप्ट्स"
+  },
+  "access": {
+    "webdav": {
+      "title": "WebDAV एक्सेस",
+      "description": "SoulFire आपको WebDAV प्रोटोकॉल का उपयोग करके इंस्टेंस, स्क्रिप्ट और अन्य फ़ाइलों तक पहुँचने की अनुमति देता है।",
+      "publicAddress": "सार्वजनिक WebDAV पता",
+      "personalToken": "व्यक्तिगत WebDAV टोकन",
+      "securityWarning": "आपका व्यक्तिगत WebDAV टोकन बहुत महत्वपूर्ण है। इसे किसी के साथ साझा न करें। इसका उपयोग आपकी फ़ाइलों तक पहुँचने के लिए प्रमाणीकरण हेतु किया जाता है। इससे कनेक्ट करते समय इसे WebDAV पासवर्ड के रूप में उपयोग करें। उपयोगकर्ता नाम आवश्यक नहीं है; यदि पूछा जाये तो कोई भी मान दे सकते हैं (जैसे 'soulfire')।",
+      "addressDescription": "यह वह पता है जिसका उपयोग आपको अपनी फ़ाइलों तक पहुँचने के लिए करना है। कभी-कभी आपको http(s):// के बजाय dav:// या davs:// का उपयोग करना पड़ सकता है।"
+    },
+    "api": {
+      "title": "API एक्सेस",
+      "description": "SoulFire का gRPC HTTP API आपको वेब अनुरोधों का उपयोग करके अपने इंस्टेंस के साथ प्रोग्रामेटिक इंटरैक्शन की अनुमति देता है।",
+      "publicAddress": "सार्वजनिक API पता",
+      "personalToken": "व्यक्तिगत API टोकन",
+      "securityWarning": "आपका व्यक्तिगत API टोकन बहुत महत्वपूर्ण है। इसे किसी के साथ साझा न करें। इसका उपयोग API तक पहुँचने के लिए प्रमाणीकरण हेतु किया जाता है।",
+      "addressDescription": "यह वह पता है जिसका उपयोग आपको API तक पहुँचने के लिए करना है।"
+    },
+    "token": {
+      "generate": "टोकन जनरेट करें",
+      "placeholder": "नीचे 'टोकन जनरेट करें' पर क्लिक करें",
+      "generating": "टोकन जेनरेट किया जा रहा है...",
+      "success": "टोकन सफलतापूर्वक जेनरेट किया गया",
+      "error": "टोकन जेनरेट करने में विफल",
+      "copy": "टोकन कॉपी करें"
+    },
+    "address": {
+      "copy": "पता कॉपी करें"
+    },
+    "documentation": "दस्तावेज़ीकरण",
+    "howToConnect": "कैसे कनेक्ट करें"
+  },
+  "uploadToMcLogs": "mclo.gs पर अपलोड करें",
+  "mcLogsUpload": {
+    "loading": "mclo.gs पर अपलोड हो रहा है...",
+    "success": "mclo.gs पर अपलोड हो गया! यहाँ देखें: {{url}}",
+    "error": "mclo.gs पर अपलोड करने में विफल"
+  },
+  "searchWithGoogle": "Google से खोजें",
+  "copyToClipboard": "क्लिपबोर्ड पर कॉपी करें",
+  "clipboardCopy": {
+    "loading": "क्लिपबोर्ड पर कॉपी हो रहा है...",
+    "success": "\"{{content}}\" को क्लिपबोर्ड पर कॉपी किया गया",
+    "error": "क्लिपबोर्ड पर कॉपी करने में विफल"
+  },
+  "userSettings": {
+    "avatar": {
+      "title": "अवतार",
+      "description": "आपका उपयोगकर्ता अवतार आपके खाते के ईमेल पते पर आधारित है। आप अपने ईमेल पते के लिए अवतार बदल सकते हैं यहाँ:",
+      "gravatar": "Gravatar"
+    },
+    "username": {
+      "uiName": "उपयोगकर्ता नाम",
+      "description": "आपका उपयोगकर्ता नाम UI और लॉग्स में आपको पहचानने के लिए इस्तेमाल किया जाता है।"
+    },
+    "email": {
+      "uiName": "ईमेल",
+      "description": "आपका ईमेल लॉगिन और सूचनाओं के लिए उपयोग किया जाता है।"
+    }
+  },
+  "auditLog": {
+    "filterPlaceholder": "ऑडिट लॉग छाँटें...",
+    "user": "उपयोगकर्ता",
+    "action": "क्रिया",
+    "type": "प्रकार",
+    "timestamp": "टाइमस्टैम्प",
+    "searchUsers": "उपयोगकर्ता खोजें...",
+    "searchTimestamps": "टाइमस्टैम्प खोजें...",
+    "executedCommand": "कमांड निष्पादित: {{data}}",
+    "contextMenu": {
+      "copyUsername": "यूज़रनेम कॉपी करें",
+      "copyCommand": "कमान्ड कॉपी करें"
+    }
+  },
+  "toggleTheme": "थीम टॉगल करें",
+  "pickADate": "तारीख चुनें",
+  "scripts": {
+    "filterPlaceholder": "स्क्रिप्ट्स छाँटें...",
+    "baseScriptDialog": {
+      "form": {
+        "scriptName": {
+          "min": "स्क्रिप्ट नाम कम से कम 3 अक्षर का होना चाहिए",
+          "max": "स्क्रिप्ट नाम अधिकतम 32 अक्षर का होना चाहिए",
+          "regex": "स्क्रिप्ट नाम लोअरकेस होना चाहिए, अल्फान्यूमेरिक अक्षर से शुरू होकर, पीठ में अल्फान्यूमेरिक या डैश हो सकते हैं, और अल्फान्यूमेरिक अक्षर पर समाप्त होना चाहिए।",
+          "label": "नाम",
+          "placeholder": "मेरी स्क्रिप्ट",
+          "description": "स्क्रिप्ट का नाम।"
+        },
+        "elevatedPermissions": {
+          "label": "प्रवर्धित अनुमतियाँ",
+          "description": "क्या स्क्रिप्ट प्रवर्धित अनुमतियों के साथ चले। केवल प्रशासक ही इस विकल्प को सक्षम कर सकते हैं।"
+        }
+      }
+    },
+    "addScriptDialog": {
+      "title": "नई स्क्रिप्ट जोड़ें",
+      "description": "स्क्रिप्ट्स छोटे प्रोग्राम हैं जो SoulFire सर्वर पर चलते हैं। इन्हें कार्यों को स्वचालित करने, कस्टम व्यवहार बनाने आदि के लिए उपयोग किया जा सकता है।",
+      "form": {
+        "cancel": "रद्द करें",
+        "add": "जोड़ें"
+      }
+    },
+    "updateScriptDialog": {
+      "title": "स्क्रिप्ट अपडेट करें",
+      "description": "स्क्रिप्ट की जानकारी अपडेट करें।",
+      "form": {
+        "cancel": "रद्द करें",
+        "update": "अपडेट करें"
+      }
+    },
+    "removeToast": {
+      "loading": "स्क्रिप्ट्स हटाई जा रही हैं...",
+      "success": "स्क्रिप्ट्स हटाई गईं!",
+      "error": "स्क्रिप्ट्स हटाने में विफल"
+    },
+    "addToast": {
+      "loading": "स्क्रिप्ट जोड़ी जा रही है...",
+      "success": "स्क्रिप्ट जोड़ी गई!",
+      "error": "स्क्रिप्ट जोड़ने में विफल"
+    },
+    "updateToast": {
+      "loading": "स्क्रिप्ट अपडेट हो रही है...",
+      "success": "स्क्रिप्ट अपडेट की गई!",
+      "error": "स्क्रिप्ट अपडेट करने में विफल"
+    },
+    "restartToast": {
+      "loading": "स्क्रिप्ट पुनः आरंभ हो रही है...",
+      "success": "स्क्रिप्ट पुनः आरंभ हुई!",
+      "error": "स्क्रिप्ट पुनः आरंभ करने में विफल"
+    },
+    "table": {
+      "type": "प्रकार",
+      "scriptName": "नाम",
+      "language": "भाषा",
+      "elevatedPermissions": "प्रवर्धित अनुमतियाँ",
+      "createdAt": "निर्मित",
+      "actions": "क्रियाएँ"
+    },
+    "globalScript": "वैश्विक",
+    "instanceScript": "इंस्टेंस"
+  },
+  "contextMenu": {
+    "instance": {
+      "goToInstance": "इंस्टेंस पर जाएँ",
+      "copyInstanceId": "इंस्टेंस आईडी कॉपी करें",
+      "copyInstanceName": "इंस्टेंस नाम कॉपी करें",
+      "deleteInstance": "इंस्टेंस हटाएँ"
+    },
+    "bot": {
+      "goToBot": "बोट पर जाएँ",
+      "copyUsername": "यूज़रनेम कॉपी करें",
+      "copyUuid": "UUID कॉपी करें",
+      "copyCoordinates": "निर्देशांक कॉपी करें"
+    },
+    "plugin": {
+      "enable": "सक्षम करें",
+      "disable": "अक्षम करें",
+      "openSettings": "सेटिंग्स खोलें",
+      "copyPluginName": "प्लगइन नाम कॉपी करें",
+      "copyVersion": "संस्करण कॉपी करें",
+      "openWebsite": "वेबसाइट खोलें"
+    }
+  }
+}

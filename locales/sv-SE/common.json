@@ -1,0 +1,528 @@
+{
+  "locale": "Språkval",
+  "close": "Stäng",
+  "cancel": "Avbryt",
+  "save": "Spara",
+  "saving": "Sparar...",
+  "error": {
+    "noAddressOrToken": "Ingen serveradress eller token hittades",
+    "page": {
+      "title": "Fel",
+      "description": "Ett fel uppstod när sidan skulle laddas. Mer information finns i konsolen.",
+      "logOut": "Logga ut",
+      "reloadPage": "Ladda om sidan",
+      "showDetails": "Visa detaljer"
+    },
+    "connectionFailed": "Anslutning till SoulFire-servern misslyckades."
+  },
+  "notFound": {
+    "page": {
+      "title": "Hittades inte",
+      "description": "Kunde inte hitta en sida på denna plats",
+      "logOut": "Logga ut",
+      "reloadPage": "Ladda om sidan"
+    }
+  },
+  "pending": {
+    "connecting": "Ansluter..."
+  },
+  "dialog": {
+    "about": {
+      "title": "Om SoulFire",
+      "description": "Du kör version {{version}} av SoulFire-klienten.",
+      "type": "Typ",
+      "value": "Värde",
+      "fields": {
+        "serverVersion": "Serverversion",
+        "serverCommit": "Server-commit",
+        "serverBranch": "Servergren",
+        "minecraftVersion": "Minecraft-version",
+        "operatingSystem": "Operativsystem",
+        "platform": "Plattform",
+        "locale": "Språkval",
+        "architecture": "Arkitektur",
+        "environment": "Miljö",
+        "browser": "Webbläsare"
+      },
+      "close": "Stäng"
+    },
+    "createInstance": {
+      "title": "Skapa en ny instans",
+      "description": "Instanser behöver vänliga namn så du kan särskilja dem. Det kan vara vilket namn som helst, t.ex. \"Min Minecraft-bot\".",
+      "form": {
+        "friendlyName": {
+          "label": "Vänligt namn",
+          "placeholder": "Min Minecraft-bot",
+          "description": "Namnet du vill ge den här instansen.",
+          "min": "Det vänliga namnet måste vara minst 3 tecken.",
+          "max": "Det vänliga namnet får vara högst 32 tecken.",
+          "regex": "Vänligt namn får endast innehålla bokstäver, siffror och mellanslag"
+        },
+        "cancel": "Avbryt",
+        "create": "Skapa"
+      },
+      "createToast": {
+        "loading": "Skapar instans...",
+        "success": "Instans skapad",
+        "error": "Misslyckades med att skapa instans"
+      }
+    },
+    "import": {
+      "main": {
+        "fromFile": "Från fil",
+        "fromUrl": "Från URL",
+        "firstClipboardItem": "Du hade flera objekt i urklipp, använder endast det första.",
+        "fromClipboard": "Från urklipp",
+        "textarea": {
+          "placeholder": "Skriv in text här...",
+          "submit": "Ladda från text"
+        }
+      },
+      "url": {
+        "description": "Att läsa från URL gör att SoulFire-servern gör en GET-förfrågan till målservern och använder svaret som data.",
+        "form": {
+          "url": {
+            "placeholder": "Klistra in URL här...",
+            "empty": "Ange en giltig URL"
+          }
+        },
+        "submit": "Ladda från URL",
+        "toast": {
+          "loading": "Laddar data från URL...",
+          "success": "Data inläst!",
+          "error": "Misslyckades med att ladda ner data"
+        }
+      }
+    }
+  },
+  "commandInput": {
+    "placeholder": "Skriv kommando (\"help\" visar lista)",
+    "emptySuggestions": "Skriv för att be om förslag eller tryck på Tab.",
+    "noSuggestions": "Inga förslag tillgängliga."
+  },
+  "controls": {
+    "start": "Starta",
+    "stop": "Stoppa",
+    "startAll": "Starta alla",
+    "stopAll": "Stoppa alla",
+    "restart": "Starta om",
+    "startCount": "Antal bottar att starta",
+    "startToast": {
+      "loading": "Startar bottar...",
+      "success": "Bottarnas status uppdaterades",
+      "error": "Misslyckades med att starta bottar"
+    },
+    "restartToast": {
+      "loading": "Startar om bottar...",
+      "success": "Bottarna ansluter igen",
+      "error": "Misslyckades med att starta om bottar"
+    },
+    "stopToast": {
+      "loading": "Stoppar bottar...",
+      "success": "Bottarna stoppas",
+      "error": "Det gick inte att stoppa bottarna"
+    }
+  },
+  "icon": {
+    "invalidName": "Ogiltigt ikon-namn: {{name}}"
+  },
+  "dataTable": {
+    "noResults": "Inga resultat.",
+    "rowsSelected": "{{amount}} av {{total}} rad(er) markerade",
+    "rowsPerPage": "Rader per sida",
+    "currentPage": "Sida {{page}} av {{total}}",
+    "goFirst": "Gå till första sidan",
+    "goPrevious": "Gå till föregående sida",
+    "goNext": "Gå till nästa sida",
+    "goLast": "Gå till sista sidan",
+    "selectAll": "Markera alla",
+    "selectRow": "Markera rad",
+    "selected": "{count, plural, one {# vald} other {# valda}}",
+    "clearSelection": "Rensa val",
+    "escape": "Esc",
+    "filter": "Filter",
+    "filters": "Filter",
+    "noFiltersApplied": "Inga filter tillämpade",
+    "modifyFilters": "Ändra filter för att förfina dina rader.",
+    "addFilters": "Lägg till filter för att förfina dina rader.",
+    "addFilter": "Lägg till filter",
+    "resetFilters": "Återställ filter",
+    "reset": "Återställ",
+    "where": "Där",
+    "selectField": "Välj fält",
+    "searchFields": "Sök i fält...",
+    "noFieldsFound": "Inga fält hittades.",
+    "enterValue": "Ange ett värde...",
+    "enterValueShort": "Ange värde...",
+    "true": "Sant",
+    "false": "Falskt",
+    "selectOption": "Välj alternativ...",
+    "selectOptions": "Välj alternativ...",
+    "searchOptions": "Sök alternativ...",
+    "noOptionsFound": "Inga alternativ hittades.",
+    "pickDateShort": "Välj datum...",
+    "typeToFilter": "Skriv för att lägga till filter...",
+    "filterByValue": "Filtrera efter \"{{value}}\"",
+    "view": "Visa",
+    "searchColumns": "Sök kolumner...",
+    "noColumnsFound": "Inga kolumner hittades.",
+    "toggleColumns": "Växla kolumner",
+    "sort": "Sortera",
+    "sortBy": "Sortera efter",
+    "noSortingApplied": "Ingen sortering tillämpad",
+    "modifySorting": "Ändra sortering för att organisera dina rader.",
+    "addSorting": "Lägg till sortering för att organisera dina rader.",
+    "addSort": "Lägg till sortering",
+    "resetSorting": "Återställ sortering",
+    "columnHeader": {
+      "asc": "Stigande",
+      "desc": "Fallande",
+      "reset": "Återställ",
+      "hide": "Dölj"
+    },
+    "operators": {
+      "iLike": "Innehåller",
+      "notILike": "Innehåller inte",
+      "eq": "Är",
+      "ne": "Är inte",
+      "isEmpty": "Är tom",
+      "isNotEmpty": "Är inte tom",
+      "lt": "Är mindre än",
+      "lte": "Är mindre än eller lika med",
+      "gt": "Är större än",
+      "gte": "Är större än eller lika med",
+      "isBetween": "Är mellan",
+      "isRelativeToToday": "Är relativt till idag",
+      "ltDate": "Är före",
+      "gtDate": "Är efter",
+      "lteDate": "Är på eller före",
+      "gteDate": "Är på eller efter",
+      "inArray": "Har någon av",
+      "notInArray": "Har ingen av"
+    },
+    "sortOrders": {
+      "asc": "Stigande",
+      "desc": "Fallande"
+    }
+  },
+  "pluginCard": {
+    "version": "Version: {{version}}",
+    "author": "Författare: {{author}}",
+    "license": "Licens: {{license}}",
+    "website": "Webbplats"
+  },
+  "settingsPage": {
+    "namespacesNotFound": "Inställningsnamnrymder hittades inte",
+    "stringList": {
+      "placeholder": "Lägg till en ny post...",
+      "add": "Lägg till",
+      "remove": "Ta bort"
+    },
+    "invalidNumberToast": {
+      "title": "Ogiltigt nummer!",
+      "description": "Värdet måste vara mellan {{min}} och {{max}}"
+    }
+  },
+  "terminal": {
+    "noLogs": "🧙 Det verkar inte finnas några loggar att visa; prova att köra några kommandon!",
+    "demo-1": "Välkommen till demoläge! 🧪",
+    "demo-2": "Det här är en skrivskyddad instans av SoulFire",
+    "demo-3": "Utforska alla menyer och funktioner innan du bestämmer dig för att installera SoulFire :D",
+    "demo-4": "Gå gärna med i vår Discord-server om du vill kontakta oss: https://soulfiremc.com/discord"
+  },
+  "uiBreadcrumb": {
+    "more": "Mer"
+  },
+  "uiDialog": {
+    "close": "Stäng"
+  },
+  "uiSheet": {
+    "close": "Stäng"
+  },
+  "uiSidebar": {
+    "toggle": "Visa/dölj sidofält"
+  },
+  "castMenu": {
+    "title": "Casta",
+    "disconnected": "Frånkopplad från {{device}}",
+    "alreadyConnected": "Redan ansluten till {{device}}",
+    "connectToast": {
+      "loading": "Ansluter till {{device}}...",
+      "success": "Ansluten till {{device}}",
+      "error": "Misslyckades med att ansluta till {{device}}"
+    },
+    "noDevices": "Inga enheter hittades",
+    "broadcastLabel": "Sänd test",
+    "broadcastToast": {
+      "loading": "Sänder meddelande...",
+      "success": "Meddelande sändes!",
+      "error": "Misslyckades med att sända meddelandet"
+    }
+  },
+  "instanceSidebar": {
+    "readDocumentation": "Läs dokumentationen",
+    "backToDashboard": "Tillbaka till instrumentpanel",
+    "deleteToast": {
+      "loading": "Tar bort instans...",
+      "success": "Instans borttagen",
+      "error": "Misslyckades med att ta bort instans"
+    },
+    "instancesGroup": "Instanser",
+    "createInstance": "Skapa instans",
+    "loadProfileToast": {
+      "loading": "Laddar profil...",
+      "success": "Profil laddad",
+      "error": "Misslyckades med att ladda profil"
+    },
+    "loadProfile": "Ladda profil",
+    "loadFromFile": "Ladda från fil",
+    "profileSaved": "Profil sparad",
+    "saveProfile": "Spara profil",
+    "deleteInstance": "Ta bort instans",
+    "controlsGroup": "Kontroller",
+    "overview": "Översikt",
+    "terminal": "Terminal",
+    "bots": "Bottar",
+    "audit-log": "Granskningslogg",
+    "settingsGroup": "Inställningar",
+    "extensionsGroup": "Tillägg",
+    "botSettings": "Bot-inställningar",
+    "accountSettings": "Kontoinställningar",
+    "metaSettings": "Instansinställningar",
+    "proxySettings": "Proxyinställningar",
+    "aiSettings": "AI-inställningar",
+    "pathfindingSettings": "Sökvägsinställningar",
+    "discoverPlugins": "Plugins",
+    "instanceScripts": "Skript"
+  },
+  "userSidebar": {
+    "readDocumentation": "Läs dokumentationen",
+    "userGroup": "Användare",
+    "instances": "Instanser",
+    "access": "Åtkomst",
+    "createInstance": "Skapa instans",
+    "settings": "Inställningar",
+    "adminGroup": "Admin",
+    "adminOverview": "Översikt",
+    "adminLogs": "Loggar",
+    "adminTerminal": "Terminal",
+    "users": "Användare",
+    "adminScripts": "Skript",
+    "serverSettings": "Serverinställningar",
+    "devSettings": "Dev-inställningar",
+    "theme": {
+      "title": "Tema",
+      "system": "System",
+      "light": "Ljust",
+      "dark": "Mörkt"
+    },
+    "terminal": {
+      "title": "Terminal"
+    },
+    "configDir": "Konfigurationsmapp",
+    "dataDir": "Datamapp",
+    "about": "Om",
+    "logOut": "Logga ut",
+    "logOutToast": {
+      "loading": "Loggar ut...",
+      "success": "Utloggad",
+      "error": "Misslyckades med att logga ut"
+    },
+    "exit": "Avsluta",
+    "stopImpersonating": "Sluta imitera",
+    "helpTranslate": "Översätt SoulFire"
+  },
+  "sidebar": {
+    "documentation": "Dokumentation",
+    "supportSoulFire": "Bjud på en kaffe",
+    "discord": "Discord"
+  },
+  "breadcrumbs": {
+    "admin": "Admin",
+    "settings": "Inställningar",
+    "controls": "Kontroller",
+    "extensions": "Tillägg",
+    "bots": "Bottar"
+  },
+  "noInstancesFound": "Inga instanser hittades",
+  "pageName": {
+    "terminal": "Terminal",
+    "logs": "Loggar",
+    "audit-log": "Granskningslogg",
+    "bots": "Bottar",
+    "botDetail": "Botdetaljer",
+    "instances": "Instanser",
+    "access": "Åtkomst",
+    "settings": "Inställningar",
+    "proxySettings": "Proxyinställningar",
+    "overview": "Översikt",
+    "users": "Användare",
+    "accountSettings": "Kontoinställningar",
+    "metaSettings": "Instansinställningar",
+    "discoverPlugins": "Plugins",
+    "adminScripts": "Skript",
+    "instanceScripts": "Skript"
+  },
+  "access": {
+    "webdav": {
+      "title": "WebDAV-åtkomst",
+      "description": "SoulFire låter dig komma åt instanser, skript och andra filer via WebDAV-protokollet.",
+      "publicAddress": "Offentlig WebDAV-adress",
+      "personalToken": "Personlig WebDAV-token",
+      "securityWarning": "Din personliga WebDAV-token är mycket viktig. Dela den inte med någon. Den används för att autentisera dig när du kommer åt dina filer. Använd den som WebDAV-lösenord när du ansluter. Användarnamn krävs ej, om du tillfrågas kan du ange vilket värde du vill (t.ex. 'soulfire').",
+      "addressDescription": "Detta är adressen du behöver använda för att komma åt dina filer. Ibland måste du använda dav:// eller davs:// istället för http(s)://."
+    },
+    "api": {
+      "title": "API-åtkomst",
+      "description": "SoulFires gRPC HTTP API gör att du kan interagera med dina instanser programmatiskt via webbförfrågningar.",
+      "publicAddress": "Offentlig API-adress",
+      "personalToken": "Personlig API-token",
+      "securityWarning": "Din personliga API-token är mycket viktig. Dela den inte med någon. Den används för att autentisera dig när du använder API:et.",
+      "addressDescription": "Detta är adressen du behöver använda för att komma åt API:et."
+    },
+    "token": {
+      "generate": "Generera token",
+      "placeholder": "Klicka på 'Generera token' nedan",
+      "generating": "Genererar token...",
+      "success": "Token genererad",
+      "error": "Misslyckades med att generera token",
+      "copy": "Kopiera token"
+    },
+    "address": {
+      "copy": "Kopiera adress"
+    },
+    "documentation": "Dokumentation",
+    "howToConnect": "Så här ansluter du"
+  },
+  "uploadToMcLogs": "Ladda upp till mclo.gs",
+  "mcLogsUpload": {
+    "loading": "Laddar upp till mclo.gs...",
+    "success": "Uppladdad till mclo.gs! Visa det här: {{url}}",
+    "error": "Misslyckades med att ladda upp till mclo.gs"
+  },
+  "searchWithGoogle": "Sök med Google",
+  "copyToClipboard": "Kopiera till urklipp",
+  "clipboardCopy": {
+    "loading": "Kopierar till urklipp...",
+    "success": "Kopierade \"{{content}}\" till urklipp",
+    "error": "Misslyckades med att kopiera till urklipp"
+  },
+  "userSettings": {
+    "avatar": {
+      "title": "Avatar",
+      "description": "Din användaravatar baseras på din kontos e-postadress. Du kan ändra avataren för din e-postadress på",
+      "gravatar": "Gravatar"
+    },
+    "username": {
+      "uiName": "Användarnamn",
+      "description": "Ditt användarnamn används för att identifiera dig i användargränssnittet och i loggar."
+    },
+    "email": {
+      "uiName": "E-post",
+      "description": "Din e-postadress används för inloggning och aviseringar."
+    }
+  },
+  "auditLog": {
+    "filterPlaceholder": "Filtrera granskningsloggar...",
+    "user": "Användare",
+    "action": "Åtgärd",
+    "type": "Typ",
+    "timestamp": "Tidsstämpel",
+    "searchUsers": "Sök användare...",
+    "searchTimestamps": "Sök tidsstämplar...",
+    "executedCommand": "Körde kommando: {{data}}",
+    "contextMenu": {
+      "copyUsername": "Kopiera användarnamn",
+      "copyCommand": "Kopiera kommando"
+    }
+  },
+  "toggleTheme": "Växla tema",
+  "pickADate": "Välj ett datum",
+  "scripts": {
+    "filterPlaceholder": "Filtrera skript...",
+    "baseScriptDialog": {
+      "form": {
+        "scriptName": {
+          "min": "Skriptnamn måste vara minst 3 tecken",
+          "max": "Skriptnamn får vara högst 32 tecken",
+          "regex": "Skriptnamn måste vara gemener, börja med en alfanumerisk tecken, följt av fler alfanumeriska tecken eller bindestreck och avsluta med en alfanumerisk tecken.",
+          "label": "Namn",
+          "placeholder": "Mitt skript",
+          "description": "Skriptets namn."
+        },
+        "elevatedPermissions": {
+          "label": "Förhöjda behörigheter",
+          "description": "Om skriptet ska köras med förhöjda behörigheter. Endast administratörer kan aktivera det här alternativet."
+        }
+      }
+    },
+    "addScriptDialog": {
+      "title": "Lägg till ett nytt skript",
+      "description": "Skript är små program som körs på SoulFire-servern. De kan användas för att automatisera uppgifter, skapa anpassat beteende och mer.",
+      "form": {
+        "cancel": "Avbryt",
+        "add": "Lägg till"
+      }
+    },
+    "updateScriptDialog": {
+      "title": "Uppdatera skript",
+      "description": "Uppdatera skriptets information.",
+      "form": {
+        "cancel": "Avbryt",
+        "update": "Uppdatera"
+      }
+    },
+    "removeToast": {
+      "loading": "Tar bort skript...",
+      "success": "Skript borttagna!",
+      "error": "Misslyckades med att ta bort skript"
+    },
+    "addToast": {
+      "loading": "Lägger till skript...",
+      "success": "Skript tillagt!",
+      "error": "Misslyckades med att lägga till skript"
+    },
+    "updateToast": {
+      "loading": "Uppdaterar skript...",
+      "success": "Skript uppdaterat!",
+      "error": "Misslyckades med att uppdatera skript"
+    },
+    "restartToast": {
+      "loading": "Startar om skript...",
+      "success": "Skript omstartat!",
+      "error": "Misslyckades med att starta om skript"
+    },
+    "table": {
+      "type": "Typ",
+      "scriptName": "Namn",
+      "language": "Språk",
+      "elevatedPermissions": "Förhöjda behörigheter",
+      "createdAt": "Skapad",
+      "actions": "Åtgärder"
+    },
+    "globalScript": "Globalt",
+    "instanceScript": "Instans"
+  },
+  "contextMenu": {
+    "instance": {
+      "goToInstance": "Gå till instans",
+      "copyInstanceId": "Kopiera instans-ID",
+      "copyInstanceName": "Kopiera instansnamn",
+      "deleteInstance": "Ta bort instans"
+    },
+    "bot": {
+      "goToBot": "Gå till bot",
+      "copyUsername": "Kopiera användarnamn",
+      "copyUuid": "Kopiera UUID",
+      "copyCoordinates": "Kopiera koordinater"
+    },
+    "plugin": {
+      "enable": "Aktivera",
+      "disable": "Inaktivera",
+      "openSettings": "Öppna inställningar",
+      "copyPluginName": "Kopiera plugin-namn",
+      "copyVersion": "Kopiera version",
+      "openWebsite": "Öppna webbplats"
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "overview": {
+    "welcome": "Bienvenido/a de nuevo, {{name}}🧙",
+    "serverMetrics": {
+      "sectionTitle": "Métricas del servidor",
+      "summary": {
+        "cpu": "CPU",
+        "heapUsed": "Heap usado",
+        "threads": "Hilos",
+        "botsOnline": "Bots en línea",
+        "uptime": "Tiempo de actividad"
+      },
+      "cpuUsage": {
+        "title": "Uso de CPU (%)"
+      },
+      "memoryUsage": {
+        "title": "Memoria Heap (MB)"
+      },
+      "threadCount": {
+        "title": "Cantidad de hilos"
+      },
+      "aggregateBots": {
+        "title": "Bots en línea (todas las instancias)"
+      }
+    },
+    "instancesChart": {
+      "title": "Instalaciones totales en este servidor",
+      "instances": "Instancias",
+      "label": {
+        "state": "Estado",
+        "active": "Activo",
+        "stopped": "Detenido",
+        "other": "Otros"
+      }
+    },
+    "usersChart": {
+      "title": "Usuarios totales en este servidor",
+      "users": "Usuarios",
+      "label": {
+        "role": "Rol",
+        "user": "Usuario",
+        "admin": "Admin",
+        "other": "Otros"
+      }
+    }
+  },
+  "users": {
+    "filterPlaceholder": "Filtrar usuarios...",
+    "baseUserDialog": {
+      "form": {
+        "username": {
+          "min": "El nombre de usuario debe tener al menos 3 caracteres",
+          "max": "Los nombres de usuario deben tener como máximo 32 caracteres",
+          "regex": "Los nombres de usuarios deben estar en minúscula, empezar con un carácter alfanumérico seguido de más de ellos o guiones, finalizando con un carácter alfanumérico.",
+          "label": "Nombre de usuario",
+          "placeholder": "Introduzca nombre de usuario",
+          "description": "Nombre de usuario único identificativo"
+        },
+        "email": {
+          "label": "Correo electrónico",
+          "placeholder": "Introduce el correo electrónico",
+          "description": "Dirección de correo electrónico del usuario para notificaciones e inicio de sesión"
+        },
+        "role": {
+          "label": "Rol",
+          "description": "El rol del usuario; los administradores pueden administrar usuarios y todas las instancias, los usuarios solo pueden administrar sus propias instancias.",
+          "user": "Usuario",
+          "admin": "Admin"
+        }
+      }
+    },
+    "addUserDialog": {
+      "title": "Agregar un nuevo usuario",
+      "description": "Agregar un nuevo usuario a este servidor",
+      "form": {
+        "cancel": "Cancelar",
+        "add": "Añadir Usuario"
+      }
+    },
+    "updateUserDialog": {
+      "title": "Actualizar Usuario",
+      "description": "Actualizar la información del usuario",
+      "form": {
+        "cancel": "Cancelar",
+        "update": "Actualizar Usuario"
+      }
+    },
+    "addToast": {
+      "loading": "Añadiendo usuario...",
+      "success": "¡Usuario añadido!",
+      "error": "Error al añadir usuario"
+    },
+    "updateToast": {
+      "loading": "Actualizando usuario...",
+      "success": "¡Usuario actualizado!",
+      "error": "Error al actualizar el usuario"
+    },
+    "removeToast": {
+      "loading": "Eliminando usuarios...",
+      "success": "¡Usuarios eliminados!",
+      "error": "Error al eliminar usuarios"
+    },
+    "invalidateToast": {
+      "loading": "Cerrando sesión de usuarios...",
+      "success": "¡Sesiones de usuarios terminadas!",
+      "error": "Error al cerrar sesión de usuarios"
+    },
+    "table": {
+      "username": "Nombre de usuario",
+      "email": "Correo electrónico",
+      "role": "Rol",
+      "createdAt": "Creado",
+      "minIssuedAt": "Fecha mínima de validez de sesión",
+      "actions": "Acciones",
+      "searchUsernames": "Buscar nombres de usuario...",
+      "searchEmails": "Buscar correos electrónicos...",
+      "searchCreatedAts": "Buscar fechas de creación...",
+      "searchMinIssuedAts": "Buscar fechas mínimas de emisión..."
+    },
+    "removeSelectedTooltip": "Eliminar usuarios seleccionados",
+    "logOutSelectedTooltip": "Cerrar sesión de los usuarios seleccionados",
+    "contextMenu": {
+      "editUser": "Editar usuario",
+      "impersonate": "Suplantar",
+      "copyUserId": "Copiar ID de usuario"
+    }
+  }
+}

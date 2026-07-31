@@ -1,0 +1,540 @@
+{
+  "locale": "Jazykové nastavenie",
+  "close": "Zavrieť",
+  "cancel": "Zrušiť",
+  "save": "Uložiť",
+  "saving": "Ukladá sa...",
+  "error": {
+    "noAddressOrToken": "Nebola nájdená adresa servera alebo token",
+    "page": {
+      "title": "Chyba",
+      "description": "Pri načítaní stránky došlo k chybe. Viac informácií je v konzole.",
+      "logOut": "Odhlásiť sa",
+      "reloadPage": "Obnoviť stránku",
+      "showDetails": "Zobraziť podrobnosti"
+    },
+    "connectionFailed": "Nepodarilo sa pripojiť k serveru SoulFire."
+  },
+  "notFound": {
+    "page": {
+      "title": "Nenašlo sa",
+      "description": "Na tejto adrese nebola nájdená žiadna stránka",
+      "logOut": "Odhlásiť sa",
+      "reloadPage": "Obnoviť stránku"
+    }
+  },
+  "pending": {
+    "connecting": "Pripájanie..."
+  },
+  "dialog": {
+    "about": {
+      "title": "O aplikácii SoulFire",
+      "description": "Používate verziu {{version}} klienta SoulFire.",
+      "type": "Typ",
+      "value": "Hodnota",
+      "fields": {
+        "serverVersion": "Verzia servera",
+        "serverCommit": "Commit servera",
+        "serverBranch": "Vetva servera",
+        "minecraftVersion": "Verzia Minecraftu",
+        "operatingSystem": "Operačný systém",
+        "platform": "Platforma",
+        "locale": "Jazykové nastavenie",
+        "architecture": "Architektúra",
+        "environment": "Prostredie",
+        "browser": "Prehliadač"
+      },
+      "close": "Zavrieť"
+    },
+    "createInstance": {
+      "title": "Vytvoriť novú inštanciu",
+      "description": "Inštancie potrebujú priateľské názvy, aby ste ich mohli rozlíšiť. Môže to byť akýkoľvek názov, napríklad \"Môj Minecraft Bot\".",
+      "form": {
+        "friendlyName": {
+          "label": "Priateľské meno",
+          "placeholder": "Môj Minecraft Bot",
+          "description": "Názov, ktorý chcete dať tejto inštancii.",
+          "min": "Priateľské meno musí mať aspoň 3 znaky.",
+          "max": "Priateľské meno môže mať najviac 32 znakov.",
+          "regex": "Priateľské meno môže obsahovať iba písmená, čísla a medzery"
+        },
+        "cancel": "Zrušiť",
+        "create": "Vytvoriť"
+      },
+      "createToast": {
+        "loading": "Vytváranie inštancie...",
+        "success": "Inštancia bola úspešne vytvorená",
+        "error": "Nepodarilo sa vytvoriť inštanciu"
+      }
+    },
+    "import": {
+      "main": {
+        "fromFile": "Zo súboru",
+        "fromUrl": "Z URL adresy",
+        "firstClipboardItem": "V schránke ste mali viacero položiek, použije sa len prvá.",
+        "fromClipboard": "Zo schránky",
+        "textarea": {
+          "placeholder": "Zadajte text sem...",
+          "submit": "Načítať z textu"
+        }
+      },
+      "url": {
+        "description": "Načítanie z URL spôsobí, že server SoulFire odošle požiadavku GET na cieľový server a použije odpoveď ako dáta.",
+        "form": {
+          "url": {
+            "placeholder": "Zadajte URL sem...",
+            "empty": "Zadajte platnú URL adresu"
+          }
+        },
+        "submit": "Načítať z URL",
+        "toast": {
+          "loading": "Sťahovanie dát...",
+          "success": "Dáta načítané!",
+          "error": "Nepodarilo sa stiahnuť dáta"
+        }
+      }
+    }
+  },
+  "commandInput": {
+    "placeholder": "Zadajte príkaz (napíšte \"help\" pre zoznam)",
+    "emptySuggestions": "Začnite písať pre návrhy alebo stlačte Tabulátor.",
+    "noSuggestions": "Žiadne návrhy nie sú k dispozícii."
+  },
+  "controls": {
+    "start": "Spustiť",
+    "resume": "Pokračovať",
+    "pause": "Pozastaviť",
+    "stop": "Zastaviť",
+    "startToast": {
+      "loading": "Spúšťa sa relácia...",
+      "success": "Relácia bola úspešne spustená",
+      "error": "Reláciu sa nepodarilo spustiť"
+    },
+    "resumeToast": {
+      "loading": "Obnovuje sa relácia...",
+      "success": "Relácia bola úspešne obnovená",
+      "error": "Reláciu sa nepodarilo obnoviť"
+    },
+    "pauseToast": {
+      "loading": "Pozastavuje sa relácia...",
+      "success": "Relácia bola úspešne pozastavená",
+      "error": "Reláciu sa nepodarilo pozastaviť"
+    },
+    "stopToast": {
+      "loading": "Zastavuje sa relácia...",
+      "success": "Relácia bola úspešne zastavená",
+      "error": "Reláciu sa nepodarilo zastaviť"
+    },
+    "accountWarning": {
+      "noAccountsTitle": "Žiadne účty nie sú nastavené",
+      "noAccountsDescription": "Pred spustením relácie musíte mať importované účty. Požiadali ste o {{required}} botov.",
+      "notEnoughTitle": "Nedostatok účtov",
+      "notEnoughDescription": "Požadovali ste {{required}} botov, ale máte importovaných len {{available}} účtov.",
+      "hint": "Môžete vygenerovať offline účty alebo importovať účty na stránke nastavení účtov.",
+      "continueWithExisting": "Pokračovať s {count, plural, one {# účtom} few {# účtami} many {# účtami} other {# účtami}}",
+      "generateAccounts": "Generovať účty"
+    }
+  },
+  "icon": {
+    "invalidName": "Neplatný názov ikony: {{name}}"
+  },
+  "dataTable": {
+    "noResults": "Žiadne výsledky.",
+    "rowsSelected": "one: {{amount}} z {{total}} riadka vybraného\nfew: {{amount}} z {{total}} riadkov vybrané\nmany: {{amount}} z {{total}} riadkov vybraných\nother: {{amount}} z {{total}} riadkov vybraných",
+    "rowsPerPage": "Riadkov na stránku",
+    "currentPage": "Stránka {{page}} z {{total}}",
+    "goFirst": "Prejsť na prvú stránku",
+    "goPrevious": "Prejsť na predchádzajúcu stránku",
+    "goNext": "Prejsť na nasledujúcu stránku",
+    "goLast": "Prejsť na poslednú stránku",
+    "selectAll": "Vybrať všetko",
+    "selectRow": "Vybrať riadok",
+    "selected": "{count, plural, one{{count} vybrané} few{{count} vybrané} many{{count} vybraných} other{{count} vybraných}}",
+    "clearSelection": "Zrušiť výber",
+    "escape": "Esc",
+    "filter": "Filter",
+    "filters": "Filtre",
+    "noFiltersApplied": "Nie sú použité žiadne filtre",
+    "modifyFilters": "Upravte filtre pre spresnenie riadkov.",
+    "addFilters": "Pridajte filtre pre spresnenie riadkov.",
+    "addFilter": "Pridať filter",
+    "resetFilters": "Obnoviť filtre",
+    "reset": "Obnoviť",
+    "where": "Kde",
+    "selectField": "Vybrať pole",
+    "searchFields": "Hľadať polia...",
+    "noFieldsFound": "Neboli nájdené žiadne polia.",
+    "enterValue": "Zadajte hodnotu...",
+    "enterValueShort": "Zadajte hodnotu...",
+    "true": "Pravda",
+    "false": "Nepravda",
+    "selectOption": "Vyberte možnosť...",
+    "selectOptions": "Vyberte možnosti...",
+    "searchOptions": "Hľadať možnosti...",
+    "noOptionsFound": "Neboli nájdené žiadne možnosti.",
+    "pickDateShort": "Vyberte dátum...",
+    "typeToFilter": "Píšte pre pridanie filtra...",
+    "filterByValue": "Filtrovať podľa \"{{value}}\"",
+    "view": "Zobraziť",
+    "searchColumns": "Hľadať stĺpce...",
+    "noColumnsFound": "Neboli nájdené žiadne stĺpce.",
+    "toggleColumns": "Prepínať stĺpce",
+    "sort": "Triediť",
+    "sortBy": "Triediť podľa",
+    "noSortingApplied": "Nie je použité žiadne triedenie",
+    "modifySorting": "Upravte triedenie pre usporiadanie riadkov.",
+    "addSorting": "Pridajte triedenie pre usporiadanie riadkov.",
+    "addSort": "Pridať triedenie",
+    "resetSorting": "Obnoviť triedenie",
+    "columnHeader": {
+      "asc": "Vzostupne",
+      "desc": "Zostupne",
+      "reset": "Obnoviť",
+      "hide": "Skryť"
+    },
+    "operators": {
+      "iLike": "Obsahuje",
+      "notILike": "Neobsahuje",
+      "eq": "Je",
+      "ne": "Nie je",
+      "isEmpty": "Je prázdne",
+      "isNotEmpty": "Nie je prázdne",
+      "lt": "Je menšie ako",
+      "lte": "Je menšie alebo rovné ako",
+      "gt": "Je väčšie ako",
+      "gte": "Je väčšie alebo rovné ako",
+      "isBetween": "Je medzi",
+      "isRelativeToToday": "Je vzhľadom na dnešok",
+      "ltDate": "Je pred",
+      "gtDate": "Je po",
+      "lteDate": "Je v alebo pred",
+      "gteDate": "Je v alebo po",
+      "inArray": "Obsahuje niektoré z",
+      "notInArray": "Neobsahuje žiadne z"
+    },
+    "sortOrders": {
+      "asc": "Vzostupne",
+      "desc": "Zostupne"
+    }
+  },
+  "pluginCard": {
+    "version": "Verzia: {{version}}",
+    "author": "Autor: {{author}}",
+    "license": "Licencia: {{license}}",
+    "website": "Webstránka"
+  },
+  "settingsPage": {
+    "namespacesNotFound": "Mená nastavení neboli nájdené",
+    "stringList": {
+      "placeholder": "Pridať novú položku...",
+      "add": "Pridať",
+      "remove": "Odstrániť"
+    },
+    "invalidNumberToast": {
+      "title": "Neplatné číslo!",
+      "description": "Hodnota musí byť medzi {{min}} a {{max}}"
+    }
+  },
+  "terminal": {
+    "noLogs": "🧙 Vyzerá to, že nie sú k dispozícii žiadne záznamy; vyskúšajte spustiť nejaké príkazy!",
+    "demo-1": "Vitajte v demo móde! 🧪",
+    "demo-2": "Toto je iba na čítanie inštancia SoulFire",
+    "demo-3": "Preskúmajte všetky menu a funkcie, než sa rozhodnete nainštalovať SoulFire :D",
+    "demo-4": "Ak sa na nás chcete obrátiť, pokojne sa pripojte na náš Discord: https://soulfiremc.com/discord"
+  },
+  "uiBreadcrumb": {
+    "more": "Viac"
+  },
+  "uiDialog": {
+    "close": "Zavrieť"
+  },
+  "uiSheet": {
+    "close": "Zavrieť"
+  },
+  "uiSidebar": {
+    "toggle": "Prepnúť bočný panel"
+  },
+  "castMenu": {
+    "title": "Cast",
+    "disconnected": "Odpojené od {{device}}",
+    "alreadyConnected": "Už ste pripojený k {{device}}",
+    "connectToast": {
+      "loading": "Pripája sa k {{device}}...",
+      "success": "Pripojené k {{device}}",
+      "error": "Nepodarilo sa pripojiť k {{device}}"
+    },
+    "noDevices": "Neboli nájdené žiadne zariadenia",
+    "broadcastLabel": "Test vysielania",
+    "broadcastToast": {
+      "loading": "Vysielanie správy...",
+      "success": "Správa bola odoslaná!",
+      "error": "Nepodarilo sa odoslať správu"
+    }
+  },
+  "instanceSidebar": {
+    "readDocumentation": "Prečítať dokumentáciu",
+    "backToDashboard": "Späť na panel",
+    "deleteToast": {
+      "loading": "Maže sa inštancia...",
+      "success": "Inštancia bola odstránená",
+      "error": "Nepodarilo sa odstrániť inštanciu"
+    },
+    "instancesGroup": "Inštancie",
+    "createInstance": "Vytvoriť inštanciu",
+    "loadProfileToast": {
+      "loading": "Načítava sa profil...",
+      "success": "Profil načítaný",
+      "error": "Nepodarilo sa načítať profil"
+    },
+    "loadProfile": "Načítať profil",
+    "loadFromFile": "Načítať zo súboru",
+    "profileSaved": "Profil uložený",
+    "saveProfile": "Uložiť profil",
+    "deleteInstance": "Odstrániť inštanciu",
+    "controlsGroup": "Ovládanie",
+    "overview": "Prehľad",
+    "terminal": "Terminál",
+    "bots": "Boti",
+    "audit-log": "Audit log",
+    "settingsGroup": "Nastavenia",
+    "extensionsGroup": "Rozšírenia",
+    "botSettings": "Nastavenia bota",
+    "accountSettings": "Nastavenia účtu",
+    "metaSettings": "Nastavenia inštancie",
+    "proxySettings": "Nastavenia proxy",
+    "aiSettings": "Nastavenia AI",
+    "pathfindingSettings": "Nastavenia hľadania cesty",
+    "discoverPlugins": "Doplnky",
+    "instanceScripts": "Skripty"
+  },
+  "userSidebar": {
+    "readDocumentation": "Prečítať dokumentáciu",
+    "userGroup": "Používateľ",
+    "instances": "Inštancie",
+    "access": "Prístup",
+    "createInstance": "Vytvoriť inštanciu",
+    "settings": "Nastavenia",
+    "adminGroup": "Admin",
+    "adminOverview": "Prehľad",
+    "adminLogs": "Záznamy",
+    "adminTerminal": "Terminál",
+    "users": "Používatelia",
+    "adminScripts": "Skripty",
+    "serverSettings": "Nastavenia servera",
+    "devSettings": "Vývojárske nastavenia",
+    "theme": {
+      "title": "Motív",
+      "system": "Systém",
+      "light": "Svetlý",
+      "dark": "Tmavý"
+    },
+    "terminal": {
+      "title": "Terminál"
+    },
+    "configDir": "Konfiguračný adresár",
+    "dataDir": "Adresár s dátami",
+    "about": "O aplikácii",
+    "logOut": "Odhlásiť sa",
+    "logOutToast": {
+      "loading": "Odhlasovanie...",
+      "success": "Odhlásený",
+      "error": "Nepodarilo sa odhlásiť"
+    },
+    "exit": "Ukončiť",
+    "stopImpersonating": "Ukončiť predstieranie",
+    "helpTranslate": "Preložiť SoulFire"
+  },
+  "sidebar": {
+    "documentation": "Dokumentácia",
+    "supportSoulFire": "Kúpte mi kávu",
+    "discord": "Discord"
+  },
+  "breadcrumbs": {
+    "admin": "Admin",
+    "settings": "Nastavenia",
+    "controls": "Ovládanie",
+    "extensions": "Rozšírenia",
+    "bots": "Boti"
+  },
+  "noInstancesFound": "Neboli nájdené žiadne inštancie",
+  "pageName": {
+    "terminal": "Terminál",
+    "logs": "Záznamy",
+    "audit-log": "Audit log",
+    "bots": "Boti",
+    "botDetail": "Podrobnosti bota",
+    "instances": "Inštancie",
+    "access": "Prístup",
+    "settings": "Nastavenia",
+    "proxySettings": "Nastavenia proxy",
+    "overview": "Prehľad",
+    "users": "Používatelia",
+    "accountSettings": "Nastavenia účtu",
+    "metaSettings": "Nastavenia inštancie",
+    "discoverPlugins": "Doplnky",
+    "adminScripts": "Skripty",
+    "instanceScripts": "Skripty"
+  },
+  "access": {
+    "webdav": {
+      "title": "WebDAV prístup",
+      "description": "SoulFire vám umožňuje pristupovať k inštancii, skriptom a iným súborom prostredníctvom protokolu WebDAV.",
+      "publicAddress": "Verejná adresa WebDAV",
+      "personalToken": "Osobný WebDAV token",
+      "securityWarning": "Váš osobný WebDAV token je veľmi dôležitý. Nezdieľajte ho s nikým. Používa sa na vašu autentifikáciu pri pristupovaní k súborom. Pri pripájaní ho používajte ako heslo WebDAV. Používateľské meno nie je povinné, ak ho systém požaduje, môžete použiť akúkoľvek hodnotu (napríklad \"soulfire\").",
+      "addressDescription": "Toto je adresa, ktorú potrebujete na prístup k svojim súborom. Niekedy musíte použiť dav:// alebo davs:// namiesto http(s)://."
+    },
+    "api": {
+      "title": "API prístup",
+      "description": "gRPC HTTP API SoulFire vám umožňuje programovo komunikovať s vašimi inštanciami pomocou webových požiadaviek.",
+      "publicAddress": "Verejná adresa API",
+      "personalToken": "Osobný API token",
+      "securityWarning": "Váš osobný API token je veľmi dôležitý. Nezdieľajte ho s nikým. Používa sa na vašu autentifikáciu pri prístupe k API.",
+      "addressDescription": "Toto je adresa, ktorú potrebujete na prístup k API."
+    },
+    "token": {
+      "generate": "Generovať token",
+      "placeholder": "Kliknite nižšie na \"Generovať token\"",
+      "generating": "Generuje sa token...",
+      "success": "Token bol úspešne vygenerovaný",
+      "error": "Nepodarilo sa vygenerovať token",
+      "copy": "Kopírovať token"
+    },
+    "address": {
+      "copy": "Kopírovať adresu"
+    },
+    "documentation": "Dokumentácia",
+    "howToConnect": "Ako sa pripojiť"
+  },
+  "uploadToMcLogs": "Nahrať na mclo.gs",
+  "mcLogsUpload": {
+    "loading": "Nahráva sa na mclo.gs...",
+    "success": "Nahraté na mclo.gs! Pozrieť tu: {{url}}",
+    "error": "Nepodarilo sa nahrať na mclo.gs"
+  },
+  "searchWithGoogle": "Vyhľadávať pomocou Google",
+  "copyToClipboard": "Kopírovať do schránky",
+  "clipboardCopy": {
+    "loading": "Kopíruje sa do schránky...",
+    "success": "Skopírované \"{{content}}\" do schránky",
+    "error": "Kopírovanie do schránky zlyhalo"
+  },
+  "userSettings": {
+    "avatar": {
+      "title": "Avatar",
+      "description": "Váš používateľský avatar je založený na vašej e-mailovej adrese účtu. Avatar k vašej e-mailovej adrese môžete zmeniť na",
+      "gravatar": "Gravatar"
+    },
+    "username": {
+      "uiName": "Používateľské meno",
+      "description": "Vaše používateľské meno sa používa na identifikáciu v rozhraní a v záznamoch."
+    },
+    "email": {
+      "uiName": "E-mail",
+      "description": "Váš e-mail sa používa na prihlásenie a oznámenia."
+    }
+  },
+  "auditLog": {
+    "filterPlaceholder": "Filtrovať audity...",
+    "user": "Používateľ",
+    "action": "Akcia",
+    "type": "Typ",
+    "timestamp": "Časová značka",
+    "searchUsers": "Hľadať používateľov...",
+    "searchTimestamps": "Hľadať časové pečiatky...",
+    "executedCommand": "Vykonaný príkaz: {{data}}",
+    "contextMenu": {
+      "copyUsername": "Kopírovať používateľské meno",
+      "copyCommand": "Kopírovať príkaz"
+    }
+  },
+  "toggleTheme": "Prepínať tému",
+  "pickADate": "Vyberte dátum",
+  "scripts": {
+    "filterPlaceholder": "Filtrovať skripty...",
+    "baseScriptDialog": {
+      "form": {
+        "scriptName": {
+          "min": "Názov skriptu musí mať aspoň 3 znaky",
+          "max": "Názov skriptu môže mať najviac 32 znakov",
+          "regex": "Názvy skriptov musia byť malými písmenami, začínať alfanumerickým znakom, nasledované ďalšími alfanumerickými znakmi alebo pomlčkami a končiť alfanumerickým znakom.",
+          "label": "Názov",
+          "placeholder": "Môj skript",
+          "description": "Názov skriptu."
+        },
+        "elevatedPermissions": {
+          "label": "Zvýšené oprávnenia",
+          "description": "Či by sa skript mal spúšťať so zvýšenými oprávneniami. Iba administrátori môžu túto možnosť povoliť."
+        }
+      }
+    },
+    "addScriptDialog": {
+      "title": "Pridať nový skript",
+      "description": "Skripty sú malé programy, ktoré bežia na serveri SoulFire. Môžu byť použité na automatizáciu úloh, vytváranie vlastného správania a ďalšie.",
+      "form": {
+        "cancel": "Zrušiť",
+        "add": "Pridať"
+      }
+    },
+    "updateScriptDialog": {
+      "title": "Aktualizovať skript",
+      "description": "Aktualizujte informácie skriptu.",
+      "form": {
+        "cancel": "Zrušiť",
+        "update": "Aktualizovať"
+      }
+    },
+    "removeToast": {
+      "loading": "Odstraňovanie skriptov...",
+      "success": "Skripty odstránené!",
+      "error": "Nepodarilo sa odstrániť skripty"
+    },
+    "addToast": {
+      "loading": "Pridáva sa skript...",
+      "success": "Skript pridaný!",
+      "error": "Nepodarilo sa pridať skript"
+    },
+    "updateToast": {
+      "loading": "Aktualizuje sa skript...",
+      "success": "Skript aktualizovaný!",
+      "error": "Nepodarilo sa aktualizovať skript"
+    },
+    "restartToast": {
+      "loading": "Reštartuje sa skript...",
+      "success": "Skript reštartovaný!",
+      "error": "Nepodarilo sa reštartovať skript"
+    },
+    "table": {
+      "type": "Typ",
+      "scriptName": "Názov",
+      "language": "Jazyk",
+      "elevatedPermissions": "Zvýšené oprávnenia",
+      "createdAt": "Vytvorené",
+      "actions": "Akcie"
+    },
+    "globalScript": "Globálny",
+    "instanceScript": "Inštancia"
+  },
+  "contextMenu": {
+    "instance": {
+      "goToInstance": "Prejsť na inštanciu",
+      "copyInstanceId": "Kopírovať ID inštancie",
+      "copyInstanceName": "Kopírovať názov inštancie",
+      "deleteInstance": "Odstrániť inštanciu"
+    },
+    "bot": {
+      "goToBot": "Prejsť na bota",
+      "copyUsername": "Kopírovať používateľské meno",
+      "copyUuid": "Kopírovať UUID",
+      "copyCoordinates": "Kopírovať súradnice"
+    },
+    "plugin": {
+      "enable": "Povoliť",
+      "disable": "Zakázať",
+      "openSettings": "Otvoriť nastavenia",
+      "copyPluginName": "Kopírovať názov pluginu",
+      "copyVersion": "Kopírovať verziu",
+      "openWebsite": "Otvoriť webstránku"
+    }
+  }
+}

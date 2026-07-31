@@ -1,0 +1,575 @@
+{
+  "locale": "Locale",
+  "close": "Close",
+  "cancel": "Cancel",
+  "save": "Save",
+  "saving": "Saving...",
+  "error": {
+    "noAddressOrToken": "No server address or token found",
+    "page": {
+      "title": "Error",
+      "description": "An error occurred while trying to load the page. More information can be found in the console.",
+      "logOut": "Log out",
+      "reloadPage": "Reload page",
+      "showDetails": "Show details"
+    },
+    "connectionFailed": "Connection to the SoulFire server failed."
+  },
+  "notFound": {
+    "page": {
+      "title": "Not found",
+      "description": "Could not find a page at this location",
+      "logOut": "Log out",
+      "reloadPage": "Reload page"
+    }
+  },
+  "pending": {
+    "connecting": "Connecting..."
+  },
+  "dialog": {
+    "about": {
+      "title": "About SoulFire",
+      "description": "You are running version {{version}} of the SoulFire client.",
+      "type": "Type",
+      "value": "Value",
+      "fields": {
+        "serverVersion": "Server Version",
+        "serverCommit": "Server Commit",
+        "serverBranch": "Server Branch",
+        "minecraftVersion": "Minecraft Version",
+        "operatingSystem": "Operating System",
+        "platform": "Platform",
+        "locale": "Locale",
+        "architecture": "Architecture",
+        "environment": "Environment",
+        "browser": "Browser"
+      },
+      "close": "Close"
+    },
+    "support": {
+      "title": "Support SoulFire",
+      "description": "SoulFire is free and open-source, built with love by the community.",
+      "body": "If SoulFire has been useful to you, please consider supporting the project. Your contribution helps cover server costs, fund development, and keep SoulFire free for everyone.",
+      "dismiss": "Maybe later",
+      "action": "Support SoulFire"
+    },
+    "createInstance": {
+      "title": "Create a new instance",
+      "description": "Instances need friendly names for you to distinguish them. It can be any name you want, for example, \"My Minecraft Bot\".",
+      "form": {
+        "friendlyName": {
+          "label": "Friendly name",
+          "placeholder": "My Minecraft Bot",
+          "description": "The name you want to give to this instance.",
+          "min": "The friendly name must be at least 3 characters long.",
+          "max": "The friendly name must be at most 32 characters long.",
+          "regex": "Friendly name must contain only letters, numbers, and spaces"
+        },
+        "cancel": "Cancel",
+        "create": "Create"
+      },
+      "createToast": {
+        "loading": "Creating instance...",
+        "success": "Instance created successfully",
+        "error": "Failed to create instance"
+      }
+    },
+    "duplicateInstance": {
+      "title": "Duplicate instance",
+      "description": "Create a new instance using the profile from \"{{name}}\".",
+      "form": {
+        "friendlyName": {
+          "description": "The name for the duplicated instance."
+        },
+        "duplicate": "Duplicate"
+      },
+      "duplicateToast": {
+        "loading": "Duplicating instance...",
+        "success": "Instance duplicated successfully",
+        "error": "Failed to duplicate instance"
+      }
+    },
+    "import": {
+      "main": {
+        "fromFile": "From file",
+        "fromUrl": "From URL",
+        "firstClipboardItem": "You had multiple items in the clipboard, only using first one.",
+        "fromClipboard": "From clipboard",
+        "textarea": {
+          "placeholder": "Put text here...",
+          "submit": "Load from text"
+        }
+      },
+      "url": {
+        "description": "Loading from URL will make the SoulFire server make a GET request to the target server and use the response as the data.",
+        "form": {
+          "url": {
+            "placeholder": "Put URL here...",
+            "empty": "Please enter a valid URL"
+          }
+        },
+        "submit": "Load from URL",
+        "toast": {
+          "loading": "Downloading data...",
+          "success": "Data loaded!",
+          "error": "Failed to download data"
+        }
+      }
+    }
+  },
+  "commandInput": {
+    "placeholder": "Enter command (type 'help' for list)",
+    "emptySuggestions": "Type to request suggestions or press Tab.",
+    "noSuggestions": "No suggestions available."
+  },
+  "controls": {
+    "start": "Start",
+    "stop": "Stop",
+    "startAll": "Start all",
+    "stopAll": "Stop all",
+    "restart": "Restart",
+    "startCount": "Number of bots to start",
+    "startToast": {
+      "loading": "Starting bots...",
+      "success": "Bot state updated",
+      "error": "Failed to start bots"
+    },
+    "restartToast": {
+      "loading": "Restarting bots...",
+      "success": "Bots are reconnecting",
+      "error": "Failed to restart bots"
+    },
+    "stopToast": {
+      "loading": "Stopping bots...",
+      "success": "Bots are stopping",
+      "error": "Failed to stop bots"
+    }
+  },
+  "botFleetSummary": "{{online}} online · {{desired}} desired · {{total}} total",
+  "icon": {
+    "invalidName": "Invalid icon name: {{name}}"
+  },
+  "dataTable": {
+    "noResults": "No results.",
+    "rowsSelected": "{{amount}} of {{total}} row(s) selected",
+    "rowsPerPage": "Rows per page",
+    "currentPage": "Page {{page}} of {{total}}",
+    "goFirst": "Go to first page",
+    "goPrevious": "Go to previous page",
+    "goNext": "Go to next page",
+    "goLast": "Go to last page",
+    "selectAll": "Select all",
+    "selectRow": "Select row",
+    "selected": "{{count}} selected",
+    "clearSelection": "Clear selection",
+    "escape": "Esc",
+    "filter": "Filter",
+    "filters": "Filters",
+    "noFiltersApplied": "No filters applied",
+    "modifyFilters": "Modify filters to refine your rows.",
+    "addFilters": "Add filters to refine your rows.",
+    "addFilter": "Add filter",
+    "resetFilters": "Reset filters",
+    "reset": "Reset",
+    "where": "Where",
+    "selectField": "Select field",
+    "searchFields": "Search fields...",
+    "noFieldsFound": "No fields found.",
+    "enterValue": "Enter a value...",
+    "enterValueShort": "Enter value...",
+    "true": "True",
+    "false": "False",
+    "selectOption": "Select option...",
+    "selectOptions": "Select options...",
+    "searchOptions": "Search options...",
+    "noOptionsFound": "No options found.",
+    "pickDateShort": "Pick date...",
+    "typeToFilter": "Type to add filter...",
+    "filterByValue": "Filter by \"{{value}}\"",
+    "view": "View",
+    "searchColumns": "Search columns...",
+    "noColumnsFound": "No columns found.",
+    "toggleColumns": "Toggle columns",
+    "sort": "Sort",
+    "sortBy": "Sort by",
+    "noSortingApplied": "No sorting applied",
+    "modifySorting": "Modify sorting to organize your rows.",
+    "addSorting": "Add sorting to organize your rows.",
+    "addSort": "Add sort",
+    "resetSorting": "Reset sorting",
+    "columnHeader": {
+      "asc": "Asc",
+      "desc": "Desc",
+      "reset": "Reset",
+      "hide": "Hide"
+    },
+    "operators": {
+      "iLike": "Contains",
+      "notILike": "Does not contain",
+      "eq": "Is",
+      "ne": "Is not",
+      "isEmpty": "Is empty",
+      "isNotEmpty": "Is not empty",
+      "lt": "Is less than",
+      "lte": "Is less than or equal to",
+      "gt": "Is greater than",
+      "gte": "Is greater than or equal to",
+      "isBetween": "Is between",
+      "isRelativeToToday": "Is relative to today",
+      "ltDate": "Is before",
+      "gtDate": "Is after",
+      "lteDate": "Is on or before",
+      "gteDate": "Is on or after",
+      "inArray": "Has any of",
+      "notInArray": "Has none of"
+    },
+    "sortOrders": {
+      "asc": "Asc",
+      "desc": "Desc"
+    }
+  },
+  "pluginCard": {
+    "version": "Version: {{version}}",
+    "author": "Author: {{author}}",
+    "license": "License: {{license}}",
+    "website": "Website"
+  },
+  "settingsPage": {
+    "namespacesNotFound": "Settings namespaces not found",
+    "stringList": {
+      "placeholder": "Add a new entry...",
+      "add": "Add",
+      "remove": "Remove"
+    },
+    "combo": {
+      "searchPlaceholder": "Search value..."
+    },
+    "invalidNumberToast": {
+      "title": "Invalid number!",
+      "description": "The value must be between {{min}} and {{max}}"
+    }
+  },
+  "terminal": {
+    "noLogs": "🧙 Looks like there are no logs to display; try running some commands!",
+    "demo-1": "Welcome to demo mode! 🧪",
+    "demo-2": "This is a read-only instance of SoulFire",
+    "demo-3": "Check out all the menus and features before deciding to install SoulFire :D",
+    "demo-4": "Feel free to join our Discord server if you would like to reach out: https://soulfiremc.com/discord"
+  },
+  "uiBreadcrumb": {
+    "more": "More"
+  },
+  "uiDialog": {
+    "close": "Close"
+  },
+  "uiSheet": {
+    "close": "Close"
+  },
+  "uiSidebar": {
+    "toggle": "Toggle Sidebar"
+  },
+  "window": {
+    "minimize": "Minimize",
+    "minimizeLabel": "Minimize window",
+    "maximize": "Maximize",
+    "maximizeLabel": "Maximize window",
+    "restore": "Restore",
+    "restoreLabel": "Restore window",
+    "close": "Close",
+    "closeLabel": "Close window",
+    "back": "Back",
+    "backLabel": "Go back",
+    "forward": "Forward",
+    "forwardLabel": "Go forward"
+  },
+  "infoButton": {
+    "showInfo": "Show info"
+  },
+  "castMenu": {
+    "title": "Cast",
+    "disconnected": "Disconnected from {{device}}",
+    "alreadyConnected": "Already connected to {{device}}",
+    "connectToast": {
+      "loading": "Connecting to {{device}}...",
+      "success": "Connected to {{device}}",
+      "error": "Failed to connect to {{device}}"
+    },
+    "noDevices": "No devices found",
+    "broadcastLabel": "Broadcast test",
+    "broadcastToast": {
+      "loading": "Broadcasting message...",
+      "success": "Message broadcasted!",
+      "error": "Failed to broadcast message"
+    }
+  },
+  "instanceSidebar": {
+    "readDocumentation": "Read documentation",
+    "backToDashboard": "Back to dashboard",
+    "deleteToast": {
+      "loading": "Deleting instance...",
+      "success": "Instance deleted",
+      "error": "Failed to delete instance"
+    },
+    "instancesGroup": "Instances",
+    "createInstance": "Create Instance",
+    "loadProfileToast": {
+      "loading": "Loading profile...",
+      "success": "Profile loaded",
+      "error": "Failed to load profile"
+    },
+    "loadProfile": "Load Profile",
+    "loadFromFile": "Load from file",
+    "profileSaved": "Profile saved",
+    "saveProfile": "Save Profile",
+    "deleteInstance": "Delete Instance",
+    "controlsGroup": "Controls",
+    "overview": "Overview",
+    "terminal": "Terminal",
+    "bots": "Bots",
+    "audit-log": "Audit Log",
+    "settingsGroup": "Settings",
+    "extensionsGroup": "Extensions",
+    "botSettings": "Bot Settings",
+    "accountSettings": "Account Settings",
+    "metaSettings": "Instance Settings",
+    "proxySettings": "Proxy Settings",
+    "aiSettings": "AI Settings",
+    "pathfindingSettings": "Pathfinding Settings",
+    "discoverPlugins": "Plugins",
+    "instanceScripts": "Scripts"
+  },
+  "userSidebar": {
+    "readDocumentation": "Read documentation",
+    "userGroup": "User",
+    "instances": "Instances",
+    "access": "Access",
+    "createInstance": "Create Instance",
+    "settings": "Settings",
+    "adminGroup": "Admin",
+    "adminOverview": "Overview",
+    "adminLogs": "Logs",
+    "adminTerminal": "Terminal",
+    "users": "Users",
+    "adminScripts": "Scripts",
+    "serverSettings": "Server Settings",
+    "devSettings": "Dev Settings",
+    "theme": {
+      "title": "Theme",
+      "system": "System",
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "terminal": {
+      "title": "Terminal"
+    },
+    "configDir": "Config directory",
+    "dataDir": "Data directory",
+    "supportSoulFire": "Support SoulFire",
+    "about": "About",
+    "logOut": "Log out",
+    "logOutToast": {
+      "loading": "Logging out...",
+      "success": "Logged out",
+      "error": "Failed to log out"
+    },
+    "exit": "Exit",
+    "stopImpersonating": "Stop impersonating",
+    "helpTranslate": "Translate SoulFire"
+  },
+  "sidebar": {
+    "documentation": "Documentation",
+    "supportSoulFire": "Support SoulFire",
+    "discord": "Discord"
+  },
+  "breadcrumbs": {
+    "admin": "Admin",
+    "settings": "Settings",
+    "controls": "Controls",
+    "extensions": "Extensions",
+    "bots": "Bots"
+  },
+  "noInstancesFound": "No instances found",
+  "pageName": {
+    "terminal": "Terminal",
+    "logs": "Logs",
+    "audit-log": "Audit Log",
+    "bots": "Bots",
+    "botDetail": "Bot Details",
+    "instances": "Instances",
+    "access": "Access",
+    "settings": "Settings",
+    "proxySettings": "Proxy Settings",
+    "overview": "Overview",
+    "users": "Users",
+    "accountSettings": "Account Settings",
+    "metaSettings": "Instance Settings",
+    "discoverPlugins": "Plugins",
+    "adminScripts": "Scripts",
+    "instanceScripts": "Scripts"
+  },
+  "access": {
+    "webdav": {
+      "title": "WebDAV Access",
+      "description": "SoulFire allows you to access instance, script and other files using the WebDAV protocol.",
+      "publicAddress": "Public WebDAV Address",
+      "personalToken": "Personal WebDAV Token",
+      "securityWarning": "Your personal WebDAV Token is very important. Do not share it with anyone. It is used to authenticate you when accessing your files. Use it as your WebDAV password when connecting. Username is not required, if you are prompted for one, you can use any value you want. (e.g. 'soulfire')",
+      "addressDescription": "This is the address you need to use to access your files. Sometimes you need to use dav:// or davs:// instead of http(s)://."
+    },
+    "api": {
+      "title": "API Access",
+      "description": "SoulFire's gRPC HTTP API allows you to interact with your instances programmatically using web requests.",
+      "publicAddress": "Public API Address",
+      "personalToken": "Personal API Token",
+      "securityWarning": "Your personal API Token is very important. Do not share it with anyone. It is used to authenticate you when accessing the API.",
+      "addressDescription": "This is the address you need to use to access the API."
+    },
+    "token": {
+      "generate": "Generate Token",
+      "placeholder": "Click 'Generate Token' below",
+      "generating": "Generating token...",
+      "success": "Token generated successfully",
+      "error": "Failed to generate token",
+      "copy": "Copy Token"
+    },
+    "address": {
+      "copy": "Copy Address"
+    },
+    "documentation": "Documentation",
+    "howToConnect": "How to connect"
+  },
+  "uploadToMcLogs": "Upload to mclo.gs",
+  "mcLogsUpload": {
+    "loading": "Uploading to mclo.gs...",
+    "success": "Uploaded to mclo.gs! View it here: {{url}}",
+    "error": "Failed to upload to mclo.gs"
+  },
+  "searchWithGoogle": "Search with Google",
+  "copyToClipboard": "Copy to clipboard",
+  "clipboardCopy": {
+    "loading": "Copying to clipboard...",
+    "success": "Copied \"{{content}}\" to clipboard",
+    "error": "Failed to copy to clipboard"
+  },
+  "userSettings": {
+    "avatar": {
+      "title": "Avatar",
+      "description": "Your user avatar is based on your account email address. You can change the avatar for your email address at",
+      "gravatar": "Gravatar"
+    },
+    "username": {
+      "uiName": "Username",
+      "description": "Your username is used to identify you in the UI and in logs."
+    },
+    "email": {
+      "uiName": "Email",
+      "description": "Your email is used for login and notifications."
+    }
+  },
+  "auditLog": {
+    "filterPlaceholder": "Filter audit logs...",
+    "user": "User",
+    "action": "Action",
+    "type": "Type",
+    "timestamp": "Timestamp",
+    "searchUsers": "Search users...",
+    "searchTimestamps": "Search timestamps...",
+    "executedCommand": "Executed command: {{data}}",
+    "changedBotDesiredState": "Changed bot desired state",
+    "restartedBots": "Restarted bots",
+    "contextMenu": {
+      "copyUsername": "Copy Username",
+      "copyCommand": "Copy Command"
+    }
+  },
+  "toggleTheme": "Toggle theme",
+  "pickADate": "Pick a date",
+  "scripts": {
+    "filterPlaceholder": "Filter scripts...",
+    "baseScriptDialog": {
+      "form": {
+        "scriptName": {
+          "min": "Script names must be at least 3 characters",
+          "max": "Script names must be at most 32 characters",
+          "regex": "Script names must be lowercase, begin with an alphanumeric character, followed by more alphanumeric characters or dashes, and end with an alphanumeric character.",
+          "label": "Name",
+          "placeholder": "My Script",
+          "description": "The name of the script."
+        },
+        "elevatedPermissions": {
+          "label": "Elevated Permissions",
+          "description": "Whether the script should run with elevated permissions. Only admins can enable this option."
+        }
+      }
+    },
+    "addScriptDialog": {
+      "title": "Add a new script",
+      "description": "Scripts are small programs that run on the SoulFire server. They can be used to automate tasks, create custom behaviour, and more.",
+      "form": {
+        "cancel": "Cancel",
+        "add": "Add"
+      }
+    },
+    "updateScriptDialog": {
+      "title": "Update script",
+      "description": "Update the script's information.",
+      "form": {
+        "cancel": "Cancel",
+        "update": "Update"
+      }
+    },
+    "removeToast": {
+      "loading": "Removing scripts...",
+      "success": "Removed scripts!",
+      "error": "Failed to remove scripts"
+    },
+    "addToast": {
+      "loading": "Adding script...",
+      "success": "Added script!",
+      "error": "Failed to add script"
+    },
+    "updateToast": {
+      "loading": "Updating script...",
+      "success": "Updated script!",
+      "error": "Failed to update script"
+    },
+    "restartToast": {
+      "loading": "Restarting script...",
+      "success": "Restarted script!",
+      "error": "Failed to restart script"
+    },
+    "table": {
+      "type": "Type",
+      "scriptName": "Name",
+      "language": "Language",
+      "elevatedPermissions": "Elevated Permissions",
+      "createdAt": "Created",
+      "actions": "Actions"
+    },
+    "globalScript": "Global",
+    "instanceScript": "Instance"
+  },
+  "contextMenu": {
+    "instance": {
+      "goToInstance": "Go to Instance",
+      "duplicateInstance": "Duplicate Instance",
+      "copyInstanceId": "Copy Instance ID",
+      "copyInstanceName": "Copy Instance Name",
+      "deleteInstance": "Delete Instance"
+    },
+    "bot": {
+      "goToBot": "Go to Bot",
+      "copyUsername": "Copy Username",
+      "copyUuid": "Copy UUID",
+      "copyCoordinates": "Copy Coordinates"
+    },
+    "plugin": {
+      "enable": "Enable",
+      "disable": "Disable",
+      "openSettings": "Open Settings",
+      "copyPluginName": "Copy Plugin Name",
+      "copyVersion": "Copy Version",
+      "openWebsite": "Open Website"
+    }
+  }
+}

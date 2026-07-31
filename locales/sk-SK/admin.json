@@ -1,0 +1,128 @@
+{
+  "overview": {
+    "welcome": "Vitaj späť, {{name}} 🧙",
+    "serverMetrics": {
+      "sectionTitle": "Metiky servera",
+      "summary": {
+        "cpu": "CPU",
+        "heapUsed": "Použitá halda",
+        "threads": "Vlákna",
+        "botsOnline": "Boti online",
+        "uptime": "Doba prevádzky"
+      },
+      "cpuUsage": {
+        "title": "Využitie CPU (%)"
+      },
+      "memoryUsage": {
+        "title": "Pamäť vyhradená pre haldu (MB)"
+      },
+      "threadCount": {
+        "title": "Počet vlákien"
+      },
+      "aggregateBots": {
+        "title": "Boti online (všetky inštancie)"
+      }
+    },
+    "instancesChart": {
+      "title": "Celkový počet inštancií na tomto serveri",
+      "instances": "Inštancie",
+      "label": {
+        "state": "Stav",
+        "active": "Aktívne",
+        "stopped": "Zastavené",
+        "other": "Ostatné"
+      }
+    },
+    "usersChart": {
+      "title": "Celkový počet používateľov na tomto serveri",
+      "users": "Používatelia",
+      "label": {
+        "role": "Rola",
+        "user": "Používateľ",
+        "admin": "Admin",
+        "other": "Ostatné"
+      }
+    }
+  },
+  "users": {
+    "filterPlaceholder": "Filtrovať používateľov...",
+    "baseUserDialog": {
+      "form": {
+        "username": {
+          "min": "Používateľské mená musia mať aspoň 3 znaky",
+          "max": "Používateľské mená môžu mať najviac 32 znakov",
+          "regex": "Používateľské mená musia byť malými písmenami, začínať alfanumerickým znakom, nasledovať môžu ďalšie alfanumerické znaky alebo pomlčky a končiť alfanumerickým znakom.",
+          "label": "Používateľské meno",
+          "placeholder": "Zadajte používateľské meno",
+          "description": "Jedinečné používateľské meno, ktoré identifikuje používateľa"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "Zadajte e-mail",
+          "description": "E-mailová adresa používateľa používaná na notifikácie a prihlásenie"
+        },
+        "role": {
+          "label": "Rola",
+          "description": "Rola používateľa. Správcovia môžu spravovať používateľov a všetky inštancie. Používatelia môžu spravovať iba svoje vlastné inštancie.",
+          "user": "Používateľ",
+          "admin": "Admin"
+        }
+      }
+    },
+    "addUserDialog": {
+      "title": "Pridať nového používateľa",
+      "description": "Pridať nového používateľa na tento server",
+      "form": {
+        "cancel": "Zrušiť",
+        "add": "Pridať používateľa"
+      }
+    },
+    "updateUserDialog": {
+      "title": "Aktualizovať používateľa",
+      "description": "Aktualizujte informácie o používateľovi",
+      "form": {
+        "cancel": "Zrušiť",
+        "update": "Aktualizovať používateľa"
+      }
+    },
+    "addToast": {
+      "loading": "Pridávanie používateľa...",
+      "success": "Používateľ pridaný!",
+      "error": "Nepodarilo sa pridať používateľa"
+    },
+    "updateToast": {
+      "loading": "Aktualizácia používateľa...",
+      "success": "Používateľ bol aktualizovaný!",
+      "error": "Nepodarilo sa aktualizovať používateľa"
+    },
+    "removeToast": {
+      "loading": "Odstraňovanie používateľov...",
+      "success": "Používatelia boli odstránení!",
+      "error": "Nepodarilo sa odstrániť používateľov"
+    },
+    "invalidateToast": {
+      "loading": "Odhlasovanie používateľov...",
+      "success": "Používatelia boli odhlásení!",
+      "error": "Nepodarilo sa odhlásiť používateľov"
+    },
+    "table": {
+      "username": "Používateľské meno",
+      "email": "E-mail",
+      "role": "Rola",
+      "createdAt": "Vytvorené",
+      "minIssuedAt": "Min. prihlásenie",
+      "actions": "Akcie",
+      "searchUsernames": "Hľadať používateľské mená...",
+      "searchEmails": "Hľadať e‑mailové adresy...",
+      "searchCreatedAts": "Hľadať dátumy vytvorenia...",
+      "searchMinIssuedAts": "Hľadať najskorší čas vydania..."
+    },
+    "removeSelectedTooltip": "Odstrániť vybraných používateľov",
+    "logOutSelectedTooltip": "Odhlásiť vybraných používateľov",
+    "contextMenu": {
+      "editUser": "Upraviť používateľa",
+      "impersonate": "Imitovať",
+      "copyUserId": "Kopírovať ID používateľa"
+    }
+  }
+}

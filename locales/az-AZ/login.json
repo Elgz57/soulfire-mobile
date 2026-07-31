@@ -1,0 +1,110 @@
+{
+  "header": {
+    "image": {
+      "alt": "SoulFire loqosu"
+    },
+    "title": "SoulFire"
+  },
+  "newUser": "SoulFire üçün yenisiniz? <a>Başlama bələdçisi</a>nə baxmanızı tövsiyə edirik.",
+  "connect": {
+    "title": "SoulFire serverinə qoşulun",
+    "description": "Qoşulmaq istədiyiniz SoulFire serverinin növünü seçin.",
+    "integrated": {
+      "title": "İnteqrasiyalı server (lokal)",
+      "description": "SoulFire serverinizi kompüterinizdə işlədər. Quraşdırma avtomatikdir və heç bir ayar tələb etmir. (Desktop/Android proqramı tələb olunur)"
+    },
+    "dedicated": {
+      "title": "Ayrılmış server (uzaq)",
+      "description": "SoulFire serverinin uzaq instansiyasına qoşulur. Serverin ünvanını və tokenini təqdim etməlisiniz."
+    },
+    "demo": {
+      "title": "Demo server",
+      "description": "Demo məlumatlarla virtual bir serveri simulyasiya edir. Bu server yalnız oxumaq üçün nəzərdə tutulur və siz heç bir dəyişiklik edə bilməzsiniz."
+    }
+  },
+  "integrated": {
+    "preparing": "İnteqrasiyalı serverin başlatmasına hazırlıq...",
+    "toast": {
+      "loading": "İnteqrasiyalı server başladılır...",
+      "success": "Inteqrasiya olunmuş server {{time}} saniyəyə başladıldı",
+      "error": "İnteqrasiyalı serveri başlatmaq mümkün olmadı"
+    },
+    "retry": "Təkrar cəhd et",
+    "reset": {
+      "button": "Məlumatları sıfırla",
+      "loading": "SoulFire məlumatları sıfırlanır...",
+      "success": "SoulFire məlumatları uğurla sıfırlandı. Yenidən başlamağa çalışın.",
+      "error": "SoulFire məlumatlarını sıfırlamaq mümkün olmadı"
+    },
+    "description": "İnteqrasiyalı server kompüterinizdə yerli olaraq işləyir. Lazım olarsa aşağıda Java başladılma arqumentlərini tənzimləyin.",
+    "form": {
+      "jvmArgs": {
+        "title": "JVM arqumentləri",
+        "description": "SoulFire Java VM arqumentləri. 4GB RAM istifadə etmək üçün <bold>-Xmx4G</bold> əlavə edin. Standart olaraq RAM-ınızın 25%-idir.",
+        "placeholder": "JVM arqumentlərinizi bura yazın"
+      },
+      "back": "Geri",
+      "start": "Başla"
+    },
+    "mobile": {
+      "description": "İnteqrasiyalı serveri mobil cihazda işlətmək üçün bir neçə əl addımını tamamlamağınız lazımdır.",
+      "form": {
+        "termuxCommand": {
+          "title": "Termux əmri",
+          "description": "<a>Termux proqramını</a> quraşdırın, ardınca isə SoulFire serverini quraşdırmaq üçün bu əmri Termux-da işlədin. Sonra <copy>generate-token api</copy> əmrini işlədərək token yaradın. Daha sonra tokeni aşağıya daxil edin."
+        },
+        "token": {
+          "title": "Token",
+          "description": "Yerli serverdə autentifikasiya üçün token.",
+          "placeholder": "Gizli token"
+        },
+        "back": "Geri",
+        "connect": "Qoşul"
+      }
+    }
+  },
+  "dedicated": {
+    "description": "Qoşulmaq istədiyiniz SoulFire serverinin ünvanını və tokenini daxil edin.",
+    "toast": {
+      "loading": "Serverə qoşulur...",
+      "success": "Serverə qoşuldu",
+      "error": "Serverə qoşulmaq mümkün olmadı"
+    },
+    "form": {
+      "address": {
+        "title": "Ünvan",
+        "description": "SoulFire serverinizin ünvanı.",
+        "placeholder": "http://localhost:38765"
+      },
+      "token": {
+        "title": "Token",
+        "placeholder": "Gizli token",
+        "description": "Serverdə autentifikasiya üçün token."
+      },
+      "email": {
+        "title": "Email",
+        "placeholder": "root@soulfiremc.com",
+        "description": "SoulFire hesabınızın email ünvanı."
+      },
+      "back": "Geri",
+      "useToken": "Token istifadə et",
+      "useEmail": "Email istifadə et",
+      "login": "Daxil ol"
+    }
+  },
+  "emailCode": {
+    "description": "Hesabınız varsa, <bold>{{email}}</bold> ünvanına kod göndərdik. Aşağıda daxil edin.",
+    "toast": {
+      "loading": "Kod yoxlanılır...",
+      "success": "Daxil olundu",
+      "error": "Kod yanlışdır"
+    },
+    "back": "Geri"
+  },
+  "footer": {
+    "version": "SoulFire Client {{version}} - {{environment}}",
+    "preview": "Ön izləmə axtarırsınız?",
+    "production": "İstehsalat üçün baxırsınız?",
+    "helpTranslate": "SoulFire tərcümə et"
+  }
+}

@@ -1,0 +1,540 @@
+{
+  "locale": "Локализация",
+  "close": "Закрыть",
+  "cancel": "Отмена",
+  "save": "Сохранить",
+  "saving": "Сохраняется...",
+  "error": {
+    "noAddressOrToken": "Адрес сервера или токен не найдены",
+    "page": {
+      "title": "Ошибка",
+      "description": "При попытке загрузить страницу произошла ошибка. Более подробную информацию можно найти в консоли.",
+      "logOut": "Выйти",
+      "reloadPage": "Перезагрузить страницу",
+      "showDetails": "Показать детали"
+    },
+    "connectionFailed": "Не удалось подключиться к серверу SoulFire."
+  },
+  "notFound": {
+    "page": {
+      "title": "Не найдено",
+      "description": "Не удалось найти страницу по этому адресу",
+      "logOut": "Выйти",
+      "reloadPage": "Перезагрузить страницу"
+    }
+  },
+  "pending": {
+    "connecting": "Подключение..."
+  },
+  "dialog": {
+    "about": {
+      "title": "О SoulFire",
+      "description": "Вы используете версию {{version}} клиента SoulFire.",
+      "type": "Тип",
+      "value": "Значение",
+      "fields": {
+        "serverVersion": "Версия сервера",
+        "serverCommit": "Коммит сервера",
+        "serverBranch": "Ветка сервера",
+        "minecraftVersion": "Версия Minecraft",
+        "operatingSystem": "Операционная система",
+        "platform": "Платформа",
+        "locale": "Локализация",
+        "architecture": "Архитектура",
+        "environment": "Окружение",
+        "browser": "Браузер"
+      },
+      "close": "Закрыть"
+    },
+    "createInstance": {
+      "title": "Создать новый экземпляр",
+      "description": "Для экземпляров нужны дружелюбные имена, чтобы вы могли их различать. Это может быть любое имя, например, «Мой бот Minecraft».",
+      "form": {
+        "friendlyName": {
+          "label": "Дружелюбное имя",
+          "placeholder": "Мой бот Minecraft",
+          "description": "Имя, которое вы хотите дать этому экземпляру.",
+          "min": "Дружелюбное имя должно содержать не менее 3 символов.",
+          "max": "Дружелюбное имя должно содержать не более 32 символов.",
+          "regex": "Дружелюбное имя может содержать только буквы, цифры и пробелы"
+        },
+        "cancel": "Отмена",
+        "create": "Создать"
+      },
+      "createToast": {
+        "loading": "Создание экземпляра...",
+        "success": "Экземпляр успешно создан",
+        "error": "Ошибка создания экземпляра"
+      }
+    },
+    "import": {
+      "main": {
+        "fromFile": "Из файла",
+        "fromUrl": "Из URL-адреса",
+        "firstClipboardItem": "У вас было несколько элементов в буфере обмена, но импортировался только первый элемент.",
+        "fromClipboard": "Из буфера обмена",
+        "textarea": {
+          "placeholder": "Вставьте текст сюда...",
+          "submit": "Загрузить из текста"
+        }
+      },
+      "url": {
+        "description": "Загрузка с URL заставит сервер SoulFire выполнить GET-запрос к целевому серверу и использовать полученный ответ в качестве данных.",
+        "form": {
+          "url": {
+            "placeholder": "Вставьте URL сюда...",
+            "empty": "Пожалуйста, введите правильную ссылку"
+          }
+        },
+        "submit": "Загрузить из URL",
+        "toast": {
+          "loading": "Загрузка данных...",
+          "success": "Данные загружены!",
+          "error": "Не удалось загрузить данные"
+        }
+      }
+    }
+  },
+  "commandInput": {
+    "placeholder": "Введите команду (введите 'help' для списка)",
+    "emptySuggestions": "Начните вводить для получения подсказок или нажмите Tab.",
+    "noSuggestions": "Подсказки отсутствуют."
+  },
+  "controls": {
+    "start": "Запуск",
+    "resume": "Возобновить",
+    "pause": "Пауза",
+    "stop": "Остановить",
+    "startToast": {
+      "loading": "Запуск сессии...",
+      "success": "Сессия успешно запущена",
+      "error": "Не удалось запустить сессию"
+    },
+    "resumeToast": {
+      "loading": "Возобновление сессии...",
+      "success": "Сессия успешно возобновлена",
+      "error": "Не удалось возобновить сессию"
+    },
+    "pauseToast": {
+      "loading": "Приостановка сессии...",
+      "success": "Сессия успешно приостановлена",
+      "error": "Не удалось приостановить сессию"
+    },
+    "stopToast": {
+      "loading": "Прекращение сессии...",
+      "success": "Сессия успешно остановлена",
+      "error": "Не удалось остановить сессию"
+    },
+    "accountWarning": {
+      "noAccountsTitle": "Нет настроенных аккаунтов",
+      "noAccountsDescription": "Перед началом сессии необходимо импортировать аккаунты. Вы запросили {{required}} ботов.",
+      "notEnoughTitle": "Недостаточно аккаунтов",
+      "notEnoughDescription": "Вы запросили {{required}} ботов, но импортировано только {{available}} аккаунтов.",
+      "hint": "Вы можете сгенерировать офлайн-аккаунты или импортировать аккаунты на странице настроек аккаунта.",
+      "continueWithExisting": "Продолжить с {{count}} аккаунтами",
+      "generateAccounts": "Сгенерировать аккаунты"
+    }
+  },
+  "icon": {
+    "invalidName": "Недопустимое имя иконки: {{name}}"
+  },
+  "dataTable": {
+    "noResults": "Нет данных.",
+    "rowsSelected": "Выбрано {{amount}} из {{total}} строк",
+    "rowsPerPage": "Строк на странице",
+    "currentPage": "Страниц {{page}} из {{total}}",
+    "goFirst": "Перейти на первую страницу",
+    "goPrevious": "Вернуться на предыдущую страницу",
+    "goNext": "Перейти на следующую страницу",
+    "goLast": "Перейти на последнюю страницу",
+    "selectAll": "Выбрать все",
+    "selectRow": "Выбрать строку",
+    "selected": "{{count}} выбрано",
+    "clearSelection": "Очистить выбор",
+    "escape": "Esc",
+    "filter": "Фильтр",
+    "filters": "Фильтры",
+    "noFiltersApplied": "Фильтры не применены",
+    "modifyFilters": "Измените фильтры для уточнения строк.",
+    "addFilters": "Добавьте фильтры для уточнения строк.",
+    "addFilter": "Добавить фильтр",
+    "resetFilters": "Сбросить фильтры",
+    "reset": "Сбросить",
+    "where": "Где",
+    "selectField": "Выбрать поле",
+    "searchFields": "Поиск по полям...",
+    "noFieldsFound": "Поля не найдены.",
+    "enterValue": "Введите значение...",
+    "enterValueShort": "Введите значение...",
+    "true": "Истина",
+    "false": "Ложь",
+    "selectOption": "Выбрать вариант...",
+    "selectOptions": "Выбрать варианты...",
+    "searchOptions": "Поиск среди вариантов...",
+    "noOptionsFound": "Варианты не найдены.",
+    "pickDateShort": "Выберите дату...",
+    "typeToFilter": "Введите для добавления фильтра...",
+    "filterByValue": "Фильтровать по «{{value}}»",
+    "view": "Просмотр",
+    "searchColumns": "Поиск по столбцам...",
+    "noColumnsFound": "Столбцы не найдены.",
+    "toggleColumns": "Переключить столбцы",
+    "sort": "Сортировать",
+    "sortBy": "Сортировать по",
+    "noSortingApplied": "Сортировка не применена",
+    "modifySorting": "Измените сортировку для организации строк.",
+    "addSorting": "Добавьте сортировку для организации строк.",
+    "addSort": "Добавить сортировку",
+    "resetSorting": "Сбросить сортировку",
+    "columnHeader": {
+      "asc": "По возрастанию",
+      "desc": "По убыванию",
+      "reset": "Сбросить",
+      "hide": "Скрыть"
+    },
+    "operators": {
+      "iLike": "Содержит",
+      "notILike": "Не содержит",
+      "eq": "Равно",
+      "ne": "Не равно",
+      "isEmpty": "Пусто",
+      "isNotEmpty": "Не пусто",
+      "lt": "Меньше чем",
+      "lte": "Меньше или равно",
+      "gt": "Больше чем",
+      "gte": "Больше или равно",
+      "isBetween": "Между",
+      "isRelativeToToday": "Относительно сегодня",
+      "ltDate": "До",
+      "gtDate": "После",
+      "lteDate": "В этот или более ранний день",
+      "gteDate": "В этот или более поздний день",
+      "inArray": "Содержит любой из",
+      "notInArray": "Не содержит ни одного из"
+    },
+    "sortOrders": {
+      "asc": "По возрастанию",
+      "desc": "По убыванию"
+    }
+  },
+  "pluginCard": {
+    "version": "Версия: {{version}}",
+    "author": "Автор: {{author}}",
+    "license": "Лицензия: {{license}}",
+    "website": "Сайт"
+  },
+  "settingsPage": {
+    "namespacesNotFound": "Настройки пространства имен не найдены",
+    "stringList": {
+      "placeholder": "Добавить новую запись...",
+      "add": "Добавить",
+      "remove": "Удалить"
+    },
+    "invalidNumberToast": {
+      "title": "Неверное число!",
+      "description": "Значение должно быть от {{min}} до {{max}}"
+    }
+  },
+  "terminal": {
+    "noLogs": "🧙 Похоже, нет записей для отображения; попробуйте выполнить несколько команд!",
+    "demo-1": "Добро пожаловать в демонстрационный режим! 🧪",
+    "demo-2": "Это экземпляр SoulFire только для чтения",
+    "demo-3": "Ознакомьтесь со всеми меню и функциями перед установкой SoulFire :D",
+    "demo-4": "Не стесняйтесь присоединиться к нашему серверу Discord: https://soulfiremc.com/discord"
+  },
+  "uiBreadcrumb": {
+    "more": "Ещё"
+  },
+  "uiDialog": {
+    "close": "Закрыть"
+  },
+  "uiSheet": {
+    "close": "Закрыть"
+  },
+  "uiSidebar": {
+    "toggle": "Переключить боковую панель"
+  },
+  "castMenu": {
+    "title": "Транслировать экран",
+    "disconnected": "Отключен от {{device}}",
+    "alreadyConnected": "Уже подключен к {{device}}",
+    "connectToast": {
+      "loading": "Подключение к {{device}}...",
+      "success": "Подключено к {{device}}",
+      "error": "Не удалось подключиться к {{device}}"
+    },
+    "noDevices": "Устройства не найдены",
+    "broadcastLabel": "Тест трансляции",
+    "broadcastToast": {
+      "loading": "Транслирование сообщения...",
+      "success": "Сообщение отправлено!",
+      "error": "Не удалось отправить сообщение"
+    }
+  },
+  "instanceSidebar": {
+    "readDocumentation": "Прочитать документацию",
+    "backToDashboard": "Назад на главную панель",
+    "deleteToast": {
+      "loading": "Удаление экземпляра...",
+      "success": "Экземпляр удален",
+      "error": "Не удалось удалить экземпляр"
+    },
+    "instancesGroup": "Экземпляры",
+    "createInstance": "Создать экземпляр",
+    "loadProfileToast": {
+      "loading": "Загрузка профиля...",
+      "success": "Профиль загружен",
+      "error": "Не удалось загрузить профиль"
+    },
+    "loadProfile": "Загрузить профиль",
+    "loadFromFile": "Загрузить из файла",
+    "profileSaved": "Профиль сохранён",
+    "saveProfile": "Сохранить профиль",
+    "deleteInstance": "Удалить экземпляр",
+    "controlsGroup": "Управление",
+    "overview": "Обзор",
+    "terminal": "Терминал",
+    "bots": "Боты",
+    "audit-log": "Журнал аудита",
+    "settingsGroup": "Настройки",
+    "extensionsGroup": "Расширения",
+    "botSettings": "Настройки ботов",
+    "accountSettings": "Настройки аккаунтов",
+    "metaSettings": "Настройки экземпляра",
+    "proxySettings": "Настройки прокси",
+    "aiSettings": "Настройки ИИ",
+    "pathfindingSettings": "Настройки поиска пути",
+    "discoverPlugins": "Плагины",
+    "instanceScripts": "Скрипты"
+  },
+  "userSidebar": {
+    "readDocumentation": "Прочитать документацию",
+    "userGroup": "Пользователь",
+    "instances": "Экземпляры",
+    "access": "Доступ",
+    "createInstance": "Создать экземпляр",
+    "settings": "Настройки",
+    "adminGroup": "Администратор",
+    "adminOverview": "Обзор",
+    "adminLogs": "Логи",
+    "adminTerminal": "Терминал",
+    "users": "Пользователи",
+    "adminScripts": "Скрипты",
+    "serverSettings": "Настройки сервера",
+    "devSettings": "Настройки разработчика",
+    "theme": {
+      "title": "Тема",
+      "system": "Системная",
+      "light": "Светлая",
+      "dark": "Тёмная"
+    },
+    "terminal": {
+      "title": "Терминал"
+    },
+    "configDir": "Каталог с конфигурацией",
+    "dataDir": "Каталог с данными",
+    "about": "О программе",
+    "logOut": "Выйти",
+    "logOutToast": {
+      "loading": "Выходим...",
+      "success": "Вы вышли",
+      "error": "Не удалось выйти из системы"
+    },
+    "exit": "Выход",
+    "stopImpersonating": "Прекратить притворяться",
+    "helpTranslate": "Перевести SoulFire"
+  },
+  "sidebar": {
+    "documentation": "Документация",
+    "supportSoulFire": "Купите мне чашечку кофе",
+    "discord": "Discord"
+  },
+  "breadcrumbs": {
+    "admin": "Администратор",
+    "settings": "Настройки",
+    "controls": "Управление",
+    "extensions": "Расширения",
+    "bots": "Боты"
+  },
+  "noInstancesFound": "Экземпляры не найдены",
+  "pageName": {
+    "terminal": "Терминал",
+    "logs": "Логи",
+    "audit-log": "Журнал аудита",
+    "bots": "Боты",
+    "botDetail": "Детали бота",
+    "instances": "Экземпляры",
+    "access": "Доступ",
+    "settings": "Настройки",
+    "proxySettings": "Настройки прокси",
+    "overview": "Обзор",
+    "users": "Пользователи",
+    "accountSettings": "Настройки аккаунтов",
+    "metaSettings": "Настройки экземпляра",
+    "discoverPlugins": "Плагины",
+    "adminScripts": "Скрипты",
+    "instanceScripts": "Скрипты"
+  },
+  "access": {
+    "webdav": {
+      "title": "Доступ через WebDAV",
+      "description": "SoulFire позволяет вам получить доступ к экземпляру, скриптам и другим файлам с помощью протокола WebDAV.",
+      "publicAddress": "Публичный WebDAV адрес",
+      "personalToken": "Персональный токен WebDAV",
+      "securityWarning": "Ваш персональный WebDAV токен очень важен. Не передавайте его никому. Он используется для аутентификации при доступе к вашим файлам. Используйте его в качестве пароля для WebDAV при подключении. Имя пользователя не обязательно, если у вас есть запрос на его использование, вы можете использовать любое значение, которое вы хотите. (например 'Soulfire')",
+      "addressDescription": "Это адрес, который вам необходимо использовать для доступа к файлам. Иногда вам нужно использовать dav:// или davs:// вместо http(s)://."
+    },
+    "api": {
+      "title": "Доступ через API",
+      "description": "SoulFire's gRPC HTTP API позволяет вам взаимодействовать с вашими экземплярами программно с помощью веб-запросов.",
+      "publicAddress": "Публичный API адрес",
+      "personalToken": "Персональный токен API",
+      "securityWarning": "Ваш персональный API токен очень важен. Не передавайте его никому. Он используется для аутентификации при доступе к API.",
+      "addressDescription": "Это адрес, который вам необходимо использовать для доступа к API."
+    },
+    "token": {
+      "generate": "Сгенерировать токен",
+      "placeholder": "Нажмите 'Сгенерировать токен' ниже",
+      "generating": "Генерация токена...",
+      "success": "Токен успешно сгенерирован",
+      "error": "Не удалось сгенерировать токен",
+      "copy": "Копировать токен"
+    },
+    "address": {
+      "copy": "Скопировать адрес"
+    },
+    "documentation": "Документация",
+    "howToConnect": "Как подключиться"
+  },
+  "uploadToMcLogs": "Загрузить на mclo.gs",
+  "mcLogsUpload": {
+    "loading": "Загрузка на mclo.gs...",
+    "success": "Загружено на mclo.gs! Посмотрите здесь: {{url}}",
+    "error": "Ошибка загрузки на mclo.gs"
+  },
+  "searchWithGoogle": "Искать в Google",
+  "copyToClipboard": "Скопировать в буфер обмена",
+  "clipboardCopy": {
+    "loading": "Копирование в буфер обмена...",
+    "success": "\"{{content}}\" скопирован в буфер обмена",
+    "error": "Ошибка копирования в буфер обмена"
+  },
+  "userSettings": {
+    "avatar": {
+      "title": "Аватар",
+      "description": "Ваш аватар пользователя основан на вашем email-адресе. Вы можете изменить аватар для вашего email-адреса на",
+      "gravatar": "Gravatar"
+    },
+    "username": {
+      "uiName": "Имя пользователя",
+      "description": "Ваше имя пользователя используется для идентификации вас в интерфейсе и в журналах."
+    },
+    "email": {
+      "uiName": "E-mail",
+      "description": "Ваш email используется для входа и уведомлений."
+    }
+  },
+  "auditLog": {
+    "filterPlaceholder": "Фильтровать журнал аудита...",
+    "user": "Пользователь",
+    "action": "Действие",
+    "type": "Тип",
+    "timestamp": "Временная метка",
+    "searchUsers": "Поиск пользователей...",
+    "searchTimestamps": "Поиск по временным меткам...",
+    "executedCommand": "Выполнена команда: {{data}}",
+    "contextMenu": {
+      "copyUsername": "Скопировать имя пользователя",
+      "copyCommand": "Скопировать команду"
+    }
+  },
+  "toggleTheme": "Переключить тему",
+  "pickADate": "Выберите дату",
+  "scripts": {
+    "filterPlaceholder": "Фильтровать скрипты...",
+    "baseScriptDialog": {
+      "form": {
+        "scriptName": {
+          "min": "Имя скрипта должно содержать не менее 3 символов",
+          "max": "Имя скрипта должно содержать не более 32 символов",
+          "regex": "Имя скрипта может содержать строчные буквы, цифры и тире. Но тире не может быть в начале или конце.",
+          "label": "Имя",
+          "placeholder": "Мой скрипт",
+          "description": "Название скрипта."
+        },
+        "elevatedPermissions": {
+          "label": "Повышенные права доступа",
+          "description": "Должен ли скрипт запускаться с повышенными правами. Только администраторы могут включить эту опцию."
+        }
+      }
+    },
+    "addScriptDialog": {
+      "title": "Добавить новый скрипт",
+      "description": "Скрипты - это небольшие программы, которые работают на сервере SoulFire. Они могут быть использованы для автоматизации задач, создания пользовательского поведения и многое другое.",
+      "form": {
+        "cancel": "Отмена",
+        "add": "Добавить"
+      }
+    },
+    "updateScriptDialog": {
+      "title": "Обновить скрипт",
+      "description": "Обновить информацию о скрипте.",
+      "form": {
+        "cancel": "Отмена",
+        "update": "Обновить"
+      }
+    },
+    "removeToast": {
+      "loading": "Удаление скрипта...",
+      "success": "Скрипты удален!",
+      "error": "Не удалось удалить скрипт"
+    },
+    "addToast": {
+      "loading": "Добавление скрипта...",
+      "success": "Скрипт добавлен!",
+      "error": "Не удалось добавить скрипт"
+    },
+    "updateToast": {
+      "loading": "Обновление скрипта...",
+      "success": "Скрипт обновлен!",
+      "error": "Не удалось обновить скрипт"
+    },
+    "restartToast": {
+      "loading": "Перезапуск скрипта...",
+      "success": "Скрипт перезапущен!",
+      "error": "Не удалось перезапустить скрипт"
+    },
+    "table": {
+      "type": "Тип",
+      "scriptName": "Имя",
+      "language": "Язык",
+      "elevatedPermissions": "Повышенные права доступа",
+      "createdAt": "Дата создания",
+      "actions": "Действия"
+    },
+    "globalScript": "Глобальный",
+    "instanceScript": "Экземпляр"
+  },
+  "contextMenu": {
+    "instance": {
+      "goToInstance": "Перейти к экземпляру",
+      "copyInstanceId": "Скопировать ID экземпляра",
+      "copyInstanceName": "Скопировать имя экземпляра",
+      "deleteInstance": "Удалить экземпляр"
+    },
+    "bot": {
+      "goToBot": "Перейти к боту",
+      "copyUsername": "Скопировать имя пользователя",
+      "copyUuid": "Скопировать UUID",
+      "copyCoordinates": "Скопировать координаты"
+    },
+    "plugin": {
+      "enable": "Включить",
+      "disable": "Отключить",
+      "openSettings": "Открыть настройки",
+      "copyPluginName": "Скопировать имя плагина",
+      "copyVersion": "Скопировать версию",
+      "openWebsite": "Открыть сайт"
+    }
+  }
+}

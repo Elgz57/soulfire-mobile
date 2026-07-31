@@ -1,0 +1,128 @@
+{
+  "overview": {
+    "welcome": "歡迎回來，{{name}} 🧙",
+    "serverMetrics": {
+      "sectionTitle": "伺服器指標",
+      "summary": {
+        "cpu": "CPU",
+        "heapUsed": "已用堆積記憶體",
+        "threads": "執行緒",
+        "botsOnline": "線上機器人",
+        "uptime": "運作時間"
+      },
+      "cpuUsage": {
+        "title": "CPU 使用率 (%)"
+      },
+      "memoryUsage": {
+        "title": "堆記憶體 (MB)"
+      },
+      "threadCount": {
+        "title": "執行緒數量"
+      },
+      "aggregateBots": {
+        "title": "線上機器人數（所有實例）"
+      }
+    },
+    "instancesChart": {
+      "title": "此伺服器上的實例總數",
+      "instances": "實例清單",
+      "label": {
+        "state": "狀態",
+        "active": "啟用中",
+        "stopped": "已停止",
+        "other": "其他"
+      }
+    },
+    "usersChart": {
+      "title": "此伺服器上的使用者總數",
+      "users": "使用者",
+      "label": {
+        "role": "角色",
+        "user": "使用者",
+        "admin": "管理員",
+        "other": "其他"
+      }
+    }
+  },
+  "users": {
+    "filterPlaceholder": "篩選使用者...",
+    "baseUserDialog": {
+      "form": {
+        "username": {
+          "min": "使用者名稱至少需要 3 個字元",
+          "max": "使用者名稱最多 32 個字元",
+          "regex": "使用者名稱必須是小寫，須以英數字開頭，後面可包含英數字或連字符號，並以英數字結尾。",
+          "label": "使用者名稱",
+          "placeholder": "請輸入使用者名稱",
+          "description": "用來識別使用者的唯一名稱"
+        },
+        "email": {
+          "label": "電子郵件",
+          "placeholder": "請輸入電子郵件",
+          "description": "用於通知和登入的使用者電子郵件地址"
+        },
+        "role": {
+          "label": "角色",
+          "description": "使用者的角色。管理員可以管理使用者及所有實例，一般使用者僅能管理自己的實例。",
+          "user": "使用者",
+          "admin": "管理員"
+        }
+      }
+    },
+    "addUserDialog": {
+      "title": "新增使用者",
+      "description": "將新使用者新增至此伺服器",
+      "form": {
+        "cancel": "取消",
+        "add": "新增使用者"
+      }
+    },
+    "updateUserDialog": {
+      "title": "更新使用者",
+      "description": "更新該使用者的資訊",
+      "form": {
+        "cancel": "取消",
+        "update": "更新使用者"
+      }
+    },
+    "addToast": {
+      "loading": "正在新增使用者...",
+      "success": "成功新增使用者！",
+      "error": "新增使用者失敗"
+    },
+    "updateToast": {
+      "loading": "正在更新使用者...",
+      "success": "已更新使用者！",
+      "error": "更新使用者失敗"
+    },
+    "removeToast": {
+      "loading": "正在移除使用者...",
+      "success": "已移除使用者！",
+      "error": "移除使用者失敗"
+    },
+    "invalidateToast": {
+      "loading": "正在登出使用者...",
+      "success": "已登出使用者！",
+      "error": "登出使用者失敗"
+    },
+    "table": {
+      "username": "使用者名稱",
+      "email": "電子郵件",
+      "role": "角色",
+      "createdAt": "建立時間",
+      "minIssuedAt": "最早登入",
+      "actions": "動作",
+      "searchUsernames": "搜尋使用者名稱...",
+      "searchEmails": "搜尋電子郵件...",
+      "searchCreatedAts": "搜尋建立時間...",
+      "searchMinIssuedAts": "搜尋最小發放時間..."
+    },
+    "removeSelectedTooltip": "移除選取的使用者",
+    "logOutSelectedTooltip": "登出選取的使用者",
+    "contextMenu": {
+      "editUser": "編輯使用者",
+      "impersonate": "模擬身份",
+      "copyUserId": "複製使用者 ID"
+    }
+  }
+}

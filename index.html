@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <title>SoulFire</title>
+
+    <meta name="theme-color" content="#3289BF" />
+    <meta name="description" content="Frontend client for SoulFire." />
+    <meta name="application-name" content="SoulFire" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta
+      name="format-detection"
+      content="telephone=no, date=no, address=no, email=no, url=no"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; connect-src 'self' https://aptabase.pistonmaster.net https://api.mclo.gs *; font-src 'self'; frame-src 'self'; img-src 'self' data: blob: https://www.gravatar.com https://mc-heads.net https://assets.mcasset.cloud; manifest-src 'self'; media-src 'self'; worker-src 'self';"
+    />
+    <meta property="og:title" content="SoulFire" />
+    <meta property="og:description" content="Frontend client for SoulFire." />
+    <meta property="og:url" content="https://app.soulfiremc.com" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="/logo.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="SoulFire Logo" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="SoulFire" />
+    <meta name="twitter:description" content="Frontend client for SoulFire." />
+    <meta name="twitter:image" content="/logo.png" />
+    <meta name="twitter:image:width" content="512" />
+    <meta name="twitter:image:height" content="512" />
+    <meta name="twitter:image:alt" content="SoulFire Logo" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="256x256" />
+    <script>
+      const el = document.documentElement;
+      const systemThemes = ['light', 'dark'];
+
+      function updateDOM(theme) {
+        el.classList.remove(...systemThemes);
+        el.classList.add(theme);
+
+        setColorScheme(theme);
+      }
+
+      function setColorScheme(theme) {
+        if (systemThemes.includes(theme)) {
+          el.style.colorScheme = theme;
+        }
+      }
+
+      function getSystemTheme() {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light';
+      }
+
+      try {
+        const themeName = localStorage.getItem('theme') || 'system';
+        const isSystem = themeName === 'system';
+        const theme = isSystem ? getSystemTheme() : themeName;
+        updateDOM(theme);
+      } catch (_e) {
+        //
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
+  </body>
+</html>

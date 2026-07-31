@@ -1,0 +1,128 @@
+{
+  "overview": {
+    "welcome": "Witamy ponownie, {{name}}🧙",
+    "serverMetrics": {
+      "sectionTitle": "Metryki serwera",
+      "summary": {
+        "cpu": "CPU",
+        "heapUsed": "Użycie sterty",
+        "threads": "Wątki",
+        "botsOnline": "Boty online",
+        "uptime": "Czas działania"
+      },
+      "cpuUsage": {
+        "title": "Użycie CPU (%)"
+      },
+      "memoryUsage": {
+        "title": "Pamięć sterty (MB)"
+      },
+      "threadCount": {
+        "title": "Liczba wątków"
+      },
+      "aggregateBots": {
+        "title": "Boty online (wszystkie instancje)"
+      }
+    },
+    "instancesChart": {
+      "title": "Wszystkie instancje na tym serwerze",
+      "instances": "Instancje",
+      "label": {
+        "state": "Stan",
+        "active": "Aktywny",
+        "stopped": "Zatrzymana",
+        "other": "Inne"
+      }
+    },
+    "usersChart": {
+      "title": "Wszyscy użytkownicy na tym serwerze",
+      "users": "Użytkownicy",
+      "label": {
+        "role": "Role",
+        "user": "Użytkownik",
+        "admin": "Administrator",
+        "other": "Inne"
+      }
+    }
+  },
+  "users": {
+    "filterPlaceholder": "Filtruj użytkowników...",
+    "baseUserDialog": {
+      "form": {
+        "username": {
+          "min": "Nazwa użytkownika musi mieć co najmniej 3 znaki",
+          "max": "Nazwa użytkownika może mieć maksymalnie 32 znaki",
+          "regex": "Nazwy użytkowników muszą być pisane małymi literami, zaczynać się od znaku alfanumerycznego, następnie zawierać kolejne znaki alfanumeryczne lub myślniki, a kończyć się znakiem alfanumerycznym.",
+          "label": "Nazwa użytkownika",
+          "placeholder": "Wpisz nazwę użytkownika",
+          "description": "Unikalna nazwa użytkownika identyfikująca użytkownika"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "Wpisz adres e-mail",
+          "description": "Adres e-mail użytkownika używany do powiadomień i logowania"
+        },
+        "role": {
+          "label": "Role",
+          "description": "Rola użytkownika. Administratorzy mogą zarządzać użytkownikami i wszystkimi instancjami. Zwykli użytkownicy mogą zarządzać tylko własnymi instancjami.",
+          "user": "Użytkownik",
+          "admin": "Administrator"
+        }
+      }
+    },
+    "addUserDialog": {
+      "title": "Dodaj nowego użytkownika",
+      "description": "Dodaj nowego użytkownika do tego serwera",
+      "form": {
+        "cancel": "Anuluj",
+        "add": "Dodaj użytkownika"
+      }
+    },
+    "updateUserDialog": {
+      "title": "Aktualizuj użytkownika",
+      "description": "Zaktualizuj informacje o użytkowniku",
+      "form": {
+        "cancel": "Anuluj",
+        "update": "Aktualizuj użytkownika"
+      }
+    },
+    "addToast": {
+      "loading": "Dodawanie użytkownika...",
+      "success": "Użytkownik został dodany!",
+      "error": "Nie udało się dodać użytkownika"
+    },
+    "updateToast": {
+      "loading": "Aktualizowanie użytkownika...",
+      "success": "Użytkownik został zaktualizowany!",
+      "error": "Nie udało się zaktualizować użytkownika"
+    },
+    "removeToast": {
+      "loading": "Usuwanie użytkowników...",
+      "success": "Użytkownicy zostali usunięci!",
+      "error": "Nie udało się usunąć użytkowników"
+    },
+    "invalidateToast": {
+      "loading": "Wylogowywanie użytkowników...",
+      "success": "Wylogowano użytkowników!",
+      "error": "Nie udało się wylogować użytkowników"
+    },
+    "table": {
+      "username": "Nazwa użytkownika",
+      "email": "E-mail",
+      "role": "Role",
+      "createdAt": "Utworzono",
+      "minIssuedAt": "Minimalne logowanie",
+      "actions": "Akcje",
+      "searchUsernames": "Szukaj nazw użytkowników...",
+      "searchEmails": "Szukaj adresów e-mail...",
+      "searchCreatedAts": "Szukaj dat utworzenia...",
+      "searchMinIssuedAts": "Szukaj minimalnych dat wydania..."
+    },
+    "removeSelectedTooltip": "Usuń wybranych użytkowników",
+    "logOutSelectedTooltip": "Wyloguj wybranych użytkowników",
+    "contextMenu": {
+      "editUser": "Edytuj użytkownika",
+      "impersonate": "Podszyj się",
+      "copyUserId": "Kopiuj ID użytkownika"
+    }
+  }
+}

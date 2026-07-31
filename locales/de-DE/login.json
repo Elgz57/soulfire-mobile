@@ -1,0 +1,110 @@
+{
+  "header": {
+    "image": {
+      "alt": "SoulFire Logo"
+    },
+    "title": "SoulFire"
+  },
+  "newUser": "Neu bei SoulFire? Wir empfehlen, den <a>Erste Schritte-Leitfaden</a> anzusehen.",
+  "connect": {
+    "title": "Verbinde dich mit einem SoulFire Server",
+    "description": "Wähle den Typ des SoulFire Servers, mit dem du dich verbinden möchtest.",
+    "integrated": {
+      "title": "Integrierter Server (lokal)",
+      "description": "Führt einen SoulFire-Server auf deinem Computer aus. Die Einrichtung ist automatisch und erfordert keine Konfiguration. (Erfordert die Desktop-/Android-App)"
+    },
+    "dedicated": {
+      "title": "Dedizierter Server (Remote)",
+      "description": "Verbindet sich mit einer remote Instanz des SoulFire Servers. Du musst die Adresse und das Token des Servers angeben."
+    },
+    "demo": {
+      "title": "Demo Server",
+      "description": "Simuliert einen virtuellen Server mit Demo-Daten. Dieser Server ist schreibgeschützt und Sie können keine Änderungen vornehmen."
+    }
+  },
+  "integrated": {
+    "preparing": "Bereite vor, den integrierten Server zu starten...",
+    "toast": {
+      "loading": "Starte den integrierten Server...",
+      "success": "Integrierter Server in {{time}} s gestartet",
+      "error": "Fehler beim Starten des integrierten Servers"
+    },
+    "retry": "Erneut versuchen",
+    "reset": {
+      "button": "Daten zurücksetzen",
+      "loading": "SoulFire-Daten werden zurückgesetzt...",
+      "success": "SoulFire-Daten wurden erfolgreich zurückgesetzt. Versuchen Sie, erneut zu starten.",
+      "error": "Fehler beim Zurücksetzen der SoulFire-Daten"
+    },
+    "description": "Der integrierte Server läuft lokal auf deinem PC. Konfiguriere bei Bedarf die Java-Startargumente unten.",
+    "form": {
+      "jvmArgs": {
+        "title": "JVM-Argumente",
+        "description": "Die SoulFire Java-VM-Argumente. Um 4GB RAM zu nutzen, füge <bold>-Xmx4G</bold> hinzu. Standardmäßig sind es 25% deines RAMs.",
+        "placeholder": "Deine JVM-Argumente hier"
+      },
+      "back": "Zurück",
+      "start": "Start"
+    },
+    "mobile": {
+      "description": "Um den integrierten Server auf dem Mobilgerät auszuführen, müssen Sie einige manuelle Schritte durchführen.",
+      "form": {
+        "termuxCommand": {
+          "title": "Termux-Befehl",
+          "description": "Installieren Sie die <a>Termux-App</a> und führen Sie dann diesen Befehl in Termux aus, um den SoulFire-Server zu installieren. Danach müssen Sie den Befehl <copy>generate-token api</copy> ausführen, um ein Token zu generieren. Geben Sie das Token anschließend unten ein."
+        },
+        "token": {
+          "title": "Token",
+          "description": "Token zur Authentifizierung mit dem lokalen Server.",
+          "placeholder": "Geheimer Token"
+        },
+        "back": "Zurück",
+        "connect": "Verbinden"
+      }
+    }
+  },
+  "dedicated": {
+    "description": "Geben Sie die Adresse und das Token des SoulFire Servers ein, mit dem Sie sich verbinden möchten.",
+    "toast": {
+      "loading": "Verbinde mit Server...",
+      "success": "Mit Server verbunden",
+      "error": "Verbindung zum Server fehlgeschlagen"
+    },
+    "form": {
+      "address": {
+        "title": "Adresse",
+        "description": "Adresse deines SoulFire-Servers.",
+        "placeholder": "http://localhost:38765"
+      },
+      "token": {
+        "title": "Token",
+        "placeholder": "Geheimer Token",
+        "description": "Token zum Authentifizieren mit dem Server."
+      },
+      "email": {
+        "title": "E-Mail",
+        "placeholder": "root@soulfiremc.com",
+        "description": "E-Mail deines SoulFire-Kontos."
+      },
+      "back": "Zurück",
+      "useToken": "Token verwenden",
+      "useEmail": "E-Mail verwenden",
+      "login": "Anmelden"
+    }
+  },
+  "emailCode": {
+    "description": "Wenn du ein Konto hast, haben wir einen Code an <bold>{{email}}</bold> gesendet. Gib ihn unten ein.",
+    "toast": {
+      "loading": "Code wird überprüft...",
+      "success": "Angemeldet",
+      "error": "Code ist ungültig"
+    },
+    "back": "Zurück"
+  },
+  "footer": {
+    "version": "SoulFire Client {{version}} - {{environment}}",
+    "preview": "Suchst du Vorschau?",
+    "production": "Suchst du Produktion?",
+    "helpTranslate": "SoulFire übersetzen"
+  }
+}

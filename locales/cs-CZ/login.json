@@ -1,0 +1,110 @@
+{
+  "header": {
+    "image": {
+      "alt": "Logo SoulFire"
+    },
+    "title": "SoulFire"
+  },
+  "newUser": "Jste v SoulFire noví? Doporučujeme podívat se na <a>průvodce začátkem</a>.",
+  "connect": {
+    "title": "Připojit se k serveru SoulFire",
+    "description": "Vyberte, ke kterému typu serveru SoulFire se chcete připojit.",
+    "integrated": {
+      "title": "Integrovaný server (lokální)",
+      "description": "Spustí server SoulFire na vašem počítači. Nastavení je automatické a nevyžaduje žádnou konfiguraci. (Vyžaduje aplikaci pro Desktop/Android)"
+    },
+    "dedicated": {
+      "title": "Dedikovaný server (vzdálený)",
+      "description": "Připojí se ke vzdálené instanci serveru SoulFire. Je potřeba zadat adresu a token serveru."
+    },
+    "demo": {
+      "title": "Demo server",
+      "description": "Simuluje virtuální server s demo daty. Tento server je pouze pro čtení a nelze na něm provádět žádné změny."
+    }
+  },
+  "integrated": {
+    "preparing": "Připravuji spuštění integrovaného serveru...",
+    "toast": {
+      "loading": "Spouštění integrovaného serveru...",
+      "success": "Integrovaný server spuštěn za {{time}}s",
+      "error": "Nepodařilo se spustit integrovaný server"
+    },
+    "retry": "Opakovat",
+    "reset": {
+      "button": "Resetovat data",
+      "loading": "Probíhá resetování dat SoulFire...",
+      "success": "Data SoulFire byla úspěšně resetována. Zkuste to znovu spustit.",
+      "error": "Nepodařilo se resetovat data SoulFire"
+    },
+    "description": "Integrovaný server běží lokálně na vašem PC. Pokud je třeba, nastavte níže argumenty pro spuštění Javy.",
+    "form": {
+      "jvmArgs": {
+        "title": "JVM argumenty",
+        "description": "Argumenty pro Java VM SoulFire. Pro použití 4GB RAM přidejte <bold>-Xmx4G</bold>. Výchozí hodnota je 25 % vaší RAM.",
+        "placeholder": "Vaše JVM argumenty zde"
+      },
+      "back": "Zpět",
+      "start": "Spustit"
+    },
+    "mobile": {
+      "description": "Pro spuštění integrovaného serveru na mobilu musíte provést několik ručních kroků.",
+      "form": {
+        "termuxCommand": {
+          "title": "Příkaz Termux",
+          "description": "Nainstalujte si <a>aplikaci Termux</a>, poté spusťte tento příkaz v Termuxu pro instalaci serveru SoulFire. Následně musíte spustit příkaz <copy>generate-token api</copy> pro vygenerování tokenu. Poté zadejte vygenerovaný token níže."
+        },
+        "token": {
+          "title": "Token",
+          "description": "Token pro ověření u místního serveru.",
+          "placeholder": "Tajný token"
+        },
+        "back": "Zpět",
+        "connect": "Připojit"
+      }
+    }
+  },
+  "dedicated": {
+    "description": "Zadejte adresu a token serveru SoulFire, ke kterému se chcete připojit.",
+    "toast": {
+      "loading": "Připojování k serveru...",
+      "success": "Připojeno k serveru",
+      "error": "Nepodařilo se připojit k serveru"
+    },
+    "form": {
+      "address": {
+        "title": "Adresa",
+        "description": "Adresa vašeho serveru SoulFire.",
+        "placeholder": "http://localhost:38765"
+      },
+      "token": {
+        "title": "Token",
+        "placeholder": "Tajný token",
+        "description": "Token pro ověření u serveru."
+      },
+      "email": {
+        "title": "Email",
+        "placeholder": "root@soulfiremc.com",
+        "description": "Email vašeho účtu SoulFire."
+      },
+      "back": "Zpět",
+      "useToken": "Použít token",
+      "useEmail": "Použít email",
+      "login": "Přihlásit se"
+    }
+  },
+  "emailCode": {
+    "description": "Pokud máte účet, poslali jsme kód na <bold>{{email}}</bold>. Zadejte jej níže.",
+    "toast": {
+      "loading": "Kontrola kódu...",
+      "success": "Přihlášeno",
+      "error": "Kód je neplatný"
+    },
+    "back": "Zpět"
+  },
+  "footer": {
+    "version": "SoulFire klient {{version}} – {{environment}}",
+    "preview": "Hledáte náhled?",
+    "production": "Hledáte produkci?",
+    "helpTranslate": "Přeložit SoulFire"
+  }
+}

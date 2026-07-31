@@ -1,0 +1,468 @@
+{
+  "proxy": {
+    "getProxies": "Proxyleri Al",
+    "addProxies": "Proxy Ekle",
+    "filterPlaceholder": "Proxyleri filtrele...",
+    "listImportToast": {
+      "loading": "Proxyler içe aktarılıyor...",
+      "success": "{{count}} proxy içe aktarıldı!",
+      "error": "Proxyler içe aktarılamadı",
+      "noProxies": "İçe aktarılacak proxy yok"
+    },
+    "import": {
+      "proxyType": "Proxy Türü",
+      "http": "HTTP",
+      "socks4": "SOCKS4",
+      "socks5": "SOCKS5",
+      "uri": "URI",
+      "dialog": {
+        "title": "{{type}} proxyleri içe aktar",
+        "description": "Proxylerinizi buraya yapıştırın, her satıra bir tane olacak şekilde"
+      }
+    },
+    "removeToast": {
+      "loading": "Proxyler kaldırılıyor...",
+      "success": "{{count}} proxy kaldırıldı!",
+      "error": "Proxyler kaldırılamadı"
+    },
+    "checkToast": {
+      "loading": "Proxyler kontrol ediliyor... {{checked}}/{{total}} (Başarılı: {{success}} Başarısız: {{failed}})",
+      "success": "{{count}} bozuk proxy kaldırıldı!",
+      "error": "Proxyler kontrol edilemedi"
+    },
+    "checkDialog": {
+      "title": "Proxyleri Kontrol Et",
+      "description": "{{count}} proxyyi kontrol etmek üzeresiniz. Geçersiz proxyler otomatik olarak kaldırılacaktır.",
+      "confirm": "Kontrolü Başlat"
+    },
+    "invalidFormat": "Geçersiz proxy formatı",
+    "table": {
+      "type": "Tip",
+      "address": "Adres",
+      "username": "Kullanıcı Adı",
+      "password": "Şifre",
+      "searchAddresses": "Adreslerde ara...",
+      "searchUsernames": "Kullanıcı adlarında ara...",
+      "searchPasswords": "Şifrelerde ara..."
+    },
+    "removeSelectedTooltip": "Seçili proxy'leri kaldır",
+    "exportSelectedTooltip": "Seçili proxy'leri dışa aktar",
+    "checkSelectedTooltip": "Seçili proxy'leri kontrol et",
+    "contextMenu": {
+      "copyAddress": "Adresi Kopyala",
+      "copyUsername": "Kullanıcı Adını Kopyala",
+      "copyPassword": "Şifreyi Kopyala",
+      "deleteProxy": "Proxy'yi Sil"
+    },
+    "postImportCheckDialog": {
+      "title": "Proxy'leri Kontrol Et?",
+      "description": "{{count}} proxy içe aktardınız. Şimdi onları kontrol etmek ister misiniz? Geçersiz proxy'ler otomatik olarak kaldırılacaktır.",
+      "confirm": "Proxyleri Kontrol Et",
+      "skip": "Atla"
+    },
+    "export": {
+      "format": "Dışa Aktarma Formatı",
+      "uri": "URI Formatı (tüm türler)",
+      "http": "Yalnızca HTTP (düz)",
+      "socks4": "Yalnızca SOCKS4 (düz)",
+      "socks5": "Yalnızca SOCKS5 (düz)",
+      "noProxies": "Dışa aktarılacak proxy yok"
+    }
+  },
+  "account": {
+    "getAccounts": "Hesapları Al",
+    "addAccounts": "Hesap Ekle",
+    "generateAccounts": "Hesapları Oluştur",
+    "filterPlaceholder": "Hesapları filtrele...",
+    "listImportToast": {
+      "loading": "Hesaplar içe aktarılıyor... {{checked}}/{{total}} (Başarılı: {{success}} Başarısız: {{failed}})",
+      "allFailed": "Hiçbir hesap içe aktarılamadı",
+      "someFailed": "{{count}} hesap içe aktarıldı, {{failed}} hesap içe aktarılamadı",
+      "noneFailed": "{{count}} hesap içe aktarıldı!",
+      "error": "Hesaplar içe aktarılamadı",
+      "noAccounts": "İçe aktarılacak hesap yok"
+    },
+    "unknownError": "Bilinmeyen hata",
+    "deviceCodeImportToast": {
+      "loading": "Hesap içe aktarılıyor...",
+      "success": "Hesap içe aktarıldı!",
+      "error": "Hesap içe aktarılamadı"
+    },
+    "generate": {
+      "title": "Çevrimdışı Hesap Oluştur",
+      "description": "Özel bir ad formatı ile çevrimdışı Java hesapları oluşturun.",
+      "amount": "Miktar",
+      "nameFormat": "Ad Formatı",
+      "nameFormatHelp": "Hesap numarası için %d kullanın (örn. Bot_%d, Bot_1, Bot_2 vb. olur)",
+      "mode": "Mevcut Hesaplar",
+      "modeHelp": "Mevcut hesaplarla nasıl işlem yapılacağını seçin:\n\n• Mevcut Olanları Yoksay: Sadece henüz var olmayan isimlerle hesap oluşturur. Var olan tüm hesaplar olduğu gibi kalır.\n\n• Mevcut Olanları Değiştir: Tüm hesapları oluşturur ve aynı UUID'ye sahip mevcut hesapları değiştirir. Diğer hesaplar korunur.\n\n• Tümünü Değiştir: MEVCUT TÜM hesapları siler ve bunları oluşturulan hesaplarla değiştirir.",
+      "modeIgnoreExisting": "Mevcut Olanları Yoksay",
+      "modeReplaceExisting": "Mevcut Olanları Değiştir",
+      "modeReplaceAll": "Tümünü Değiştir",
+      "submit": "Oluştur",
+      "generating": "Oluşturuluyor...",
+      "progress": "Hesaplar oluşturuluyor... {{checked}}/{{total}} (Başarılı: {{success}} Hatalı: {{failed}})",
+      "success": "{{count}} hesap oluşturuldu!",
+      "allFailed": "Hiç hesap oluşturulamadı",
+      "allExist": "Tüm kullanıcı adları zaten mevcut. Yeniden oluşturmak için 'Mevcut hesapların üzerine yaz' seçeneğini etkinleştirin.",
+      "error": "Hesaplar oluşturulamadı",
+      "invalidAmount": "Lütfen geçerli bir miktar girin (en az 1)",
+      "missingPlaceholder": "Ad formatı %d yer tutucu içermeli"
+    },
+    "import": {
+      "javaEdition": "Java Sürümü",
+      "bedrockEdition": "Bedrock Sürümü",
+      "offline": "Çevrimdışı",
+      "microsoftCredentials": "Microsoft Kimlik Bilgileri",
+      "microsoftDeviceCode": "Microsoft Cihaz Kodu",
+      "microsoftRefreshToken": "Microsoft Yenileme Jetonu",
+      "microsoftCookies": "Microsoft Çerezleri",
+      "microsoftAccessToken": "Microsoft Erişim Anahtarı",
+      "altProviders": "Alternatif Sağlayıcılar",
+      "dialog": {
+        "title": "{{type}} hesapları içe aktar",
+        "description": "Hesaplarınızı buraya yapıştırın, her satıra bir tane olacak şekilde"
+      }
+    },
+    "removeToast": {
+      "loading": "Hesaplar kaldırılıyor...",
+      "success": "{{count}} hesap kaldırıldı!",
+      "error": "Hesaplar kaldırılamadı"
+    },
+    "table": {
+      "type": "Tip",
+      "profileId": "UUID",
+      "lastKnownName": "Kullanıcı Adı",
+      "searchProfileIds": "Profil kimliklerinde ara...",
+      "searchLastKnownNames": "Son bilinen isimlerde ara...",
+      "actions": "İşlemler"
+    },
+    "removeSelectedTooltip": "Seçili hesapları kaldır",
+    "contextMenu": {
+      "openConfig": "Yapılandırmayı Aç",
+      "openMetadata": "Metadata'yı Aç",
+      "copyProfileId": "Profil Kimliğini Kopyala",
+      "copyUsername": "Kullanıcı Adını Kopyala"
+    },
+    "config": {
+      "title": "{{name}} Yapılandır",
+      "description": "Bu hesap için bot başına ayarları yapılandırın",
+      "openButton": "Hesabı yapılandır",
+      "pageTitle": "{{name}} - {{page}} Ayarları",
+      "noSettings": "Bu sayfa için ayar mevcut değil"
+    },
+    "deviceCodeConfirmDialog": {
+      "title": "Cihaz Kodu Kimlik Doğrulaması",
+      "description": "Cihaz kodu akışını başlatmadan önce seçenekleri yapılandırın.",
+      "start": "Kimlik Doğrulamayı Başlat"
+    },
+    "deviceCodeDialog": {
+      "title": "Cihaz Kodu Kimlik Doğrulaması",
+      "description": "Bağlamak için Microsoft hesabınızla oturum açın.",
+      "openInBrowser": "Tarayıcıda Aç",
+      "orManually": "Ya da kodu elle girin",
+      "codeLabel": "Kodunuz",
+      "urlLabel": "Git:"
+    },
+    "ravealts": {
+      "button": "Ravealts",
+      "title": "Ravealts üzerinden Hesap Satın Al",
+      "description": "Ravealts API anahtarınızı kullanarak Minecraft hesapları satın alın.",
+      "apiKeyLabel": "API Anahtarı",
+      "apiKeyPlaceholder": "Ravealts API anahtarınızı girin",
+      "validate": "Doğrula",
+      "validating": "Doğrulanıyor...",
+      "keyValid": "Anahtar doğrulandı",
+      "keyInvalid": "Geçersiz API anahtarı",
+      "credits": "Kredi: {{credits}}",
+      "stockTitle": "Mevcut Stok",
+      "noStock": "Stokta hesap yok",
+      "accountType": "Hesap Türü",
+      "amount": "Miktar (1-10)",
+      "purchase": "Satın Al &amp; İçe Aktar",
+      "purchasing": "Satın alınıyor...",
+      "purchaseSuccess": "{{count}} hesap satın alındı, içe aktarılıyor...",
+      "purchaseError": "Satın alma başarısız: {{message}}",
+      "networkError": "Ravealts API'ına bağlanılamadı",
+      "outOfStock": "Seçilen tür stokta yok",
+      "insufficientBalance": "Yeterli kredi yok",
+      "rateLimited": "Çok fazla istek, lütfen daha sonra tekrar deneyin"
+    },
+    "metadata": {
+      "openButton": "Metaveriyi Düzenle",
+      "title": "Metaveri: {{name}}",
+      "description": "Bu hesap için kalıcı metadata girişlerini yönetin. Her giriş bir ad alanı, anahtar ve JSON değeri içerir.",
+      "namespacePlaceholder": "Ad Alanı",
+      "keyPlaceholder": "Anahtar",
+      "valuePlaceholder": "Değer (JSON)",
+      "noEntries": "Metadata girişi yok. Yukarıdan bir tane ekleyin.",
+      "addSuccess": "Giriş eklendi",
+      "addError": "Giriş eklenemedi",
+      "updateError": "Giriş güncellenemedi",
+      "deleteSuccess": "Girdi silindi",
+      "deleteError": "Girdi silinemedi",
+      "duplicateError": "Bu ad alanı ve anahtara sahip bir giriş zaten mevcut",
+      "invalidJson": "Geçersiz JSON değeri"
+    }
+  },
+  "instanceMetadata": {
+    "title": "Varlık Meta Verisi / Instance Meta Verisi ",
+    "description": "Bu örnek için kalıcı meta veri girişlerini yönetin. Her bir giriş, bir ad alanı, bir anahtar ve bir JSON değeri içerir.",
+    "namespacePlaceholder": "Ad Alanı",
+    "keyPlaceholder": "Anahtar",
+    "valuePlaceholder": "Değer (JSON)",
+    "noEntries": "Metadata girişi yok. Yukarıdan bir tane ekleyin.",
+    "addSuccess": "Giriş eklendi",
+    "addError": "Giriş eklenemedi",
+    "updateError": "Giriş güncellenemedi",
+    "deleteSuccess": "Girdi silindi",
+    "deleteError": "Girdi silinemedi",
+    "duplicateError": "Bu ad alanı ve anahtara sahip bir giriş zaten mevcut",
+    "invalidJson": "Geçersiz JSON değeri"
+  },
+  "bots": {
+    "searchPlaceholder": "Botlarda ara...",
+    "onlineCount": "{{online}} çevrim içi / {{total}} toplamı",
+    "noBots": "Hiç bot yapılandırılmadı. Hesaplarınızı Hesap Ayarları sayfasından ekleyin.",
+    "noBotsFound": "Aramanıza uyan bot bulunamadı.",
+    "loadingMore": "Daha fazla yükleniyor...",
+    "showingCount": "{{total}} öğeden {{loaded}} gösteriliyor",
+    "allLoaded": "Tüm {{total}} botlar yüklendi",
+    "online": "Çevrim içi",
+    "offline": "Çevrimdışı",
+    "notJoined": "Katılmadı",
+    "backToBots": "Botlara Geri Dön",
+    "comingSoon": "Çok Yakında",
+    "terminalPanel": {
+      "title": "Bot Terminali"
+    },
+    "positionPanel": {
+      "title": "Konum ve Rotasyon",
+      "position": "Konum",
+      "rotation": "Rotasyon",
+      "offline": "Bot çevrim dışı. Konum verileri yalnızca bot bağlıyken görüntülenebilir."
+    },
+    "chatPanel": {
+      "title": "Sohbet Mesajları",
+      "description": "Bu bota ait sohbet mesajları gelecekteki bir güncellemede burada görünecek."
+    },
+    "commandPanel": {
+      "title": "Bot Komutları",
+      "placeholder": "Bu bota komut gönder...",
+      "description": "Bota özel komutlar gelecekteki bir güncellemede sunulacak."
+    },
+    "povPanel": {
+      "title": "Bot Bakış Açısı",
+      "capture": "Yakala",
+      "refresh": "Yenile",
+      "auto": "Otomatik",
+      "startAutoRefresh": "Oto-yenilemeyi başlat (1 saniye aralıkla)",
+      "stopAutoRefresh": "Oto-yenilemeyi durdur",
+      "clickToCapture": "Botun bakış açısını göstermek için Yakala'ya tıklayın",
+      "offline": "Bot çevrimdışı. Bakış açısı yalnızca bot bağlandığında kullanılabilir."
+    },
+    "statsPanel": {
+      "title": "Bot İstatistikleri",
+      "health": "Can",
+      "food": "Yiyecek",
+      "saturation": "Doygunluk",
+      "experience": "Deneyim",
+      "level": "Seviye",
+      "toNextLevel": "sonraki seviyeye",
+      "gameMode": "Oyun Modu",
+      "survival": "Hayatta Kalma",
+      "creative": "Yaratıcı",
+      "adventure": "Macera",
+      "spectator": "İzleyici",
+      "unknown": "Bilinmeyen",
+      "offline": "Bot çevrimdışı. İstatistikler yalnızca bot bağlandığında görüntülenebilir."
+    },
+    "inventoryPanel": {
+      "title": "Envanter",
+      "hotbar": "Kısayol Çubuğu",
+      "main": "Ana Envanter",
+      "items": "öğeler",
+      "carrying": "Taşınıyor",
+      "dropOne": "Birini Bırak",
+      "dropAll": "Hepsini Bırak",
+      "closeContainer": "Kapat",
+      "clickHint": "Sol tık: al/koy | Sağ tık: yarım/bir | Shift+tık: hızlı taşı | Orta tık: hızlı envanter seç",
+      "offline": "Bot çevrimdışı. Envanter yalnızca bot bağlandığında kullanılabilir.",
+      "buttons": {
+        "stonecutterRecipes": "Tarifler",
+        "enchantments": "Büyüler",
+        "patterns": "Desenler",
+        "trades": "Ticaretler",
+        "beaconEffects": "Beykon Etkileri",
+        "crafterSlots": "Slot Kontrolleri",
+        "lecternControls": "Kitap Kontrolleri",
+        "actions": "İşlemler"
+      },
+      "textInput": {
+        "title": "Metin Girişi",
+        "anvilRename": "Eşyayı Yeniden Adlandır"
+      },
+      "bookPages": {
+        "title": "Kitap İçeriği",
+        "emptyPage": "(Boş sayfa)",
+        "pageIndicator": "Sayfa {{current}} / {{total}}"
+      }
+    },
+    "visualPanel": {
+      "title": "Bot Görünümü",
+      "compass": "Baktığı Yön",
+      "lookDirection": "Bakış Açısı",
+      "lookingUp": "Yukarı bakıyor",
+      "lookingDown": "Aşağı bakıyor",
+      "lookingStraight": "Düz bakıyor",
+      "worldInfo": "Dünya Bilgisi",
+      "dimension": "Boyut",
+      "biome": "Biyom",
+      "offline": "Bot çevrimdışı. Görsel veriler yalnızca bot bağlıyken kullanılabilir."
+    },
+    "actionsPanel": {
+      "title": "Bot Eylemleri",
+      "leftClick": "Sol Tık",
+      "rightClick": "Sağ Tık",
+      "leftClickDescription": "Varlığa saldır veya blok kır",
+      "rightClickDescription": "Eşyayı kullan veya etkileşimde bulun",
+      "offline": "Bot çevrimdışı. Eylemler yalnızca bot bağlandığında kullanılabilir."
+    },
+    "movementPanel": {
+      "title": "Hareket Kontrolü",
+      "movement": "Hareket (WASD)",
+      "forward": "İleri Hareket Et (W)",
+      "backward": "Geri Hareket Et (S)",
+      "left": "Sola Kay (A)",
+      "right": "Sağa Kay (D)",
+      "jump": "Zıpla",
+      "sneak": "Yavaşla",
+      "sprint": "Koş",
+      "stop": "Durdur",
+      "rotation": "Bakış Yönü",
+      "lookUp": "Yukarı Bak",
+      "lookDown": "Aşağı Bak",
+      "lookLeft": "Sola Bak",
+      "lookRight": "Sağa Bak",
+      "offline": "Bot çevrimdışı. Hareket kontrolleri yalnızca bot bağlandığında kullanılabilir."
+    },
+    "dialogPanel": {
+      "title": "Sunucu Diyaloğu",
+      "noDialog": "Şu anda herhangi bir sunucu diyaloğu görüntülenmiyor.",
+      "dialogType": "Tip",
+      "dialogId": "Diyalog Kimliği",
+      "notice": "Bildirim",
+      "confirmation": "Onaylama",
+      "multiAction": "Çoklu Eylem",
+      "serverLinks": "Sunucu Bağlantıları",
+      "dialogList": "Diyalog Listesi",
+      "unknownType": "Bilinmeyen",
+      "dismiss": "Kapat",
+      "submit": "Gönder",
+      "offline": "Bot çevrimdışı. Diyaloglar yalnızca bot bağlandığında kullanılabilir."
+    }
+  },
+  "scripts": {
+    "title": "Görsel Scriptler",
+    "description": "Görsel bir düğüm tabanlı düzenleyici kullanarak otomasyon scriptleri oluşturun.",
+    "experimentalTitle": "Deneysel Özellik",
+    "experimentalWarning": "Bu özellik deneyseldir. Gelecekte bozulmalar olabilir ve mevcut scriptler çalışmayabilir. Dikkatli kullanın.",
+    "createScript": "Script Oluştur",
+    "createScriptTitle": "Yeni Script Oluştur",
+    "createScriptDescription": "Bu örnek için yeni bir görsel script oluşturun. Scriptler, botun eylemlerini otomatikleştirebilir ve olaylara yanıt verebilir.",
+    "scriptName": "Script Adı",
+    "scriptNamePlaceholder": "Script adını girin...",
+    "scriptDescription": "Açıklama",
+    "scriptDescriptionPlaceholder": "Bu scriptin ne yaptığını açıklayın...",
+    "create": "Oluştur",
+    "createSuccess": "Script başarıyla oluşturuldu",
+    "createError": "Script oluşturulamadı",
+    "noScripts": "Henüz Script Yok",
+    "noScriptsDescription": "Görsel düğüm tabanlı düzenleyiciyi kullanarak bot eylemlerini otomatikleştirmek için ilk scriptinizi oluşturun.",
+    "createFirstScript": "İlk Scriptinizi Oluşturun",
+    "running": "Çalışıyor",
+    "paused": "Duraklatıldı",
+    "nodes": "düğümler",
+    "noDescription": "Açıklama yok",
+    "edit": "Düzenle",
+    "pause": "Duraklat",
+    "pauseSuccess": "Betik duraklatıldı",
+    "pauseError": "Betik duraklatılamadı",
+    "resume": "Devam et",
+    "resumeSuccess": "Betik devam ettirildi",
+    "resumeError": "Betik devam ettirilemedi",
+    "delete": "Sil",
+    "deleteSuccess": "Script başarıyla silindi",
+    "deleteError": "Script silinemedi",
+    "saveSuccess": "Script başarıyla kaydedildi",
+    "saveError": "Script kaydedilemedi",
+    "activateSuccess": "Script aktifleştirildi",
+    "activateError": "Script aktifleştirilemedi",
+    "deactivateSuccess": "Script devre dışı bırakıldı",
+    "untitledScript": "Başlıksız Script",
+    "saveFirstBeforeActivating": "Aktifleştirmeden önce scripti kaydedin",
+    "activating": "Komut dosyası etkinleştiriliyor...",
+    "activated": "Script aktifleştirildi",
+    "executionCompleted": "Script tamamlandı",
+    "executionCompletedSuccess": "Script başarıyla tamamlandı",
+    "deactivated": "Script devre dışı bırakıldı",
+    "deactivatedByUser": "Komut dosyası kullanıcı tarafından devre dışı bırakıldı",
+    "executionFailed": "Script yürütme başarısız oldu",
+    "executionError": "Yürütme hatası: {{error}}",
+    "nodeStarted": "Düğüm başlatıldı: {{nodeId}}",
+    "nodeCompleted": "Düğüm tamamlandı: {{nodeId}}",
+    "nodeError": "Düğüm hatası: {{error}}",
+    "contextMenu": {
+      "edit": "Script'i Düzenle",
+      "pause": "Duraklat",
+      "resume": "Devam et",
+      "delete": "Script'i Sil",
+      "copyScriptName": "Script Adını Kopyala",
+      "copyScriptId": "Script Kimliğini Kopyala"
+    },
+    "editor": {
+      "toolbar": {
+        "backToScripts": "Scriptlere Geri Dön",
+        "save": "Kaydet",
+        "saveTooltip": "Scripti kaydet.",
+        "resume": "Devam et",
+        "resumeTooltip": "Betik yürütmesini devam ettir",
+        "pause": "Duraklat",
+        "pauseTooltip": "Komut dosyası yürütmesini duraklat",
+        "unsaved": "Kaydedilmedi",
+        "clearCanvas": "Tuvali temizle",
+        "zoomIn": "Yakınlaştır",
+        "zoomOut": "Uzaklaştır",
+        "fit": "Sığdır",
+        "export": "Scripti dışa aktar",
+        "import": "Scripti içe aktar",
+        "exportSuccess": "Script başarıyla dışa aktarıldı",
+        "importSuccess": "Script başarıyla içe aktarıldı",
+        "importError": "Script içe aktarılamadı"
+      },
+      "palette": {
+        "title": "Düğüm Paleti",
+        "search": "Düğüm ara..."
+      },
+      "logs": {
+        "title": "Yürütme Günlükleri",
+        "clearTitle": "Günlükleri temizle",
+        "noLogs": "Henüz günlük yok. Yürütme günlüklerini görmek için scripti çalıştırın.",
+        "entries_one": "{{count}} giriş",
+        "entries_other": "{{count}} giriş"
+      },
+      "contextMenu": {
+        "duplicate": "Çoğalt",
+        "rename": "Yeniden adlandır.",
+        "disconnectAll": "Tüm bağlantıları kes",
+        "collapse": "Daralt",
+        "expand": "Genişlet",
+        "mute": "Sesi Kapat",
+        "unmute": "Sesi Aç",
+        "showPreview": "Önizlemeyi Göster",
+        "hidePreview": "Önizlemeyi Gizle",
+        "delete": "Sil"
+      }
+    }
+  }
+}

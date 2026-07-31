@@ -1,0 +1,470 @@
+{
+  "proxy": {
+    "getProxies": "Отримати проксі",
+    "addProxies": "Додати проксі",
+    "filterPlaceholder": "Фільтрувати проксі...",
+    "listImportToast": {
+      "loading": "Імпортування проксі...",
+      "success": "Імпортовано {{count}} проксі!",
+      "error": "Не вдалося імпортувати проксі",
+      "noProxies": "Немає проксі для імпортування"
+    },
+    "import": {
+      "proxyType": "Тип проксі",
+      "http": "HTTP",
+      "socks4": "SOCKS4",
+      "socks5": "SOCKS5",
+      "uri": "URI",
+      "dialog": {
+        "title": "Імпортувати {{type}} проксі",
+        "description": "Вставте ваші проксі тут, по одному на рядок"
+      }
+    },
+    "removeToast": {
+      "loading": "Видалення проксі...",
+      "success": "Видалено {{count}} проксі!",
+      "error": "Не вдалося видалити проксі"
+    },
+    "checkToast": {
+      "loading": "Перевірка проксі... {{checked}}/{{total}} (Успішно: {{success}} Не вдалося: {{failed}})",
+      "success": "Видалено {{count}} пошкоджених проксі!",
+      "error": "Не вдалося перевірити проксі"
+    },
+    "checkDialog": {
+      "title": "Перевірити проксі-сервери",
+      "description": "Ви збираєтеся перевірити {{count}} проксі-серверів. Недійсні проксі-сервери буде автоматично видалено.",
+      "confirm": "Почати перевірку"
+    },
+    "invalidFormat": "Неправильний формат проксі",
+    "table": {
+      "type": "Тип",
+      "address": "Адреса",
+      "username": "Ім'я користувача",
+      "password": "Пароль",
+      "searchAddresses": "Пошук адрес...",
+      "searchUsernames": "Пошук імен користувачів...",
+      "searchPasswords": "Пошук паролів..."
+    },
+    "removeSelectedTooltip": "Видалити вибрані проксі",
+    "exportSelectedTooltip": "Експортувати вибрані проксі",
+    "checkSelectedTooltip": "Перевірити вибрані проксі",
+    "contextMenu": {
+      "copyAddress": "Скопіювати адресу",
+      "copyUsername": "Копіювати ім'я користувача",
+      "copyPassword": "Скопіювати пароль",
+      "deleteProxy": "Видалити проксі"
+    },
+    "postImportCheckDialog": {
+      "title": "Перевірити проксі?",
+      "description": "Ви щойно імпортували {{count}} проксі. Бажаєте перевірити їх зараз? Невалідні проксі буде автоматично видалено.",
+      "confirm": "Перевірити проксі-сервери",
+      "skip": "Пропустити"
+    },
+    "export": {
+      "format": "Формат експорту",
+      "uri": "Формат URI (усі типи)",
+      "http": "Тільки HTTP (флет)",
+      "socks4": "Тільки SOCKS4 (флет)",
+      "socks5": "Тільки SOCKS5 (флет)",
+      "noProxies": "Немає проксі для експорту"
+    }
+  },
+  "account": {
+    "getAccounts": "Отримати акаунти",
+    "addAccounts": "Додати акаунти",
+    "generateAccounts": "Згенерувати акаунти",
+    "filterPlaceholder": "Фільтрувати акаунти...",
+    "listImportToast": {
+      "loading": "Імпортування акаунтів... {{checked}}/{{total}} (Успішно: {{success}} Не вдалося: {{failed}})",
+      "allFailed": "Не вдалося імпортувати жодного акаунта.",
+      "someFailed": "Імпортовано {{count}} акаунтів, не вдалося імпортувати {{failed}} акаунтів",
+      "noneFailed": "Імпортовано {{count}} акаунтів!",
+      "error": "Не вдалося імпортувати акаунти",
+      "noAccounts": "Немає акаунтів для імпортування"
+    },
+    "unknownError": "Невідома помилка",
+    "deviceCodeImportToast": {
+      "loading": "Імпорт акаунта...",
+      "success": "Акаунт імпортовано!",
+      "error": "Не вдалося імпортувати акаунт"
+    },
+    "generate": {
+      "title": "Згенерувати офлайн-акаунти",
+      "description": "Згенеруйте офлайн Java-акаунти з власним форматом імені.",
+      "amount": "Кількість",
+      "nameFormat": "Формат імені",
+      "nameFormatHelp": "Використовуйте %d як заповнювач для номера акаунта (наприклад, Bot_%d стане Bot_1, Bot_2 тощо)",
+      "mode": "Існуючі акаунти",
+      "modeHelp": "Виберіть, як обробляти існуючі акаунти:\n\n• Ігнорувати існуючі: Генерує лише ті акаунти, імена яких ще не існують. Усі наявні акаунти залишаються без змін.\n\n• Замінити існуючі: Генерує всі акаунти, замінюючи ті, в яких співпадає UUID. Інші акаунти залишаються.\n\n• Замінити всі: Видаляє ВСІ існуючі акаунти та заміняє їх згенерованими.",
+      "modeIgnoreExisting": "Ігнорувати існуючі",
+      "modeReplaceExisting": "Замінити існуючі",
+      "modeReplaceAll": "Замінити всі",
+      "submit": "Згенерувати",
+      "generating": "Генерується...",
+      "progress": "Генеруємо акаунти... {{checked}}/{{total}} (Успішно: {{success}} Помилки: {{failed}})",
+      "success": "Згенеровано {{count}} акаунт!",
+      "allFailed": "Не вдалося згенерувати жодного акаунта",
+      "allExist": "Усі імена користувачів вже існують. Увімкніть \"Перезаписати існуючі акаунти\", щоб згенерувати їх заново.",
+      "error": "Не вдалося згенерувати акаунти",
+      "invalidAmount": "Вкажіть коректну кількість (не менше 1)",
+      "missingPlaceholder": "Формат імені має містити заповнювач %d"
+    },
+    "import": {
+      "javaEdition": "Java Edition",
+      "bedrockEdition": "Bedrock Edition",
+      "offline": "Офлайн",
+      "microsoftCredentials": "Облікові дані Microsoft",
+      "microsoftDeviceCode": "Код пристрою Microsoft",
+      "microsoftRefreshToken": "Токен оновлення Microsoft",
+      "microsoftCookies": "Файли cookie Microsoft",
+      "microsoftAccessToken": "Токен доступу Microsoft",
+      "altProviders": "Альтернативні провайдери",
+      "dialog": {
+        "title": "Імпортувати {{type}} акаунти",
+        "description": "Вставте ваші акаунти тут, по одному на рядок"
+      }
+    },
+    "removeToast": {
+      "loading": "Видалення акаунтів...",
+      "success": "Видалено {{count}} акаунтів!",
+      "error": "Не вдалося видалити акаунти"
+    },
+    "table": {
+      "type": "Тип",
+      "profileId": "UUID",
+      "lastKnownName": "Ім'я користувача",
+      "searchProfileIds": "Пошук ID профілю...",
+      "searchLastKnownNames": "Пошук останніх відомих імен...",
+      "actions": "Дії"
+    },
+    "removeSelectedTooltip": "Видалити вибрані акаунти",
+    "contextMenu": {
+      "openConfig": "Відкрити конфігурацію",
+      "openMetadata": "Відкрити метадані",
+      "copyProfileId": "Скопіювати ID профілю",
+      "copyUsername": "Копіювати ім'я користувача"
+    },
+    "config": {
+      "title": "Налаштувати {{name}}",
+      "description": "Налаштуйте окремі параметри ботів для цього акаунта",
+      "openButton": "Налаштувати акаунт",
+      "pageTitle": "Налаштування {{name}} — {{page}}",
+      "noSettings": "Немає налаштувань для цієї сторінки"
+    },
+    "deviceCodeConfirmDialog": {
+      "title": "Аутентифікація за допомогою коду пристрою",
+      "description": "Налаштуйте параметри перед початком автентифікації через код пристрою.",
+      "start": "Почати автентифікацію"
+    },
+    "deviceCodeDialog": {
+      "title": "Аутентифікація за допомогою коду пристрою",
+      "description": "Увійдіть до свого облікового запису Microsoft, щоб звʼязати його.",
+      "openInBrowser": "Відкрити в браузері",
+      "orManually": "Або введіть код вручну",
+      "codeLabel": "Ваш код",
+      "urlLabel": "Перейдіть на"
+    },
+    "ravealts": {
+      "button": "Ravealts",
+      "title": "Придбати акаунти через Ravealts",
+      "description": "Купуйте акаунти Minecraft, використовуючи свій API-ключ Ravealts.",
+      "apiKeyLabel": "API ключ",
+      "apiKeyPlaceholder": "Введіть ваш API ключ Ravealts",
+      "validate": "Перевірити",
+      "validating": "Перевіряємо...",
+      "keyValid": "Ключ підтверджено",
+      "keyInvalid": "Недійсний API ключ",
+      "credits": "Кредитів: {{credits}}",
+      "stockTitle": "Доступний запас",
+      "noStock": "Немає облікових записів у наявності",
+      "accountType": "Тип облікового запису",
+      "amount": "Кількість (1-10)",
+      "purchase": "Купити й імпортувати",
+      "purchasing": "Купуємо...",
+      "purchaseSuccess": "Придбано {{count}} облікових записів, імпортуємо...",
+      "purchaseError": "Помилка під час покупки: {{message}}",
+      "networkError": "Не вдалося підключитися до API Ravealts",
+      "outOfStock": "Обраний тип відсутній у запасі",
+      "insufficientBalance": "Недостатньо кредитів",
+      "rateLimited": "Перевищено ліміт запитів, спробуйте пізніше"
+    },
+    "metadata": {
+      "openButton": "Редагувати метадані",
+      "title": "Метадані: {{name}}",
+      "description": "Керуйте постійними метаданими цього облікового запису. Кожен запис має простір імен, ключ та значення у форматі JSON.",
+      "namespacePlaceholder": "Простір імен",
+      "keyPlaceholder": "Ключ",
+      "valuePlaceholder": "Значення (JSON)",
+      "noEntries": "Немає записів метаданих. Додайте один вище.",
+      "addSuccess": "Запис додано",
+      "addError": "Не вдалося додати запис",
+      "updateError": "Не вдалося оновити запис",
+      "deleteSuccess": "Запис видалено",
+      "deleteError": "Не вдалося видалити запис",
+      "duplicateError": "Запис із цим простором і ключем вже існує",
+      "invalidJson": "Неприпустиме значення JSON"
+    }
+  },
+  "instanceMetadata": {
+    "title": "Мета-дані екземпляра",
+    "description": "Керуйте постійними метаданими цього екземпляра. Кожен запис має простір імен, ключ і значення у форматі JSON.",
+    "namespacePlaceholder": "Простір імен",
+    "keyPlaceholder": "Ключ",
+    "valuePlaceholder": "Значення (JSON)",
+    "noEntries": "Немає записів метаданих. Додайте один вище.",
+    "addSuccess": "Запис додано",
+    "addError": "Не вдалося додати запис",
+    "updateError": "Не вдалося оновити запис",
+    "deleteSuccess": "Запис видалено",
+    "deleteError": "Не вдалося видалити запис",
+    "duplicateError": "Запис із цим простором і ключем вже існує",
+    "invalidJson": "Неприпустиме значення JSON"
+  },
+  "bots": {
+    "searchPlaceholder": "Пошук ботів...",
+    "onlineCount": "{{online}} онлайн / {{total}} всього",
+    "noBots": "Ботів не налаштовано. Додайте облікові записи на сторінці налаштувань акаунтів.",
+    "noBotsFound": "Жоден бот не відповідає вашому запиту.",
+    "loadingMore": "Завантаження ще...",
+    "showingCount": "Показано {{loaded}} із {{total}}",
+    "allLoaded": "Усі {{total}} ботів завантажено",
+    "online": "Онлайн",
+    "offline": "Офлайн",
+    "notJoined": "Не приєднався",
+    "backToBots": "Повернутися до ботів",
+    "comingSoon": "Незабаром",
+    "terminalPanel": {
+      "title": "Термінал бота"
+    },
+    "positionPanel": {
+      "title": "Позиція та обертання",
+      "position": "Позиція",
+      "rotation": "Обертання",
+      "offline": "Бот офлайн. Дані про позицію доступні лише коли бот підключений."
+    },
+    "chatPanel": {
+      "title": "Чат-повідомлення",
+      "description": "Чат-повідомлення від цього бота з’являться тут у майбутньому оновленні."
+    },
+    "commandPanel": {
+      "title": "Команди бота",
+      "placeholder": "Надіслати команду цьому боту...",
+      "description": "Команди з обмеженим доступом до бота будуть доступні у майбутньому оновленні."
+    },
+    "povPanel": {
+      "title": "POV бота",
+      "capture": "Захопити",
+      "refresh": "Оновити",
+      "auto": "Авто",
+      "startAutoRefresh": "Запустити автооновлення (інтервал 1 секунда)",
+      "stopAutoRefresh": "Зупинити автооновлення",
+      "clickToCapture": "Натисніть \"Захопити\", щоб відобразити точку зору бота",
+      "offline": "Бот офлайн. Відображення POV доступне тільки коли бот підключений."
+    },
+    "statsPanel": {
+      "title": "Статистика бота",
+      "health": "Здоровʼя",
+      "food": "Їжа",
+      "saturation": "Насичення",
+      "experience": "Досвід",
+      "level": "Рівень",
+      "toNextLevel": "до наступного рівня",
+      "gameMode": "Режим гри",
+      "survival": "Виживання",
+      "creative": "Творчий",
+      "adventure": "Пригода",
+      "spectator": "Спостерігач",
+      "unknown": "Невідомо",
+      "offline": "Бот офлайн. Статистика доступна лише під час підключення бота."
+    },
+    "inventoryPanel": {
+      "title": "Інвентар",
+      "hotbar": "Гаряча панель",
+      "main": "Основний інвентар",
+      "items": "предмети",
+      "carrying": "Несе",
+      "dropOne": "Викинути один",
+      "dropAll": "Викинути все",
+      "closeContainer": "Закрити",
+      "clickHint": "Лівий клік: взяти/поставити | Правий клік: половина/один | Shift+клік: швидке переміщення | Середній клік: вибрати слот швидкого доступу",
+      "offline": "Бот офлайн. Інвентар доступний лише при підключенні бота.",
+      "buttons": {
+        "stonecutterRecipes": "Рецепти",
+        "enchantments": "Чари",
+        "patterns": "Візерунки",
+        "trades": "Торги",
+        "beaconEffects": "Ефекти маяка",
+        "crafterSlots": "Управління слотами",
+        "lecternControls": "Управління книгою",
+        "actions": "Дії"
+      },
+      "textInput": {
+        "title": "Ввід тексту",
+        "anvilRename": "Перейменувати предмет"
+      },
+      "bookPages": {
+        "title": "Вміст книги",
+        "emptyPage": "(Порожня сторінка)",
+        "pageIndicator": "Сторінка {{current}} з {{total}}"
+      }
+    },
+    "visualPanel": {
+      "title": "Вигляд бота",
+      "compass": "Напрямок погляду",
+      "lookDirection": "Кут погляду",
+      "lookingUp": "Дивиться вгору",
+      "lookingDown": "Дивиться вниз",
+      "lookingStraight": "Дивиться прямо",
+      "worldInfo": "Інформація про світ",
+      "dimension": "Вимір",
+      "biome": "Біом",
+      "offline": "Бот офлайн. Візуальні дані доступні лише при підключенні бота."
+    },
+    "actionsPanel": {
+      "title": "Дії бота",
+      "leftClick": "Лівий клік",
+      "rightClick": "Правий клік",
+      "leftClickDescription": "Атакувати сутність або зламати блок",
+      "rightClickDescription": "Використати предмет або взаємодіяти",
+      "offline": "Бот офлайн. Дії доступні лише коли бот підключений."
+    },
+    "movementPanel": {
+      "title": "Управління рухом",
+      "movement": "Рух (WASD)",
+      "forward": "Рухатися вперед (W)",
+      "backward": "Рухатися назад (S)",
+      "left": "Рух вліво (A)",
+      "right": "Рух вправо (D)",
+      "jump": "Стрибок",
+      "sneak": "Крастися",
+      "sprint": "Бігти",
+      "stop": "Зупинити",
+      "rotation": "Напрямок погляду",
+      "lookUp": "Дивитися вгору",
+      "lookDown": "Дивитися вниз",
+      "lookLeft": "Дивитися ліворуч",
+      "lookRight": "Дивитися праворуч",
+      "offline": "Бот офлайн. Управління рухом доступно лише коли бот підключений."
+    },
+    "dialogPanel": {
+      "title": "Діалог сервера",
+      "noDialog": "Зараз діалог сервера не відображається.",
+      "dialogType": "Тип",
+      "dialogId": "ID діалогу",
+      "notice": "Повідомлення",
+      "confirmation": "Підтвердження",
+      "multiAction": "Мультидія",
+      "serverLinks": "Посилання сервера",
+      "dialogList": "Список діалогів",
+      "unknownType": "Невідомо",
+      "dismiss": "Закрити",
+      "submit": "Відправити",
+      "offline": "Бот офлайн. Діалоги доступні лише коли бот підключений."
+    }
+  },
+  "scripts": {
+    "title": "Візуальні скрипти",
+    "description": "Створюйте автоматизаційні скрипти за допомогою візуального редактора на основі вузлів.",
+    "experimentalTitle": "Експериментальна функція",
+    "experimentalWarning": "Ця функція є експериментальною. Можуть бути непередбачені зміни в майбутньому, і наявні скрипти можуть перестати працювати. Використовуйте з обережністю.",
+    "createScript": "Створити скрипт",
+    "createScriptTitle": "Створити новий скрипт",
+    "createScriptDescription": "Створіть новий візуальний скрипт для цього екземпляра. Скрипти можуть автоматизувати дії бота та реагувати на події.",
+    "scriptName": "Назва скрипта",
+    "scriptNamePlaceholder": "Введіть назву скрипта...",
+    "scriptDescription": "Опис",
+    "scriptDescriptionPlaceholder": "Опишіть, що робить цей скрипт...",
+    "create": "Створити",
+    "createSuccess": "Скрипт успішно створено",
+    "createError": "Не вдалося створити скрипт",
+    "noScripts": "Скриптів ще немає",
+    "noScriptsDescription": "Створіть свій перший скрипт для автоматизації дій бота за допомогою візуального редактора на основі вузлів.",
+    "createFirstScript": "Створіть свій перший скрипт",
+    "running": "Працює",
+    "paused": "Призупинено",
+    "nodes": "вузли",
+    "noDescription": "Немає опису",
+    "edit": "Редагувати",
+    "pause": "Призупинити",
+    "pauseSuccess": "Скрипт призупинено",
+    "pauseError": "Не вдалося призупинити скрипт",
+    "resume": "Відновити",
+    "resumeSuccess": "Скрипт відновлено",
+    "resumeError": "Не вдалося відновити скрипт",
+    "delete": "Видалити",
+    "deleteSuccess": "Скрипт успішно видалено",
+    "deleteError": "Не вдалося видалити скрипт",
+    "saveSuccess": "Скрипт успішно збережено",
+    "saveError": "Не вдалося зберегти скрипт",
+    "activateSuccess": "Скрипт активовано",
+    "activateError": "Не вдалося активувати скрипт",
+    "deactivateSuccess": "Скрипт деактивовано",
+    "untitledScript": "Скрипт без назви",
+    "saveFirstBeforeActivating": "Спочатку збережіть скрипт перед активацією",
+    "activating": "Активується скрипт...",
+    "activated": "Скрипт активовано",
+    "executionCompleted": "Скрипт завершено",
+    "executionCompletedSuccess": "Скрипт успішно завершено",
+    "deactivated": "Скрипт деактивовано",
+    "deactivatedByUser": "Скрипт деактивовано користувачем",
+    "executionFailed": "Помилка виконання скрипта",
+    "executionError": "Помилка виконання: {{error}}",
+    "nodeStarted": "Вузол запущено: {{nodeId}}",
+    "nodeCompleted": "Вузол завершено: {{nodeId}}",
+    "nodeError": "Помилка вузла: {{error}}",
+    "contextMenu": {
+      "edit": "Редагувати скрипт",
+      "pause": "Призупинити",
+      "resume": "Відновити",
+      "delete": "Видалити скрипт",
+      "copyScriptName": "Скопіювати назву скрипта",
+      "copyScriptId": "Скопіювати ID скрипта"
+    },
+    "editor": {
+      "toolbar": {
+        "backToScripts": "Повернутися до скриптів",
+        "save": "Зберегти",
+        "saveTooltip": "Зберегти скрипт",
+        "resume": "Відновити",
+        "resumeTooltip": "Відновити виконання скрипту",
+        "pause": "Призупинити",
+        "pauseTooltip": "Призупинити виконання скрипта",
+        "unsaved": "Незбережено",
+        "clearCanvas": "Очистити полотно",
+        "zoomIn": "Збільшити",
+        "zoomOut": "Зменшити",
+        "fit": "Підігнати",
+        "export": "Експортувати скрипт",
+        "import": "Імпортувати скрипт",
+        "exportSuccess": "Скрипт успішно експортовано",
+        "importSuccess": "Скрипт успішно імпортовано",
+        "importError": "Не вдалося імпортувати скрипт"
+      },
+      "palette": {
+        "title": "Палітра вузлів",
+        "search": "Пошук вузлів..."
+      },
+      "logs": {
+        "title": "Логи виконання",
+        "clearTitle": "Очистити логи",
+        "noLogs": "Логів ще немає. Запустіть скрипт, щоб побачити логи виконання.",
+        "entries_one": "{{count}} запис",
+        "entries_few": "{{count}} записи",
+        "entries_many": "{{count}} записів",
+        "entries_other": "{{count}} Записи"
+      },
+      "contextMenu": {
+        "duplicate": "Дублювати",
+        "rename": "Перейменувати",
+        "disconnectAll": "Від'єднати всі",
+        "collapse": "Згорнути",
+        "expand": "Розгорнути",
+        "mute": "Вимкнути звук",
+        "unmute": "Увімкнути звук",
+        "showPreview": "Показати перегляд",
+        "hidePreview": "Сховати перегляд",
+        "delete": "Видалити"
+      }
+    }
+  }
+}

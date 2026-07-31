@@ -1,0 +1,540 @@
+{
+  "locale": "语言",
+  "close": "关闭",
+  "cancel": "取消",
+  "save": "保存",
+  "saving": "正在保存...",
+  "error": {
+    "noAddressOrToken": "未找到服务器地址或令牌",
+    "page": {
+      "title": "出错",
+      "description": "尝试加载页面时发生错误。更多信息可在控制台中找到。",
+      "logOut": "退出登录",
+      "reloadPage": "重新载入页面",
+      "showDetails": "显示详情"
+    },
+    "connectionFailed": "连接 SoulFire 服务器失败。"
+  },
+  "notFound": {
+    "page": {
+      "title": "未找到",
+      "description": "无法在此位置找到页面",
+      "logOut": "退出登录",
+      "reloadPage": "重新载入页面"
+    }
+  },
+  "pending": {
+    "connecting": "正在连接..."
+  },
+  "dialog": {
+    "about": {
+      "title": "关于 SoulFire",
+      "description": "正在运行 {{version}} 版本的 SoulFire 客户端",
+      "type": "类型",
+      "value": "值",
+      "fields": {
+        "serverVersion": "服务器版本",
+        "serverCommit": "服务器提交",
+        "serverBranch": "服务器分支",
+        "minecraftVersion": "Minecraft 版本",
+        "operatingSystem": "操作系统",
+        "platform": "平台",
+        "locale": "语言",
+        "architecture": "建筑",
+        "environment": "环境",
+        "browser": "浏览器"
+      },
+      "close": "关闭"
+    },
+    "createInstance": {
+      "title": "创建一个新实例",
+      "description": "实例需要一个名字来区分它们，它可以是你想要的任何名字，例如“Minecraft Bot”。",
+      "form": {
+        "friendlyName": {
+          "label": "一个友好的名称",
+          "placeholder": "我的 Minecraft 机器人",
+          "description": "您想要赋予此实例的名称",
+          "min": "名称至少需要3个字符",
+          "max": "名称最多允许32个字符",
+          "regex": "名称只能包含字母、数字和空格"
+        },
+        "cancel": "取消",
+        "create": "创建"
+      },
+      "createToast": {
+        "loading": "正在创建实例...",
+        "success": "实例已成功创建",
+        "error": "创建实例失败"
+      }
+    },
+    "import": {
+      "main": {
+        "fromFile": "从文件",
+        "fromUrl": "从 URL",
+        "firstClipboardItem": "在剪贴板中有多个项目，只使用第一个。",
+        "fromClipboard": "从剪贴板",
+        "textarea": {
+          "placeholder": "将文本放在这里...",
+          "submit": "从文本加载"
+        }
+      },
+      "url": {
+        "description": "从 URL 加载将使 SoulFire 服务器向目标服务器发出GET 请求，并使用响应作为数据。",
+        "form": {
+          "url": {
+            "placeholder": "将 URL 放在这里...",
+            "empty": "请输入一个有效的 URL"
+          }
+        },
+        "submit": "从 URL 加载",
+        "toast": {
+          "loading": "正在下载数据...",
+          "success": "数据已加载！",
+          "error": "下载数据失败"
+        }
+      }
+    }
+  },
+  "commandInput": {
+    "placeholder": "输入命令（输入“help”查看列表）",
+    "emptySuggestions": "输入以请求建议或按 Tab 键。",
+    "noSuggestions": "暂无可用建议。"
+  },
+  "controls": {
+    "start": "开始",
+    "resume": "继续",
+    "pause": "暂停",
+    "stop": "停止",
+    "startToast": {
+      "loading": "正在启动会话...",
+      "success": "会话已成功启动",
+      "error": "启动会话失败"
+    },
+    "resumeToast": {
+      "loading": "正在恢复会话...",
+      "success": "会话已成功恢复",
+      "error": "恢复会话失败"
+    },
+    "pauseToast": {
+      "loading": "正在暂停会话...",
+      "success": "会话已成功暂停",
+      "error": "暂停会话失败"
+    },
+    "stopToast": {
+      "loading": "正在停止会话...",
+      "success": "会话已成功停止",
+      "error": "停止会话失败"
+    },
+    "accountWarning": {
+      "noAccountsTitle": "未配置账户",
+      "noAccountsDescription": "在开始会话之前，您需要先导入账号。您请求了 {{required}} 个机器人。",
+      "notEnoughTitle": "账户数量不足",
+      "notEnoughDescription": "您请求了 {{required}} 个机器人，但只导入了 {{available}} 个账户。",
+      "hint": "您可以生成离线账户或在账户设置页面导入账户。",
+      "continueWithExisting": "继续使用 {{count}} 个账户",
+      "generateAccounts": "生成账户"
+    }
+  },
+  "icon": {
+    "invalidName": "无效的图标名称: {{name}}"
+  },
+  "dataTable": {
+    "noResults": "无结果。",
+    "rowsSelected": "已选择 {{amount}} 行（共 {{total}} 行）",
+    "rowsPerPage": "每页行数",
+    "currentPage": "第 {{page}} 页，共 {{total}} 页",
+    "goFirst": "转到第一页",
+    "goPrevious": "转到上一页",
+    "goNext": "转到下一页",
+    "goLast": "转到最后一页",
+    "selectAll": "全选",
+    "selectRow": "选择行",
+    "selected": "已选择 {{count}} 项",
+    "clearSelection": "清除选择",
+    "escape": "Esc",
+    "filter": "筛选",
+    "filters": "筛选器",
+    "noFiltersApplied": "未应用筛选器",
+    "modifyFilters": "修改筛选器以优化行结果。",
+    "addFilters": "添加筛选器以优化行结果。",
+    "addFilter": "添加筛选器",
+    "resetFilters": "重置筛选器",
+    "reset": "重置",
+    "where": "条件",
+    "selectField": "选择字段",
+    "searchFields": "搜索字段...",
+    "noFieldsFound": "未找到字段。",
+    "enterValue": "输入一个值...",
+    "enterValueShort": "输入值...",
+    "true": "真",
+    "false": "假",
+    "selectOption": "选择选项...",
+    "selectOptions": "选择多个选项...",
+    "searchOptions": "搜索选项...",
+    "noOptionsFound": "未找到选项。",
+    "pickDateShort": "选日期...",
+    "typeToFilter": "输入以添加筛选器...",
+    "filterByValue": "按“{{value}}”筛选",
+    "view": "查看",
+    "searchColumns": "搜索列...",
+    "noColumnsFound": "未找到列。",
+    "toggleColumns": "切换列",
+    "sort": "排序",
+    "sortBy": "排序方式",
+    "noSortingApplied": "未应用排序",
+    "modifySorting": "修改排序以整理行。",
+    "addSorting": "添加排序以整理行。",
+    "addSort": "添加排序方式",
+    "resetSorting": "重置排序",
+    "columnHeader": {
+      "asc": "升序",
+      "desc": "降序",
+      "reset": "重置",
+      "hide": "隐藏"
+    },
+    "operators": {
+      "iLike": "包含",
+      "notILike": "不包含",
+      "eq": "等于",
+      "ne": "不等于",
+      "isEmpty": "为空",
+      "isNotEmpty": "不为空",
+      "lt": "小于",
+      "lte": "小于或等于",
+      "gt": "大于",
+      "gte": "大于或等于",
+      "isBetween": "介于",
+      "isRelativeToToday": "相对于今天",
+      "ltDate": "早于",
+      "gtDate": "晚于",
+      "lteDate": "在该日或之前",
+      "gteDate": "在该日或之后",
+      "inArray": "包含任意",
+      "notInArray": "不包含任何"
+    },
+    "sortOrders": {
+      "asc": "升序",
+      "desc": "降序"
+    }
+  },
+  "pluginCard": {
+    "version": "版本: {{version}}",
+    "author": "作者: {{author}}",
+    "license": "许可：{{license}}",
+    "website": "网站"
+  },
+  "settingsPage": {
+    "namespacesNotFound": "未找到设置命名空间",
+    "stringList": {
+      "placeholder": "添加新条目...",
+      "add": "添加",
+      "remove": "删除"
+    },
+    "invalidNumberToast": {
+      "title": "无效数字！",
+      "description": "值必须介于 {{min}} 和 {{max}} 之间"
+    }
+  },
+  "terminal": {
+    "noLogs": "🧙 看起来没有日志可以显示，尝试运行一些命令!",
+    "demo-1": "欢迎来到演示模式！🧪",
+    "demo-2": "这是一个只读的 SoulFire 实例",
+    "demo-3": "在决定安装 SoulFire 之前，请先查看所有菜单和功能",
+    "demo-4": "如果您想要加入我们的Discord服务器，请访问： https://soulfiremc.com/discord"
+  },
+  "uiBreadcrumb": {
+    "more": "更多"
+  },
+  "uiDialog": {
+    "close": "关闭"
+  },
+  "uiSheet": {
+    "close": "关闭"
+  },
+  "uiSidebar": {
+    "toggle": "切换侧边栏"
+  },
+  "castMenu": {
+    "title": "投放",
+    "disconnected": "与 {{device}} 断开连接",
+    "alreadyConnected": "已连接 {{device}}",
+    "connectToast": {
+      "loading": "正在连接到 {{device}} ...",
+      "success": "已连接至 {{device}}",
+      "error": "无法连接到{{device}}"
+    },
+    "noDevices": "未找到设备",
+    "broadcastLabel": "广播测试",
+    "broadcastToast": {
+      "loading": "正在广播消息…",
+      "success": "消息已播报！",
+      "error": "广播消息失败"
+    }
+  },
+  "instanceSidebar": {
+    "readDocumentation": "阅读文档",
+    "backToDashboard": "返回仪表板",
+    "deleteToast": {
+      "loading": "正在删除实例...",
+      "success": "实例已删除",
+      "error": "删除实例失败"
+    },
+    "instancesGroup": "实例",
+    "createInstance": "创建实例",
+    "loadProfileToast": {
+      "loading": "正在加载配置文件...",
+      "success": "配置文件已加载",
+      "error": "加载配置文件失败"
+    },
+    "loadProfile": "加载配置文件",
+    "loadFromFile": "从文件中加载",
+    "profileSaved": "配置文件已保存",
+    "saveProfile": "保存配置文件",
+    "deleteInstance": "删除实例",
+    "controlsGroup": "控制",
+    "overview": "概况",
+    "terminal": "终端",
+    "bots": "机器人",
+    "audit-log": "审计日志",
+    "settingsGroup": "设置",
+    "extensionsGroup": "扩展",
+    "botSettings": "机器人设置",
+    "accountSettings": "帐户设置",
+    "metaSettings": "实例设置",
+    "proxySettings": "代理设置",
+    "aiSettings": "AI设置",
+    "pathfindingSettings": "路径寻路设置",
+    "discoverPlugins": "插件",
+    "instanceScripts": "脚本"
+  },
+  "userSidebar": {
+    "readDocumentation": "阅读文档",
+    "userGroup": "用户",
+    "instances": "实例",
+    "access": "访问权限",
+    "createInstance": "创建实例",
+    "settings": "设置",
+    "adminGroup": "管理员",
+    "adminOverview": "概况",
+    "adminLogs": "日志",
+    "adminTerminal": "终端",
+    "users": "用户",
+    "adminScripts": "脚本",
+    "serverSettings": "服务器设置",
+    "devSettings": "开发者设置",
+    "theme": {
+      "title": "主题",
+      "system": "系统",
+      "light": "浅色",
+      "dark": "深色"
+    },
+    "terminal": {
+      "title": "终端"
+    },
+    "configDir": "配置目录",
+    "dataDir": "数据目录",
+    "about": "关于",
+    "logOut": "退出登录",
+    "logOutToast": {
+      "loading": "正在登出…",
+      "success": "已登出",
+      "error": "登出失败"
+    },
+    "exit": "退出",
+    "stopImpersonating": "",
+    "helpTranslate": "协助翻译 SoulFire"
+  },
+  "sidebar": {
+    "documentation": "文档",
+    "supportSoulFire": "捐赠",
+    "discord": "Discord"
+  },
+  "breadcrumbs": {
+    "admin": "管理员",
+    "settings": "设置",
+    "controls": "控制",
+    "extensions": "扩展",
+    "bots": "机器人"
+  },
+  "noInstancesFound": "未找到实例",
+  "pageName": {
+    "terminal": "终端",
+    "logs": "日志",
+    "audit-log": "审计日志",
+    "bots": "机器人",
+    "botDetail": "机器人详情",
+    "instances": "实例",
+    "access": "访问权限",
+    "settings": "设置",
+    "proxySettings": "代理设置",
+    "overview": "概况",
+    "users": "用户",
+    "accountSettings": "帐户设置",
+    "metaSettings": "实例设置",
+    "discoverPlugins": "插件",
+    "adminScripts": "脚本",
+    "instanceScripts": "脚本"
+  },
+  "access": {
+    "webdav": {
+      "title": "WebDAV 访问",
+      "description": "SoulFire 允许你通过 WebDAV 协议访问实例、脚本和其它文件。",
+      "publicAddress": "公共 WebDAV 地址",
+      "personalToken": "个人 WebDAV Token",
+      "securityWarning": "你的个人 WebDAV Token 非常重要。请勿与他人分享。它用于你访问文件时的身份验证。在连接时将其用作 WebDAV 密码。不需要用户名，如果系统要求输入，可以填写任意内容（如 \"soulfire\"）。",
+      "addressDescription": "这是你访问文件需要使用的地址。有时你需要将 http(s):// 替换为 dav:// 或 davs://。"
+    },
+    "api": {
+      "title": "API 访问",
+      "description": "SoulFire 的 gRPC HTTP API 允许你通过网页请求以编程方式与实例交互。",
+      "publicAddress": "公共 API 地址",
+      "personalToken": "个人 API Token",
+      "securityWarning": "你的个人 API Token 非常重要。请勿与他人分享。它用于你访问 API 时的身份验证。",
+      "addressDescription": "这是你访问 API 需要使用的地址。"
+    },
+    "token": {
+      "generate": "生成 Token",
+      "placeholder": "点击下方“生成 Token”",
+      "generating": "正在生成 token...",
+      "success": "令牌生成成功",
+      "error": "生成 token 失败",
+      "copy": "复制 Token"
+    },
+    "address": {
+      "copy": "复制地址"
+    },
+    "documentation": "文档",
+    "howToConnect": "如何连接"
+  },
+  "uploadToMcLogs": "上传到 mclo.gs",
+  "mcLogsUpload": {
+    "loading": "正在上传到 mclo.gs...",
+    "success": "已上传到 mclo.gs！在此查看：{{url}}",
+    "error": "上传到 mclo.gs 失败"
+  },
+  "searchWithGoogle": "使用 Google 搜索",
+  "copyToClipboard": "复制到剪贴板",
+  "clipboardCopy": {
+    "loading": "正在复制到剪贴板...",
+    "success": "已将“{{content}}”复制到剪贴板",
+    "error": "复制到剪贴板失败"
+  },
+  "userSettings": {
+    "avatar": {
+      "title": "头像",
+      "description": "您的用户头像基于您的账户邮箱地址。您可以在以下网址更改邮箱地址的头像",
+      "gravatar": "Gravatar"
+    },
+    "username": {
+      "uiName": "用户名",
+      "description": "您的用户名用于在界面和日志中标识您。"
+    },
+    "email": {
+      "uiName": "电子邮箱",
+      "description": "您的邮箱用于登录和通知。"
+    }
+  },
+  "auditLog": {
+    "filterPlaceholder": "筛选审计日志...",
+    "user": "用户",
+    "action": "操作",
+    "type": "类型",
+    "timestamp": "",
+    "searchUsers": "搜索用户...",
+    "searchTimestamps": "搜索时间戳...",
+    "executedCommand": "执行的命令：{{data}}",
+    "contextMenu": {
+      "copyUsername": "复制用户名",
+      "copyCommand": "复制命令"
+    }
+  },
+  "toggleTheme": "切换主题",
+  "pickADate": "选日期",
+  "scripts": {
+    "filterPlaceholder": "筛选脚本...",
+    "baseScriptDialog": {
+      "form": {
+        "scriptName": {
+          "min": "脚本名称至少需要3个字符",
+          "max": "脚本名称最多允许32个字符",
+          "regex": "脚本名称必须为小写，必须以字母或数字开头，其余只能包含字母、数字或短横线，并且以字母或数字结尾。",
+          "label": "名称",
+          "placeholder": "我的脚本",
+          "description": "脚本的名称。"
+        },
+        "elevatedPermissions": {
+          "label": "高级权限",
+          "description": "是否让脚本以高级权限运行。只有管理员可以启用此选项。"
+        }
+      }
+    },
+    "addScriptDialog": {
+      "title": "添加新脚本",
+      "description": "脚本是在 SoulFire 服务器上运行的小型程序。它们可用于自动化任务、创建自定义行为等。",
+      "form": {
+        "cancel": "取消",
+        "add": "添加"
+      }
+    },
+    "updateScriptDialog": {
+      "title": "更新脚本",
+      "description": "更新脚本信息。",
+      "form": {
+        "cancel": "取消",
+        "update": "更新"
+      }
+    },
+    "removeToast": {
+      "loading": "正在删除脚本...",
+      "success": "脚本已删除！",
+      "error": "删除脚本失败"
+    },
+    "addToast": {
+      "loading": "正在添加脚本...",
+      "success": "脚本已添加！",
+      "error": "添加脚本失败"
+    },
+    "updateToast": {
+      "loading": "正在更新脚本...",
+      "success": "脚本已更新！",
+      "error": "更新脚本失败"
+    },
+    "restartToast": {
+      "loading": "正在重启脚本...",
+      "success": "脚本已重启！",
+      "error": "重启脚本失败"
+    },
+    "table": {
+      "type": "类型",
+      "scriptName": "名称",
+      "language": "语言",
+      "elevatedPermissions": "高级权限",
+      "createdAt": "创建时间",
+      "actions": "操作"
+    },
+    "globalScript": "全局",
+    "instanceScript": "实例"
+  },
+  "contextMenu": {
+    "instance": {
+      "goToInstance": "前往实例",
+      "copyInstanceId": "复制实例 ID",
+      "copyInstanceName": "复制实例名称",
+      "deleteInstance": "删除实例"
+    },
+    "bot": {
+      "goToBot": "前往 Bot",
+      "copyUsername": "复制用户名",
+      "copyUuid": "复制 UUID",
+      "copyCoordinates": "复制坐标"
+    },
+    "plugin": {
+      "enable": "启用",
+      "disable": "禁用",
+      "openSettings": "打开设置",
+      "copyPluginName": "复制插件名称",
+      "copyVersion": "复制版本",
+      "openWebsite": "打开网站"
+    }
+  }
+}

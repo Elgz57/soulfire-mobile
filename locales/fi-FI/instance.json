@@ -1,0 +1,468 @@
+{
+  "proxy": {
+    "getProxies": "Hae proxyja",
+    "addProxies": "Lisää proxyja",
+    "filterPlaceholder": "Suodata proxyt...",
+    "listImportToast": {
+      "loading": "Tuodaan proxyja...",
+      "success": "{{count}} proxy tuotu!",
+      "error": "Proxyjen tuominen epäonnistui",
+      "noProxies": "Ei proxyja tuotavaksi"
+    },
+    "import": {
+      "proxyType": "Proxy-tyyppi",
+      "http": "HTTP",
+      "socks4": "SOCKS4",
+      "socks5": "SOCKS5",
+      "uri": "URI",
+      "dialog": {
+        "title": "Tuo {{type}} proxyja",
+        "description": "Liitä proxysi tähän, yksi per rivi"
+      }
+    },
+    "removeToast": {
+      "loading": "Poistetaan proxyja...",
+      "success": "{{count}} proxy poistettu!",
+      "error": "Proxyjen poistaminen epäonnistui"
+    },
+    "checkToast": {
+      "loading": "Tarkistetaan proxyja... {{checked}}/{{total}} (Onnistui: {{success}} Epäonnistui: {{failed}})",
+      "success": "{{count}} viallista proxyä poistettu!",
+      "error": "Proxyjen tarkistus epäonnistui"
+    },
+    "checkDialog": {
+      "title": "Tarkista välityspalvelimet",
+      "description": "Olet tarkistamassa {{count}} välityspalvelinta. Virheelliset välityspalvelimet poistetaan automaattisesti.",
+      "confirm": "Aloita tarkistus"
+    },
+    "invalidFormat": "Virheellinen proxyn muoto",
+    "table": {
+      "type": "Tyyppi",
+      "address": "Osoite",
+      "username": "Käyttäjätunnus",
+      "password": "Salasana",
+      "searchAddresses": "Etsi osoitteita...",
+      "searchUsernames": "Etsi käyttäjätunnuksia...",
+      "searchPasswords": "Etsi salasanoja..."
+    },
+    "removeSelectedTooltip": "Poista valitut proxyt",
+    "exportSelectedTooltip": "Vie valitut proxyt",
+    "checkSelectedTooltip": "Tarkista valitut proxyt",
+    "contextMenu": {
+      "copyAddress": "Kopioi osoite",
+      "copyUsername": "Kopioi käyttäjätunnus",
+      "copyPassword": "Kopioi salasana",
+      "deleteProxy": "Poista välityspalvelin"
+    },
+    "postImportCheckDialog": {
+      "title": "Tarkista proxyt?",
+      "description": "Toit juuri sisään {{count}} proxyä. Haluatko tarkistaa ne nyt? Virheelliset proxyt poistetaan automaattisesti.",
+      "confirm": "Tarkista välityspalvelimet",
+      "skip": "Ohita"
+    },
+    "export": {
+      "format": "Vientimuoto",
+      "uri": "URI-muoto (kaikki tyypit)",
+      "http": "Vain HTTP (tavallinen)",
+      "socks4": "Vain SOCKS4 (tavallinen)",
+      "socks5": "Vain SOCKS5 (tavallinen)",
+      "noProxies": "Ei proxyja vietäväksi"
+    }
+  },
+  "account": {
+    "getAccounts": "Hae tilejä",
+    "addAccounts": "Lisää tilejä",
+    "generateAccounts": "Luo tilejä",
+    "filterPlaceholder": "Suodata tilejä...",
+    "listImportToast": {
+      "loading": "Tuodaan tilejä... {{checked}}/{{total}} (Onnistui: {{success}} Epäonnistui: {{failed}})",
+      "allFailed": "Tilien tuominen epäonnistui kokonaan.",
+      "someFailed": "Tuotiin {{count}} tiliä, {{failed}} tilin tuominen epäonnistui.",
+      "noneFailed": "{{count}} tiliä tuotu!",
+      "error": "Tilien tuominen epäonnistui",
+      "noAccounts": "Ei tilejä tuotavaksi"
+    },
+    "unknownError": "Tuntematon virhe",
+    "deviceCodeImportToast": {
+      "loading": "Tiliä tuodaan...",
+      "success": "Tili tuotu!",
+      "error": "Tilin tuominen epäonnistui"
+    },
+    "generate": {
+      "title": "Luo offline-tilejä",
+      "description": "Luo offline-Java-tilejä omavalintaisella nimi­muodolla.",
+      "amount": "Määrä",
+      "nameFormat": "Nimimuoto",
+      "nameFormatHelp": "Käytä %d numero­paikkamerkkinä tilin numerolle (esim. Bot_%d → Bot_1, Bot_2 jne.)",
+      "mode": "Olemassa olevat tilit",
+      "modeHelp": "Valitse, miten olemassa olevat tilit käsitellään:\n\n• Ohita olemassa olevat: Luo vain sellaisia tilejä, joiden nimet eivät ole vielä käytössä. Kaikki olemassa olevat tilit säilyvät muuttumattomina.\n\n• Korvaa olemassa olevat: Luo kaikki tilit ja korvaa olemassa olevat tilit, joilla on sama UUID. Muut tilit säilyvät.\n\n• Korvaa kaikki: Poistaa KAIKKI olemassa olevat tilit ja korvaa ne uusilla luoduilla tileillä.",
+      "modeIgnoreExisting": "Ohita olemassa olevat",
+      "modeReplaceExisting": "Korvaa olemassa olevat",
+      "modeReplaceAll": "Korvaa kaikki",
+      "submit": "Luo",
+      "generating": "Luodaan...",
+      "progress": "Luodaan tilejä... {{checked}}/{{total}} (Onnistui: {{success}} Epäonnistui: {{failed}})",
+      "success": "{{count}} tiliä luotu!",
+      "allFailed": "Yhtään tiliä ei voitu luoda",
+      "allExist": "Kaikki käyttäjänimet ovat jo olemassa. Ota käyttöön \\\"Korvaa olemassa olevat tilit\\\" uudelleenluodaksesi ne.",
+      "error": "Tilien luonti epäonnistui",
+      "invalidAmount": "Syötä kelvollinen määrä (vähintään 1)",
+      "missingPlaceholder": "Nimimuodossa on oltava %d-paikkamerkki"
+    },
+    "import": {
+      "javaEdition": "Java Edition",
+      "bedrockEdition": "Bedrock Edition",
+      "offline": "Offline",
+      "microsoftCredentials": "Microsoft-tunnukset",
+      "microsoftDeviceCode": "Microsoft-laitteen koodi",
+      "microsoftRefreshToken": "Microsoft-virkistystunnus",
+      "microsoftCookies": "Microsoft-evästeet",
+      "microsoftAccessToken": "Microsoft Access Token",
+      "altProviders": "Vaihtoehtoiset tarjoajat",
+      "dialog": {
+        "title": "Tuo {{type}} tilejä",
+        "description": "Liitä tilisi tähän, yksi per rivi"
+      }
+    },
+    "removeToast": {
+      "loading": "Poistetaan tilejä...",
+      "success": "{{count}} tiliä poistettu!",
+      "error": "Tilien poistaminen epäonnistui"
+    },
+    "table": {
+      "type": "Tyyppi",
+      "profileId": "UUID",
+      "lastKnownName": "Käyttäjätunnus",
+      "searchProfileIds": "Etsi profiilitunnuksia...",
+      "searchLastKnownNames": "Etsi viimeksi tunnettuja nimiä...",
+      "actions": "Toiminnot"
+    },
+    "removeSelectedTooltip": "Poista valitut tilit",
+    "contextMenu": {
+      "openConfig": "Avaa asetukset",
+      "openMetadata": "Avaa metatiedot",
+      "copyProfileId": "Kopioi profiilin tunniste",
+      "copyUsername": "Kopioi käyttäjätunnus"
+    },
+    "config": {
+      "title": "Määritä {{name}}",
+      "description": "Määritä tämän tilin bottikohtaiset asetukset",
+      "openButton": "Määritä tili",
+      "pageTitle": "{{name}} - {{page}} asetukset",
+      "noSettings": "Tälle sivulle ei ole asetuksia saatavilla"
+    },
+    "deviceCodeConfirmDialog": {
+      "title": "Laitteen kooditodennus",
+      "description": "Määritä asetukset ennen laitteen koodivirran aloittamista.",
+      "start": "Aloita todennus"
+    },
+    "deviceCodeDialog": {
+      "title": "Laitteen kooditodennus",
+      "description": "Kirjaudu sisään Microsoft-tililläsi yhdistääksesi sen.",
+      "openInBrowser": "Avaa selaimessa",
+      "orManually": "Tai syötä koodi manuaalisesti",
+      "codeLabel": "Koodisi",
+      "urlLabel": "Siirry osoitteeseen"
+    },
+    "ravealts": {
+      "button": "Ravealts",
+      "title": "Osta tilejä Ravealtsin kautta",
+      "description": "Osta Minecraft-tilejä käyttämällä Ravealts API -avaintasi.",
+      "apiKeyLabel": "API-avain",
+      "apiKeyPlaceholder": "Syötä Ravealts API-avaimesi",
+      "validate": "Vahvista",
+      "validating": "Vahvistetaan...",
+      "keyValid": "Avain vahvistettu",
+      "keyInvalid": "Virheellinen API-avain",
+      "credits": "Krediitit: {{credits}}",
+      "stockTitle": "Saatavilla oleva varasto",
+      "noStock": "Ei tilejä varastossa",
+      "accountType": "Tilin tyyppi",
+      "amount": "Määrä (1-10)",
+      "purchase": "Osta & Tuo",
+      "purchasing": "Ostetaan...",
+      "purchaseSuccess": "Ostettu {{count}} tiliä, tuodaan...",
+      "purchaseError": "Osto epäonnistui: {{message}}",
+      "networkError": "Yhteyttä Ravealts API:iin ei voitu muodostaa",
+      "outOfStock": "Valittu tyyppi on loppunut varastosta",
+      "insufficientBalance": "Ei tarpeeksi krediittejä",
+      "rateLimited": "Liikaa pyyntöjä, yritä uudelleen myöhemmin"
+    },
+    "metadata": {
+      "openButton": "Muokkaa metatietoja",
+      "title": "Metatiedot: {{name}}",
+      "description": "Hallinnoi tämän tilin pysyviä metatietokirjauksia. Jokaisella merkinnällä on nimiavaruus, avain ja JSON-arvo.",
+      "namespacePlaceholder": "Nimiavaruus",
+      "keyPlaceholder": "Avain",
+      "valuePlaceholder": "Arvo (JSON)",
+      "noEntries": "Ei metatietokirjauksia. Lisää yksi yllä.",
+      "addSuccess": "Merkintä lisätty",
+      "addError": "Kirjauksen lisääminen epäonnistui",
+      "updateError": "Kirjauksen päivittäminen epäonnistui",
+      "deleteSuccess": "Merkintä poistettu",
+      "deleteError": "Merkinnän poistaminen epäonnistui",
+      "duplicateError": "Merkintä tällä nimiavaruudella ja avaimella on jo olemassa",
+      "invalidJson": "Virheellinen JSON-arvo"
+    }
+  },
+  "instanceMetadata": {
+    "title": "Instanssin metatiedot",
+    "description": "Hallinnoi tämän instanssin pysyviä metatietomerkintöjä. Jokaisella merkinnällä on nimiavaruus, avain ja JSON-arvo.",
+    "namespacePlaceholder": "Nimiavaruus",
+    "keyPlaceholder": "Avain",
+    "valuePlaceholder": "Arvo (JSON)",
+    "noEntries": "Ei metatietokirjauksia. Lisää yksi yllä.",
+    "addSuccess": "Merkintä lisätty",
+    "addError": "Kirjauksen lisääminen epäonnistui",
+    "updateError": "Kirjauksen päivittäminen epäonnistui",
+    "deleteSuccess": "Merkintä poistettu",
+    "deleteError": "Merkinnän poistaminen epäonnistui",
+    "duplicateError": "Merkintä tällä nimiavaruudella ja avaimella on jo olemassa",
+    "invalidJson": "Virheellinen JSON-arvo"
+  },
+  "bots": {
+    "searchPlaceholder": "Hae botteja...",
+    "onlineCount": "{{online}} online / {{total}} yhteensä",
+    "noBots": "Ei yhtään bottia asetettu. Lisää tilejä Tiliasetukset-sivulta.",
+    "noBotsFound": "Hakusi ei vastannut yhtään bottia.",
+    "loadingMore": "Ladataan lisää...",
+    "showingCount": "Näytetään {{loaded}} / {{total}}:sta",
+    "allLoaded": "Kaikki {{total}} bottia ladattu",
+    "online": "Paikalla",
+    "offline": "Offline",
+    "notJoined": "Ei liittynyt",
+    "backToBots": "Takaisin botteihin",
+    "comingSoon": "Tulossa pian",
+    "terminalPanel": {
+      "title": "Botti-terminaali"
+    },
+    "positionPanel": {
+      "title": "Sijainti & kääntö",
+      "position": "Sijainti",
+      "rotation": "Kääntö",
+      "offline": "Botti on offline-tilassa. Sijaintitiedot saatavilla vain, kun botti on yhdistetty."
+    },
+    "chatPanel": {
+      "title": "Viestit chatissa",
+      "description": "Tämän botin chat-viestit näkyvät täällä tulevassa päivityksessä."
+    },
+    "commandPanel": {
+      "title": "Bottikomennot",
+      "placeholder": "Lähetä komento tälle botille...",
+      "description": "Bottikohtaiset komennot ovat saatavilla tulevassa päivityksessä."
+    },
+    "povPanel": {
+      "title": "Botin näkymä",
+      "capture": "Kaappaa",
+      "refresh": "Päivitä",
+      "auto": "Auto",
+      "startAutoRefresh": "Aloita automaattinen päivitys (1 sekunnin välein)",
+      "stopAutoRefresh": "Lopeta automaattinen päivitys",
+      "clickToCapture": "Napsauta Kaappaa nähdäksesi botin näkymän",
+      "offline": "Botti on offline-tilassa. Näkymän renderöinti on käytettävissä vain, kun botti on yhdistettynä."
+    },
+    "statsPanel": {
+      "title": "Botin tilastot",
+      "health": "Terveys",
+      "food": "Ruoka",
+      "saturation": "Kylläisyys",
+      "experience": "Kokemus",
+      "level": "Taso",
+      "toNextLevel": "seuraavaan tasoon",
+      "gameMode": "Pelitila",
+      "survival": "Selviytyminen",
+      "creative": "Luova",
+      "adventure": "Seikkailu",
+      "spectator": "Katselija",
+      "unknown": "Tuntematon",
+      "offline": "Botti on offline-tilassa. Tilastot ovat saatavilla vain, kun botti on yhdistetty."
+    },
+    "inventoryPanel": {
+      "title": "Inventaario",
+      "hotbar": "Pikavalikko",
+      "main": "Päätavarasto",
+      "items": "esineet",
+      "carrying": "Kantamuksissa",
+      "dropOne": "Pudota yksi",
+      "dropAll": "Pudota kaikki",
+      "closeContainer": "Sulje",
+      "clickHint": "Vasen klikkaus: nosta/sijoita | Oikea klikkaus: puolet/yksi | Shift+klikkaus: nopea siirto | Keskimmäinen klikkaus: valitse pikanäppäin",
+      "offline": "Botti on offline-tilassa. Varasto on saatavilla vain, kun botti on yhdistetty.",
+      "buttons": {
+        "stonecutterRecipes": "Reseptit",
+        "enchantments": "Lumoukset",
+        "patterns": "Kuviot",
+        "trades": "Kaupat",
+        "beaconEffects": "Majakan efektit",
+        "crafterSlots": "Paikkaohjaimet",
+        "lecternControls": "Kirjaohjaimet",
+        "actions": "Toiminnot"
+      },
+      "textInput": {
+        "title": "Tekstisyöte",
+        "anvilRename": "Nimeä esine uudelleen"
+      },
+      "bookPages": {
+        "title": "Kirjan sisältö",
+        "emptyPage": "(Tyhjä sivu)",
+        "pageIndicator": "Sivu {{current}} / {{total}}"
+      }
+    },
+    "visualPanel": {
+      "title": "Botin näkymä",
+      "compass": "Suunta",
+      "lookDirection": "Katselukulma",
+      "lookingUp": "Katsoo ylös",
+      "lookingDown": "Katsoo alas",
+      "lookingStraight": "Katsoo suoraan",
+      "worldInfo": "Maailman tiedot",
+      "dimension": "Ulottuvuus",
+      "biome": "Biomi",
+      "offline": "Botti on offline-tilassa. Näkymätiedot ovat saatavilla vain, kun botti on yhdistetty."
+    },
+    "actionsPanel": {
+      "title": "Botin toiminnot",
+      "leftClick": "Vasen klikkaus",
+      "rightClick": "Oikea klikkaus",
+      "leftClickDescription": "Hyökkää olentoon tai riko lohko",
+      "rightClickDescription": "Käytä esinettä tai käytä toimintoa",
+      "offline": "Botti on offline-tilassa. Toiminnot ovat käytettävissä vain, kun botti on yhdistetty."
+    },
+    "movementPanel": {
+      "title": "Liikeohjaus",
+      "movement": "Liikkuminen (WASD)",
+      "forward": "Liiku eteenpäin (W)",
+      "backward": "Liiku taaksepäin (S)",
+      "left": "Siirry vasemmalle (A)",
+      "right": "Siirry oikealle (D)",
+      "jump": "Hyppää",
+      "sneak": "Kyykisty",
+      "sprint": "Juokse",
+      "stop": "Pysäytä",
+      "rotation": "Katselusuunta",
+      "lookUp": "Katso ylös",
+      "lookDown": "Katso alas",
+      "lookLeft": "Katso vasemmalle",
+      "lookRight": "Katso oikealle",
+      "offline": "Botti on offline-tilassa. Liikeohjaimet ovat käytettävissä vain, kun botti on yhdistetty."
+    },
+    "dialogPanel": {
+      "title": "Palvelimen dialogi",
+      "noDialog": "Palvelimen dialogia ei näytetä tällä hetkellä.",
+      "dialogType": "Tyyppi",
+      "dialogId": "Dialogin tunniste",
+      "notice": "Huomautus",
+      "confirmation": "Vahvistus",
+      "multiAction": "Monitoiminto",
+      "serverLinks": "Palvelimen linkit",
+      "dialogList": "Dialogilista",
+      "unknownType": "Tuntematon",
+      "dismiss": "Hylkää",
+      "submit": "Lähetä",
+      "offline": "Botti on offline-tilassa. Dialogit ovat käytettävissä vain, kun botti on yhdistetty."
+    }
+  },
+  "scripts": {
+    "title": "Visuaaliset skriptit",
+    "description": "Luo automaatioskriptejä visuaalisella solmupohjaisella editorilla.",
+    "experimentalTitle": "Kokeellinen ominaisuus",
+    "experimentalWarning": "Tämä ominaisuus on kokeellinen. Tulevaisuudessa voi tapahtua muutoksia, jotka rikkovat nykyisen toiminnan, ja olemassa olevat skriptit saattavat lakata toimimasta. Käytä varoen.",
+    "createScript": "Luo skripti",
+    "createScriptTitle": "Luo uusi skripti",
+    "createScriptDescription": "Luo uusi visuaalinen skripti tälle instanssille. Skriptit voivat automatisoida botin toimintoja ja reagoida tapahtumiin.",
+    "scriptName": "Skriptin nimi",
+    "scriptNamePlaceholder": "Syötä skriptin nimi...",
+    "scriptDescription": "Kuvaus",
+    "scriptDescriptionPlaceholder": "Kuvaile, mitä tämä skripti tekee...",
+    "create": "Luo",
+    "createSuccess": "Skripti luotu onnistuneesti",
+    "createError": "Skriptin luonti epäonnistui",
+    "noScripts": "Ei vielä skriptejä",
+    "noScriptsDescription": "Luo ensimmäinen skriptisi automatisoidaksesi botin toimintoja visuaalisella solmupohjaisella editorilla.",
+    "createFirstScript": "Luo ensimmäinen skriptisi",
+    "running": "Käynnissä",
+    "paused": "Tauotettu",
+    "nodes": "solmut",
+    "noDescription": "Ei kuvausta",
+    "edit": "Muokkaa",
+    "pause": "Tauota",
+    "pauseSuccess": "Skripti keskeytetty",
+    "pauseError": "Skriptin keskeyttäminen epäonnistui",
+    "resume": "Jatka",
+    "resumeSuccess": "Skripti jatkettu",
+    "resumeError": "Skriptin jatkaminen epäonnistui",
+    "delete": "Poista",
+    "deleteSuccess": "Skripti poistettiin onnistuneesti",
+    "deleteError": "Skriptin poisto epäonnistui",
+    "saveSuccess": "Skripti tallennettiin onnistuneesti",
+    "saveError": "Skriptin tallennus epäonnistui",
+    "activateSuccess": "Skripti aktivoitu",
+    "activateError": "Skriptin aktivointi epäonnistui",
+    "deactivateSuccess": "Skripti deaktivoitu",
+    "untitledScript": "Nimetön skripti",
+    "saveFirstBeforeActivating": "Tallenna skripti ennen aktivointia",
+    "activating": "Skripti aktivoidaan...",
+    "activated": "Skripti aktivoitu",
+    "executionCompleted": "Skripti suoritettu",
+    "executionCompletedSuccess": "Skripti suoritettu onnistuneesti",
+    "deactivated": "Skripti deaktivoitu",
+    "deactivatedByUser": "Käyttäjä poisti skriptin käytöstä",
+    "executionFailed": "Skriptin suoritus epäonnistui",
+    "executionError": "Suoritusvirhe: {{error}}",
+    "nodeStarted": "Solmu käynnistetty: {{nodeId}}",
+    "nodeCompleted": "Solmu valmis: {{nodeId}}",
+    "nodeError": "Solmun virhe: {{error}}",
+    "contextMenu": {
+      "edit": "Muokkaa skriptiä",
+      "pause": "Tauota",
+      "resume": "Jatka",
+      "delete": "Poista skripti",
+      "copyScriptName": "Kopioi skriptin nimi",
+      "copyScriptId": "Kopioi skriptin tunniste"
+    },
+    "editor": {
+      "toolbar": {
+        "backToScripts": "Takaisin skripteihin",
+        "save": "Tallenna",
+        "saveTooltip": "Tallenna skripti",
+        "resume": "Jatka",
+        "resumeTooltip": "Jatka skriptin suorittamista",
+        "pause": "Tauota",
+        "pauseTooltip": "Keskeytä skriptin suoritus",
+        "unsaved": "Tallentamaton",
+        "clearCanvas": "Tyhjennä työtila",
+        "zoomIn": "Lähennä",
+        "zoomOut": "Loitonna",
+        "fit": "Sovita",
+        "export": "Vie skriptiä",
+        "import": "Tuo skripti",
+        "exportSuccess": "Skripti viety onnistuneesti",
+        "importSuccess": "Skripti tuotu onnistuneesti",
+        "importError": "Skriptin tuonti epäonnistui"
+      },
+      "palette": {
+        "title": "Solmupaletti",
+        "search": "Etsi solmuja..."
+      },
+      "logs": {
+        "title": "Suorituksen lokit",
+        "clearTitle": "Tyhjennä lokit",
+        "noLogs": "Ei vielä lokia. Suorita skripti nähdäksesi suorituksen lokit.",
+        "entries_one": "{{count}} merkintä",
+        "entries_other": "{{count}} merkintää"
+      },
+      "contextMenu": {
+        "duplicate": "Monista",
+        "rename": "Nimeä uudelleen",
+        "disconnectAll": "Katkaise kaikki yhteydet",
+        "collapse": "Pienennä",
+        "expand": "Laajenna",
+        "mute": "Mykistä",
+        "unmute": "Poista mykistys",
+        "showPreview": "Näytä esikatselu",
+        "hidePreview": "Piilota esikatselu",
+        "delete": "Poista"
+      }
+    }
+  }
+}

@@ -1,0 +1,468 @@
+{
+  "proxy": {
+    "getProxies": "Getz Proxyz!",
+    "addProxies": "Add Proxyz!",
+    "filterPlaceholder": "Findz proxies...",
+    "listImportToast": {
+      "loading": "Importin proxyz... waitz plz!",
+      "success": "{{count}} proxies imported! Much wow!",
+      "error": "Proxyz import failz!",
+      "noProxies": "No proxyz here for importin, sry."
+    },
+    "import": {
+      "proxyType": "Proxy Typz",
+      "http": "HTTP",
+      "socks4": "SOCKS4",
+      "socks5": "SOCKS5",
+      "uri": "URI",
+      "dialog": {
+        "title": "Import {{type}} proxyz",
+        "description": "Paste ur proxies here, putz one per line kthx."
+      }
+    },
+    "removeToast": {
+      "loading": "Remoovin proxies... hold ur kibble.",
+      "success": "Removed {{count}} proxyz!",
+      "error": "Cudnt remoov proxies, much sads."
+    },
+    "checkToast": {
+      "loading": "Chekin proxyz... {{checked}}/{{total}} (Success: {{success}} Failz: {{failed}})",
+      "success": "Removed {{count}} broked proxyz!",
+      "error": "Proxy check borked! No can haz check."
+    },
+    "checkDialog": {
+      "title": "Chek Proxyz",
+      "description": "U iz about to chek {{count}} proxyz. Bad proxyz will be deletd automatiklee.",
+      "confirm": "Start Chek"
+    },
+    "invalidFormat": "Proxy not rite format, no cheezburgerz.",
+    "table": {
+      "type": "Tyep",
+      "address": "Addres",
+      "username": "Usernamez",
+      "password": "Passwurd",
+      "searchAddresses": "SRSCH 4DDRESSEZ...",
+      "searchUsernames": "Seerch usernams...",
+      "searchPasswords": "SRSCH PAWZSWRDZ..."
+    },
+    "removeSelectedTooltip": "RMVZ SLEKTEDZ PROXIEZ",
+    "exportSelectedTooltip": "Eksport selekted proxiezz",
+    "checkSelectedTooltip": "CHEK SLEKTEDZ PROXIEZ",
+    "contextMenu": {
+      "copyAddress": "Coppy Adress",
+      "copyUsername": "Copy Usernamez",
+      "copyPassword": "Coppy Pawsswurdz!",
+      "deleteProxy": "DELET PROXY, KTHX!"
+    },
+    "postImportCheckDialog": {
+      "title": "Chek Proxiez?",
+      "description": "U jus imported {{count}} proxiez. U wants 2 chek dem now? Invalid proxiez will be removd automaticly.",
+      "confirm": "Chek Proxyz",
+      "skip": "SKIPZ"
+    },
+    "export": {
+      "format": "Eksport Format",
+      "uri": "URI Format (all typz)",
+      "http": "HTTP Only (flat)",
+      "socks4": "SOCKS4 Only (flat)",
+      "socks5": "SOCKS5 Only (flat)",
+      "noProxies": "No proxiez to eksport, kthx."
+    }
+  },
+  "account": {
+    "getAccounts": "Getz Accountz!",
+    "addAccounts": "Add Accountz!",
+    "generateAccounts": "Genurayt Accountz!",
+    "filterPlaceholder": "Findz acountz...",
+    "listImportToast": {
+      "loading": "Importin acountz... {{checked}}/{{total}} (Success: {{success}} Failz: {{failed}})",
+      "allFailed": "Oopsies, no acountz gotz importd, kthxbye.",
+      "someFailed": "{{count}} acountz imported, but {{failed}} acountz no werk. Oh noes!",
+      "noneFailed": "{{count}} acountz imported! Yayz!",
+      "error": "Oopsies, accountz no can haz importz",
+      "noAccounts": "No acountz here for importin, sry."
+    },
+    "unknownError": "I dunno wut went wrongz",
+    "deviceCodeImportToast": {
+      "loading": "Importin accountz... plz wait (o rly?)",
+      "success": "Acount waz imported! Yamz!",
+      "error": "Import account failz!"
+    },
+    "generate": {
+      "title": "Genurayt Offline Accountz!",
+      "description": "Genurayt offline Java accountz wif custom name formatz, kthx!",
+      "amount": "Amownt",
+      "nameFormat": "Naym Format",
+      "nameFormatHelp": "Uze %d az placeholder fur account numbur (exampul: Bot_%d becumz Bot_1, Bot_2, etcz)",
+      "mode": "Alreddy Got Acowntz",
+      "modeHelp": "Choose how to deal wif alreddy hav acowntz:\n\n• Ignore Alreddy: Only makez acowntz wif naemz tht don\"t exist yet. Keepez al old acowntz as dey is.\n\n• Replaze Alreddy: Makez all acowntz, swapz any acowntz dat haz same UUID. Other acowntz stay.\n\n• Replaze All: DELEEET ALL acowntz an replaze wit new gen acowntz.",
+      "modeIgnoreExisting": "Ignore Alreddy",
+      "modeReplaceExisting": "Replaze Alreddy",
+      "modeReplaceAll": "Replac ALL TEH FINGS",
+      "submit": "Genurayt",
+      "generating": "Genuraytin...",
+      "progress": "Genuraytin accountz... {{checked}}/{{total}} (Succesz: {{success}} Failz: {{failed}})",
+      "success": "Genurayted {{count}} accountz!",
+      "allFailed": "Faild tu genurayt any accountz",
+      "allExist": "All teh usernamez alredy exist. Plz enable 'OVERRID EXISTIN ACCOUNTS' to regen dem.",
+      "error": "Faild tu genurayt accountz",
+      "invalidAmount": "Plz enterz valid amownt (at leest 1)",
+      "missingPlaceholder": "Naym format haz to haz %d placeholder"
+    },
+    "import": {
+      "javaEdition": "Java Editshun",
+      "bedrockEdition": "Bedrock Editshun",
+      "offline": "Offlyne",
+      "microsoftCredentials": "Microsoft Passwurdz",
+      "microsoftDeviceCode": "Microsoft Device Codez",
+      "microsoftRefreshToken": "Microsoft Refresh Tokenz",
+      "microsoftCookies": "Microsoft Cookeezz!",
+      "microsoftAccessToken": "Microsoft Accesz Tokenz",
+      "altProviders": "Alt Providurz",
+      "dialog": {
+        "title": "Import {{type}} acountz",
+        "description": "Paste ur acountz here, one purr line kthx."
+      }
+    },
+    "removeToast": {
+      "loading": "Remoovin acountz... hold on kitteh.",
+      "success": "Removed {{count}} acountz!",
+      "error": "Remoovin acountz failed, no cheezburgerz."
+    },
+    "table": {
+      "type": "Tyep",
+      "profileId": "UUID",
+      "lastKnownName": "Usernamez",
+      "searchProfileIds": "SRSCH PURRFILE IDS...",
+      "searchLastKnownNames": "SRSCH LAST KNOWN NAMES...",
+      "actions": "Akshuns"
+    },
+    "removeSelectedTooltip": "RMVZ SLEKTEDZ ACCOUNTZ",
+    "contextMenu": {
+      "openConfig": "OPN CONFIG, YAY!",
+      "openMetadata": "OPN METADEETA, WOW!",
+      "copyProfileId": "COPY PROFILE ID, SRSLY",
+      "copyUsername": "Copy Usernamez"
+    },
+    "config": {
+      "title": "Configur teh {{name}}",
+      "description": "Configur pwoper bot settns fur dis account",
+      "openButton": "Configur accownt",
+      "pageTitle": "{{name}} - {{page}} Settnz",
+      "noSettings": "No settnz availabru fur dis page"
+    },
+    "deviceCodeConfirmDialog": {
+      "title": "DEVIC COD AUTENTIKASHUNZ!11!",
+      "description": "Settin ur opshuns b4 u start teh devize kode floh.",
+      "start": "STAWT AUTHENTICASHUN"
+    },
+    "deviceCodeDialog": {
+      "title": "DEVIC COD AUTENTIKASHUNZ!11!",
+      "description": "SIGNS IN WIF UR MICROSFT AKOUNT TO LINKZ IT. KTHXBAI!1!",
+      "openInBrowser": "OPEN INZ BROWSR",
+      "orManually": "OR ENTER CODE MANUALS LOL",
+      "codeLabel": "UR CODEZ",
+      "urlLabel": "GO 2"
+    },
+    "ravealts": {
+      "button": "Ravealtz",
+      "title": "Purchez Accownts via Ravealtz",
+      "description": "Buy Minecraft accowntz usin ur Ravealtz API kitteh key.",
+      "apiKeyLabel": "API Keyzorz",
+      "apiKeyPlaceholder": "Enters ur Ravealts API keyzorz",
+      "validate": "Chekz!",
+      "validating": "Chekkin...",
+      "keyValid": "Keyzorz iz validz!",
+      "keyInvalid": "Dats invalid API keyzorz",
+      "credits": "Creditz: {{credits}}",
+      "stockTitle": "Stockz Availabul",
+      "noStock": "No accowntz in stockz",
+      "accountType": "Accownt Typez",
+      "amount": "Amownt (1-10)",
+      "purchase": "Buyz & Importz",
+      "purchasing": "Buyinz...",
+      "purchaseSuccess": "Buyed {{count}} accowntz, importin...",
+      "purchaseError": "Buy failz: {{message}}",
+      "networkError": "Cudnt connek tu Ravealts APIz",
+      "outOfStock": "Dis type iz out of stockz",
+      "insufficientBalance": "No haz enuff creditz",
+      "rateLimited": "Rate limitz, tryz agen laytur"
+    },
+    "metadata": {
+      "openButton": "Edit Metadaterz",
+      "title": "Metadaterz: {{name}}",
+      "description": "Managz purrsistent metadata enturiez fur dis accownt. Each entury haz a namespace, key, an JSON valu. Meow!",
+      "namespacePlaceholder": "Namspace",
+      "keyPlaceholder": "Key",
+      "valuePlaceholder": "Valoo (JSON)",
+      "noEntries": "No metadata enturiez. Addz one up dere.",
+      "addSuccess": "Entury addzored",
+      "addError": "No can add entury, oh noes!",
+      "updateError": "No can updait entury, sry!",
+      "deleteSuccess": "Entry deletd, kthxbye!",
+      "deleteError": "O NOEZ! Couldn delet entry D:",
+      "duplicateError": "Dis entry already existz wit dat namespace an key!",
+      "invalidJson": "Dis JSON iz borked, fix plz!"
+    }
+  },
+  "instanceMetadata": {
+    "title": "Instanz MetaDataz",
+    "description": "Manaj persiztent metadata entriez fur dis instanz. Each entry haz a namespaze, key, an JSON valu.",
+    "namespacePlaceholder": "Namspace",
+    "keyPlaceholder": "Key",
+    "valuePlaceholder": "Valoo (JSON)",
+    "noEntries": "No metadata enturiez. Addz one up dere.",
+    "addSuccess": "Entury addzored",
+    "addError": "No can add entury, oh noes!",
+    "updateError": "No can updait entury, sry!",
+    "deleteSuccess": "Entry deletd, kthxbye!",
+    "deleteError": "O NOEZ! Couldn delet entry D:",
+    "duplicateError": "Dis entry already existz wit dat namespace an key!",
+    "invalidJson": "Dis JSON iz borked, fix plz!"
+  },
+  "bots": {
+    "searchPlaceholder": "Serch bots...",
+    "onlineCount": "{{online}} kittehs onlien / {{total}} totl kittehs",
+    "noBots": "No botz configgerd. Add acountz frum da Account Settin Page.",
+    "noBotsFound": "No botz match ur search, kthx.",
+    "loadingMore": "Loadin moar...",
+    "showingCount": "Showin {{loaded}} uv {{total}}",
+    "allLoaded": "All {{total}} botz loaded",
+    "online": "ONLIEN",
+    "offline": "Offlyne",
+    "notJoined": "Nawt Joind",
+    "backToBots": "Bak 2 Botz",
+    "comingSoon": "CUHMIN SOONZ",
+    "terminalPanel": {
+      "title": "Bot Termynal"
+    },
+    "positionPanel": {
+      "title": "Pozishun & Rotashun",
+      "position": "Pozishun",
+      "rotation": "Rotashun",
+      "offline": "Bot iz offlien. Pozishun data only availbul wen bot iz connekkted."
+    },
+    "chatPanel": {
+      "title": "Chat Meowsajes",
+      "description": "Chat meowsajes frum dis bot will appear heer in teh fuchur updat."
+    },
+    "commandPanel": {
+      "title": "Bot Commandses",
+      "placeholder": "Send command 2 dis bot...",
+      "description": "Bot-skoped commandz will b availbul in a fuchur updat."
+    },
+    "povPanel": {
+      "title": "Bot POW!",
+      "capture": "CAPTURZ!",
+      "refresh": "REFRESH PLZ",
+      "auto": "Auto",
+      "startAutoRefresh": "Start auto-refresh (1 sekond interval)",
+      "stopAutoRefresh": "Stop auto-refresh",
+      "clickToCapture": "Klik CAPTURZ tu see bot'z point ov viewz",
+      "offline": "Bot iz offlinez. U c'n only see POW when bot iz connekktid, kthx."
+    },
+    "statsPanel": {
+      "title": "Bot Statzz",
+      "health": "Helth",
+      "food": "FOODS",
+      "saturation": "Nomz Levl (Saturashun)",
+      "experience": "Eksperiencez",
+      "level": "Levelz",
+      "toNextLevel": "to nexteh levelz",
+      "gameMode": "Game Mode",
+      "survival": "Survival",
+      "creative": "Creative",
+      "adventure": "Adventure",
+      "spectator": "Spectator",
+      "unknown": "Unkownz",
+      "offline": "Bot iz offlinez. Statzz seez only when bot iz connekktid, kthx."
+    },
+    "inventoryPanel": {
+      "title": "Inventoryz",
+      "hotbar": "Hotbar (Iz Hot!)",
+      "main": "Main Inventoree",
+      "items": "itemz",
+      "carrying": "Carryingz",
+      "dropOne": "Drop Onez",
+      "dropAll": "Drop All Teh Thingz",
+      "closeContainer": "Cloes",
+      "clickHint": "Left clik: pik up/places | Rite clik: half/one | Shift+clik: kwik mov | Middle clik: seleckt hotbar slot",
+      "offline": "Bot iz offlinez. Inventoree showz only when bot iz connekktid, kthx.",
+      "buttons": {
+        "stonecutterRecipes": "Recipiez",
+        "enchantments": "Enchantmintz",
+        "patterns": "Patternz",
+        "trades": "Tradez",
+        "beaconEffects": "Beacon Effecktz",
+        "crafterSlots": "Slot Kontrolz",
+        "lecternControls": "Buk Kontrolz",
+        "actions": "Akshuns"
+      },
+      "textInput": {
+        "title": "Text Inpoot",
+        "anvilRename": "Rename Itum"
+      },
+      "bookPages": {
+        "title": "Buk Kontentz",
+        "emptyPage": "(Emptiez page)",
+        "pageIndicator": "Page {{current}} uv {{total}}"
+      }
+    },
+    "visualPanel": {
+      "title": "Bot Viewz",
+      "compass": "Facin Direkshun",
+      "lookDirection": "Look Anglez",
+      "lookingUp": "Lookz up",
+      "lookingDown": "Lookz downz",
+      "lookingStraight": "Lookz STR8 ahd",
+      "worldInfo": "Wurld Infoz",
+      "dimension": "Dimenshun",
+      "biome": "Biomez",
+      "offline": "Bot iz offlinez. Visual data onlyz wen bot iz connekktid, kthx."
+    },
+    "actionsPanel": {
+      "title": "Bot Actshunz",
+      "leftClick": "Left Clik",
+      "rightClick": "Rite Clik",
+      "leftClickDescription": "Attack entitee or brek blok",
+      "rightClickDescription": "Uze itum or interakt",
+      "offline": "Bot iz offline. Actshunz only avaylbul wen bot iz connectd."
+    },
+    "movementPanel": {
+      "title": "Moovmunt Kontrol",
+      "movement": "Moovmunt (WASD)",
+      "forward": "Moov Forward (W)",
+      "backward": "Moov Backward (S)",
+      "left": "Strafe Left (A)",
+      "right": "Strafe Rite (D)",
+      "jump": "Jumpz",
+      "sneak": "Sneekz",
+      "sprint": "Sprintz",
+      "stop": "Stawp",
+      "rotation": "Look Direkshun",
+      "lookUp": "Lookz Up",
+      "lookDown": "Lookz Down",
+      "lookLeft": "Lookz Left",
+      "lookRight": "Lookz Rite",
+      "offline": "Bot iz offline. Moovmunt kontrolz onli avaylbl wen bot iz connectd."
+    },
+    "dialogPanel": {
+      "title": "Server Dialogz",
+      "noDialog": "No server dialogz iz showin nao.",
+      "dialogType": "Tyep",
+      "dialogId": "Dialog ID",
+      "notice": "Notis",
+      "confirmation": "Confirmashun",
+      "multiAction": "Multi Actshun",
+      "serverLinks": "Server Linkz",
+      "dialogList": "Dialog Listz",
+      "unknownType": "Unkownz",
+      "dismiss": "Dismizz",
+      "submit": "Submitz",
+      "offline": "Bot iz offline. Dialogz only avaylbul wen bot iz connectd."
+    }
+  },
+  "scripts": {
+    "title": "Vizhul Skriptz",
+    "description": "Mak awtomaet skript using funneh nodez editor, kthx.",
+    "experimentalTitle": "XPERIMENTAL FEETURZ!!1!1!",
+    "experimentalWarning": "Dis featur iz xperimentul. Dere can b breakin changz in da future an' skripts u got mite brake. USE WIF CAWTUN, KTHXBAI!",
+    "createScript": "Make Skript",
+    "createScriptTitle": "Make Nu Skript",
+    "createScriptDescription": "Mak nub vizhul skript 4 diz instanz. Skriptz do teh bot stuf an respawn to evnts.",
+    "scriptName": "Skript Naym",
+    "scriptNamePlaceholder": "Type skript naym heer...",
+    "scriptDescription": "Deskripshun",
+    "scriptDescriptionPlaceholder": "Say wut diz skript duz...",
+    "create": "Makee Makee",
+    "createSuccess": "Skript creatd, so gud!",
+    "createError": "Failyure. Skript not created ;_;",
+    "noScripts": "No Skriptz Yetz",
+    "noScriptsDescription": "Mak ur first skript 2 automate bot stuf wit vizhul nodez editorz!",
+    "createFirstScript": "Make Ur First Skript",
+    "running": "Runnin",
+    "paused": "Pawzed",
+    "nodes": "nodez",
+    "noDescription": "No has deskripshun",
+    "edit": "Editsie",
+    "pause": "Pawse",
+    "pauseSuccess": "Skript iz pausd, kthx!",
+    "pauseError": "Oh noez, faild tu paus skript!",
+    "resume": "Resoome",
+    "resumeSuccess": "Skript iz bak in accionz!",
+    "resumeError": "Oh noez, skript cant resoom!",
+    "delete": "DELEET",
+    "deleteSuccess": "Skript get deletd suksessleh, YAY!",
+    "deleteError": "NOOO! Skript not deletd!",
+    "saveSuccess": "Skript be saved, awesumz!",
+    "saveError": "Sadness. Skript didn save :(",
+    "activateSuccess": "Skript activ8d",
+    "activateError": "Oh noes, kan haz aktivaet skript",
+    "deactivateSuccess": "Skript deactiv8d",
+    "untitledScript": "Untitled Skriptz",
+    "saveFirstBeforeActivating": "Save teh skript furst b4 aktivaetin",
+    "activating": "Aktivatin scripty...",
+    "activated": "Skript activ8d",
+    "executionCompleted": "Skript finished!",
+    "executionCompletedSuccess": "Skript finishd suksessfulleh! YUS!",
+    "deactivated": "Skript deactiv8d",
+    "deactivatedByUser": "Script waz deactivated by hooman",
+    "executionFailed": "Skript explodid, did not werk D;",
+    "executionError": "Oh noes: {{error}}",
+    "nodeStarted": "Node begun: {{nodeId}}",
+    "nodeCompleted": "Node completid: {{nodeId}}",
+    "nodeError": "Node fail: {{error}}",
+    "contextMenu": {
+      "edit": "EDIT SCRIPT, LETZ GO!",
+      "pause": "Pawse",
+      "resume": "Resoome",
+      "delete": "DELET SCRIPT, KTHXBYE!",
+      "copyScriptName": "Coppy Skript Naym!",
+      "copyScriptId": "Coppy Skript ID!"
+    },
+    "editor": {
+      "toolbar": {
+        "backToScripts": "Bak to Skriptz",
+        "save": "SAEV",
+        "saveTooltip": "Saev skriptz!",
+        "resume": "Resoome",
+        "resumeTooltip": "Resoom skript doin stufs",
+        "pause": "Pawse",
+        "pauseTooltip": "PAWZ skript runnin'",
+        "unsaved": "UNSAVEZ",
+        "clearCanvas": "Cleer doodle pad",
+        "zoomIn": "ZOOMZ IN",
+        "zoomOut": "ZOOMZ OWT",
+        "fit": "Fit ded!",
+        "export": "XPORT SKRIPT!",
+        "import": "IMPORT SKRIPT!",
+        "exportSuccess": "Skript has bin xported, kthx!",
+        "importSuccess": "Skript has bin importd, kthx!",
+        "importError": "Oh noes, failed 2 import skript!"
+      },
+      "palette": {
+        "title": "Node Kitteh",
+        "search": "Sersch nodez..."
+      },
+      "logs": {
+        "title": "Execushun Logz",
+        "clearTitle": "Cleer logz",
+        "noLogs": "No logz yet! Run skript 2 sees what happuns.",
+        "entries_one": "{{count}} entry",
+        "entries_other": "{{count}} entriez"
+      },
+      "contextMenu": {
+        "duplicate": "Copy dat",
+        "rename": "Renaym",
+        "disconnectAll": "ALL DISCONNECT",
+        "collapse": "COLLAPZ",
+        "expand": "EXPANDZ",
+        "mute": "MUTEZ",
+        "unmute": "UNMUTEZ",
+        "showPreview": "SHOW PREVYU",
+        "hidePreview": "HIDE PREVYU",
+        "delete": "DELEET"
+      }
+    }
+  }
+}

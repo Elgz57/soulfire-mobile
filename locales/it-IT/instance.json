@@ -1,0 +1,468 @@
+{
+  "proxy": {
+    "getProxies": "Ottieni Proxy",
+    "addProxies": "Aggiungi Proxy",
+    "filterPlaceholder": "Filtra proxy...",
+    "listImportToast": {
+      "loading": "Importazione proxy in corso...",
+      "success": "{{count}} proxy importati!",
+      "error": "Impossibile importare i proxy.",
+      "noProxies": "Nessun proxy da importare"
+    },
+    "import": {
+      "proxyType": "Tipo di proxy",
+      "http": "HTTP",
+      "socks4": "SOCKS4",
+      "socks5": "SOCKS5",
+      "uri": "URI",
+      "dialog": {
+        "title": "Importa proxy {{type}}",
+        "description": "Incolla i tuoi proxy qui, uno per riga"
+      }
+    },
+    "removeToast": {
+      "loading": "Rimozione proxy in corso...",
+      "success": "{{count}} proxy rimossi!",
+      "error": "Impossibile rimuovere i proxy."
+    },
+    "checkToast": {
+      "loading": "Verifica dei proxy in corso... {{checked}}/{{total}} (Successo: {{success}} Falliti: {{failed}})",
+      "success": "{{count}} proxy difettosi rimossi!",
+      "error": "Impossibile verificare i proxy."
+    },
+    "checkDialog": {
+      "title": "Controlla Proxy",
+      "description": "Stai per controllare {{count}} proxy. I proxy non validi verranno rimossi automaticamente.",
+      "confirm": "Avvia Controllo"
+    },
+    "invalidFormat": "Formato proxy non valido",
+    "table": {
+      "type": "Tipo",
+      "address": "Indirizzo",
+      "username": "Nome utente",
+      "password": "Password",
+      "searchAddresses": "Cerca indirizzi...",
+      "searchUsernames": "Cerca nomi utente...",
+      "searchPasswords": "Cerca password..."
+    },
+    "removeSelectedTooltip": "Rimuovi i proxy selezionati",
+    "exportSelectedTooltip": "Esporta i proxy selezionati",
+    "checkSelectedTooltip": "Controlla i proxy selezionati",
+    "contextMenu": {
+      "copyAddress": "Copia indirizzo",
+      "copyUsername": "Copia nome utente",
+      "copyPassword": "Copia password",
+      "deleteProxy": "Elimina proxy"
+    },
+    "postImportCheckDialog": {
+      "title": "Controllare i proxy?",
+      "description": "Hai appena importato {{count}} proxy. Vuoi controllarli ora? I proxy non validi verranno rimossi automaticamente.",
+      "confirm": "Controlla Proxy",
+      "skip": "Salta"
+    },
+    "export": {
+      "format": "Formato di esportazione",
+      "uri": "Formato URI (tutti i tipi)",
+      "http": "Solo HTTP (piatto)",
+      "socks4": "Solo SOCKS4 (piatto)",
+      "socks5": "Solo SOCKS5 (piatto)",
+      "noProxies": "Nessun proxy da esportare"
+    }
+  },
+  "account": {
+    "getAccounts": "Ottieni Account",
+    "addAccounts": "Aggiungi Account",
+    "generateAccounts": "Genera Account",
+    "filterPlaceholder": "Filtra account...",
+    "listImportToast": {
+      "loading": "Importazione account in corso... {{checked}}/{{total}} (Successo: {{success}} Falliti: {{failed}})",
+      "allFailed": "Impossibile importare gli account.",
+      "someFailed": "Importati {{count}} account, impossibile importarli {{failed}}.",
+      "noneFailed": "{{count}} account importati!",
+      "error": "Impossibile importare gli account.",
+      "noAccounts": "Nessun account da importare"
+    },
+    "unknownError": "Errore sconosciuto",
+    "deviceCodeImportToast": {
+      "loading": "Importazione account in corso...",
+      "success": "Account importato!",
+      "error": "Impossibile importare l'account."
+    },
+    "generate": {
+      "title": "Genera Account Offline",
+      "description": "Genera account Java offline con un formato nome personalizzato.",
+      "amount": "Quantità",
+      "nameFormat": "Formato nome",
+      "nameFormatHelp": "Usa %d come segnaposto per il numero dell'account (es: Bot_%d diventa Bot_1, Bot_2, ecc.)",
+      "mode": "Account Esistenti",
+      "modeHelp": "Scegli come gestire gli account esistenti:\n\n• Ignora Esistenti: Genera solo account con nomi che non esistono già. Mantiene tutti gli account esistenti invariati.\n\n• Sostituisci Esistenti: Genera tutti gli account, sostituendo quelli esistenti che hanno lo stesso UUID. Gli altri account vengono mantenuti.\n\n• Sostituisci Tutto: Elimina TUTTI gli account esistenti e li sostituisce con quelli generati.",
+      "modeIgnoreExisting": "Ignora Esistenti",
+      "modeReplaceExisting": "Sostituisci Esistenti",
+      "modeReplaceAll": "Sostituisci tutto",
+      "submit": "Genera",
+      "generating": "Generazione in corso...",
+      "progress": "Generazione account in corso... {{checked}}/{{total}} (Successo: {{success}} Falliti: {{failed}})",
+      "success": "{{count}} account generati!",
+      "allFailed": "Impossibile generare alcun account",
+      "allExist": "Tutti i nomi utente esistono già. Abilita \"Sovrascrivi account esistenti\" per rigenerarli.",
+      "error": "Impossibile generare gli account.",
+      "invalidAmount": "Inserisci una quantità valida (almeno 1)",
+      "missingPlaceholder": "Il formato nome deve contenere il segnaposto %d"
+    },
+    "import": {
+      "javaEdition": "Java Edition",
+      "bedrockEdition": "Bedrock Edition",
+      "offline": "Offline",
+      "microsoftCredentials": "Credenziali Microsoft",
+      "microsoftDeviceCode": "Codice dispositivo Microsoft",
+      "microsoftRefreshToken": "Token di aggiornamento Microsoft",
+      "microsoftCookies": "Cookie di Microsoft",
+      "microsoftAccessToken": "Token di accesso Microsoft",
+      "altProviders": "Provider alternativi",
+      "dialog": {
+        "title": "Importa account {{type}}",
+        "description": "Incolla qui i tuoi account, uno per riga"
+      }
+    },
+    "removeToast": {
+      "loading": "Rimozione account in corso...",
+      "success": "{{count}} account rimossi!",
+      "error": "Impossibile rimuovere gli account."
+    },
+    "table": {
+      "type": "Tipo",
+      "profileId": "UUID",
+      "lastKnownName": "Nome utente",
+      "searchProfileIds": "Cerca ID profilo...",
+      "searchLastKnownNames": "Cerca ultimi nomi noti...",
+      "actions": "Azioni"
+    },
+    "removeSelectedTooltip": "Rimuovi account selezionati",
+    "contextMenu": {
+      "openConfig": "Apri configurazione",
+      "openMetadata": "Apri metadati",
+      "copyProfileId": "Copia ID profilo",
+      "copyUsername": "Copia nome utente"
+    },
+    "config": {
+      "title": "Configura {{name}}",
+      "description": "Configura le impostazioni per-bot di questo account",
+      "openButton": "Configura account",
+      "pageTitle": "Impostazioni di {{name}} - {{page}}",
+      "noSettings": "Nessuna impostazione disponibile per questa pagina"
+    },
+    "deviceCodeConfirmDialog": {
+      "title": "Autenticazione tramite codice dispositivo",
+      "description": "Configura le opzioni prima di iniziare il flusso del codice del dispositivo.",
+      "start": "Avvia autenticazione"
+    },
+    "deviceCodeDialog": {
+      "title": "Autenticazione tramite codice dispositivo",
+      "description": "Accedi con il tuo account Microsoft per collegarlo.",
+      "openInBrowser": "Apri nel browser",
+      "orManually": "Oppure inserisci il codice manualmente",
+      "codeLabel": "Il tuo codice",
+      "urlLabel": "Vai a"
+    },
+    "ravealts": {
+      "button": "Ravealts",
+      "title": "Acquista account tramite Ravealts",
+      "description": "Acquista account Minecraft utilizzando la tua chiave API Ravealts.",
+      "apiKeyLabel": "Chiave API",
+      "apiKeyPlaceholder": "Inserisci la tua chiave API Ravealts",
+      "validate": "Convalida",
+      "validating": "Convalida in corso...",
+      "keyValid": "Chiave convalidata",
+      "keyInvalid": "Chiave API non valida",
+      "credits": "Crediti: {{credits}}",
+      "stockTitle": "Stock disponibile",
+      "noStock": "Nessun account disponibile in stock",
+      "accountType": "Tipo di account",
+      "amount": "Quantità (1-10)",
+      "purchase": "Acquista e importa",
+      "purchasing": "Acquisto in corso...",
+      "purchaseSuccess": "Acquistati {{count}} account, importazione in corso...",
+      "purchaseError": "Acquisto non riuscito: {{message}}",
+      "networkError": "Impossibile connettersi all'API Ravealts",
+      "outOfStock": "La tipologia selezionata non è disponibile in stock",
+      "insufficientBalance": "Crediti insufficienti",
+      "rateLimited": "Limite di richieste raggiunto, riprova più tardi"
+    },
+    "metadata": {
+      "openButton": "Modifica Metadati",
+      "title": "Metadati: {{name}}",
+      "description": "Gestisci le voci di metadati persistenti per questo account. Ogni voce ha uno spazio dei nomi, una chiave e un valore JSON.",
+      "namespacePlaceholder": "Spazio dei nomi",
+      "keyPlaceholder": "Chiave",
+      "valuePlaceholder": "Valore (JSON)",
+      "noEntries": "Nessuna voce di metadati. Aggiungine una sopra.",
+      "addSuccess": "Voce aggiunta",
+      "addError": "Impossibile aggiungere la voce",
+      "updateError": "Impossibile aggiornare la voce",
+      "deleteSuccess": "Voce eliminata",
+      "deleteError": "Impossibile eliminare la voce",
+      "duplicateError": "Esiste già una voce con questo namespace e chiave",
+      "invalidJson": "Valore JSON non valido"
+    }
+  },
+  "instanceMetadata": {
+    "title": "Metadati dell'istanza",
+    "description": "Gestisci le voci di metadati persistenti per questa istanza. Ogni voce ha uno spazio dei nomi, una chiave e un valore JSON.",
+    "namespacePlaceholder": "Spazio dei nomi",
+    "keyPlaceholder": "Chiave",
+    "valuePlaceholder": "Valore (JSON)",
+    "noEntries": "Nessuna voce di metadati. Aggiungine una sopra.",
+    "addSuccess": "Voce aggiunta",
+    "addError": "Impossibile aggiungere la voce",
+    "updateError": "Impossibile aggiornare la voce",
+    "deleteSuccess": "Voce eliminata",
+    "deleteError": "Impossibile eliminare la voce",
+    "duplicateError": "Esiste già una voce con questo namespace e chiave",
+    "invalidJson": "Valore JSON non valido"
+  },
+  "bots": {
+    "searchPlaceholder": "Cerca bot...",
+    "onlineCount": "{{online}} online / {{total}} totale",
+    "noBots": "Nessun bot configurato. Aggiungi account dalla pagina Impostazioni Account.",
+    "noBotsFound": "Nessun bot corrisponde alla tua ricerca.",
+    "loadingMore": "Caricamento in corso...",
+    "showingCount": "Mostrando {{loaded}} di {{total}}",
+    "allLoaded": "Tutti i {{total}} bot caricati",
+    "online": "Online",
+    "offline": "Offline",
+    "notJoined": "Non unito",
+    "backToBots": "Torna ai Bot",
+    "comingSoon": "Prossimamente",
+    "terminalPanel": {
+      "title": "Terminale Bot"
+    },
+    "positionPanel": {
+      "title": "Posizione e Rotazione",
+      "position": "Posizione",
+      "rotation": "Rotazione",
+      "offline": "Il bot è offline. I dati sulla posizione sono disponibili solo quando il bot è connesso."
+    },
+    "chatPanel": {
+      "title": "Messaggi della chat",
+      "description": "I messaggi della chat di questo bot appariranno qui in un futuro aggiornamento."
+    },
+    "commandPanel": {
+      "title": "Comandi Bot",
+      "placeholder": "Invia comando a questo bot...",
+      "description": "I comandi specifici del bot saranno disponibili in un futuro aggiornamento."
+    },
+    "povPanel": {
+      "title": "POV Bot",
+      "capture": "Cattura",
+      "refresh": "Aggiorna",
+      "auto": "Auto",
+      "startAutoRefresh": "Avvia auto-aggiornamento (intervallo di 1 secondo)",
+      "stopAutoRefresh": "Ferma auto-aggiornamento",
+      "clickToCapture": "Fai clic su Cattura per mostrare il punto di vista del bot",
+      "offline": "Il bot è offline. La visualizzazione POV è disponibile solo quando il bot è connesso."
+    },
+    "statsPanel": {
+      "title": "Statistiche Bot",
+      "health": "Salute",
+      "food": "Cibo",
+      "saturation": "Saturazione",
+      "experience": "Esperienza",
+      "level": "Livello",
+      "toNextLevel": "al prossimo livello",
+      "gameMode": "Modalità di Gioco",
+      "survival": "Sopravvivenza",
+      "creative": "Creativa",
+      "adventure": "Avventura",
+      "spectator": "Spettatore",
+      "unknown": "Sconosciuto",
+      "offline": "Il bot è offline. Le statistiche sono disponibili solo quando il bot è connesso."
+    },
+    "inventoryPanel": {
+      "title": "Inventario",
+      "hotbar": "Hotbar",
+      "main": "Inventario principale",
+      "items": "oggetti",
+      "carrying": "In possesso",
+      "dropOne": "Lascia uno",
+      "dropAll": "Lascia tutto",
+      "closeContainer": "Chiudi",
+      "clickHint": "Click sinistro: prendi/posa | Click destro: metà/uno | Shift+click: sposta velocemente | Click centrale: seleziona slot barra rapida",
+      "offline": "Il bot è offline. L'inventario è disponibile solo quando il bot è connesso.",
+      "buttons": {
+        "stonecutterRecipes": "Ricette",
+        "enchantments": "Incantamenti",
+        "patterns": "Motivi",
+        "trades": "Scambi",
+        "beaconEffects": "Effetti del Faro",
+        "crafterSlots": "Controlli Slot",
+        "lecternControls": "Controlli Libro",
+        "actions": "Azioni"
+      },
+      "textInput": {
+        "title": "Input di Testo",
+        "anvilRename": "Rinomina Oggetto"
+      },
+      "bookPages": {
+        "title": "Contenuto del Libro",
+        "emptyPage": "(Pagina vuota)",
+        "pageIndicator": "Pagina {{current}} di {{total}}"
+      }
+    },
+    "visualPanel": {
+      "title": "Vista Bot",
+      "compass": "Direzione frontale",
+      "lookDirection": "Angolo di visione",
+      "lookingUp": "Guarda in alto",
+      "lookingDown": "Guarda in basso",
+      "lookingStraight": "Guarda dritto",
+      "worldInfo": "Info mondo",
+      "dimension": "Dimensione",
+      "biome": "Bioma",
+      "offline": "Il bot è offline. I dati visivi sono disponibili solo quando il bot è connesso."
+    },
+    "actionsPanel": {
+      "title": "Azioni Bot",
+      "leftClick": "Click Sinistro",
+      "rightClick": "Click Destro",
+      "leftClickDescription": "Attacca entità o distruggi blocco",
+      "rightClickDescription": "Usa oggetto o interagisci",
+      "offline": "Il bot è offline. Le azioni sono disponibili solo quando il bot è connesso."
+    },
+    "movementPanel": {
+      "title": "Controllo Movimento",
+      "movement": "Movimento (WASD)",
+      "forward": "Avanti (W)",
+      "backward": "Indietro (S)",
+      "left": "Verso Sinistra (A)",
+      "right": "Verso Destra (D)",
+      "jump": "Salta",
+      "sneak": "Accovacciati",
+      "sprint": "Scatta",
+      "stop": "Ferma",
+      "rotation": "Direzione dello Sguardo",
+      "lookUp": "Guarda in Alto",
+      "lookDown": "Guarda in Basso",
+      "lookLeft": "Guarda a Sinistra",
+      "lookRight": "Guarda a Destra",
+      "offline": "Il bot è offline. I controlli di movimento sono disponibili solo quando il bot è connesso."
+    },
+    "dialogPanel": {
+      "title": "Dialogo Server",
+      "noDialog": "Nessun dialogo del server attualmente visualizzato.",
+      "dialogType": "Tipo",
+      "dialogId": "ID Dialogo",
+      "notice": "Avviso",
+      "confirmation": "Conferma",
+      "multiAction": "Azione Multipla",
+      "serverLinks": "Link Server",
+      "dialogList": "Lista Dialoghi",
+      "unknownType": "Sconosciuto",
+      "dismiss": "Chiudi",
+      "submit": "Invia",
+      "offline": "Il bot è offline. I dialoghi sono disponibili solo quando il bot è connesso."
+    }
+  },
+  "scripts": {
+    "title": "Script Visuali",
+    "description": "Crea script di automazione usando un editor visuale basato su nodi.",
+    "experimentalTitle": "Funzionalità Sperimentale",
+    "experimentalWarning": "Questa funzionalità è sperimentale. Potrebbero esserci modifiche sostanziali in futuro e gli script esistenti potrebbero smettere di funzionare. Usare con cautela.",
+    "createScript": "Crea Script",
+    "createScriptTitle": "Crea Nuovo Script",
+    "createScriptDescription": "Crea un nuovo script visuale per questa istanza. Gli script possono automatizzare le azioni del bot e rispondere agli eventi.",
+    "scriptName": "Nome Script",
+    "scriptNamePlaceholder": "Inserisci il nome dello script...",
+    "scriptDescription": "Descrizione",
+    "scriptDescriptionPlaceholder": "Descrivi cosa fa questo script...",
+    "create": "Crea",
+    "createSuccess": "Script creato con successo",
+    "createError": "Impossibile creare lo script",
+    "noScripts": "Nessuno Script",
+    "noScriptsDescription": "Crea il tuo primo script per automatizzare le azioni del bot usando l'editor visuale basato su nodi.",
+    "createFirstScript": "Crea il tuo Primo Script",
+    "running": "In esecuzione",
+    "paused": "In pausa",
+    "nodes": "nodi",
+    "noDescription": "Nessuna descrizione",
+    "edit": "Modifica",
+    "pause": "Pausa",
+    "pauseSuccess": "Script in pausa",
+    "pauseError": "Impossibile mettere in pausa lo script",
+    "resume": "Riprendi",
+    "resumeSuccess": "Script ripreso",
+    "resumeError": "Impossibile riprendere lo script",
+    "delete": "Elimina",
+    "deleteSuccess": "Script eliminato con successo",
+    "deleteError": "Impossibile eliminare lo script",
+    "saveSuccess": "Script salvato con successo",
+    "saveError": "Impossibile salvare lo script",
+    "activateSuccess": "Script attivato",
+    "activateError": "Impossibile attivare lo script",
+    "deactivateSuccess": "Script disattivato",
+    "untitledScript": "Script senza titolo",
+    "saveFirstBeforeActivating": "Salva prima lo script prima di attivarlo",
+    "activating": "Attivazione script in corso...",
+    "activated": "Script attivato",
+    "executionCompleted": "Script completato",
+    "executionCompletedSuccess": "Script completato con successo",
+    "deactivated": "Script disattivato",
+    "deactivatedByUser": "Script disattivato dall'utente",
+    "executionFailed": "Esecuzione script fallita",
+    "executionError": "Errore di esecuzione: {{error}}",
+    "nodeStarted": "Nodo avviato: {{nodeId}}",
+    "nodeCompleted": "Nodo completato: {{nodeId}}",
+    "nodeError": "Errore nodo: {{error}}",
+    "contextMenu": {
+      "edit": "Modifica script",
+      "pause": "Pausa",
+      "resume": "Riprendi",
+      "delete": "Elimina script",
+      "copyScriptName": "Copia nome script",
+      "copyScriptId": "Copia ID script"
+    },
+    "editor": {
+      "toolbar": {
+        "backToScripts": "Torna agli Script",
+        "save": "Salva",
+        "saveTooltip": "Salva script",
+        "resume": "Riprendi",
+        "resumeTooltip": "Riprendi l'esecuzione dello script",
+        "pause": "Pausa",
+        "pauseTooltip": "Metti in pausa l'esecuzione dello script",
+        "unsaved": "Non salvato",
+        "clearCanvas": "Pulisci area di lavoro",
+        "zoomIn": "Ingrandisci",
+        "zoomOut": "Riduci",
+        "fit": "Adatta",
+        "export": "Esporta script",
+        "import": "Importa script",
+        "exportSuccess": "Script esportato con successo",
+        "importSuccess": "Script importato con successo",
+        "importError": "Importazione dello script non riuscita"
+      },
+      "palette": {
+        "title": "Palette Nodi",
+        "search": "Cerca nodi..."
+      },
+      "logs": {
+        "title": "Log di Esecuzione",
+        "clearTitle": "Pulisci log",
+        "noLogs": "Nessun log presente. Esegui lo script per vedere i log di esecuzione.",
+        "entries_one": "{{count}} voce",
+        "entries_other": "{{count}} voci"
+      },
+      "contextMenu": {
+        "duplicate": "Duplica",
+        "rename": "Rinomina",
+        "disconnectAll": "Disconnetti Tutto",
+        "collapse": "Comprimi",
+        "expand": "Espandi",
+        "mute": "Disattiva audio",
+        "unmute": "Attiva audio",
+        "showPreview": "Mostra anteprima",
+        "hidePreview": "Nascondi anteprima",
+        "delete": "Elimina"
+      }
+    }
+  }
+}

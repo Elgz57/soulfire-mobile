@@ -1,0 +1,467 @@
+{
+  "proxy": {
+    "getProxies": "獲取代理伺服器",
+    "addProxies": "新增代理伺服器",
+    "filterPlaceholder": "篩選代理伺服器...",
+    "listImportToast": {
+      "loading": "正在導入代理伺服器...",
+      "success": "已導入 {{count}} 個代理伺服器！",
+      "error": "導入代理伺服器失敗",
+      "noProxies": "沒有可導入的代理伺服器"
+    },
+    "import": {
+      "proxyType": "代理伺服器類型",
+      "http": "HTTP",
+      "socks4": "SOCKS4",
+      "socks5": "SOCKS5",
+      "uri": "URI",
+      "dialog": {
+        "title": "導入 {{type}} 代理伺服器",
+        "description": "請將您的代理伺服器貼在此處，每行一個"
+      }
+    },
+    "removeToast": {
+      "loading": "正在移除代理伺服器...",
+      "success": "已移除 {{count}} 個代理伺服器！",
+      "error": "移除代理伺服器失敗"
+    },
+    "checkToast": {
+      "loading": "正在檢查代理伺服器... {{checked}}/{{total}}（成功：{{success}} 失敗：{{failed}}）",
+      "success": "已移除 {{count}} 個損壞的代理伺服器！",
+      "error": "檢查代理伺服器失敗"
+    },
+    "checkDialog": {
+      "title": "檢查代理伺服器",
+      "description": "您即將檢查 {{count}} 個代理伺服器。無效的代理將會自動移除。",
+      "confirm": "開始檢查"
+    },
+    "invalidFormat": "代理伺服器格式無效",
+    "table": {
+      "type": "類型",
+      "address": "位址",
+      "username": "使用者名稱",
+      "password": "密碼",
+      "searchAddresses": "搜尋位址...",
+      "searchUsernames": "搜尋使用者名稱...",
+      "searchPasswords": "搜尋密碼..."
+    },
+    "removeSelectedTooltip": "移除所選代理伺服器",
+    "exportSelectedTooltip": "導出已選取的代理伺服器",
+    "checkSelectedTooltip": "檢查所選代理伺服器",
+    "contextMenu": {
+      "copyAddress": "複製位址",
+      "copyUsername": "複製用戶名稱",
+      "copyPassword": "複製密碼",
+      "deleteProxy": "刪除代理伺服器"
+    },
+    "postImportCheckDialog": {
+      "title": "檢查代理伺服器？",
+      "description": "您剛剛匯入了 {{count}} 個代理伺服器。您現在要檢查它們嗎？無效的代理將自動移除。",
+      "confirm": "檢查代理伺服器",
+      "skip": "略過"
+    },
+    "export": {
+      "format": "導出格式",
+      "uri": "URI 格式（所有類型）",
+      "http": "僅限 HTTP（平面）",
+      "socks4": "僅限 SOCKS4（平面）",
+      "socks5": "僅限 SOCKS5（平面）",
+      "noProxies": "無可匯出的代理伺服器"
+    }
+  },
+  "account": {
+    "getAccounts": "獲取帳戶",
+    "addAccounts": "新增帳戶",
+    "generateAccounts": "產生帳戶",
+    "filterPlaceholder": "篩選帳戶...",
+    "listImportToast": {
+      "loading": "正在導入帳戶... {{checked}}/{{total}}（成功：{{success}} 失敗：{{failed}}）",
+      "allFailed": "未能導入任何帳戶",
+      "someFailed": "已導入 {{count}} 個帳戶，未能導入 {{failed}} 個帳戶",
+      "noneFailed": "已導入 {{count}} 個帳戶！",
+      "error": "導入帳戶失敗",
+      "noAccounts": "沒有可導入的帳戶"
+    },
+    "unknownError": "未知錯誤",
+    "deviceCodeImportToast": {
+      "loading": "正在導入帳戶...",
+      "success": "帳戶已導入！",
+      "error": "導入帳戶失敗"
+    },
+    "generate": {
+      "title": "產生離線帳戶",
+      "description": "以自訂名稱格式產生離線 Java 帳戶。",
+      "amount": "數量",
+      "nameFormat": "名稱格式",
+      "nameFormatHelp": "請使用 %d 作為帳戶編號的佔位符（例如：Bot_%d 會變成 Bot_1、Bot_2 等）",
+      "mode": "現有帳號",
+      "modeHelp": "選擇如何處理現有帳號：\n\n• 忽略現有：只建立名稱尚未存在的帳號，所有現有帳號不變。\n\n• 替換現有：建立所有帳號，並替換任何 UUID 相同的現有帳號。其他帳號維持不變。\n\n• 全部替換：刪除所有現有帳號，並用產生的帳號取代。",
+      "modeIgnoreExisting": "忽略現有",
+      "modeReplaceExisting": "替換現有",
+      "modeReplaceAll": "全部取代",
+      "submit": "產生",
+      "generating": "正在產生...",
+      "progress": "正在產生帳戶... {{checked}}/{{total}}（成功：{{success}} 失敗：{{failed}}）",
+      "success": "已產生 {{count}} 個帳戶！",
+      "allFailed": "未能產生任何帳戶",
+      "allExist": "所有使用者名稱已存在。請啟用「覆蓋現有帳號」以重新產生。",
+      "error": "產生帳戶失敗",
+      "invalidAmount": "請輸入有效數量（至少 1）",
+      "missingPlaceholder": "名稱格式必須包含 %d 佔位符"
+    },
+    "import": {
+      "javaEdition": "Java 版",
+      "bedrockEdition": "Bedrock 版",
+      "offline": "離線",
+      "microsoftCredentials": "Microsoft 憑證",
+      "microsoftDeviceCode": "Microsoft 裝置驗證碼",
+      "microsoftRefreshToken": "Microsoft 重新整理權杖",
+      "microsoftCookies": "Microsoft Cookie 檔案",
+      "microsoftAccessToken": "Microsoft 存取權杖",
+      "altProviders": "替代供應商",
+      "dialog": {
+        "title": "導入 {{type}} 帳戶",
+        "description": "請將您的帳戶貼在此處，每行一個"
+      }
+    },
+    "removeToast": {
+      "loading": "正在移除帳戶...",
+      "success": "已移除 {{count}} 個帳戶！",
+      "error": "移除帳戶失敗"
+    },
+    "table": {
+      "type": "類型",
+      "profileId": "UUID",
+      "lastKnownName": "使用者名稱",
+      "searchProfileIds": "搜尋個人檔案 ID...",
+      "searchLastKnownNames": "搜尋最後已知名稱...",
+      "actions": "動作"
+    },
+    "removeSelectedTooltip": "移除所選帳號",
+    "contextMenu": {
+      "openConfig": "打開設定檔",
+      "openMetadata": "打開中繼資料",
+      "copyProfileId": "複製個人檔案 ID",
+      "copyUsername": "複製用戶名稱"
+    },
+    "config": {
+      "title": "設定 {{name}}",
+      "description": "為此帳號設定每個機器人專屬的設定",
+      "openButton": "設定帳號",
+      "pageTitle": "{{name}} - {{page}} 設定",
+      "noSettings": "此頁面沒有可用的設定"
+    },
+    "deviceCodeConfirmDialog": {
+      "title": "裝置代碼驗證",
+      "description": "在開始裝置代碼流程前請先配置選項。",
+      "start": "開始驗證"
+    },
+    "deviceCodeDialog": {
+      "title": "裝置代碼驗證",
+      "description": "使用您的 Microsoft 帳戶登入以進行連結。",
+      "openInBrowser": "在瀏覽器中開啟",
+      "orManually": "或手動輸入代碼",
+      "codeLabel": "您的代碼",
+      "urlLabel": "前往"
+    },
+    "ravealts": {
+      "button": "Ravealts",
+      "title": "透過 Ravealts 購買帳號",
+      "description": "使用您的 Ravealts API 金鑰購買 Minecraft 帳號。",
+      "apiKeyLabel": "",
+      "apiKeyPlaceholder": "請輸入您的 Ravealts API 金鑰",
+      "validate": "驗證",
+      "validating": "正在驗證...",
+      "keyValid": "金鑰已驗證",
+      "keyInvalid": "API 金鑰無效",
+      "credits": "點數：{{credits}}",
+      "stockTitle": "可用庫存",
+      "noStock": "庫存中沒有帳號",
+      "accountType": "帳號類型",
+      "amount": "數量 (1-10)",
+      "purchase": "購買並導入",
+      "purchasing": "正在購買...",
+      "purchaseSuccess": "已購買 {{count}} 個帳號，正在導入...",
+      "purchaseError": "購買失敗：{{message}}",
+      "networkError": "無法連接到 Ravealts API",
+      "outOfStock": "所選類型已無庫存",
+      "insufficientBalance": "點數不足",
+      "rateLimited": "受限頻率，請稍後再試"
+    },
+    "metadata": {
+      "openButton": "編輯中繼資料",
+      "title": "中繼資料：{{name}}",
+      "description": "管理此帳戶的持久化中繼資料條目。每個條目都有命名空間、鍵和值（JSON 格式）。",
+      "namespacePlaceholder": "命名空間",
+      "keyPlaceholder": "鍵",
+      "valuePlaceholder": "值（JSON）",
+      "noEntries": "沒有中繼資料條目。請在上方新增一個。",
+      "addSuccess": "已新增條目",
+      "addError": "新增條目失敗",
+      "updateError": "更新條目失敗",
+      "deleteSuccess": "條目已刪除",
+      "deleteError": "刪除條目失敗",
+      "duplicateError": "具有相同命名空間和鍵的條目已存在",
+      "invalidJson": "無效的 JSON 值"
+    }
+  },
+  "instanceMetadata": {
+    "title": "實例中繼資料（Metadata）",
+    "description": "管理此實例的持久中繼資料項目。每個項目都包含一個命名空間、鍵，以及 JSON 值。",
+    "namespacePlaceholder": "命名空間",
+    "keyPlaceholder": "鍵",
+    "valuePlaceholder": "值（JSON）",
+    "noEntries": "沒有中繼資料條目。請在上方新增一個。",
+    "addSuccess": "已新增條目",
+    "addError": "新增條目失敗",
+    "updateError": "更新條目失敗",
+    "deleteSuccess": "條目已刪除",
+    "deleteError": "刪除條目失敗",
+    "duplicateError": "具有相同命名空間和鍵的條目已存在",
+    "invalidJson": "無效的 JSON 值"
+  },
+  "bots": {
+    "searchPlaceholder": "搜尋機器人...",
+    "onlineCount": "{{online}} 位在線 / 共 {{total}} 位",
+    "noBots": "沒有已設定的機器人。請至帳戶設定頁面新增帳號。",
+    "noBotsFound": "沒有符合搜尋條件的機器人。",
+    "loadingMore": "載入更多...",
+    "showingCount": "正在顯示 {{loaded}} / {{total}} 筆資料",
+    "allLoaded": "所有 {{total}} 個機器人已載入",
+    "online": "在線",
+    "offline": "離線",
+    "notJoined": "未加入",
+    "backToBots": "返回機器人列表",
+    "comingSoon": "即將推出",
+    "terminalPanel": {
+      "title": "機器人終端機"
+    },
+    "positionPanel": {
+      "title": "位置與旋轉",
+      "position": "位置",
+      "rotation": "旋轉",
+      "offline": "機器人離線時僅能查看位置資料，僅在連線時可用。"
+    },
+    "chatPanel": {
+      "title": "聊天訊息",
+      "description": "來自此機器人的聊天訊息將在後續更新中顯示於此。"
+    },
+    "commandPanel": {
+      "title": "機器人指令",
+      "placeholder": "傳送指令給此機器人...",
+      "description": "僅限機器人的指令將在後續更新中提供。"
+    },
+    "povPanel": {
+      "title": "機器人視角",
+      "capture": "截圖",
+      "refresh": "重新整理",
+      "auto": "自動",
+      "startAutoRefresh": "開始自動刷新（每秒1次）",
+      "stopAutoRefresh": "停止自動刷新",
+      "clickToCapture": "點擊「截圖」以渲染機器人的視角",
+      "offline": "機器人離線。只有連線時才能渲染視角。"
+    },
+    "statsPanel": {
+      "title": "機器人統計",
+      "health": "生命值",
+      "food": "飽食度",
+      "saturation": "飽和度",
+      "experience": "經驗值",
+      "level": "等級",
+      "toNextLevel": "距下個等級",
+      "gameMode": "遊戲模式",
+      "survival": "生存",
+      "creative": "創造",
+      "adventure": "冒險",
+      "spectator": "旁觀",
+      "unknown": "未知",
+      "offline": "機器人離線。只有連線時才能查看統計數據。"
+    },
+    "inventoryPanel": {
+      "title": "物品欄",
+      "hotbar": "快捷欄",
+      "main": "主背包",
+      "items": "物品",
+      "carrying": "攜帶中",
+      "dropOne": "丟棄一個",
+      "dropAll": "全部丟棄",
+      "closeContainer": "關閉",
+      "clickHint": "左鍵：拿取/放置 | 右鍵：一半/一個 | Shift+點擊：快速移動 | 滾輪鍵：選擇快捷欄欄位",
+      "offline": "機器人離線。只有連線時才能使用背包。",
+      "buttons": {
+        "stonecutterRecipes": "配方",
+        "enchantments": "附魔",
+        "patterns": "圖樣",
+        "trades": "交易",
+        "beaconEffects": "燈塔效果",
+        "crafterSlots": "格控",
+        "lecternControls": "書本控制",
+        "actions": "動作"
+      },
+      "textInput": {
+        "title": "文字輸入",
+        "anvilRename": "重新命名物品"
+      },
+      "bookPages": {
+        "title": "書本內容",
+        "emptyPage": "（空白頁）",
+        "pageIndicator": "第 {{current}} / {{total}} 頁"
+      }
+    },
+    "visualPanel": {
+      "title": "機器人視圖",
+      "compass": "朝向",
+      "lookDirection": "視角",
+      "lookingUp": "向上看",
+      "lookingDown": "向下看",
+      "lookingStraight": "平視",
+      "worldInfo": "世界資訊",
+      "dimension": "維度",
+      "biome": "生物群系",
+      "offline": "機器人離線。只有連線時才能查看視覺資料。"
+    },
+    "actionsPanel": {
+      "title": "機器人動作",
+      "leftClick": "左鍵點擊",
+      "rightClick": "右鍵點擊",
+      "leftClickDescription": "攻擊實體或破壞方塊",
+      "rightClickDescription": "使用物品或互動",
+      "offline": "機器人離線。只有當機器人連線時才能操作。"
+    },
+    "movementPanel": {
+      "title": "移動控制",
+      "movement": "移動（WASD）",
+      "forward": "前進（W）",
+      "backward": "後退（S）",
+      "left": "左平移（A）",
+      "right": "右平移（D）",
+      "jump": "跳躍",
+      "sneak": "潛行",
+      "sprint": "疾跑",
+      "stop": "停止",
+      "rotation": "視角方向",
+      "lookUp": "向上看",
+      "lookDown": "向下看",
+      "lookLeft": "向左看",
+      "lookRight": "向右看",
+      "offline": "機器人離線。只有當機器人連線時才能移動。"
+    },
+    "dialogPanel": {
+      "title": "伺服器對話框",
+      "noDialog": "目前沒有顯示伺服器對話框。",
+      "dialogType": "類型",
+      "dialogId": "對話框 ID",
+      "notice": "通知",
+      "confirmation": "確認",
+      "multiAction": "多重操作",
+      "serverLinks": "伺服器連結",
+      "dialogList": "對話框列表",
+      "unknownType": "未知",
+      "dismiss": "關閉",
+      "submit": "提交",
+      "offline": "機器人離線。只有當機器人連線時才能顯示對話框。"
+    }
+  },
+  "scripts": {
+    "title": "視覺腳本",
+    "description": "使用可視化節點編輯器建立自動化腳本。",
+    "experimentalTitle": "實驗性功能",
+    "experimentalWarning": "此功能為實驗性質。未來可能會有重大變更，現有腳本可能會發生錯誤，請小心使用。",
+    "createScript": "建立腳本",
+    "createScriptTitle": "建立新腳本",
+    "createScriptDescription": "為此實例建立新的視覺腳本。腳本可自動化機器人行為並回應事件。",
+    "scriptName": "腳本名稱",
+    "scriptNamePlaceholder": "輸入腳本名稱...",
+    "scriptDescription": "描述",
+    "scriptDescriptionPlaceholder": "描述此腳本的功能...",
+    "create": "建立",
+    "createSuccess": "腳本建立成功",
+    "createError": "腳本建立失敗",
+    "noScripts": "尚無腳本",
+    "noScriptsDescription": "建立您的第一個腳本，透過可視化節點編輯器自動化機器人動作。",
+    "createFirstScript": "建立您的第一個腳本",
+    "running": "執行中",
+    "paused": "已暫停",
+    "nodes": "節點",
+    "noDescription": "無描述",
+    "edit": "編輯",
+    "pause": "暫停",
+    "pauseSuccess": "指令碼已暫停",
+    "pauseError": "暫停指令碼失敗",
+    "resume": "繼續",
+    "resumeSuccess": "指令碼已恢復運行",
+    "resumeError": "恢復指令碼失敗",
+    "delete": "刪除",
+    "deleteSuccess": "腳本刪除成功",
+    "deleteError": "腳本刪除失敗",
+    "saveSuccess": "腳本儲存成功",
+    "saveError": "腳本儲存失敗",
+    "activateSuccess": "指令碼已啟用",
+    "activateError": "啟用指令碼失敗",
+    "deactivateSuccess": "指令碼已停用",
+    "untitledScript": "未命名腳本",
+    "saveFirstBeforeActivating": "請先儲存指令碼再啟用",
+    "activating": "正在啟用腳本...",
+    "activated": "指令碼已啟用",
+    "executionCompleted": "腳本完成",
+    "executionCompletedSuccess": "腳本順利完成",
+    "deactivated": "指令碼已停用",
+    "deactivatedByUser": "腳本已由使用者停用",
+    "executionFailed": "腳本執行失敗",
+    "executionError": "執行錯誤：{{error}}",
+    "nodeStarted": "節點已啟動：{{nodeId}}",
+    "nodeCompleted": "節點完成：{{nodeId}}",
+    "nodeError": "節點錯誤：{{error}}",
+    "contextMenu": {
+      "edit": "編輯腳本",
+      "pause": "暫停",
+      "resume": "繼續",
+      "delete": "刪除腳本",
+      "copyScriptName": "複製腳本名稱",
+      "copyScriptId": "複製腳本 ID"
+    },
+    "editor": {
+      "toolbar": {
+        "backToScripts": "返回腳本",
+        "save": "儲存",
+        "saveTooltip": "儲存腳本",
+        "resume": "繼續",
+        "resumeTooltip": "恢復執行指令碼",
+        "pause": "暫停",
+        "pauseTooltip": "暫停腳本執行",
+        "unsaved": "未儲存",
+        "clearCanvas": "清除畫布",
+        "zoomIn": "放大",
+        "zoomOut": "縮小",
+        "fit": "適合",
+        "export": "匯出腳本",
+        "import": "導入腳本",
+        "exportSuccess": "腳本匯出成功",
+        "importSuccess": "腳本導入成功",
+        "importError": "導入腳本失敗"
+      },
+      "palette": {
+        "title": "節點面板",
+        "search": "搜尋節點..."
+      },
+      "logs": {
+        "title": "執行紀錄",
+        "clearTitle": "清除紀錄",
+        "noLogs": "尚無紀錄。執行腳本以查看執行紀錄。",
+        "entries_other": "{{count}} 筆紀錄"
+      },
+      "contextMenu": {
+        "duplicate": "複製",
+        "rename": "重新命名",
+        "disconnectAll": "全部斷開連線",
+        "collapse": "收合",
+        "expand": "展開",
+        "mute": "靜音",
+        "unmute": "取消靜音",
+        "showPreview": "顯示預覽",
+        "hidePreview": "隱藏預覽",
+        "delete": "刪除"
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "overview": {
+    "welcome": "Bienvenue, {{name}}🧙",
+    "serverMetrics": {
+      "sectionTitle": "Métriques du serveur",
+      "summary": {
+        "cpu": "CPU",
+        "heapUsed": "Mémoire utilisée par le tas",
+        "threads": "Threads",
+        "botsOnline": "Bots en ligne",
+        "uptime": "Temps de fonctionnement"
+      },
+      "cpuUsage": {
+        "title": "Utilisation du CPU (%)"
+      },
+      "memoryUsage": {
+        "title": "Mémoire Heap (Mo)"
+      },
+      "threadCount": {
+        "title": "Nombre de threads"
+      },
+      "aggregateBots": {
+        "title": "Bots en ligne (toutes les instances)"
+      }
+    },
+    "instancesChart": {
+      "title": "Nombre total d'instances sur ce serveur",
+      "instances": "Instances",
+      "label": {
+        "state": "État",
+        "active": "Actif",
+        "stopped": "Arrêté",
+        "other": "Autre"
+      }
+    },
+    "usersChart": {
+      "title": "Nombre total d'utilisateurs sur ce serveur",
+      "users": "Utilisateur·rice·s",
+      "label": {
+        "role": "Rôle",
+        "user": "Utilisateur",
+        "admin": "Administrateur",
+        "other": "Autre"
+      }
+    }
+  },
+  "users": {
+    "filterPlaceholder": "Filtrer les utilisateurs...",
+    "baseUserDialog": {
+      "form": {
+        "username": {
+          "min": "Le nom d'utilisateur doit contenir au moins 3 caractères",
+          "max": "Les noms de scripts doivent comporter au maximum 32 caractères",
+          "regex": "Les noms d'utilisateurs doivent être en minuscule, commencer par un caractère alphanumérique, suivi de plus de caractères alphanumériques ou de tirets, et se terminer par un caractère alphanumérique.",
+          "label": "Nom d´utilisateur",
+          "placeholder": "Entrez un nom d'utilisateur",
+          "description": "Un nom d'utilisateur unique qui identifie l'utilisateur"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Entrez l'adresse e-mail",
+          "description": "L'adresse e-mail de l'utilisateur utilisé pour les notifications et la connexion"
+        },
+        "role": {
+          "label": "Rôle",
+          "description": "Le rôle de l'utilisateur. Les administrateurs peuvent gérer les utilisateurs et toutes les instances. Les utilisateurs ne peuvent gérer que leurs propres instances.",
+          "user": "Utilisateur",
+          "admin": "Administrateur"
+        }
+      }
+    },
+    "addUserDialog": {
+      "title": "Ajouter un nouvel utilisateur",
+      "description": "Ajouter un nouvel utilisateur à ce serveur",
+      "form": {
+        "cancel": "Annuler",
+        "add": "Ajouter un utilisateur"
+      }
+    },
+    "updateUserDialog": {
+      "title": "Mettre à jour l'utilisateur",
+      "description": "Mettre à jour les informations de l'utilisateur",
+      "form": {
+        "cancel": "Annuler",
+        "update": "Mettre à jour l'utilisateur"
+      }
+    },
+    "addToast": {
+      "loading": "Ajout de l'utilisateur...",
+      "success": "Utilisateur ajouté !",
+      "error": "Impossible d'ajouter l'utilisateur"
+    },
+    "updateToast": {
+      "loading": "Mise à jour de l'utilisateur...",
+      "success": "Utilisateur mis à jour !",
+      "error": "Impossible de mettre à jour l'utilisateur"
+    },
+    "removeToast": {
+      "loading": "Suppression des utilisateurs...",
+      "success": "Utilisateurs supprimés !",
+      "error": "Impossible de supprimer les utilisateurs"
+    },
+    "invalidateToast": {
+      "loading": "Déconnexion des utilisateurs...",
+      "success": "Utilisateurs déconnectés !",
+      "error": "Échec de la déconnexion des utilisateurs"
+    },
+    "table": {
+      "username": "Nom d´utilisateur",
+      "email": "Email",
+      "role": "Rôle",
+      "createdAt": "Créé",
+      "minIssuedAt": "Connexion minimum",
+      "actions": "Actions",
+      "searchUsernames": "Rechercher des noms d'utilisateur...",
+      "searchEmails": "Rechercher des emails...",
+      "searchCreatedAts": "Rechercher les dates de création...",
+      "searchMinIssuedAts": "Rechercher les dates d'émission minimales..."
+    },
+    "removeSelectedTooltip": "Supprimer les utilisateurs sélectionnés",
+    "logOutSelectedTooltip": "Déconnecter les utilisateurs sélectionnés",
+    "contextMenu": {
+      "editUser": "Modifier l'utilisateur",
+      "impersonate": "Se connecter en tant qu'utilisateur",
+      "copyUserId": "Copier l'ID de l'utilisateur"
+    }
+  }
+}

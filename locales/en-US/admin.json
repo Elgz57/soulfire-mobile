@@ -1,0 +1,129 @@
+{
+  "overview": {
+    "welcome": "Welcome back, {{name}} 🧙",
+    "serverMetrics": {
+      "sectionTitle": "Server Metrics",
+      "summary": {
+        "cpu": "CPU",
+        "heapUsed": "Heap Used",
+        "threads": "Threads",
+        "botsOnline": "Bots Online",
+        "uptime": "Uptime"
+      },
+      "cpuUsage": {
+        "title": "CPU Usage (%)"
+      },
+      "memoryUsage": {
+        "title": "Heap Memory (MB)"
+      },
+      "threadCount": {
+        "title": "Thread Count"
+      },
+      "aggregateBots": {
+        "title": "Bots Online (All Instances)"
+      }
+    },
+    "instancesChart": {
+      "title": "Total instances on this server",
+      "instances": "Instances",
+      "label": {
+        "state": "State",
+        "active": "Active",
+        "stopped": "Stopped",
+        "other": "Other"
+      }
+    },
+    "usersChart": {
+      "title": "Total users on this server",
+      "users": "Users",
+      "label": {
+        "role": "Role",
+        "user": "User",
+        "admin": "Admin",
+        "other": "Other"
+      }
+    }
+  },
+  "users": {
+    "filterPlaceholder": "Filter users...",
+    "baseUserDialog": {
+      "form": {
+        "username": {
+          "min": "Usernames must be at least 3 characters",
+          "max": "Usernames must be at most 32 characters",
+          "regex": "Usernames must be lowercase, begin with an alphanumeric character, followed by more alphanumeric characters or dashes, and end with an alphanumeric character.",
+          "label": "Username",
+          "placeholder": "Enter username",
+          "description": "A unique username that identifies the user"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Enter email",
+          "description": "The email address of the user used for notifications and login"
+        },
+        "role": {
+          "label": "Role",
+          "placeholder": "Select a role",
+          "description": "The role of the user. Admins can manage users and all instances. Users can only manage their own instances.",
+          "user": "User",
+          "admin": "Admin"
+        }
+      }
+    },
+    "addUserDialog": {
+      "title": "Add a new user",
+      "description": "Add a new user to this server",
+      "form": {
+        "cancel": "Cancel",
+        "add": "Add User"
+      }
+    },
+    "updateUserDialog": {
+      "title": "Update user",
+      "description": "Update the user's information",
+      "form": {
+        "cancel": "Cancel",
+        "update": "Update User"
+      }
+    },
+    "addToast": {
+      "loading": "Adding user...",
+      "success": "Added user!",
+      "error": "Failed to add user"
+    },
+    "updateToast": {
+      "loading": "Updating user...",
+      "success": "Updated user!",
+      "error": "Failed to update user"
+    },
+    "removeToast": {
+      "loading": "Removing users...",
+      "success": "Removed users!",
+      "error": "Failed to remove users"
+    },
+    "invalidateToast": {
+      "loading": "Logging users out...",
+      "success": "Logged out users!",
+      "error": "Failed to log out users"
+    },
+    "table": {
+      "username": "Username",
+      "email": "Email",
+      "role": "Role",
+      "createdAt": "Created",
+      "minIssuedAt": "Min Login",
+      "actions": "Actions",
+      "searchUsernames": "Search usernames...",
+      "searchEmails": "Search emails...",
+      "searchCreatedAts": "Search created ats...",
+      "searchMinIssuedAts": "Search min issued ats..."
+    },
+    "removeSelectedTooltip": "Remove selected users",
+    "logOutSelectedTooltip": "Log out selected users",
+    "contextMenu": {
+      "editUser": "Edit User",
+      "impersonate": "Impersonate",
+      "copyUserId": "Copy User ID"
+    }
+  }
+}

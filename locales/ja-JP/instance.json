@@ -1,0 +1,467 @@
+{
+  "proxy": {
+    "getProxies": "プロキシを取得",
+    "addProxies": "プロキシを追加",
+    "filterPlaceholder": "プロキシをフィルター...",
+    "listImportToast": {
+      "loading": "プロキシをインポート中...",
+      "success": "{{count}}件のプロキシをインポートしました！",
+      "error": "プロキシのインポートに失敗しました。",
+      "noProxies": "インポートするプロキシがありません。"
+    },
+    "import": {
+      "proxyType": "プロキシタイプ",
+      "http": "HTTP",
+      "socks4": "SOCKS4",
+      "socks5": "SOCKS5",
+      "uri": "URI",
+      "dialog": {
+        "title": "{{type}}プロキシをインポート",
+        "description": "ここにプロキシを1行ごとに貼り付けてください。"
+      }
+    },
+    "removeToast": {
+      "loading": "プロキシを削除中...",
+      "success": "{{count}}件のプロキシを削除しました！",
+      "error": "プロキシの削除に失敗しました。"
+    },
+    "checkToast": {
+      "loading": "プロキシをチェック中... {{checked}}/{{total}}（成功：{{success}} 失敗：{{failed}}）",
+      "success": "{{count}}件の壊れたプロキシを削除しました！",
+      "error": "プロキシのチェックに失敗しました。"
+    },
+    "checkDialog": {
+      "title": "プロキシの確認",
+      "description": "{{count}}個のプロキシを確認しようとしています。無効なプロキシは自動的に削除されます。",
+      "confirm": "確認を開始"
+    },
+    "invalidFormat": "無効なプロキシ形式です。",
+    "table": {
+      "type": "種類",
+      "address": "アドレス",
+      "username": "ユーザー名",
+      "password": "パスワード",
+      "searchAddresses": "アドレスを検索...",
+      "searchUsernames": "ユーザー名で検索...",
+      "searchPasswords": "パスワードを検索..."
+    },
+    "removeSelectedTooltip": "選択したプロキシを削除",
+    "exportSelectedTooltip": "選択したプロキシをエクスポートする",
+    "checkSelectedTooltip": "選択したプロキシをチェック",
+    "contextMenu": {
+      "copyAddress": "アドレスをコピー",
+      "copyUsername": "ユーザー名をコピー",
+      "copyPassword": "パスワードをコピーする",
+      "deleteProxy": "プロキシを削除する"
+    },
+    "postImportCheckDialog": {
+      "title": "プロキシをチェックしますか？",
+      "description": "{{count}} 個のプロキシをインポートしました。今すぐチェックしますか？無効なプロキシは自動的に削除されます。",
+      "confirm": "プロキシの確認",
+      "skip": "スキップ"
+    },
+    "export": {
+      "format": "エクスポート形式",
+      "uri": "URI形式（すべてのタイプ）",
+      "http": "HTTP専用（フラット）",
+      "socks4": "SOCKS4専用（フラット）",
+      "socks5": "SOCKS5専用（フラット）",
+      "noProxies": "エクスポートするプロキシがありません"
+    }
+  },
+  "account": {
+    "getAccounts": "アカウントを取得",
+    "addAccounts": "アカウントを追加",
+    "generateAccounts": "アカウントを生成",
+    "filterPlaceholder": "アカウントをフィルター...",
+    "listImportToast": {
+      "loading": "アカウントをインポート中... {{checked}}/{{total}}（成功：{{success}} 失敗：{{failed}}）",
+      "allFailed": "アカウントのインポートにすべて失敗しました。",
+      "someFailed": "{{count}}件のアカウントをインポートし、{{failed}}件のアカウントのインポートに失敗しました。",
+      "noneFailed": "{{count}}件のアカウントをインポートしました！",
+      "error": "アカウントのインポートに失敗しました。",
+      "noAccounts": "インポートするアカウントがありません。"
+    },
+    "unknownError": "不明なエラー",
+    "deviceCodeImportToast": {
+      "loading": "アカウントをインポート中...",
+      "success": "アカウントをインポートしました！",
+      "error": "アカウントのインポートに失敗しました。"
+    },
+    "generate": {
+      "title": "オフラインアカウントを生成",
+      "description": "カスタム名フォーマットでオフラインJavaアカウントを生成します。",
+      "amount": "件数",
+      "nameFormat": "名前フォーマット",
+      "nameFormatHelp": "%dをアカウント番号のプレースホルダーとして使用します（例：Bot_%d は Bot_1, Bot_2 などになります）。",
+      "mode": "既存のアカウント",
+      "modeHelp": "既存のアカウントの処理方法を選択してください:\n\n• 既存を無視: すでに存在しない名前のアカウントのみ生成します。既存のアカウントはすべてそのまま残します。\n\n• 既存を置換: すべてのアカウントを生成し、UUIDが同じ既存のアカウントを置換します。他のアカウントはそのまま残します。\n\n• すべて置換: すべての既存アカウントを削除し、生成したアカウントに置き換えます。",
+      "modeIgnoreExisting": "既存を無視",
+      "modeReplaceExisting": "既存を置換",
+      "modeReplaceAll": "すべて置換",
+      "submit": "生成",
+      "generating": "生成中...",
+      "progress": "アカウントを生成中... {{checked}}/{{total}}（成功：{{success}} 失敗：{{failed}}）",
+      "success": "{{count}}件のアカウントを生成しました！",
+      "allFailed": "アカウントの生成にすべて失敗しました。",
+      "allExist": "すべてのユーザー名は既に存在します。「既存のアカウントを上書き」を有効にして再生成してください。",
+      "error": "アカウントの生成に失敗しました。",
+      "invalidAmount": "有効な件数（1以上）を入力してください。",
+      "missingPlaceholder": "名前フォーマットに%dプレースホルダーが含まれている必要があります。"
+    },
+    "import": {
+      "javaEdition": "Java版",
+      "bedrockEdition": "Bedrock版",
+      "offline": "オフライン",
+      "microsoftCredentials": "Microsoft認証情報",
+      "microsoftDeviceCode": "Microsoftデバイスコード",
+      "microsoftRefreshToken": "Microsoftリフレッシュトークン",
+      "microsoftCookies": "Microsoftクッキー",
+      "microsoftAccessToken": "Microsoftアクセストークン",
+      "altProviders": "代替プロバイダー",
+      "dialog": {
+        "title": "{{type}}アカウントをインポート",
+        "description": "ここにアカウントを1行ごとに貼り付けてください。"
+      }
+    },
+    "removeToast": {
+      "loading": "アカウントを削除中...",
+      "success": "{{count}}件のアカウントを削除しました！",
+      "error": "アカウントの削除に失敗しました。"
+    },
+    "table": {
+      "type": "種類",
+      "profileId": "UUID",
+      "lastKnownName": "ユーザー名",
+      "searchProfileIds": "プロファイルIDを検索...",
+      "searchLastKnownNames": "最後に確認された名前を検索...",
+      "actions": "操作"
+    },
+    "removeSelectedTooltip": "選択したアカウントを削除",
+    "contextMenu": {
+      "openConfig": "設定を開く",
+      "openMetadata": "メタデータを開く",
+      "copyProfileId": "プロファイルIDをコピー",
+      "copyUsername": "ユーザー名をコピー"
+    },
+    "config": {
+      "title": "{{name}}の設定を構成する",
+      "description": "このアカウントのボットごとの設定を構成します",
+      "openButton": "アカウントを設定する",
+      "pageTitle": "{{name}} - {{page}}の設定",
+      "noSettings": "このページには設定がありません"
+    },
+    "deviceCodeConfirmDialog": {
+      "title": "デバイスコード認証",
+      "description": "デバイスコードフローを開始する前にオプションを設定してください。",
+      "start": "認証を開始"
+    },
+    "deviceCodeDialog": {
+      "title": "デバイスコード認証",
+      "description": "Microsoft アカウントでサインインしてリンクします。",
+      "openInBrowser": "ブラウザで開く",
+      "orManually": "またはコードを手動で入力",
+      "codeLabel": "あなたのコード",
+      "urlLabel": "アクセス先"
+    },
+    "ravealts": {
+      "button": "Ravealts",
+      "title": "Ravealts経由でアカウントを購入",
+      "description": "Ravealts APIキーを使用してMinecraftアカウントを購入します。",
+      "apiKeyLabel": "APIキー",
+      "apiKeyPlaceholder": "RavealtsのAPIキーを入力してください",
+      "validate": "認証",
+      "validating": "認証中...",
+      "keyValid": "キーが認証されました",
+      "keyInvalid": "無効なAPIキーです",
+      "credits": "クレジット: {{credits}}",
+      "stockTitle": "在庫数",
+      "noStock": "在庫がありません",
+      "accountType": "アカウントの種類",
+      "amount": "数量 (1-10)",
+      "purchase": "購入＆インポート",
+      "purchasing": "購入中...",
+      "purchaseSuccess": "{{count}} 個のアカウントを購入し、インポート中...",
+      "purchaseError": "購入失敗: {{message}}",
+      "networkError": "Ravealts API に接続できませんでした",
+      "outOfStock": "選択した種類は在庫切れです",
+      "insufficientBalance": "クレジットが不足しています",
+      "rateLimited": "制限を超えました。しばらくしてから再試行してください"
+    },
+    "metadata": {
+      "openButton": "メタデータを編集する",
+      "title": "メタデータ: {{name}}",
+      "description": "このアカウントの永続的なメタデータエントリを管理します。各エントリは名前空間、キー、JSON値を持ちます。",
+      "namespacePlaceholder": "名前空間",
+      "keyPlaceholder": "キー",
+      "valuePlaceholder": "値（JSON）",
+      "noEntries": "メタデータエントリがありません。上で追加してください。",
+      "addSuccess": "エントリが追加されました",
+      "addError": "エントリの追加に失敗しました",
+      "updateError": "エントリの更新に失敗しました",
+      "deleteSuccess": "エントリを削除しました",
+      "deleteError": "エントリの削除に失敗しました",
+      "duplicateError": "このネームスペースとキーを持つエントリは既に存在します",
+      "invalidJson": "無効なJSON値"
+    }
+  },
+  "instanceMetadata": {
+    "title": "インスタンスメタデータ",
+    "description": "このインスタンスの永続的なメタデータエントリを管理します。各エントリにはネームスペース、キー、およびJSON値があります。",
+    "namespacePlaceholder": "名前空間",
+    "keyPlaceholder": "キー",
+    "valuePlaceholder": "値（JSON）",
+    "noEntries": "メタデータエントリがありません。上で追加してください。",
+    "addSuccess": "エントリが追加されました",
+    "addError": "エントリの追加に失敗しました",
+    "updateError": "エントリの更新に失敗しました",
+    "deleteSuccess": "エントリを削除しました",
+    "deleteError": "エントリの削除に失敗しました",
+    "duplicateError": "このネームスペースとキーを持つエントリは既に存在します",
+    "invalidJson": "無効なJSON値"
+  },
+  "bots": {
+    "searchPlaceholder": "ボットを検索...",
+    "onlineCount": "{{online}} 人がオンライン / 合計 {{total}} 人",
+    "noBots": "ボットが設定されていません。アカウント設定ページからアカウントを追加してください。",
+    "noBotsFound": "検索条件に一致するボットが見つかりません。",
+    "loadingMore": "さらに読み込み中...",
+    "showingCount": "{{loaded}}／{{total}}件を表示中",
+    "allLoaded": "すべての{{total}}体のボットが読み込まれました",
+    "online": "オンライン",
+    "offline": "オフライン",
+    "notJoined": "未参加",
+    "backToBots": "ボット一覧に戻る",
+    "comingSoon": "近日公開",
+    "terminalPanel": {
+      "title": "ボット端末"
+    },
+    "positionPanel": {
+      "title": "位置 & 回転",
+      "position": "位置",
+      "rotation": "回転",
+      "offline": "ボットはオフラインです。位置データはボットが接続中のみ利用可能です。"
+    },
+    "chatPanel": {
+      "title": "チャットメッセージ",
+      "description": "このボットのチャットメッセージは今後のアップデートでここに表示されます。"
+    },
+    "commandPanel": {
+      "title": "ボットコマンド",
+      "placeholder": "このボットにコマンドを送信...",
+      "description": "ボット専用コマンドは今後のアップデートで利用可能になります。"
+    },
+    "povPanel": {
+      "title": "ボット視点",
+      "capture": "キャプチャ",
+      "refresh": "更新",
+      "auto": "自動",
+      "startAutoRefresh": "自動更新を開始（1秒間隔）",
+      "stopAutoRefresh": "自動更新を停止",
+      "clickToCapture": "「キャプチャ」をクリックしてボットの視点を表示",
+      "offline": "ボットはオフラインです。視点表示はボットが接続中のみ利用できます。"
+    },
+    "statsPanel": {
+      "title": "ボット統計",
+      "health": "体力",
+      "food": "食料",
+      "saturation": "満腹度",
+      "experience": "経験値",
+      "level": "レベル",
+      "toNextLevel": "次のレベルまで",
+      "gameMode": "ゲームモード",
+      "survival": "サバイバル",
+      "creative": "クリエイティブ",
+      "adventure": "アドベンチャー",
+      "spectator": "スペクテイター",
+      "unknown": "不明",
+      "offline": "ボットはオフラインです。統計はボットが接続中のみ利用できます。"
+    },
+    "inventoryPanel": {
+      "title": "インベントリ",
+      "hotbar": "ホットバー",
+      "main": "メインインベントリー",
+      "items": "アイテム",
+      "carrying": "所持中",
+      "dropOne": "1つ捨てる",
+      "dropAll": "すべて捨てる",
+      "closeContainer": "閉じる",
+      "clickHint": "左クリック：取得／配置 ｜ 右クリック：半分／1つ ｜ Shift+クリック：すばやく移動 ｜ 中クリック：ホットバーのスロット選択",
+      "offline": "ボットはオフラインです。インベントリーはボットが接続中のみ利用できます。",
+      "buttons": {
+        "stonecutterRecipes": "レシピ",
+        "enchantments": "エンチャント",
+        "patterns": "パターン",
+        "trades": "取引",
+        "beaconEffects": "ビーコン効果",
+        "crafterSlots": "スロット操作",
+        "lecternControls": "本の操作",
+        "actions": "操作"
+      },
+      "textInput": {
+        "title": "テキスト入力",
+        "anvilRename": "アイテム名を変更"
+      },
+      "bookPages": {
+        "title": "本の内容",
+        "emptyPage": "（空のページ）",
+        "pageIndicator": "{{total}}ページ中{{current}}ページ"
+      }
+    },
+    "visualPanel": {
+      "title": "ボットビュ―",
+      "compass": "向いている方角",
+      "lookDirection": "視線の角度",
+      "lookingUp": "上を見ている",
+      "lookingDown": "下を見ている",
+      "lookingStraight": "まっすぐ見ている",
+      "worldInfo": "ワールド情報",
+      "dimension": "ディメンション",
+      "biome": "バイオーム",
+      "offline": "ボットはオフラインです。ビジュアルデータはボットが接続中のみ利用できます。"
+    },
+    "actionsPanel": {
+      "title": "ボットのアクション",
+      "leftClick": "左クリック",
+      "rightClick": "右クリック",
+      "leftClickDescription": "エンティティ攻撃またはブロックを壊す",
+      "rightClickDescription": "アイテム使用または操作",
+      "offline": "ボットはオフラインです。アクションはボットが接続されている時のみ可能です。"
+    },
+    "movementPanel": {
+      "title": "移動コントロール",
+      "movement": "移動（WASD）",
+      "forward": "前進（W）",
+      "backward": "後退（S）",
+      "left": "左に移動（A）",
+      "right": "右に移動（D）",
+      "jump": "ジャンプ",
+      "sneak": "スニーク",
+      "sprint": "スプリント",
+      "stop": "停止",
+      "rotation": "視点方向",
+      "lookUp": "上を見る",
+      "lookDown": "下を見る",
+      "lookLeft": "左を見る",
+      "lookRight": "右を見る",
+      "offline": "ボットはオフラインです。移動コントロールはボットが接続されている時のみ使用できます。"
+    },
+    "dialogPanel": {
+      "title": "サーバーダイアログ",
+      "noDialog": "現在表示されているサーバーダイアログはありません。",
+      "dialogType": "種類",
+      "dialogId": "ダイアログID",
+      "notice": "通知",
+      "confirmation": "確認",
+      "multiAction": "マルチアクション",
+      "serverLinks": "サーバーリンク",
+      "dialogList": "ダイアログ一覧",
+      "unknownType": "不明",
+      "dismiss": "閉じる",
+      "submit": "送信",
+      "offline": "ボットはオフラインです。ダイアログはボットが接続されている時のみ利用できます。"
+    }
+  },
+  "scripts": {
+    "title": "ビジュアルスクリプト",
+    "description": "ビジュアルノードベースのエディターを使って自動化スクリプトを作成しましょう。",
+    "experimentalTitle": "実験的機能",
+    "experimentalWarning": "この機能は実験的です。将来的に互換性が破壊される変更が加えられる可能性があり、既存のスクリプトが動作しなくなることがあります。ご利用の際はご注意ください。",
+    "createScript": "スクリプトを作成",
+    "createScriptTitle": "新しいスクリプトを作成",
+    "createScriptDescription": "このインスタンス用の新しいビジュアルスクリプトを作成します。スクリプトはボットの動作を自動化し、イベントに反応できます。",
+    "scriptName": "スクリプト名",
+    "scriptNamePlaceholder": "スクリプト名を入力してください...",
+    "scriptDescription": "説明",
+    "scriptDescriptionPlaceholder": "このスクリプトが何をするか説明してください...",
+    "create": "作成",
+    "createSuccess": "スクリプトが正常に作成されました",
+    "createError": "スクリプトの作成に失敗しました",
+    "noScripts": "まだスクリプトはありません",
+    "noScriptsDescription": "ビジュアルノードベースのエディターを使って、最初のスクリプトでボット動作を自動化しましょう。",
+    "createFirstScript": "最初のスクリプトを作成",
+    "running": "稼働中",
+    "paused": "一時停止中",
+    "nodes": "ノード",
+    "noDescription": "説明なし",
+    "edit": "編集",
+    "pause": "一時停止",
+    "pauseSuccess": "スクリプトが一時停止しました",
+    "pauseError": "スクリプトの一時停止に失敗しました",
+    "resume": "再開",
+    "resumeSuccess": "スクリプトが再開されました",
+    "resumeError": "スクリプトの再開に失敗しました",
+    "delete": "削除",
+    "deleteSuccess": "スクリプトが正常に削除されました",
+    "deleteError": "スクリプトの削除に失敗しました",
+    "saveSuccess": "スクリプトが正常に保存されました",
+    "saveError": "スクリプトの保存に失敗しました",
+    "activateSuccess": "スクリプトが有効化されました",
+    "activateError": "スクリプトの有効化に失敗しました",
+    "deactivateSuccess": "スクリプトが無効化されました",
+    "untitledScript": "無題のスクリプト",
+    "saveFirstBeforeActivating": "有効化する前に、まずスクリプトを保存してください",
+    "activating": "スクリプトを有効化しています…",
+    "activated": "スクリプトが有効化されました",
+    "executionCompleted": "スクリプトが完了しました",
+    "executionCompletedSuccess": "スクリプトが正常に完了しました",
+    "deactivated": "スクリプトが無効化されました",
+    "deactivatedByUser": "ユーザーによってスクリプトが無効化されました",
+    "executionFailed": "スクリプト実行に失敗しました",
+    "executionError": "実行エラー: {{error}}",
+    "nodeStarted": "ノード開始: {{nodeId}}",
+    "nodeCompleted": "ノード完了: {{nodeId}}",
+    "nodeError": "ノードエラー: {{error}}",
+    "contextMenu": {
+      "edit": "スクリプトを編集",
+      "pause": "一時停止",
+      "resume": "再開",
+      "delete": "スクリプトを削除する",
+      "copyScriptName": "スクリプト名をコピー",
+      "copyScriptId": "スクリプトIDをコピー"
+    },
+    "editor": {
+      "toolbar": {
+        "backToScripts": "スクリプトへ戻る",
+        "save": "保存する",
+        "saveTooltip": "スクリプトを保存",
+        "resume": "再開",
+        "resumeTooltip": "スクリプトの実行を再開",
+        "pause": "一時停止",
+        "pauseTooltip": "スクリプトの実行を一時停止",
+        "unsaved": "未保存",
+        "clearCanvas": "キャンバスをクリア",
+        "zoomIn": "ズームイン",
+        "zoomOut": "ズームアウト",
+        "fit": "フィット",
+        "export": "スクリプトをエクスポート",
+        "import": "スクリプトをインポート",
+        "exportSuccess": "スクリプトのエクスポートに成功しました",
+        "importSuccess": "スクリプトのインポートに成功しました",
+        "importError": "スクリプトのインポートに失敗しました"
+      },
+      "palette": {
+        "title": "ノードパレット",
+        "search": "ノード検索..."
+      },
+      "logs": {
+        "title": "実行ログ",
+        "clearTitle": "ログをクリア",
+        "noLogs": "まだログはありません。スクリプトを実行してログをご確認ください。",
+        "entries_other": "{{count}}件のエントリ"
+      },
+      "contextMenu": {
+        "duplicate": "複製",
+        "rename": "名前を変更",
+        "disconnectAll": "すべて切断",
+        "collapse": "折りたたむ",
+        "expand": "展開",
+        "mute": "ミュート",
+        "unmute": "ミュート解除",
+        "showPreview": "プレビューを表示",
+        "hidePreview": "プレビューを非表示",
+        "delete": "削除"
+      }
+    }
+  }
+}

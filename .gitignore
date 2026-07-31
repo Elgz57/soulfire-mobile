@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Web build output (Capacitor copies this into the native projects)
+dist/
+
+# Generated route tree is committed upstream; keep it tracked here too so a
+# clean clone type-checks without running the generator first.
+# src/routeTree.gen.ts
+
+# Android
+android/local.properties
+android/.gradle/
+android/build/
+android/app/build/
+android/capacitor-cordova-android-plugins/build/
+android/app/src/main/assets/public/
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/capacitor.plugins.json
+android/app/release/
+*.keystore
+!debug.keystore
+keystore.properties
+
+# iOS
+ios/App/Pods/
+ios/App/build/
+ios/App/App/public/
+ios/App/App/capacitor.config.json
+ios/App/App/config.xml
+ios/DerivedData/
+*.xcuserstate
+xcuserdata/
+
+# Editors
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*

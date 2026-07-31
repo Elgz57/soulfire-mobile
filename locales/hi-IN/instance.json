@@ -1,0 +1,468 @@
+{
+  "proxy": {
+    "getProxies": "प्रॉक्सी प्राप्त करें",
+    "addProxies": "प्रॉक्सी जोड़ें",
+    "filterPlaceholder": "प्रॉक्सी छाँटें...",
+    "listImportToast": {
+      "loading": "प्रॉक्सी आयात हो रही हैं...",
+      "success": "{{count}} प्रॉक्सी आयात हुईं!",
+      "error": "प्रॉक्सी आयात करने में विफल रहे",
+      "noProxies": "आयात करने के लिए कोई प्रॉक्सी नहीं है"
+    },
+    "import": {
+      "proxyType": "प्रॉक्सी प्रकार",
+      "http": "HTTP",
+      "socks4": "SOCKS4",
+      "socks5": "SOCKS5",
+      "uri": "URI",
+      "dialog": {
+        "title": "{{type}} प्रॉक्सी आयात करें",
+        "description": "अपनी प्रॉक्सियाँ यहाँ चिपकाएँ, प्रत्येक पंक्ति में एक"
+      }
+    },
+    "removeToast": {
+      "loading": "प्रॉक्सी हटाई जा रही हैं...",
+      "success": "{{count}} प्रॉक्सी हटाई गईं!",
+      "error": "प्रॉक्सी हटाने में विफल रहे"
+    },
+    "checkToast": {
+      "loading": "प्रॉक्सी जाँची जा रही हैं... {{checked}}/{{total}} (सफल: {{success}} विफल: {{failed}})",
+      "success": "{{count}} टूटी हुई प्रॉक्सी हटाई गईं!",
+      "error": "प्रॉक्सी जांचने में विफल रहे"
+    },
+    "checkDialog": {
+      "title": "प्रॉक्सी जांचें",
+      "description": "आप {{count}} प्रॉक्सी जांचने वाले हैं। अमान्य प्रॉक्सी स्वचालित रूप से हटा दिए जाएंगे।",
+      "confirm": "जांच शुरू करें"
+    },
+    "invalidFormat": "अमान्य प्रॉक्सी प्रारूप",
+    "table": {
+      "type": "प्रकार",
+      "address": "पता",
+      "username": "उपयोगकर्ता नाम",
+      "password": "पासवर्ड",
+      "searchAddresses": "पते खोजें...",
+      "searchUsernames": "यूज़रनेम खोजें...",
+      "searchPasswords": "पासवर्ड खोजें..."
+    },
+    "removeSelectedTooltip": "चयनित प्रॉक्सी हटाएँ",
+    "exportSelectedTooltip": "चयनित प्रॉक्सी निर्यात करें",
+    "checkSelectedTooltip": "चयनित प्रॉक्सी जांचें",
+    "contextMenu": {
+      "copyAddress": "पता कॉपी करें",
+      "copyUsername": "यूज़रनेम कॉपी करें",
+      "copyPassword": "पासवर्ड कॉपी करें",
+      "deleteProxy": "प्रॉक्सी हटाएँ"
+    },
+    "postImportCheckDialog": {
+      "title": "क्या प्रॉक्सी जांचें?",
+      "description": "आपने अभी-अभी {{count}} प्रॉक्सी आयात किए हैं। क्या आप इन्हें अभी जांचना चाहेंगे? अवैध प्रॉक्सी स्वतः ही हटा दिए जाएंगे।",
+      "confirm": "प्रॉक्सी जांचें",
+      "skip": "छोड़ें"
+    },
+    "export": {
+      "format": "निर्यात प्रारूप",
+      "uri": "URI प्रारूप (सभी प्रकार)",
+      "http": "केवल HTTP (फ्लैट)",
+      "socks4": "केवल SOCKS4 (फ्लैट)",
+      "socks5": "केवल SOCKS5 (फ्लैट)",
+      "noProxies": "निर्यात करने के लिए कोई प्रॉक्सी नहीं है"
+    }
+  },
+  "account": {
+    "getAccounts": "खाते प्राप्त करें",
+    "addAccounts": "खाते जोड़ें",
+    "generateAccounts": "खाते जनरेट करें",
+    "filterPlaceholder": "खातों को छाँटें...",
+    "listImportToast": {
+      "loading": "खाते आयात हो रहे हैं... {{checked}}/{{total}} (सफल: {{success}} विफल: {{failed}})",
+      "allFailed": "कोई भी खाता आयात करने में विफल रहे",
+      "someFailed": "{{count}} खाते आयात किए गए, {{failed}} खाते आयात करने में विफल रहे",
+      "noneFailed": "{{count}} खाते आयात हुए!",
+      "error": "खाते आयात करने में विफल रहे",
+      "noAccounts": "आयात करने के लिए कोई खाता नहीं है"
+    },
+    "unknownError": "अज्ञात त्रुटि",
+    "deviceCodeImportToast": {
+      "loading": "खाता आयात हो रहा है...",
+      "success": "खाता आयात हुआ!",
+      "error": "खाता आयात करने में विफल रहे"
+    },
+    "generate": {
+      "title": "ऑफ़लाइन खाते जनरेट करें",
+      "description": "मनचाहे नाम प्रारूप के साथ ऑफ़लाइन जावा खाते जनरेट करें।",
+      "amount": "संख्या",
+      "nameFormat": "नाम प्रारूप",
+      "nameFormatHelp": "%d को खाते की संख्या के लिए प्लेसहोल्डर के रूप में प्रयोग करें (उदा., Bot_%d बन जाएगा Bot_1, Bot_2, आदि)",
+      "mode": "मौजूदा खाते",
+      "modeHelp": "मौजूदा खातों को कैसे संभालना है चुनें:\n\n• मौजूदा को अनदेखा करें: केवल ऐसे खातों को बनाता है जिनके नाम पहले से मौजूद नहीं हैं। सभी मौजूदा खाते अपरिवर्तित रहते हैं।\n\n• मौजूदा को बदलें: सभी खाते बनाता है, और किसी खाते की UUID अगर पहले से मौजूद है तो उसे बदल देता है। अन्य खाते वही रहते हैं।\n\n• सभी बदलें: सभी मौजूदा खातों को हटा देता है और उनकी जगह नए बनाए गए खातों को जोड़ देता है।",
+      "modeIgnoreExisting": "मौजूदा को अनदेखा करें",
+      "modeReplaceExisting": "मौजूदा को बदलें",
+      "modeReplaceAll": "सभी को बदलें",
+      "submit": "जनरेट करें",
+      "generating": "जनरेट किया जा रहा है...",
+      "progress": "खाते जनरेट हो रहे हैं... {{checked}}/{{total}} (सफल: {{success}} विफल: {{failed}})",
+      "success": "{{count}} खाते जनरेट किए गए!",
+      "allFailed": "कोई भी खाता जनरेट करने में विफल रहे",
+      "allExist": "सभी उपयोगकर्ता नाम पहले से मौजूद हैं। इन्हें फिर से जनरेट करने के लिए 'मौजूदा खातों को ओवरराइट करें' सक्षम करें।",
+      "error": "खाते जनरेट करने में विफल रहे",
+      "invalidAmount": "कृपया एक मान्य संख्या दर्ज करें (कम से कम 1)",
+      "missingPlaceholder": "नाम प्रारूप में %d प्लेसहोल्डर होना आवश्यक है"
+    },
+    "import": {
+      "javaEdition": "जावा संस्करण",
+      "bedrockEdition": "बेडरॉक संस्करण",
+      "offline": "ऑफ़लाइन",
+      "microsoftCredentials": "Microsoft क्रेडेंशियल्स",
+      "microsoftDeviceCode": "Microsoft डिवाइस कोड",
+      "microsoftRefreshToken": "Microsoft रिफ्रेश टोकन",
+      "microsoftCookies": "माइक्रोसॉफ्ट कुकीज़",
+      "microsoftAccessToken": "माइक्रोसॉफ्ट एक्सेस टोकन",
+      "altProviders": "वैकल्पिक प्रदाता",
+      "dialog": {
+        "title": "{{type}} खाते आयात करें",
+        "description": "अपने खाते यहाँ चिपकाएँ, प्रत्येक पंक्ति में एक"
+      }
+    },
+    "removeToast": {
+      "loading": "खाते हटाए जा रहे हैं...",
+      "success": "{{count}} खाते हटाए गए!",
+      "error": "खाते हटाने में विफल रहे"
+    },
+    "table": {
+      "type": "प्रकार",
+      "profileId": "UUID",
+      "lastKnownName": "उपयोगकर्ता नाम",
+      "searchProfileIds": "प्रोफ़ाइल आईडी खोजें...",
+      "searchLastKnownNames": "आखिरी ज्ञात नाम खोजें...",
+      "actions": "क्रियाएँ"
+    },
+    "removeSelectedTooltip": "चयनित खाते हटाएँ",
+    "contextMenu": {
+      "openConfig": "कॉन्फ़िग खोलें",
+      "openMetadata": "मेटाडाटा खोलें",
+      "copyProfileId": "प्रोफ़ाइल आईडी कॉपी करें",
+      "copyUsername": "यूज़रनेम कॉपी करें"
+    },
+    "config": {
+      "title": "{{name}} को कॉन्फ़िगर करें",
+      "description": "इस खाते के लिए प्रति-बॉट सेटिंग्स कॉन्फ़िगर करें",
+      "openButton": "खाता कॉन्फ़िगर करें",
+      "pageTitle": "{{name}} - {{page}} सेटिंग्स",
+      "noSettings": "इस पेज के लिए कोई सेटिंग्स उपलब्ध नहीं हैं"
+    },
+    "deviceCodeConfirmDialog": {
+      "title": "डिवाइस कोड प्रमाणीकरण",
+      "description": "डिवाइस कोड फ़्लो शुरू करने से पहले विकल्प कॉन्फ़िगर करें।",
+      "start": "प्रमाणीकरण शुरू करें"
+    },
+    "deviceCodeDialog": {
+      "title": "डिवाइस कोड प्रमाणीकरण",
+      "description": "लिंक करने के लिए अपने Microsoft खाते से साइन इन करें।",
+      "openInBrowser": "ब्राउज़र में खोलें",
+      "orManually": "या कोड मैन्युअली दर्ज करें",
+      "codeLabel": "आपका कोड",
+      "urlLabel": "पर जाएं"
+    },
+    "ravealts": {
+      "button": "Ravealts",
+      "title": "Ravealts के माध्यम से खाते खरीदें",
+      "description": "अपने Ravealts API कुंजी का उपयोग करते हुए Minecraft खाते खरीदें।",
+      "apiKeyLabel": "एपीआई कुंजी",
+      "apiKeyPlaceholder": "अपनी Ravealts एपीआई कुंजी दर्ज करें",
+      "validate": "सत्यापित करें",
+      "validating": "सत्यापन हो रहा है...",
+      "keyValid": "कुंजी सत्यापित हो गई",
+      "keyInvalid": "अमान्य एपीआई कुंजी",
+      "credits": "क्रेडिट्स: {{credits}}",
+      "stockTitle": "उपलब्ध स्टॉक",
+      "noStock": "स्टॉक में कोई खाता नहीं है",
+      "accountType": "खाता प्रकार",
+      "amount": "संख्या (1-10)",
+      "purchase": "खरीदें और आयात करें",
+      "purchasing": "खरीदारी हो रही है...",
+      "purchaseSuccess": "{{count}} खाते खरीदे गए, आयात किया जा रहा है...",
+      "purchaseError": "खरीदारी विफल: {{message}}",
+      "networkError": "Ravealts API से कनेक्ट नहीं हो सका",
+      "outOfStock": "चयनित प्रकार स्टॉक में नहीं है",
+      "insufficientBalance": "पर्याप्त क्रेडिट्स नहीं हैं",
+      "rateLimited": "रेट लिमिटेड, बाद में पुनः प्रयास करें"
+    },
+    "metadata": {
+      "openButton": "मेटाडेटा संपादित करें",
+      "title": "मेटाडेटा: {{name}}",
+      "description": "इस खाते के लिए स्थायी मेटाडेटा प्रविष्टियों का प्रबंधन करें। प्रत्येक प्रविष्टि में एक namespace, कुंजी, और JSON मान होता है।",
+      "namespacePlaceholder": "नेमस्पेस",
+      "keyPlaceholder": "कुंजी",
+      "valuePlaceholder": "मान (JSON)",
+      "noEntries": "कोई मेटाडेटा प्रविष्टियाँ नहीं हैं। ऊपर एक जोड़ें।",
+      "addSuccess": "प्रविष्टि जोड़ी गई",
+      "addError": "प्रविष्टि जोड़ने में विफल",
+      "updateError": "प्रविष्टि अपडेट करने में विफल",
+      "deleteSuccess": "प्रविष्टि हटाई गई",
+      "deleteError": "प्रविष्टि हटाने में विफल",
+      "duplicateError": "इस नेमस्पेस और कुंजी के साथ एक प्रविष्टि पहले से मौजूद है",
+      "invalidJson": "अमान्य JSON मान"
+    }
+  },
+  "instanceMetadata": {
+    "title": "इंस्टेंस मेटाडेटा",
+    "description": "इस इंस्टेंस के लिए स्थायी मेटाडेटा प्रविष्टियाँ प्रबंधित करें। प्रत्येक प्रविष्टि में एक नेमस्पेस, कुंजी, और JSON मान होता है।",
+    "namespacePlaceholder": "नेमस्पेस",
+    "keyPlaceholder": "कुंजी",
+    "valuePlaceholder": "मान (JSON)",
+    "noEntries": "कोई मेटाडेटा प्रविष्टियाँ नहीं हैं। ऊपर एक जोड़ें।",
+    "addSuccess": "प्रविष्टि जोड़ी गई",
+    "addError": "प्रविष्टि जोड़ने में विफल",
+    "updateError": "प्रविष्टि अपडेट करने में विफल",
+    "deleteSuccess": "प्रविष्टि हटाई गई",
+    "deleteError": "प्रविष्टि हटाने में विफल",
+    "duplicateError": "इस नेमस्पेस और कुंजी के साथ एक प्रविष्टि पहले से मौजूद है",
+    "invalidJson": "अमान्य JSON मान"
+  },
+  "bots": {
+    "searchPlaceholder": "बॉट्स खोजें...",
+    "onlineCount": "{{online}} ऑनलाइन / {{total}} कुल",
+    "noBots": "कोई बॉट कॉन्फ़िगर नहीं है। खाते जोड़ने के लिए खाता सेटिंग्स पृष्ठ पर जाएँ।",
+    "noBotsFound": "आपकी खोज से कोई बॉट नहीं मिला।",
+    "loadingMore": "अधिक लोड हो रहा है...",
+    "showingCount": "{{loaded}} में से {{total}} दिखा रहे हैं",
+    "allLoaded": "सभी {{total}} बॉट्स लोड किए गए",
+    "online": "ऑनलाइन",
+    "offline": "ऑफ़लाइन",
+    "notJoined": "शामिल नहीं हुआ",
+    "backToBots": "बॉट्स पर वापस जाएं",
+    "comingSoon": "जल्द आ रहा है",
+    "terminalPanel": {
+      "title": "बॉट टर्मिनल"
+    },
+    "positionPanel": {
+      "title": "स्थिति और घूर्णन",
+      "position": "स्थिति",
+      "rotation": "घूर्णन",
+      "offline": "बॉट ऑफलाइन है। स्थिति डेटा केवल तब उपलब्ध होता है जब बॉट जुड़ा होता है।"
+    },
+    "chatPanel": {
+      "title": "चैट संदेश",
+      "description": "इस बॉट से चैट संदेश भविष्य के अपडेट में यहाँ दिखेंगे।"
+    },
+    "commandPanel": {
+      "title": "बॉट कमांड्स",
+      "placeholder": "इस बॉट को कमांड भेजें...",
+      "description": "बॉट-स्कोप्ड कमांड्स भविष्य के अपडेट में उपलब्ध होंगे।"
+    },
+    "povPanel": {
+      "title": "बॉट दृष्टिकोण",
+      "capture": "कैप्चर करें",
+      "refresh": "रीफ्रेश करें",
+      "auto": "ऑटो",
+      "startAutoRefresh": "ऑटो-रीफ्रेश प्रारंभ करें (1 सेकंड का अंतराल)",
+      "stopAutoRefresh": "ऑटो-रीफ्रेश रोकें",
+      "clickToCapture": "बॉट का दृष्टिकोण देखने के लिए कैप्चर पर क्लिक करें",
+      "offline": "बॉट ऑफलाइन है। दृष्टिकोण रेंडरिंग केवल तभी उपलब्ध है जब बॉट कनेक्टेड हो।"
+    },
+    "statsPanel": {
+      "title": "बॉट की जानकारी",
+      "health": "स्वास्थ्य",
+      "food": "खाद्य",
+      "saturation": "संतृप्ति",
+      "experience": "अनुभव",
+      "level": "स्तर",
+      "toNextLevel": "अगले स्तर तक",
+      "gameMode": "गेम मोड",
+      "survival": "सर्वाइवल",
+      "creative": "क्रिएटिव",
+      "adventure": "एडवेंचर",
+      "spectator": "स्पेकटेटर",
+      "unknown": "अज्ञात",
+      "offline": "बॉट ऑफलाइन है। आँकड़े केवल तभी उपलब्ध हैं जब बॉट कनेक्टेड हो।"
+    },
+    "inventoryPanel": {
+      "title": "इन्वेंटरी",
+      "hotbar": "हॉटबार",
+      "main": "मुख्य इन्वेंटरी",
+      "items": "आइटम",
+      "carrying": "वह ले जा रहा है",
+      "dropOne": "एक छोड़ें",
+      "dropAll": "सभी छोड़ें",
+      "closeContainer": "बंद करें",
+      "clickHint": "बाएं क्लिक करें: उठाएँ/रखें | दाएं क्लिक करें: आधा/एक | शिफ्ट+क्लिक: तुरंत स्थानांतरित करें | मिडल क्लिक: हॉटबार स्लॉट चुनें",
+      "offline": "बॉट ऑफलाइन है। इन्वेंटरी केवल तभी उपलब्ध है जब बॉट कनेक्टेड हो।",
+      "buttons": {
+        "stonecutterRecipes": "रेसिपीज़",
+        "enchantments": "जादू-टोने",
+        "patterns": "पैटर्न",
+        "trades": "व्यापार",
+        "beaconEffects": "बीकन इफेक्ट्स",
+        "crafterSlots": "स्लॉट नियंत्रण",
+        "lecternControls": "पुस्तक नियंत्रण",
+        "actions": "क्रियाएँ"
+      },
+      "textInput": {
+        "title": "पाठ इनपुट",
+        "anvilRename": "आइटम का नाम बदलें"
+      },
+      "bookPages": {
+        "title": "पुस्तक सामग्री",
+        "emptyPage": "(खाली पृष्ठ)",
+        "pageIndicator": "पृष्ठ {{current}} में से {{total}}"
+      }
+    },
+    "visualPanel": {
+      "title": "बॉट दृश्य",
+      "compass": "मुखि दिशा",
+      "lookDirection": "देखने का कोण",
+      "lookingUp": "ऊपर देख रहा है",
+      "lookingDown": "नीचे देख रहा है",
+      "lookingStraight": "सीधे देख रहा है",
+      "worldInfo": "दुनिया की जानकारी",
+      "dimension": "आयाम",
+      "biome": "जैवमंडल",
+      "offline": "बॉट ऑफलाइन है। दृश्य डेटा केवल तभी उपलब्ध है जब बॉट कनेक्टेड हो।"
+    },
+    "actionsPanel": {
+      "title": "बॉट क्रियाएँ",
+      "leftClick": "बाएं क्लिक",
+      "rightClick": "दाएं क्लिक",
+      "leftClickDescription": "इकाई पर हमला करें या ब्लॉक तोड़ें",
+      "rightClickDescription": "आइटम का उपयोग करें या इंटरैक्ट करें",
+      "offline": "बॉट ऑफ़लाइन है। क्रियाएँ केवल तभी उपलब्ध हैं जब बॉट कनेक्टेड हो।"
+    },
+    "movementPanel": {
+      "title": "गतिविधि नियंत्रण",
+      "movement": "गतिविधि (WASD)",
+      "forward": "आगे बढ़ें (W)",
+      "backward": "पीछे जाएं (S)",
+      "left": "बाएँ स्ट्रेफ करें (A)",
+      "right": "दाएँ स्ट्रेफ करें (D)",
+      "jump": "जंप करें",
+      "sneak": "दबे रहें",
+      "sprint": "स्प्रिंट करें",
+      "stop": "बंद करें",
+      "rotation": "दृष्टि दिशा",
+      "lookUp": "ऊपर देखें",
+      "lookDown": "नीचे देखें",
+      "lookLeft": "बाएँ देखें",
+      "lookRight": "दाएँ देखें",
+      "offline": "बॉट ऑफ़लाइन है। गतिविधि नियंत्रण केवल तभी उपलब्ध हैं जब बॉट कनेक्टेड हो।"
+    },
+    "dialogPanel": {
+      "title": "सर्वर संवाद",
+      "noDialog": "फिलहाल कोई सर्वर संवाद प्रदर्शित नहीं है।",
+      "dialogType": "प्रकार",
+      "dialogId": "संवाद आईडी",
+      "notice": "नोटिस",
+      "confirmation": "पुष्टि",
+      "multiAction": "मल्टी एक्शन",
+      "serverLinks": "सर्वर लिंक",
+      "dialogList": "संवाद सूची",
+      "unknownType": "अज्ञात",
+      "dismiss": "निरस्त करें",
+      "submit": "प्रस्तुत करें",
+      "offline": "बॉट ऑफ़लाइन है। संवाद केवल तभी उपलब्ध हैं जब बॉट कनेक्टेड हो।"
+    }
+  },
+  "scripts": {
+    "title": "विजुअल स्क्रिप्ट्स",
+    "description": "विजुअल नोड-आधारित संपादक का उपयोग करके ऑटोमेशन स्क्रिप्ट्स बनाएँ।",
+    "experimentalTitle": "प्रायोगिक सुविधा",
+    "experimentalWarning": "यह सुविधा प्रायोगिक है। भविष्य में इसमें महत्वपूर्ण परिवर्तन हो सकते हैं और मौजूदा स्क्रिप्ट्स काम करना बंद कर सकती हैं। सावधानी के साथ प्रयोग करें।",
+    "createScript": "स्क्रिप्ट बनाएँ",
+    "createScriptTitle": "नई स्क्रिप्ट बनाएँ",
+    "createScriptDescription": "इस उदाहरण के लिए एक नई विजुअल स्क्रिप्ट बनाएँ। स्क्रिप्ट्स बॉट की क्रियाओं को स्वचालित कर सकती हैं और घटनाओं पर प्रतिक्रिया दे सकती हैं।",
+    "scriptName": "स्क्रिप्ट का नाम",
+    "scriptNamePlaceholder": "स्क्रिप्ट का नाम दर्ज करें...",
+    "scriptDescription": "विवरण",
+    "scriptDescriptionPlaceholder": "बताएँ कि यह स्क्रिप्ट क्या करती है...",
+    "create": "बनाएँ",
+    "createSuccess": "स्क्रिप्ट सफलतापूर्वक बनाई गई",
+    "createError": "स्क्रिप्ट बनाने में विफल",
+    "noScripts": "अभी तक कोई स्क्रिप्ट नहीं",
+    "noScriptsDescription": "विजुअल नोड-आधारित संपादक का उपयोग कर अपने पहले बॉट ऑटोमेशन के लिए स्क्रिप्ट बनाएँ।",
+    "createFirstScript": "अपनी पहली स्क्रिप्ट बनाएँ",
+    "running": "चल रहा है",
+    "paused": "रुका हुआ है",
+    "nodes": "नोड्स",
+    "noDescription": "कोई विवरण नहीं",
+    "edit": "संपादित करें",
+    "pause": "रोकें",
+    "pauseSuccess": "स्क्रिप्ट रोक दी गई है",
+    "pauseError": "स्क्रिप्ट को रोकने में विफल रहा",
+    "resume": "फिर से शुरू करें",
+    "resumeSuccess": "स्क्रिप्ट फिर से शुरू की गई",
+    "resumeError": "स्क्रिप्ट को फिर से शुरू करने में विफल रहा",
+    "delete": "हटाएँ",
+    "deleteSuccess": "स्क्रिप्ट सफलतापूर्वक हटाई गई",
+    "deleteError": "स्क्रिप्ट हटाने में विफल",
+    "saveSuccess": "स्क्रिप्ट सफलतापूर्वक सेव की गई",
+    "saveError": "स्क्रिप्ट सेव करने में विफल",
+    "activateSuccess": "स्क्रिप्ट सक्रिय की गई",
+    "activateError": "स्क्रिप्ट को सक्रिय करने में विफल रहा",
+    "deactivateSuccess": "स्क्रिप्ट निष्क्रिय की गई",
+    "untitledScript": "शीर्षकहीन स्क्रिप्ट",
+    "saveFirstBeforeActivating": "सक्रिय करने से पहले पहले स्क्रिप्ट सहेजें",
+    "activating": "स्क्रिप्ट सक्रिय की जा रही है...",
+    "activated": "स्क्रिप्ट सक्रिय की गई",
+    "executionCompleted": "स्क्रिप्ट पूर्ण",
+    "executionCompletedSuccess": "स्क्रिप्ट सफलतापूर्वक पूर्ण हुई",
+    "deactivated": "स्क्रिप्ट निष्क्रिय की गई",
+    "deactivatedByUser": "उपयोगकर्ता द्वारा स्क्रिप्ट निष्क्रिय की गई",
+    "executionFailed": "स्क्रिप्ट निष्पादन विफल हुआ",
+    "executionError": "निष्पादन त्रुटि: {{error}}",
+    "nodeStarted": "नोड शुरू: {{nodeId}}",
+    "nodeCompleted": "नोड पूर्ण: {{nodeId}}",
+    "nodeError": "नोड त्रुटि: {{error}}",
+    "contextMenu": {
+      "edit": "स्क्रिप्ट संपादित करें",
+      "pause": "रोकें",
+      "resume": "फिर से शुरू करें",
+      "delete": "स्क्रिप्ट हटाएँ",
+      "copyScriptName": "स्क्रिप्ट नाम कॉपी करें",
+      "copyScriptId": "स्क्रिप्ट आईडी कॉपी करें"
+    },
+    "editor": {
+      "toolbar": {
+        "backToScripts": "स्क्रिप्ट्स पर वापस जाएँ",
+        "save": "सहेजें",
+        "saveTooltip": "स्क्रिप्ट सहेजें",
+        "resume": "फिर से शुरू करें",
+        "resumeTooltip": "स्क्रिप्ट निष्पादन फिर से प्रारंभ करें",
+        "pause": "रोकें",
+        "pauseTooltip": "स्क्रिप्ट निष्पादन रोकें",
+        "unsaved": "असुरक्षित",
+        "clearCanvas": "कैनवास साफ़ करें",
+        "zoomIn": "ज़ूम इन",
+        "zoomOut": "ज़ूम आउट",
+        "fit": "फिट करें",
+        "export": "स्क्रिप्ट निर्यात करें",
+        "import": "स्क्रिप्ट आयात करें",
+        "exportSuccess": "स्क्रिप्ट सफलतापूर्वक निर्यात हुई",
+        "importSuccess": "स्क्रिप्ट सफलतापूर्वक आयात हुई",
+        "importError": "स्क्रिप्ट आयात करने में विफल"
+      },
+      "palette": {
+        "title": "नोड पैलेट",
+        "search": "नोड खोजें..."
+      },
+      "logs": {
+        "title": "निष्पादन लॉग्स",
+        "clearTitle": "लॉग्स साफ़ करें",
+        "noLogs": "अभी तक कोई लॉग नहीं। निष्पादन लॉग्स देखने के लिए स्क्रिप्ट चलाएँ।",
+        "entries_one": "{{count}} प्रविष्टि",
+        "entries_other": "{{count}} प्रविष्टियाँ"
+      },
+      "contextMenu": {
+        "duplicate": "डुप्लिकेट करें",
+        "rename": "नाम बदलें",
+        "disconnectAll": "सभी डिस्कनेक्ट करें",
+        "collapse": "संकुचित करें",
+        "expand": "विस्तृत करें",
+        "mute": "म्यूट करें",
+        "unmute": "अनम्यूट करें",
+        "showPreview": "पूर्वावलोकन दिखाएँ",
+        "hidePreview": "पूर्वावलोकन छुपाएँ",
+        "delete": "हटाएँ"
+      }
+    }
+  }
+}

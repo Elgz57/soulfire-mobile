@@ -1,0 +1,128 @@
+{
+  "overview": {
+    "welcome": "Chào mừng trở lại, {{name}} 🧙",
+    "serverMetrics": {
+      "sectionTitle": "Chỉ Số Máy Chủ",
+      "summary": {
+        "cpu": "CPU",
+        "heapUsed": "Bộ Nhớ Heap Đã Sử Dụng",
+        "threads": "Luồng",
+        "botsOnline": "Bots Trực Tuyến",
+        "uptime": "Thời Gian Hoạt Động"
+      },
+      "cpuUsage": {
+        "title": "Sử dụng CPU (%)"
+      },
+      "memoryUsage": {
+        "title": "Bộ nhớ Heap (MB)"
+      },
+      "threadCount": {
+        "title": "Số lượng luồng"
+      },
+      "aggregateBots": {
+        "title": "Bots trực tuyến (Tất cả phiên bản)"
+      }
+    },
+    "instancesChart": {
+      "title": "Tổng số phiên bản trên máy chủ này",
+      "instances": "Các phiên bản",
+      "label": {
+        "state": "Trạng thái",
+        "active": "Đang hoạt động",
+        "stopped": "Đã dừng",
+        "other": "Khác"
+      }
+    },
+    "usersChart": {
+      "title": "",
+      "users": "Người dùng",
+      "label": {
+        "role": "Vai trò",
+        "user": "Người dùng",
+        "admin": "Quản trị viên",
+        "other": "Khác"
+      }
+    }
+  },
+  "users": {
+    "filterPlaceholder": "Lọc người dùng...",
+    "baseUserDialog": {
+      "form": {
+        "username": {
+          "min": "Tên người dùng phải có ít nhất 3 ký tự",
+          "max": "Tên người dùng phải có nhiều nhất 32 ký tự",
+          "regex": "Tên người dùng phải viết thường, bắt đầu bằng ký tự chữ hoặc số, theo sau là các ký tự chữ, số hoặc dấu gạch ngang và kết thúc bằng ký tự chữ hoặc số.",
+          "label": "Tên đăng nhập",
+          "placeholder": "Nhập tên người dùng",
+          "description": ""
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Nhập email",
+          "description": "Địa chỉ email của người dùng dùng để nhận thông báo và đăng nhập"
+        },
+        "role": {
+          "label": "Vai trò",
+          "description": "Vai trò của người dùng. Quản trị viên có thể quản lý người dùng và tất cả các phiên bản. Người dùng chỉ được phép quản lý phiên bản của riêng mình.",
+          "user": "Người dùng",
+          "admin": "Quản trị viên"
+        }
+      }
+    },
+    "addUserDialog": {
+      "title": "Thêm người dùng mới",
+      "description": "Thêm người dùng mới vào máy chủ này",
+      "form": {
+        "cancel": "Hủy",
+        "add": "Thêm người dùng"
+      }
+    },
+    "updateUserDialog": {
+      "title": "Cập nhật người dùng",
+      "description": "Cập nhật thông tin người dùng",
+      "form": {
+        "cancel": "Hủy",
+        "update": "Cập nhật người dùng"
+      }
+    },
+    "addToast": {
+      "loading": "Đang thêm người dùng...",
+      "success": "Đã thêm người dùng!",
+      "error": "Thêm người dùng thất bại"
+    },
+    "updateToast": {
+      "loading": "Đang cập nhật người dùng...",
+      "success": "Đã cập nhật người dùng!",
+      "error": "Cập nhật người dùng thất bại"
+    },
+    "removeToast": {
+      "loading": "Đang xóa người dùng...",
+      "success": "Đã xóa người dùng!",
+      "error": "Xóa người dùng thất bại"
+    },
+    "invalidateToast": {
+      "loading": "Đang đăng xuất người dùng...",
+      "success": "Đã đăng xuất người dùng!",
+      "error": "Đăng xuất người dùng thất bại"
+    },
+    "table": {
+      "username": "Tên đăng nhập",
+      "email": "Email",
+      "role": "Vai trò",
+      "createdAt": "Đã tạo",
+      "minIssuedAt": "Lần đăng nhập sớm nhất",
+      "actions": "Hành động",
+      "searchUsernames": "Tìm kiếm tên người dùng...",
+      "searchEmails": "Tìm kiếm email...",
+      "searchCreatedAts": "Tìm kiếm ngày tạo...",
+      "searchMinIssuedAts": "Tìm kiếm thời gian cấp phát tối thiểu..."
+    },
+    "removeSelectedTooltip": "Xóa người dùng đã chọn",
+    "logOutSelectedTooltip": "Đăng xuất người dùng đã chọn",
+    "contextMenu": {
+      "editUser": "Chỉnh sửa người dùng",
+      "impersonate": "Giả lập người dùng",
+      "copyUserId": "Sao chép ID người dùng"
+    }
+  }
+}

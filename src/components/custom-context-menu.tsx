@@ -1,0 +1,155 @@
+import { ClipboardCopyIcon, CloudUploadIcon, SearchIcon } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
+import { useTranslation } from "react-i18next";
+import { toast } from "sonner";
+import {
+  ContextMenuContainer,
+  MenuItem,
+} from "@/components/context-menu-primitives.tsx";
+import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard.ts";
+import { openExternalUrl, uploadToMcLogs } from "@/lib/utils.tsx";
+
+interface MenuPosition {
+  x: number;
+  y: number;
+  text: string;
+}
+
+function hasSelectTextAncestor(element: Element | null): boolean {
+  let current = element;
+  while (current) {
+    if (current.classList.contains("select-text")) {
+      return true;
+    }
+    current = current.parentElement;
+  }
+  return false;
+}
+
+export function CustomContextMenu() {
+  const [menu, setMenu] = useState<MenuPosition | null>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const copyToClipboard = useCopyToClipboard();
+  const { t } = useTranslation("common");
+
+  const dismiss = useCallback(() => setMenu(null), []);
+
+  useEffect(() => {
+    function onContextMenu(e: MouseEvent) {
+      if (
+        "__entityContextMenu" in e &&
+        (e as MouseEvent & { __entityContextMenu?: boolean })
+          .__entityContextMenu
+      )
+        return;
+
+      e.preventDefault();
+
+      const target = e.target as Element | null;
+      if (!target || !hasSelectTextAncestor(target)) {
+        setMenu(null);
+        return;
+      }
+
+      const selection = window.getSelection();
+      const selectedText = selection?.toString() ?? "";
+      if (selectedText.length === 0) {
+        setMenu(null);
+        return;
+      }
+
+      setMenu({ x: e.clientX, y: e.clientY, text: selectedText });
+    }
+
+    document.addEventListener("contextmenu", onContextMenu);
+    return () => document.removeEventListener("contextmenu", onContextMenu);
+  }, []);
+
+  useEffect(() => {
+    if (!menu) return;
+
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        dismiss();
+      }
+    }
+
+    window.addEventListener("keydown", onKeyDown);
+    window.addEventListener("scroll", dismiss, true);
+    window.addEventListener("blur", dismiss);
+
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("scroll", dismiss, true);
+      window.removeEventListener("blur", dismiss);
+    };
+  }, [menu, dismiss]);
+
+  useEffect(() => {
+    if (!menu) return;
+
+    function onMouseDown(e: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        dismiss();
+      }
+    }
+
+    document.addEventListener("mousedown", onMouseDown);
+    return () => document.removeEventListener("mousedown", onMouseDown);
+  }, [menu, dismiss]);
+
+  if (!menu) return null;
+
+  return createPortal(
+    <ContextMenuContainer
+      menuRef={menuRef}
+      className="fixed z-50 duration-100"
+      style={{ left: menu.x, top: menu.y }}
+    >
+      <MenuItem
+        onClick={() => {
+          copyToClipboard(menu.text);
+          dismiss();
+        }}
+      >
+        <ClipboardCopyIcon className="size-4" />
+        {t("copyToClipboard")}
+      </MenuItem>
+      <MenuItem
+        onClick={() => {
+          toast.promise(
+            uploadToMcLogs(menu.text).then((response) => {
+              if (response.success) {
+                copyToClipboard(response.url);
+                return response.url;
+              }
+              throw new Error(`Upload failed: ${response.error}`);
+            }),
+            {
+              loading: t("mcLogsUpload.loading"),
+              success: (url) => t("mcLogsUpload.success", { url }),
+              error: t("mcLogsUpload.error"),
+            },
+          );
+          dismiss();
+        }}
+      >
+        <CloudUploadIcon className="size-4" />
+        {t("uploadToMcLogs")}
+      </MenuItem>
+      <MenuItem
+        onClick={() => {
+          openExternalUrl(
+            `https://www.google.com/search?q=${encodeURIComponent(menu.text)}`,
+          );
+          dismiss();
+        }}
+      >
+        <SearchIcon className="size-4" />
+        {t("searchWithGoogle")}
+      </MenuItem>
+    </ContextMenuContainer>,
+    document.body,
+  );
+}

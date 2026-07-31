@@ -1,0 +1,470 @@
+{
+  "proxy": {
+    "getProxies": "Pobierz proxy",
+    "addProxies": "Dodaj proxy",
+    "filterPlaceholder": "Filtruj proxy...",
+    "listImportToast": {
+      "loading": "Importowanie serwerów proxy...",
+      "success": "Zaimportowano {{count}} serwerów proxy!",
+      "error": "Nie udało się zaimportować serwerów proxy",
+      "noProxies": "Brak serwerów proxy do importu"
+    },
+    "import": {
+      "proxyType": "Typ serwera proxy",
+      "http": "HTTP",
+      "socks4": "SOCKS4",
+      "socks5": "SOCKS5",
+      "uri": "URI",
+      "dialog": {
+        "title": "Importuj serwer pośredniczący {{type}}",
+        "description": "Wklej tutaj swoje proxy po jednym na linię"
+      }
+    },
+    "removeToast": {
+      "loading": "Usuwanie proxy...",
+      "success": "Usunięto {{count}} serwerów proxy!",
+      "error": "Nie udało się usunąć serwerów proxy"
+    },
+    "checkToast": {
+      "loading": "Sprawdzanie proxy... {{checked}}/{{total}} (Sukces: {{success}} Niepowodzenie: {{failed}})",
+      "success": "Usunięto {{count}} uszkodzonych serwerów proxy!",
+      "error": "Nie udało się sprawdzić serwerów proxy"
+    },
+    "checkDialog": {
+      "title": "Sprawdź serwery proxy",
+      "description": "Zamierzasz sprawdzić {{count}} serwerów proxy. Nieprawidłowe serwery proxy zostaną automatycznie usunięte.",
+      "confirm": "Rozpocznij sprawdzanie"
+    },
+    "invalidFormat": "Nieprawidłowy format proxy",
+    "table": {
+      "type": "Typ",
+      "address": "Adres",
+      "username": "Nazwa użytkownika",
+      "password": "Hasło",
+      "searchAddresses": "Szukaj adresów...",
+      "searchUsernames": "Szukaj nazw użytkowników...",
+      "searchPasswords": "Szukaj haseł..."
+    },
+    "removeSelectedTooltip": "Usuń wybrane serwery proxy",
+    "exportSelectedTooltip": "Eksportuj wybrane proxy",
+    "checkSelectedTooltip": "Sprawdź wybrane serwery proxy",
+    "contextMenu": {
+      "copyAddress": "Kopiuj adres",
+      "copyUsername": "Kopiuj nazwę użytkownika",
+      "copyPassword": "Kopiuj hasło",
+      "deleteProxy": "Usuń proxy"
+    },
+    "postImportCheckDialog": {
+      "title": "Sprawdzić serwery pośredniczące?",
+      "description": "Właśnie zaimportowałeś {{count}} proxy. Czy chcesz je teraz sprawdzić? Nieprawidłowe proxy zostaną usunięte automatycznie.",
+      "confirm": "Sprawdź serwery proxy",
+      "skip": "Pomiń"
+    },
+    "export": {
+      "format": "Format eksportu",
+      "uri": "Format URI (wszystkie typy)",
+      "http": "Tylko HTTP (płaski format)",
+      "socks4": "Tylko SOCKS4 (płaski format)",
+      "socks5": "Tylko SOCKS5 (płaski format)",
+      "noProxies": "Brak serwerów proxy do eksportu"
+    }
+  },
+  "account": {
+    "getAccounts": "Pobierz konta",
+    "addAccounts": "Dodaj konta",
+    "generateAccounts": "Generuj konta",
+    "filterPlaceholder": "Filtruj konta...",
+    "listImportToast": {
+      "loading": "Importowanie kont... {{checked}}/{{total}} (Sukces: {{success}} Niepowodzenie: {{failed}})",
+      "allFailed": "Nie udało się zaimportować żadnych kont",
+      "someFailed": "Zaimportowano {{count}} kont, nie udało się zaimportować {{failed}} kont",
+      "noneFailed": "Zaimportowano {{count}} kont!",
+      "error": "Nie udało się zaimportować kont",
+      "noAccounts": "Brak kont do importu"
+    },
+    "unknownError": "Nieznany błąd",
+    "deviceCodeImportToast": {
+      "loading": "Importowanie konta...",
+      "success": "Konto zaimportowane!",
+      "error": "Nie udało się zaimportować konta"
+    },
+    "generate": {
+      "title": "Generuj konta offline",
+      "description": "Generuj offline'owe konta Java z własnym formatem nazwy.",
+      "amount": "Ilość",
+      "nameFormat": "Format nazwy",
+      "nameFormatHelp": "Użyj %d jako symbolu zastępczego dla numeru konta (np. Bot_%d stanie się Bot_1, Bot_2 itd.)",
+      "mode": "Istniejące konta",
+      "modeHelp": "Wybierz, jak obsłużyć istniejące konta:\n\n• Ignoruj istniejące: Generuje tylko konta z nazwami, które jeszcze nie istnieją. Wszystkie istniejące konta pozostają bez zmian.\n\n• Zastąp istniejące: Generuje wszystkie konta, zastępując wszelkie istniejące konta o tym samym UUID. Pozostałe konta są zachowane.\n\n• Zastąp wszystkie: Usuwa WSZYSTKIE istniejące konta i zastępuje je wygenerowanymi kontami.",
+      "modeIgnoreExisting": "Ignoruj istniejące",
+      "modeReplaceExisting": "Zastąp istniejące",
+      "modeReplaceAll": "Zastąp wszystko",
+      "submit": "Generuj",
+      "generating": "Generowanie...",
+      "progress": "Generowanie kont... {{checked}}/{{total}} (Sukces: {{success}} Niepowodzenie: {{failed}})",
+      "success": "Wygenerowano {{count}} kont!",
+      "allFailed": "Nie udało się wygenerować żadnych kont",
+      "allExist": "Wszystkie nazwy użytkowników już istnieją. Włącz \"Zastąp istniejące konta\", aby je wygenerować ponownie.",
+      "error": "Nie udało się wygenerować kont",
+      "invalidAmount": "Wprowadź poprawną ilość (co najmniej 1)",
+      "missingPlaceholder": "Format nazwy musi zawierać symbol zastępczy %d"
+    },
+    "import": {
+      "javaEdition": "Edycja Java",
+      "bedrockEdition": "Edycja Bedrock",
+      "offline": "Niedostępny",
+      "microsoftCredentials": "Poświadczenia Microsoft",
+      "microsoftDeviceCode": "Kod urządzenia Microsoft",
+      "microsoftRefreshToken": "Microsoft Refresh Token",
+      "microsoftCookies": "Ciasteczka Microsoft",
+      "microsoftAccessToken": "Token dostępu Microsoft",
+      "altProviders": "Dostawcy kont alternatywnych",
+      "dialog": {
+        "title": "Importuj konta {{type}}",
+        "description": "Wklej tutaj swoje konta, po jednym na linię"
+      }
+    },
+    "removeToast": {
+      "loading": "Usuwanie kont...",
+      "success": "Usunięto {{count}} kont!",
+      "error": "Nie udało się usunąć kont"
+    },
+    "table": {
+      "type": "Typ",
+      "profileId": "UUID",
+      "lastKnownName": "Nazwa użytkownika",
+      "searchProfileIds": "Szukaj ID profili...",
+      "searchLastKnownNames": "Szukaj ostatnich znanych nazw...",
+      "actions": "Akcje"
+    },
+    "removeSelectedTooltip": "Usuń wybrane konta",
+    "contextMenu": {
+      "openConfig": "Otwórz konfigurację",
+      "openMetadata": "Otwórz metadane",
+      "copyProfileId": "Kopiuj ID profilu",
+      "copyUsername": "Kopiuj nazwę użytkownika"
+    },
+    "config": {
+      "title": "Konfiguruj {{name}}",
+      "description": "Skonfiguruj ustawienia dla tego konta osobno dla każdego bota",
+      "openButton": "Skonfiguruj konto",
+      "pageTitle": "{{name}} - Ustawienia {{page}}",
+      "noSettings": "Brak dostępnych ustawień dla tej strony"
+    },
+    "deviceCodeConfirmDialog": {
+      "title": "Uwierzytelnianie za pomocą kodu urządzenia",
+      "description": "Skonfiguruj opcje przed rozpoczęciem uwierzytelniania za pomocą kodu urządzenia.",
+      "start": "Rozpocznij uwierzytelnianie"
+    },
+    "deviceCodeDialog": {
+      "title": "Uwierzytelnianie za pomocą kodu urządzenia",
+      "description": "Zaloguj się przy użyciu swojego konta Microsoft, aby je powiązać.",
+      "openInBrowser": "Otwórz w przeglądarce",
+      "orManually": "Lub wpisz kod ręcznie",
+      "codeLabel": "Twój kod",
+      "urlLabel": "Przejdź do"
+    },
+    "ravealts": {
+      "button": "Ravealts",
+      "title": "Kup konta za pośrednictwem Ravealts",
+      "description": "Kupuj konta Minecraft używając swojego klucza API Ravealts.",
+      "apiKeyLabel": "Klucz API",
+      "apiKeyPlaceholder": "Wprowadź swój klucz API Ravealts",
+      "validate": "Zatwierdź",
+      "validating": "Trwa weryfikacja...",
+      "keyValid": "Klucz zweryfikowany",
+      "keyInvalid": "Nieprawidłowy klucz API",
+      "credits": "Środki: {{credits}}",
+      "stockTitle": "Dostępny zapas",
+      "noStock": "Brak kont w magazynie",
+      "accountType": "Typ konta",
+      "amount": "Liczba (1-10)",
+      "purchase": "Zakup i zaimportuj",
+      "purchasing": "Trwa zakup...",
+      "purchaseSuccess": "Zakupiono {{count}} kont, trwa import...",
+      "purchaseError": "Zakup nieudany: {{message}}",
+      "networkError": "Nie można połączyć się z API Ravealts",
+      "outOfStock": "Wybrany typ jest niedostępny",
+      "insufficientBalance": "Niewystarczająca liczba środków",
+      "rateLimited": "Limit zapytań został osiągnięty, spróbuj ponownie później"
+    },
+    "metadata": {
+      "openButton": "Edytuj metadane",
+      "title": "Metadane: {{name}}",
+      "description": "Zarządzaj trwałymi wpisami metadanych dla tego konta. Każdy wpis posiada przestrzeń nazw, klucz oraz wartość w formacie JSON.",
+      "namespacePlaceholder": "Przestrzeń nazw",
+      "keyPlaceholder": "Klucz",
+      "valuePlaceholder": "Wartość (JSON)",
+      "noEntries": "Brak wpisów metadanych. Dodaj jeden powyżej.",
+      "addSuccess": "Wpis dodany",
+      "addError": "Nie udało się dodać wpisu",
+      "updateError": "Nie udało się zaktualizować wpisu",
+      "deleteSuccess": "Wpis został usunięty",
+      "deleteError": "Nie udało się usunąć wpisu",
+      "duplicateError": "Wpis z tą przestrzenią nazw i kluczem już istnieje",
+      "invalidJson": "Nieprawidłowa wartość JSON"
+    }
+  },
+  "instanceMetadata": {
+    "title": "Metadane instancji",
+    "description": "Zarządzaj trwałymi wpisami metadanych dla tej instancji. Każdy wpis ma przestrzeń nazw, klucz i wartość JSON.",
+    "namespacePlaceholder": "Przestrzeń nazw",
+    "keyPlaceholder": "Klucz",
+    "valuePlaceholder": "Wartość (JSON)",
+    "noEntries": "Brak wpisów metadanych. Dodaj jeden powyżej.",
+    "addSuccess": "Wpis dodany",
+    "addError": "Nie udało się dodać wpisu",
+    "updateError": "Nie udało się zaktualizować wpisu",
+    "deleteSuccess": "Wpis został usunięty",
+    "deleteError": "Nie udało się usunąć wpisu",
+    "duplicateError": "Wpis z tą przestrzenią nazw i kluczem już istnieje",
+    "invalidJson": "Nieprawidłowa wartość JSON"
+  },
+  "bots": {
+    "searchPlaceholder": "Szukaj botów...",
+    "onlineCount": "{{online}} online / {{total}} ogółem",
+    "noBots": "Brak skonfigurowanych botów. Dodaj konta na stronie Ustawienia kont.",
+    "noBotsFound": "Brak botów pasujących do Twojego wyszukiwania.",
+    "loadingMore": "Wczytywanie kolejnych...",
+    "showingCount": "Wyświetlanie {{loaded}} z {{total}}",
+    "allLoaded": "Załadowano wszystkie {{total}} boty",
+    "online": "Online",
+    "offline": "Niedostępny",
+    "notJoined": "Nie dołączono",
+    "backToBots": "Powrót do botów",
+    "comingSoon": "Wkrótce dostępne",
+    "terminalPanel": {
+      "title": "Terminal Bota"
+    },
+    "positionPanel": {
+      "title": "Pozycja i obrót",
+      "position": "Pozycja",
+      "rotation": "Obrót",
+      "offline": "Bot jest offline. Dane o pozycji są dostępne tylko, gdy bot jest połączony."
+    },
+    "chatPanel": {
+      "title": "Wiadomości na czacie",
+      "description": "Wiadomości czatu od tego bota pojawią się tutaj w przyszłej aktualizacji."
+    },
+    "commandPanel": {
+      "title": "Polecenia bota",
+      "placeholder": "Wyślij polecenie do tego bota...",
+      "description": "Polecenia ograniczone do botów będą dostępne w przyszłej aktualizacji."
+    },
+    "povPanel": {
+      "title": "POV bota",
+      "capture": "Przechwyć",
+      "refresh": "Odśwież",
+      "auto": "Auto",
+      "startAutoRefresh": "Uruchom auto-odświeżanie (odstęp 1 sekunda)",
+      "stopAutoRefresh": "Zatrzymaj auto-odświeżanie",
+      "clickToCapture": "Kliknij \"Przechwyć\", aby wyświetlić widok bota",
+      "offline": "Bot jest offline. Renderowanie widoku możliwe tylko, gdy bot jest połączony."
+    },
+    "statsPanel": {
+      "title": "Statystyki bota",
+      "health": "Zdrowie",
+      "food": "Pożywienie",
+      "saturation": "Nasycenie",
+      "experience": "Doświadczenie",
+      "level": "Poziom",
+      "toNextLevel": "do następnego poziomu",
+      "gameMode": "Tryb gry",
+      "survival": "Przetrwanie",
+      "creative": "Kreatywny",
+      "adventure": "Przygoda",
+      "spectator": "Widok",
+      "unknown": "Nieznany",
+      "offline": "Bot jest offline. Statystyki dostępne tylko, gdy bot jest połączony."
+    },
+    "inventoryPanel": {
+      "title": "Ekwipunek",
+      "hotbar": "Pasek szybkiego wyboru",
+      "main": "Główny ekwipunek",
+      "items": "przedmiotów",
+      "carrying": "Niesione",
+      "dropOne": "Upuść jeden",
+      "dropAll": "Upuść wszystko",
+      "closeContainer": "Zamknij",
+      "clickHint": "Lewy klik: podnieś/umieść | Prawy klik: połowa/jeden | Shift+klik: szybkie przeniesienie | Środkowy klik: wybierz slot paska szybkiego dostępu",
+      "offline": "Bot jest offline. Ekwipunek dostępny tylko, gdy bot jest połączony.",
+      "buttons": {
+        "stonecutterRecipes": "Przepisy",
+        "enchantments": "Zaklęcia",
+        "patterns": "Wzory",
+        "trades": "Handel",
+        "beaconEffects": "Efekty latarni",
+        "crafterSlots": "Sterowanie slotami",
+        "lecternControls": "Sterowanie książką",
+        "actions": "Akcje"
+      },
+      "textInput": {
+        "title": "Pole tekstowe",
+        "anvilRename": "Zmień nazwę przedmiotu"
+      },
+      "bookPages": {
+        "title": "Treść książki",
+        "emptyPage": "(Pusta strona)",
+        "pageIndicator": "Strona {{current}} z {{total}}"
+      }
+    },
+    "visualPanel": {
+      "title": "Widok bota",
+      "compass": "Kierunek patrzenia",
+      "lookDirection": "Kąt patrzenia",
+      "lookingUp": "Patrzy w górę",
+      "lookingDown": "Patrzy w dół",
+      "lookingStraight": "Patrzy prosto",
+      "worldInfo": "Informacje o świecie",
+      "dimension": "Wymiar",
+      "biome": "Biom",
+      "offline": "Bot jest offline. Dane wizualne dostępne tylko, gdy bot jest połączony."
+    },
+    "actionsPanel": {
+      "title": "Akcje Bota",
+      "leftClick": "Lewy klik",
+      "rightClick": "Prawy klik",
+      "leftClickDescription": "Atakuj jednostkę lub niszcz blok",
+      "rightClickDescription": "Użyj przedmiotu lub wejdź w interakcję",
+      "offline": "Bot jest offline. Akcje są dostępne tylko gdy bot jest połączony."
+    },
+    "movementPanel": {
+      "title": "Sterowanie ruchem",
+      "movement": "Ruch (WASD)",
+      "forward": "Idź do przodu (W)",
+      "backward": "Idź do tyłu (S)",
+      "left": "W lewo (A)",
+      "right": "W prawo (D)",
+      "jump": "Skok",
+      "sneak": "Skradanie się",
+      "sprint": "Biegnij",
+      "stop": "Zatrzymaj",
+      "rotation": "Kierunek patrzenia",
+      "lookUp": "Patrz w górę",
+      "lookDown": "Patrz w dół",
+      "lookLeft": "Patrz w lewo",
+      "lookRight": "Patrz w prawo",
+      "offline": "Bot jest offline. Sterowanie ruchem jest dostępne tylko gdy bot jest połączony."
+    },
+    "dialogPanel": {
+      "title": "Dialog serwera",
+      "noDialog": "Aktualnie nie wyświetlono żadnego dialogu serwera.",
+      "dialogType": "Typ",
+      "dialogId": "ID dialogu",
+      "notice": "Powiadomienie",
+      "confirmation": "Potwierdzenie",
+      "multiAction": "Wiele akcji",
+      "serverLinks": "Linki serwera",
+      "dialogList": "Lista dialogów",
+      "unknownType": "Nieznany",
+      "dismiss": "Zamknij",
+      "submit": "Wyślij",
+      "offline": "Bot jest offline. Dialogi są dostępne tylko gdy bot jest połączony."
+    }
+  },
+  "scripts": {
+    "title": "Skrypty wizualne",
+    "description": "Twórz skrypty automatyzacji za pomocą wizualnego edytora węzłów.",
+    "experimentalTitle": "Funkcja eksperymentalna",
+    "experimentalWarning": "Ta funkcja jest eksperymentalna. W przyszłości mogą wystąpić niezgodności, a istniejące skrypty mogą przestać działać. Używaj ostrożnie.",
+    "createScript": "Utwórz skrypt",
+    "createScriptTitle": "Utwórz nowy skrypt",
+    "createScriptDescription": "Utwórz nowy skrypt wizualny dla tej instancji. Skrypty mogą automatyzować działania bota i reagować na zdarzenia.",
+    "scriptName": "Nazwa skryptu",
+    "scriptNamePlaceholder": "Wprowadź nazwę skryptu...",
+    "scriptDescription": "Opis",
+    "scriptDescriptionPlaceholder": "Opisz, co robi ten skrypt...",
+    "create": "Utwórz",
+    "createSuccess": "Skrypt został pomyślnie utworzony",
+    "createError": "Nie udało się utworzyć skryptu",
+    "noScripts": "Brak skryptów",
+    "noScriptsDescription": "Utwórz swój pierwszy skrypt, aby zautomatyzować działania bota za pomocą wizualnego edytora węzłów.",
+    "createFirstScript": "Utwórz swój pierwszy skrypt",
+    "running": "Uruchomiona",
+    "paused": "Wstrzymana",
+    "nodes": "węzły",
+    "noDescription": "Brak opisu",
+    "edit": "Edytuj",
+    "pause": "Wstrzymaj",
+    "pauseSuccess": "Skrypt wstrzymany",
+    "pauseError": "Nie udało się wstrzymać skryptu",
+    "resume": "Wznów",
+    "resumeSuccess": "Skrypt wznowiony",
+    "resumeError": "Nie udało się wznowić skryptu",
+    "delete": "Usuń",
+    "deleteSuccess": "Skrypt został pomyślnie usunięty",
+    "deleteError": "Nie udało się usunąć skryptu",
+    "saveSuccess": "Skrypt został pomyślnie zapisany",
+    "saveError": "Nie udało się zapisać skryptu",
+    "activateSuccess": "Skrypt został aktywowany",
+    "activateError": "Nie udało się aktywować skryptu",
+    "deactivateSuccess": "Skrypt został dezaktywowany",
+    "untitledScript": "Skrypt bez nazwy",
+    "saveFirstBeforeActivating": "Najpierw zapisz skrypt przed aktywacją",
+    "activating": "Aktywowanie skryptu...",
+    "activated": "Skrypt został aktywowany",
+    "executionCompleted": "Wykonywanie skryptu zakończone",
+    "executionCompletedSuccess": "Skrypt zakończony pomyślnie",
+    "deactivated": "Skrypt został dezaktywowany",
+    "deactivatedByUser": "Skrypt dezaktywowany przez użytkownika",
+    "executionFailed": "Wykonywanie skryptu nie powiodło się",
+    "executionError": "Błąd wykonania: {{error}}",
+    "nodeStarted": "Węzeł rozpoczęty: {{nodeId}}",
+    "nodeCompleted": "Węzeł zakończony: {{nodeId}}",
+    "nodeError": "Błąd węzła: {{error}}",
+    "contextMenu": {
+      "edit": "Edytuj skrypt",
+      "pause": "Wstrzymaj",
+      "resume": "Wznów",
+      "delete": "Usuń skrypt",
+      "copyScriptName": "Kopiuj nazwę skryptu",
+      "copyScriptId": "Kopiuj identyfikator skryptu"
+    },
+    "editor": {
+      "toolbar": {
+        "backToScripts": "Powrót do skryptów",
+        "save": "Zapisz",
+        "saveTooltip": "Zapisz skrypt",
+        "resume": "Wznów",
+        "resumeTooltip": "Wznów wykonywanie skryptu",
+        "pause": "Wstrzymaj",
+        "pauseTooltip": "Wstrzymaj wykonywanie skryptu",
+        "unsaved": "Niezapisane",
+        "clearCanvas": "Wyczyść płótno",
+        "zoomIn": "Powiększ",
+        "zoomOut": "Pomniejsz",
+        "fit": "Dopasuj",
+        "export": "Eksportuj skrypt",
+        "import": "Importuj skrypt",
+        "exportSuccess": "Skrypt został pomyślnie wyeksportowany",
+        "importSuccess": "Skrypt został pomyślnie zaimportowany",
+        "importError": "Nie udało się zaimportować skryptu"
+      },
+      "palette": {
+        "title": "Paleta węzłów",
+        "search": "Szukaj węzłów..."
+      },
+      "logs": {
+        "title": "Logi wykonania",
+        "clearTitle": "Wyczyść logi",
+        "noLogs": "Brak logów. Uruchom skrypt, aby zobaczyć logi wykonywania.",
+        "entries_one": "{{count}} wpis",
+        "entries_few": "{{count}} wpisy",
+        "entries_many": "{{count}} wpisów",
+        "entries_other": "{{count}} wpisów"
+      },
+      "contextMenu": {
+        "duplicate": "Duplikuj",
+        "rename": "Zmień nazwę",
+        "disconnectAll": "Odłącz wszystko",
+        "collapse": "Zwiń",
+        "expand": "Rozwiń",
+        "mute": "Wycisz",
+        "unmute": "Wyłącz wyciszenie",
+        "showPreview": "Pokaż podgląd",
+        "hidePreview": "Ukryj podgląd",
+        "delete": "Usuń"
+      }
+    }
+  }
+}

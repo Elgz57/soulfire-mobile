@@ -1,0 +1,540 @@
+{
+  "locale": "語言環境",
+  "close": "關閉",
+  "cancel": "取消",
+  "save": "儲存",
+  "saving": "正在儲存...",
+  "error": {
+    "noAddressOrToken": "找不到伺服器地址或權杖",
+    "page": {
+      "title": "錯誤",
+      "description": "載入頁面時發生錯誤。更多資訊可在主控台查看。",
+      "logOut": "登出",
+      "reloadPage": "重新載入頁面",
+      "showDetails": "顯示詳細資料"
+    },
+    "connectionFailed": "連接 SoulFire 伺服器失敗。"
+  },
+  "notFound": {
+    "page": {
+      "title": "找不到",
+      "description": "找不到此位置的頁面",
+      "logOut": "登出",
+      "reloadPage": "重新載入頁面"
+    }
+  },
+  "pending": {
+    "connecting": "連線中..."
+  },
+  "dialog": {
+    "about": {
+      "title": "關於 SoulFire",
+      "description": "您正在執行 SoulFire 客戶端的版本 {{version}}。",
+      "type": "類型",
+      "value": "數值",
+      "fields": {
+        "serverVersion": "伺服器版本",
+        "serverCommit": "伺服器提交版本",
+        "serverBranch": "伺服器分支",
+        "minecraftVersion": "Minecraft 版本",
+        "operatingSystem": "作業系統",
+        "platform": "平台",
+        "locale": "語言環境",
+        "architecture": "架構",
+        "environment": "環境",
+        "browser": "瀏覽器"
+      },
+      "close": "關閉"
+    },
+    "createInstance": {
+      "title": "建立新實例",
+      "description": "實例需要設定易於識別的名稱，以便您區分。這可以是您想要的任何名稱，例如「我的 Minecraft Bot」。",
+      "form": {
+        "friendlyName": {
+          "label": "顯示名稱",
+          "placeholder": "我的 Minecraft Bot",
+          "description": "您想給這個實例設定的名稱。",
+          "min": "顯示名稱必須至少 3 個字元。",
+          "max": "顯示名稱最多只能有 32 個字元。",
+          "regex": "顯示名稱只能包含字母、數字和空格"
+        },
+        "cancel": "取消",
+        "create": "建立"
+      },
+      "createToast": {
+        "loading": "正在建立實例...",
+        "success": "實例建立成功",
+        "error": "建立實例失敗"
+      }
+    },
+    "import": {
+      "main": {
+        "fromFile": "從檔案匯入",
+        "fromUrl": "從網址匯入",
+        "firstClipboardItem": "剪貼簿中有多個項目，僅使用第一個。",
+        "fromClipboard": "從剪貼簿",
+        "textarea": {
+          "placeholder": "請在此輸入文本...",
+          "submit": "從文本載入"
+        }
+      },
+      "url": {
+        "description": "從網址載入會讓 SoulFire 伺服器向目標伺服器發送 GET 請求並使用回應作為資料。",
+        "form": {
+          "url": {
+            "placeholder": "請在此輸入網址...",
+            "empty": "請輸入有效的網址"
+          }
+        },
+        "submit": "從網址載入",
+        "toast": {
+          "loading": "正在從網址下載資料...",
+          "success": "資料載入完成！",
+          "error": "下載資料失敗"
+        }
+      }
+    }
+  },
+  "commandInput": {
+    "placeholder": "輸入指令（輸入 'help' 查看列表）",
+    "emptySuggestions": "輸入以請求建議或按 Tab 鍵。",
+    "noSuggestions": "沒有可用建議。"
+  },
+  "controls": {
+    "start": "開始",
+    "resume": "繼續",
+    "pause": "暫停",
+    "stop": "停止",
+    "startToast": {
+      "loading": "正在啟動會話...",
+      "success": "會話已成功啟動",
+      "error": "啟動會話失敗"
+    },
+    "resumeToast": {
+      "loading": "正在恢復會話...",
+      "success": "會話已成功恢復",
+      "error": "恢復會話失敗"
+    },
+    "pauseToast": {
+      "loading": "正在暫停會話...",
+      "success": "會話已成功暫停",
+      "error": "暫停會話失敗"
+    },
+    "stopToast": {
+      "loading": "正在停止會話...",
+      "success": "會話已成功停止",
+      "error": "停止會話失敗"
+    },
+    "accountWarning": {
+      "noAccountsTitle": "未設定帳戶",
+      "noAccountsDescription": "在開始會話之前，您需要先匯入帳號。您已請求 {{required}} 個機器人。",
+      "notEnoughTitle": "帳戶數不足",
+      "notEnoughDescription": "您要求了 {{required}} 個 bot，但僅匯入 {{available}} 個帳戶。",
+      "hint": "您可以在帳戶設定頁面產生離線帳戶或匯入帳戶。",
+      "continueWithExisting": "以現有 {{count}} 個帳戶繼續",
+      "generateAccounts": "產生帳戶"
+    }
+  },
+  "icon": {
+    "invalidName": "無效的圖示名稱：{{name}}"
+  },
+  "dataTable": {
+    "noResults": "沒有結果。",
+    "rowsSelected": "已選擇 {{amount}} 筆 / 共 {{total}} 筆資料",
+    "rowsPerPage": "每頁行數",
+    "currentPage": "第 {{page}} 頁，共 {{total}} 頁",
+    "goFirst": "前往第一頁",
+    "goPrevious": "前往上一頁",
+    "goNext": "前往下一頁",
+    "goLast": "前往最後一頁",
+    "selectAll": "全選",
+    "selectRow": "選取此行",
+    "selected": "已選取 {{count}} 項",
+    "clearSelection": "清除選取",
+    "escape": "Esc",
+    "filter": "篩選",
+    "filters": "篩選條件",
+    "noFiltersApplied": "未套用篩選條件",
+    "modifyFilters": "修改篩選條件以精選列資料。",
+    "addFilters": "新增篩選條件以精選列資料。",
+    "addFilter": "新增篩選條件",
+    "resetFilters": "重設篩選條件",
+    "reset": "重設",
+    "where": "條件",
+    "selectField": "選擇欄位",
+    "searchFields": "搜尋欄位...",
+    "noFieldsFound": "找不到欄位。",
+    "enterValue": "請輸入值...",
+    "enterValueShort": "輸入值...",
+    "true": "是",
+    "false": "否",
+    "selectOption": "選擇選項...",
+    "selectOptions": "選擇多個選項...",
+    "searchOptions": "搜尋選項...",
+    "noOptionsFound": "找不到選項。",
+    "pickDateShort": "選擇日期...",
+    "typeToFilter": "輸入以新增篩選條件...",
+    "filterByValue": "按「{{value}}」篩選",
+    "view": "檢視",
+    "searchColumns": "搜尋欄位...",
+    "noColumnsFound": "找不到欄位。",
+    "toggleColumns": "切換欄位",
+    "sort": "排序",
+    "sortBy": "排序依據",
+    "noSortingApplied": "未套用排序",
+    "modifySorting": "修改排序以整理您的列資料。",
+    "addSorting": "新增排序以整理您的列資料。",
+    "addSort": "新增排序",
+    "resetSorting": "重設排序",
+    "columnHeader": {
+      "asc": "升冪",
+      "desc": "降冪",
+      "reset": "重設",
+      "hide": "隱藏"
+    },
+    "operators": {
+      "iLike": "包含",
+      "notILike": "不包含",
+      "eq": "等於",
+      "ne": "不等於",
+      "isEmpty": "為空",
+      "isNotEmpty": "不為空",
+      "lt": "小於",
+      "lte": "小於或等於",
+      "gt": "大於",
+      "gte": "大於或等於",
+      "isBetween": "介於",
+      "isRelativeToToday": "相對於今天",
+      "ltDate": "早於",
+      "gtDate": "晚於",
+      "lteDate": "在此日期或更早",
+      "gteDate": "在此日期或更晚",
+      "inArray": "包含以下任何一項",
+      "notInArray": "不包含以下任何一項"
+    },
+    "sortOrders": {
+      "asc": "升冪",
+      "desc": "降冪"
+    }
+  },
+  "pluginCard": {
+    "version": "版本：{{version}}",
+    "author": "作者：{{author}}",
+    "license": "授權：{{license}}",
+    "website": "網站"
+  },
+  "settingsPage": {
+    "namespacesNotFound": "未找到設定命名空間",
+    "stringList": {
+      "placeholder": "新增項目...",
+      "add": "新增",
+      "remove": "移除"
+    },
+    "invalidNumberToast": {
+      "title": "無效的數字！",
+      "description": "數值必須介於 {{min}} 和 {{max}} 之間"
+    }
+  },
+  "terminal": {
+    "noLogs": "🧙 看起來沒有可顯示的日誌；請嘗試執行一些指令！",
+    "demo-1": "歡迎來到演示模式！🧪",
+    "demo-2": "這是一個只讀的 SoulFire 實例",
+    "demo-3": "在決定安裝 SoulFire 之前，請盡情瀏覽所有選單和功能 :D",
+    "demo-4": "如果您想聯絡我們，歡迎加入 Discord 伺服器：https://soulfiremc.com/discord"
+  },
+  "uiBreadcrumb": {
+    "more": "更多"
+  },
+  "uiDialog": {
+    "close": "關閉"
+  },
+  "uiSheet": {
+    "close": "關閉"
+  },
+  "uiSidebar": {
+    "toggle": "切換側邊欄"
+  },
+  "castMenu": {
+    "title": "投放",
+    "disconnected": "已從 {{device}} 中斷連線",
+    "alreadyConnected": "已連線至 {{device}}",
+    "connectToast": {
+      "loading": "正在連線至 {{device}}...",
+      "success": "已連線到 {{device}}",
+      "error": "連線到 {{device}} 失敗"
+    },
+    "noDevices": "沒有找到裝置",
+    "broadcastLabel": "廣播測試",
+    "broadcastToast": {
+      "loading": "正在廣播訊息...",
+      "success": "訊息已廣播！",
+      "error": "廣播訊息失敗"
+    }
+  },
+  "instanceSidebar": {
+    "readDocumentation": "閱讀文件",
+    "backToDashboard": "返回主控台",
+    "deleteToast": {
+      "loading": "正在刪除實例...",
+      "success": "實例已刪除",
+      "error": "刪除實例失敗"
+    },
+    "instancesGroup": "實例清單",
+    "createInstance": "建立實例",
+    "loadProfileToast": {
+      "loading": "正在載入個人資料...",
+      "success": "個人資料已載入",
+      "error": "載入個人資料失敗"
+    },
+    "loadProfile": "載入個人資料",
+    "loadFromFile": "從檔案載入",
+    "profileSaved": "個人資料已儲存",
+    "saveProfile": "儲存個人資料",
+    "deleteInstance": "刪除實例",
+    "controlsGroup": "控制項",
+    "overview": "總覽",
+    "terminal": "終端機",
+    "bots": "機器人群組/機器人列表/機器人",
+    "audit-log": "稽核日誌",
+    "settingsGroup": "設定",
+    "extensionsGroup": "擴充功能",
+    "botSettings": "Bot 設定",
+    "accountSettings": "帳戶設定",
+    "metaSettings": "實例設定",
+    "proxySettings": "代理設定",
+    "aiSettings": "AI 設定",
+    "pathfindingSettings": "路徑尋找設定",
+    "discoverPlugins": "插件",
+    "instanceScripts": "腳本"
+  },
+  "userSidebar": {
+    "readDocumentation": "閱讀文件",
+    "userGroup": "使用者",
+    "instances": "實例清單",
+    "access": "存取權限",
+    "createInstance": "建立實例",
+    "settings": "設定",
+    "adminGroup": "管理員",
+    "adminOverview": "總覽",
+    "adminLogs": "日誌",
+    "adminTerminal": "終端機",
+    "users": "使用者",
+    "adminScripts": "腳本",
+    "serverSettings": "伺服器設定",
+    "devSettings": "開發者設定",
+    "theme": {
+      "title": "主題",
+      "system": "系統",
+      "light": "亮色",
+      "dark": "暗色"
+    },
+    "terminal": {
+      "title": "終端機"
+    },
+    "configDir": "設定目錄",
+    "dataDir": "資料目錄",
+    "about": "關於",
+    "logOut": "登出",
+    "logOutToast": {
+      "loading": "正在登出...",
+      "success": "已登出",
+      "error": "登出失敗"
+    },
+    "exit": "退出",
+    "stopImpersonating": "停止模擬",
+    "helpTranslate": "協助翻譯 SoulFire"
+  },
+  "sidebar": {
+    "documentation": "文件",
+    "supportSoulFire": "請請我喝杯咖啡",
+    "discord": "Discord"
+  },
+  "breadcrumbs": {
+    "admin": "管理員",
+    "settings": "設定",
+    "controls": "控制項",
+    "extensions": "擴充功能",
+    "bots": "機器人群組/機器人列表/機器人"
+  },
+  "noInstancesFound": "未找到任何實例",
+  "pageName": {
+    "terminal": "終端機",
+    "logs": "日誌",
+    "audit-log": "稽核日誌",
+    "bots": "機器人群組/機器人列表/機器人",
+    "botDetail": "機器人詳細資訊",
+    "instances": "實例清單",
+    "access": "存取權限",
+    "settings": "設定",
+    "proxySettings": "代理設定",
+    "overview": "總覽",
+    "users": "使用者",
+    "accountSettings": "帳戶設定",
+    "metaSettings": "實例設定",
+    "discoverPlugins": "插件",
+    "adminScripts": "腳本",
+    "instanceScripts": "腳本"
+  },
+  "access": {
+    "webdav": {
+      "title": "WebDAV 存取",
+      "description": "SoulFire 允許您使用 WebDAV 協定存取實例、腳本及其他檔案。",
+      "publicAddress": "公開 WebDAV 位址",
+      "personalToken": "個人 WebDAV 權杖",
+      "securityWarning": "您的個人 WebDAV 權杖非常重要。請勿與他人分享。它用於驗證您存取檔案時的身分。連線時請使用作為 WebDAV 密碼。如果需要帳號名稱，可以隨意填寫（例如：'soulfire'）。",
+      "addressDescription": "這是您用來存取檔案的位址。有時需使用 dav:// 或 davs:// 替代 http(s)://。"
+    },
+    "api": {
+      "title": "API 存取",
+      "description": "SoulFire 的 gRPC HTTP API 可讓您通過網路請求程式化地互動您的實例。",
+      "publicAddress": "公開 API 位址",
+      "personalToken": "個人 API 權杖",
+      "securityWarning": "您的個人 API 權杖非常重要。請勿與他人分享。它用於您存取 API 時的身分驗證。",
+      "addressDescription": "這是您用來存取 API 的位址。"
+    },
+    "token": {
+      "generate": "產生權杖",
+      "placeholder": "請點下方的「產生權杖」",
+      "generating": "正在產生權杖...",
+      "success": "權杖產生成功",
+      "error": "產生權杖失敗",
+      "copy": "複製權杖"
+    },
+    "address": {
+      "copy": "複製位址"
+    },
+    "documentation": "文件",
+    "howToConnect": "如何連線"
+  },
+  "uploadToMcLogs": "上傳到 mclo.gs",
+  "mcLogsUpload": {
+    "loading": "正在上傳到 mclo.gs...",
+    "success": "已上傳到 mclo.gs！在此檢視：{{url}}",
+    "error": "上傳至 mclo.gs 失敗"
+  },
+  "searchWithGoogle": "使用 Google 搜尋",
+  "copyToClipboard": "複製到剪貼簿",
+  "clipboardCopy": {
+    "loading": "正在複製到剪貼簿...",
+    "success": "已將「{{content}}」複製到剪貼簿",
+    "error": "複製到剪貼簿失敗"
+  },
+  "userSettings": {
+    "avatar": {
+      "title": "頭像",
+      "description": "您的使用者頭像是根據您的帳戶電子郵件地址生成。您可以在以下位置變更您電子郵件地址對應的頭像：",
+      "gravatar": "Gravatar"
+    },
+    "username": {
+      "uiName": "使用者名稱",
+      "description": "您的使用者名稱將用於在 UI 和日誌中識別您。"
+    },
+    "email": {
+      "uiName": "電子郵件",
+      "description": "您的電子郵件將用於登入與通知。"
+    }
+  },
+  "auditLog": {
+    "filterPlaceholder": "篩選稽核日誌...",
+    "user": "使用者",
+    "action": "動作",
+    "type": "類型",
+    "timestamp": "時間戳記",
+    "searchUsers": "搜尋使用者...",
+    "searchTimestamps": "搜尋時間戳記...",
+    "executedCommand": "執行指令：{{data}}",
+    "contextMenu": {
+      "copyUsername": "複製用戶名稱",
+      "copyCommand": "複製指令"
+    }
+  },
+  "toggleTheme": "切換主題",
+  "pickADate": "選擇日期",
+  "scripts": {
+    "filterPlaceholder": "篩選腳本...",
+    "baseScriptDialog": {
+      "form": {
+        "scriptName": {
+          "min": "腳本名稱至少須 3 個字元",
+          "max": "腳本名稱最多須 32 個字元",
+          "regex": "腳本名稱必須小寫，以字母或數字開頭，後續可為字母、數字或橫線，並以字母或數字結尾。",
+          "label": "名稱",
+          "placeholder": "我的腳本",
+          "description": "腳本的名稱。"
+        },
+        "elevatedPermissions": {
+          "label": "提升權限",
+          "description": "是否以提升權限執行腳本。僅限管理員可啟用此選項。"
+        }
+      }
+    },
+    "addScriptDialog": {
+      "title": "新增腳本",
+      "description": "腳本是在 SoulFire 伺服器上運行的小型程式。它們可用於自動化作業、建立自訂行為等。",
+      "form": {
+        "cancel": "取消",
+        "add": "新增"
+      }
+    },
+    "updateScriptDialog": {
+      "title": "更新腳本",
+      "description": "更新腳本資訊。",
+      "form": {
+        "cancel": "取消",
+        "update": "更新"
+      }
+    },
+    "removeToast": {
+      "loading": "正在移除腳本...",
+      "success": "腳本已移除！",
+      "error": "移除腳本失敗"
+    },
+    "addToast": {
+      "loading": "正在新增腳本...",
+      "success": "腳本已新增！",
+      "error": "新增腳本失敗"
+    },
+    "updateToast": {
+      "loading": "正在更新腳本...",
+      "success": "腳本已更新！",
+      "error": "更新腳本失敗"
+    },
+    "restartToast": {
+      "loading": "正在重新啟動腳本...",
+      "success": "腳本已重新啟動！",
+      "error": "重新啟動腳本失敗"
+    },
+    "table": {
+      "type": "類型",
+      "scriptName": "名稱",
+      "language": "語言",
+      "elevatedPermissions": "提升權限",
+      "createdAt": "建立時間",
+      "actions": "動作"
+    },
+    "globalScript": "全域",
+    "instanceScript": "實例"
+  },
+  "contextMenu": {
+    "instance": {
+      "goToInstance": "前往實例",
+      "copyInstanceId": "複製實例 ID",
+      "copyInstanceName": "複製實例名稱",
+      "deleteInstance": "刪除實例"
+    },
+    "bot": {
+      "goToBot": "前往機器人",
+      "copyUsername": "複製用戶名稱",
+      "copyUuid": "複製 UUID",
+      "copyCoordinates": "複製座標"
+    },
+    "plugin": {
+      "enable": "啟用",
+      "disable": "停用",
+      "openSettings": "打開設定",
+      "copyPluginName": "複製插件名稱",
+      "copyVersion": "複製版本",
+      "openWebsite": "打開網站"
+    }
+  }
+}

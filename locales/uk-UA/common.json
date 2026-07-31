@@ -1,0 +1,540 @@
+{
+  "locale": "Мова інтерфейсу",
+  "close": "Закрити",
+  "cancel": "Скасувати",
+  "save": "Зберегти",
+  "saving": "Збереження...",
+  "error": {
+    "noAddressOrToken": "Не знайдено адресу сервера або токен",
+    "page": {
+      "title": "Помилка",
+      "description": "Виникла помилка під час завантаження сторінки. Додаткову інформацію можна знайти в консолі.",
+      "logOut": "Вийти",
+      "reloadPage": "Перезавантажити сторінку",
+      "showDetails": "Показати подробиці"
+    },
+    "connectionFailed": "Не вдалося підключитися до сервера SoulFire."
+  },
+  "notFound": {
+    "page": {
+      "title": "Не знайдено",
+      "description": "На цій сторінці нічого не знайдено",
+      "logOut": "Вийти",
+      "reloadPage": "Перезавантажити сторінку"
+    }
+  },
+  "pending": {
+    "connecting": "З'єднання..."
+  },
+  "dialog": {
+    "about": {
+      "title": "Про SoulFire",
+      "description": "Ви використовуєте версію {{version}} клієнта SoulFire.",
+      "type": "Тип",
+      "value": "Значення",
+      "fields": {
+        "serverVersion": "Версія сервера",
+        "serverCommit": "Коміт сервера",
+        "serverBranch": "Гілка сервера",
+        "minecraftVersion": "Версія Minecraft",
+        "operatingSystem": "Операційна система",
+        "platform": "Платформа",
+        "locale": "Мова інтерфейсу",
+        "architecture": "Архітектура",
+        "environment": "Середовище",
+        "browser": "Браузер"
+      },
+      "close": "Закрити"
+    },
+    "createInstance": {
+      "title": "Створити новий екземпляр",
+      "description": "Екземплярам потрібні дружні імена, щоб ви могли їх розрізняти. Це може бути будь-яке ім'я, наприклад, \"Мій бот Minecraft\".",
+      "form": {
+        "friendlyName": {
+          "label": "Дружнє ім'я",
+          "placeholder": "Мій бот Minecraft",
+          "description": "Ім'я, яке ви хочете дати цьому екземпляру.",
+          "min": "Дружнє ім'я має містити щонайменше 3 символи.",
+          "max": "Дружнє ім'я має бути максимум з 32 символів.",
+          "regex": "Дружнє ім'я має містити лише літери, цифри і пробіли"
+        },
+        "cancel": "Скасувати",
+        "create": "Створити"
+      },
+      "createToast": {
+        "loading": "Створення екземпляра...",
+        "success": "Екземпляр успішно створено",
+        "error": "Не вдалося створити екземпляр"
+      }
+    },
+    "import": {
+      "main": {
+        "fromFile": "З файлу",
+        "fromUrl": "За URL-адресою",
+        "firstClipboardItem": "У буфері обміну було кілька елементів, використано лише перший.",
+        "fromClipboard": "З буфера обміну",
+        "textarea": {
+          "placeholder": "Введіть текст тут...",
+          "submit": "Завантажити з тексту"
+        }
+      },
+      "url": {
+        "description": "Завантаження з URL призведе до того, що сервер SoulFire виконає GET-запит до цільового сервера та скористається відповіддю як даними.",
+        "form": {
+          "url": {
+            "placeholder": "Вставте URL тут...",
+            "empty": "Будь ласка, введіть коректну URL-адресу"
+          }
+        },
+        "submit": "Завантажити з URL",
+        "toast": {
+          "loading": "Завантаження даних...",
+          "success": "Дані завантажено!",
+          "error": "Не вдалося завантажити дані"
+        }
+      }
+    }
+  },
+  "commandInput": {
+    "placeholder": "Введіть команду (введіть 'help' для списку)",
+    "emptySuggestions": "Введіть текст для отримання підказок або натисніть Tab.",
+    "noSuggestions": "Підказки відсутні."
+  },
+  "controls": {
+    "start": "Почати",
+    "resume": "Відновити",
+    "pause": "Призупинити",
+    "stop": "Зупинити",
+    "startToast": {
+      "loading": "Запуск сесії...",
+      "success": "Сесію успішно запущено",
+      "error": "Не вдалося запустити сесію"
+    },
+    "resumeToast": {
+      "loading": "Відновлення сесії...",
+      "success": "Сесію успішно відновлено",
+      "error": "Не вдалося відновити сесію"
+    },
+    "pauseToast": {
+      "loading": "Пауза сесії...",
+      "success": "Сесію призупинено успішно",
+      "error": "Не вдалося призупинити сесію"
+    },
+    "stopToast": {
+      "loading": "Зупиняємо сесію...",
+      "success": "Сесію зупинено успішно",
+      "error": "Не вдалося зупинити сесію"
+    },
+    "accountWarning": {
+      "noAccountsTitle": "Облікові записи не налаштовано",
+      "noAccountsDescription": "Перш ніж почати сесію, потрібно імпортувати облікові записи. Ви запросили {{required}} ботів.",
+      "notEnoughTitle": "Недостатньо облікових записів",
+      "notEnoughDescription": "Ви запросили {{required}} ботів, але імпортовано лише {{available}} облікових записів.",
+      "hint": "Ви можете згенерувати офлайн-акаунти або імпортувати облікові записи на сторінці налаштувань облікового запису.",
+      "continueWithExisting": "Продовжити з {count, plural, one {# обліковим записом} few {# обліковими записами} many {# облікових записів} other {# облікового запису}}",
+      "generateAccounts": "Згенерувати акаунти"
+    }
+  },
+  "icon": {
+    "invalidName": "Недійсна назва іконки: {{name}}"
+  },
+  "dataTable": {
+    "noResults": "Немає результатів.",
+    "rowsSelected": "Вибрано {{amount}} з {{total}} рядків",
+    "rowsPerPage": "Рядків на сторінці",
+    "currentPage": "Сторінка {{page}} з {{total}}",
+    "goFirst": "Перейти на першу сторінку",
+    "goPrevious": "Перейти на попередню сторінку",
+    "goNext": "Перейти на наступну сторінку",
+    "goLast": "Перейти на останню сторінку",
+    "selectAll": "Вибрати всі",
+    "selectRow": "Вибрати рядок",
+    "selected": "{count, plural, one{Вибрано {count}} few{Вибрано {count}} many{Вибрано {count}} other{Вибрано {count}}}",
+    "clearSelection": "Очистити вибір",
+    "escape": "Esc",
+    "filter": "Фільтр",
+    "filters": "Фільтри",
+    "noFiltersApplied": "Фільтри не застосовано",
+    "modifyFilters": "Змініть фільтри, щоб уточнити рядки.",
+    "addFilters": "Додайте фільтри, щоб уточнити рядки.",
+    "addFilter": "Додати фільтр",
+    "resetFilters": "Скинути фільтри",
+    "reset": "Скинути",
+    "where": "Де",
+    "selectField": "Виберіть поле",
+    "searchFields": "Пошук полів...",
+    "noFieldsFound": "Поля не знайдено.",
+    "enterValue": "Введіть значення...",
+    "enterValueShort": "Введіть значення...",
+    "true": "Правда",
+    "false": "Неправда",
+    "selectOption": "Виберіть опцію...",
+    "selectOptions": "Виберіть опції...",
+    "searchOptions": "Пошук опцій...",
+    "noOptionsFound": "Опцій не знайдено.",
+    "pickDateShort": "Виберіть дату...",
+    "typeToFilter": "Введіть для додавання фільтра...",
+    "filterByValue": "Фільтрувати за «{{value}}»",
+    "view": "Перегляд",
+    "searchColumns": "Пошук колонок...",
+    "noColumnsFound": "Колонок не знайдено.",
+    "toggleColumns": "Перемкнути колонки",
+    "sort": "Сортувати",
+    "sortBy": "Сортувати за",
+    "noSortingApplied": "Сортування не застосовано",
+    "modifySorting": "Змініть сортування, щоб впорядкувати рядки.",
+    "addSorting": "Додайте сортування, щоб впорядкувати рядки.",
+    "addSort": "Додати сортування",
+    "resetSorting": "Скинути сортування",
+    "columnHeader": {
+      "asc": "За зростанням",
+      "desc": "За спаданням",
+      "reset": "Скинути",
+      "hide": "Сховати"
+    },
+    "operators": {
+      "iLike": "Містить",
+      "notILike": "Не містить",
+      "eq": "Дорівнює",
+      "ne": "Не дорівнює",
+      "isEmpty": "Порожнє",
+      "isNotEmpty": "Не є порожнім",
+      "lt": "Менше ніж",
+      "lte": "Менше або дорівнює",
+      "gt": "Більше ніж",
+      "gte": "Більше або дорівнює",
+      "isBetween": "Між",
+      "isRelativeToToday": "Відносно сьогоднішнього дня",
+      "ltDate": "Раніше",
+      "gtDate": "Пізніше",
+      "lteDate": "У цей або раніше",
+      "gteDate": "У цей або пізніше",
+      "inArray": "Містить хоча б одне з",
+      "notInArray": "Не містить жодного з"
+    },
+    "sortOrders": {
+      "asc": "За зростанням",
+      "desc": "За спаданням"
+    }
+  },
+  "pluginCard": {
+    "version": "Версія: {{version}}",
+    "author": "Автор: {{author}}",
+    "license": "Ліцензія: {{license}}",
+    "website": "Вебсайт"
+  },
+  "settingsPage": {
+    "namespacesNotFound": "Простори назв налаштувань не знайдено",
+    "stringList": {
+      "placeholder": "Додати новий запис...",
+      "add": "Додати",
+      "remove": "Видалити"
+    },
+    "invalidNumberToast": {
+      "title": "Некоректне число!",
+      "description": "Значення має бути між {{min}} і {{max}}"
+    }
+  },
+  "terminal": {
+    "noLogs": "🧙 Здається, тут немає логів для відображення; спробуйте виконати якісь команди!",
+    "demo-1": "Ласкаво просимо в демо-режим! 🧪",
+    "demo-2": "Це екземпляр SoulFire лише для читання",
+    "demo-3": "Ознайомтеся з усіма меню та функціями перед встановленням SoulFire :D",
+    "demo-4": "Не соромтеся приєднуватися до нашого серверу Discord, якщо хочете зв'язатися: https://soulfiremc.com/discord"
+  },
+  "uiBreadcrumb": {
+    "more": "Ще"
+  },
+  "uiDialog": {
+    "close": "Закрити"
+  },
+  "uiSheet": {
+    "close": "Закрити"
+  },
+  "uiSidebar": {
+    "toggle": "Показати/Сховати бічну панель"
+  },
+  "castMenu": {
+    "title": "Cast",
+    "disconnected": "Від'єднано від {{device}}",
+    "alreadyConnected": "Вже підключено до {{device}}",
+    "connectToast": {
+      "loading": "Підключення до {{device}}...",
+      "success": "Підключено до {{device}}",
+      "error": "Не вдалося підключитися до {{device}}"
+    },
+    "noDevices": "Пристроїв не знайдено",
+    "broadcastLabel": "Тест трансляції",
+    "broadcastToast": {
+      "loading": "Трансляція повідомлення...",
+      "success": "Повідомлення транслюється!",
+      "error": "Не вдалося транслювати повідомлення"
+    }
+  },
+  "instanceSidebar": {
+    "readDocumentation": "Читати документацію",
+    "backToDashboard": "Назад до панелі",
+    "deleteToast": {
+      "loading": "Видалення екземпляра...",
+      "success": "Екземпляр видалено",
+      "error": "Не вдалося видалити екземпляр"
+    },
+    "instancesGroup": "Екземпляри",
+    "createInstance": "Створити екземпляр",
+    "loadProfileToast": {
+      "loading": "Завантаження профілю...",
+      "success": "Профіль завантажено",
+      "error": "Не вдалося завантажити профіль"
+    },
+    "loadProfile": "Завантажити профіль",
+    "loadFromFile": "Завантажити з файлу",
+    "profileSaved": "Профіль збережено",
+    "saveProfile": "Зберегти профіль",
+    "deleteInstance": "Видалити екземпляр",
+    "controlsGroup": "Керування",
+    "overview": "Огляд",
+    "terminal": "Термінал",
+    "bots": "Боти",
+    "audit-log": "Аудит-лог",
+    "settingsGroup": "Налаштування",
+    "extensionsGroup": "Розширення",
+    "botSettings": "Налаштування бота",
+    "accountSettings": "Налаштування акаунта",
+    "metaSettings": "Налаштування екземпляра",
+    "proxySettings": "Налаштування проксі",
+    "aiSettings": "AI налаштування",
+    "pathfindingSettings": "Налаштування пошуку шляху",
+    "discoverPlugins": "Плагіни",
+    "instanceScripts": "Скрипти"
+  },
+  "userSidebar": {
+    "readDocumentation": "Читати документацію",
+    "userGroup": "Користувач",
+    "instances": "Екземпляри",
+    "access": "Доступ",
+    "createInstance": "Створити екземпляр",
+    "settings": "Налаштування",
+    "adminGroup": "Адмін",
+    "adminOverview": "Огляд",
+    "adminLogs": "Журнали відповідності діяльності або доступу користувачів",
+    "adminTerminal": "Термінал",
+    "users": "Користувачі",
+    "adminScripts": "Скрипти",
+    "serverSettings": "Налаштування сервера",
+    "devSettings": "Dev налаштування",
+    "theme": {
+      "title": "Тема",
+      "system": "Система",
+      "light": "Світла",
+      "dark": "Темна"
+    },
+    "terminal": {
+      "title": "Термінал"
+    },
+    "configDir": "Директорія конфігурації",
+    "dataDir": "Директорія даних",
+    "about": "Про",
+    "logOut": "Вийти",
+    "logOutToast": {
+      "loading": "Вихід із акаунту...",
+      "success": "Вийшли з акаунту",
+      "error": "Не вдалося вийти з акаунту"
+    },
+    "exit": "Вийти",
+    "stopImpersonating": "Зупинити імітацію",
+    "helpTranslate": "Перекласти SoulFire"
+  },
+  "sidebar": {
+    "documentation": "Документація",
+    "supportSoulFire": "Купити мені каву",
+    "discord": "Discord"
+  },
+  "breadcrumbs": {
+    "admin": "Адмін",
+    "settings": "Налаштування",
+    "controls": "Керування",
+    "extensions": "Розширення",
+    "bots": "Боти"
+  },
+  "noInstancesFound": "Екземпляри не знайдено",
+  "pageName": {
+    "terminal": "Термінал",
+    "logs": "Журнали відповідності діяльності або доступу користувачів",
+    "audit-log": "Аудит-лог",
+    "bots": "Боти",
+    "botDetail": "Деталі бота",
+    "instances": "Екземпляри",
+    "access": "Доступ",
+    "settings": "Налаштування",
+    "proxySettings": "Налаштування проксі",
+    "overview": "Огляд",
+    "users": "Користувачі",
+    "accountSettings": "Налаштування акаунта",
+    "metaSettings": "Налаштування екземпляра",
+    "discoverPlugins": "Плагіни",
+    "adminScripts": "Скрипти",
+    "instanceScripts": "Скрипти"
+  },
+  "access": {
+    "webdav": {
+      "title": "Доступ WebDAV",
+      "description": "SoulFire дозволяє отримати доступ до екземплярів, скриптів та інших файлів через протокол WebDAV.",
+      "publicAddress": "Публічна адреса WebDAV",
+      "personalToken": "Особистий WebDAV токен",
+      "securityWarning": "Ваш особистий WebDAV токен дуже важливий. Не діліться ним ні з ким. Він використовується для автентифікації при зверненні до ваших файлів. Використовуйте його як пароль WebDAV при підключенні. Ім'я користувача не потрібне, якщо його вимагають — введіть будь-яке значення (наприклад, 'soulfire').",
+      "addressDescription": "Це адреса, яку потрібно використовувати для доступу до ваших файлів. Іноді потрібно використовувати dav:// або davs:// замість http(s)://."
+    },
+    "api": {
+      "title": "API-доступ",
+      "description": "gRPC HTTP API від SoulFire дозволяє програмно взаємодіяти з екземплярами за допомогою веб-запитів.",
+      "publicAddress": "Публічна адреса API",
+      "personalToken": "Особистий API токен",
+      "securityWarning": "Ваш особистий API токен дуже важливий. Не діліться ним ні з ким. Він використовується для автентифікації у API.",
+      "addressDescription": "Це адреса, яку потрібно використовувати для доступу до API."
+    },
+    "token": {
+      "generate": "Згенерувати токен",
+      "placeholder": "Натисніть 'Згенерувати токен' нижче",
+      "generating": "Генерація токена...",
+      "success": "Токен успішно згенеровано",
+      "error": "Не вдалося згенерувати токен",
+      "copy": "Скопіювати токен"
+    },
+    "address": {
+      "copy": "Скопіювати адресу"
+    },
+    "documentation": "Документація",
+    "howToConnect": "Як підключитися"
+  },
+  "uploadToMcLogs": "Завантажити на mclo.gs",
+  "mcLogsUpload": {
+    "loading": "Завантаження на mclo.gs...",
+    "success": "Завантажено на mclo.gs! Переглянути тут: {{url}}",
+    "error": "Не вдалося завантажити на mclo.gs"
+  },
+  "searchWithGoogle": "Шукати в Google",
+  "copyToClipboard": "Скопіювати в буфер обміну",
+  "clipboardCopy": {
+    "loading": "Копіювання в буфер обміну...",
+    "success": "Скопійовано «{{content}}» у буфер обміну",
+    "error": "Не вдалося скопіювати у буфер обміну"
+  },
+  "userSettings": {
+    "avatar": {
+      "title": "Аватар",
+      "description": "Ваш аватар користувача базується на електронній адресі вашого акаунта. Ви можете змінити аватар для своєї електронної адреси на",
+      "gravatar": "Gravatar"
+    },
+    "username": {
+      "uiName": "Ім'я користувача",
+      "description": "Ваше ім'я користувача використовується для ідентифікації у інтерфейсі та в журналах."
+    },
+    "email": {
+      "uiName": "Електронна пошта",
+      "description": "Ваша електронна адреса використовується для входу та сповіщень."
+    }
+  },
+  "auditLog": {
+    "filterPlaceholder": "Фільтрувати аудит-логи...",
+    "user": "Користувач",
+    "action": "Дія",
+    "type": "Тип",
+    "timestamp": "Час",
+    "searchUsers": "Пошук користувачів...",
+    "searchTimestamps": "Пошук часових міток...",
+    "executedCommand": "Виконана команда: {{data}}",
+    "contextMenu": {
+      "copyUsername": "Копіювати ім'я користувача",
+      "copyCommand": "Скопіювати команду"
+    }
+  },
+  "toggleTheme": "Перемкнути тему",
+  "pickADate": "Оберіть дату",
+  "scripts": {
+    "filterPlaceholder": "Фільтрувати скрипти...",
+    "baseScriptDialog": {
+      "form": {
+        "scriptName": {
+          "min": "Ім'я скрипта повинно містити щонайменше 3 символи",
+          "max": "Ім'я скрипта повинно містити не більше 32 символів",
+          "regex": "Ім'я скрипта має бути маленькими літерами, починатися з алфавітно-цифрового символу, далі дозволені алфавітно-цифрові символи або дефіси, і завершуватися алфавітно-цифровим символом.",
+          "label": "Назва",
+          "placeholder": "Мій скрипт",
+          "description": "Назва скрипта."
+        },
+        "elevatedPermissions": {
+          "label": "Підвищені дозволи",
+          "description": "Чи повинен скрипт працювати з підвищеними дозволами. Включати цю опцію можуть лише адміністратори."
+        }
+      }
+    },
+    "addScriptDialog": {
+      "title": "Додати новий скрипт",
+      "description": "Скрипти — це маленькі програми, які працюють на сервері SoulFire. Вони можуть використовуватися для автоматизації завдань, створення особливої поведінки тощо.",
+      "form": {
+        "cancel": "Скасувати",
+        "add": "Додати"
+      }
+    },
+    "updateScriptDialog": {
+      "title": "Оновити скрипт",
+      "description": "Оновіть інформацію про скрипт.",
+      "form": {
+        "cancel": "Скасувати",
+        "update": "Оновити"
+      }
+    },
+    "removeToast": {
+      "loading": "Видалення скриптів...",
+      "success": "Скрипти видалено!",
+      "error": "Не вдалося видалити скрипти"
+    },
+    "addToast": {
+      "loading": "Додавання скрипта...",
+      "success": "Скрипт додано!",
+      "error": "Не вдалося додати скрипт"
+    },
+    "updateToast": {
+      "loading": "Оновлення скрипта...",
+      "success": "Скрипт оновлено!",
+      "error": "Не вдалося оновити скрипт"
+    },
+    "restartToast": {
+      "loading": "Перезапуск скрипта...",
+      "success": "Скрипт перезапущено!",
+      "error": "Не вдалося перезапустити скрипт"
+    },
+    "table": {
+      "type": "Тип",
+      "scriptName": "Назва",
+      "language": "Мова",
+      "elevatedPermissions": "Підвищені дозволи",
+      "createdAt": "Створено",
+      "actions": "Дії"
+    },
+    "globalScript": "Глобальний",
+    "instanceScript": "Екземпляр"
+  },
+  "contextMenu": {
+    "instance": {
+      "goToInstance": "Перейти до інстансу",
+      "copyInstanceId": "Скопіювати ID екземпляра",
+      "copyInstanceName": "Скопіювати назву екземпляра",
+      "deleteInstance": "Видалити екземпляр"
+    },
+    "bot": {
+      "goToBot": "Перейти до бота",
+      "copyUsername": "Копіювати ім'я користувача",
+      "copyUuid": "Скопіювати UUID",
+      "copyCoordinates": "Скопіювати координати"
+    },
+    "plugin": {
+      "enable": "Увімкнути",
+      "disable": "Вимкнути",
+      "openSettings": "Відкрити налаштування",
+      "copyPluginName": "Скопіювати назву плагіна",
+      "copyVersion": "Скопіювати версію",
+      "openWebsite": "Відкрити вебсайт"
+    }
+  }
+}

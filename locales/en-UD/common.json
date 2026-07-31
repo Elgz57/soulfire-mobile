@@ -1,0 +1,540 @@
+{
+  "locale": "ǝlɐɔo˥",
+  "close": "ǝsolↃ",
+  "cancel": "˥˥ǝɔuɐↃ",
+  "save": "ǝʌɐS",
+  "saving": "...ƃuᴉʌɐS",
+  "error": {
+    "noAddressOrToken": "puoɟ puoᴉɟ oʞoʇ ɹo  ssǝɹpɐ ɹǝʌɹǝs oN",
+    "page": {
+      "title": "ɹoɹɹƎ",
+      "description": ".ǝʟoɔuos ǝɥʇ uᴉ puoɟ ǝq uɐɔ noᴉʇɐɯɹoɟuᴉ ǝɹoɯ .ǝƃɐd ǝɥʇ pɐo˥ oʇ ƃuᴉʎɹʇ ǝlᴉɥʍ pǝɹɹnɔɔo ɹoɹɹǝ uɐ",
+      "logOut": "ʇno ƃo˥",
+      "reloadPage": "ǝƃɐd pɐo˥ǝᴚ",
+      "showDetails": "slɐᴉʇǝp ʍoɥS"
+    },
+    "connectionFailed": ".pǝlᴉɐɟ ɹǝʌɹǝs ǝɹᴉɟ˥noS ǝɥʇ oʇ uoᴉʇɔǝuuoↃ"
+  },
+  "notFound": {
+    "page": {
+      "title": "puoɟ ʇoN",
+      "description": "uoᴉʇɐɔo˥ sᴉɥʇ ʇɐ ǝƃɐd ɐ puᴉɟ op lpuoɔ",
+      "logOut": "ʇno ƃo˥",
+      "reloadPage": "ǝƃɐd pɐo˥ǝᴚ"
+    }
+  },
+  "pending": {
+    "connecting": "...ƃuᴉʇɔǝuuoↃ"
+  },
+  "dialog": {
+    "about": {
+      "title": "ǝɹᴉɟ˥noS ʇnoq∀",
+      "description": ".ʇuǝᴉlɔ ǝɹᴉɟ˥noS ǝɥʇ ɟo {{version}} uoᴉsɹǝʌ ƃuᴉuunɹ ǝɹɐ no⅄",
+      "type": "ǝԀʎ┴",
+      "value": "ǝnlɐΛ",
+      "fields": {
+        "serverVersion": "ʇ,uoqɹǝɹs uoᴉsɹǝΛ",
+        "serverCommit": "ʇ,uoqɹǝɹs ʇᴉɯɯoↃ",
+        "serverBranch": "ʇ,uoqɹǝɹs ɥɔuɐɹq",
+        "minecraftVersion": "uoᴉsɹǝʌ ʇɐɯǝɹɔuᴉW",
+        "operatingSystem": "ɯǝʇsǝS ƃuᴉʇɐɹǝdo",
+        "platform": "ɯɹoɟɐ˥Ԁ",
+        "locale": "ǝlɐɔo˥",
+        "architecture": "ǝɹnʇɔǝʇᴉɹɥɔɐ",
+        "environment": "ʇuǝɯuoɹᴉʌuƎ",
+        "browser": "ɹǝsɯoɹq"
+      },
+      "close": "ǝsolↃ"
+    },
+    "createInstance": {
+      "title": "ǝɔuɐʇsᴉ uǝʍ ɐ ǝʇɐɹɔ",
+      "description": ".\"ʇoԐ ʇɐɹɔɐuǝᴉɯ ʎW ┴ :ǝ˙ǝʟԐԀ ןɐ ɹoɟ ƃuǝɯɐu ʎlpuᴉɹɟ pǝǝu sǝɔuɐʇsᴉ ≈ sǝʇuǝuᴉ | oɹxǝ ,ʇuɐʍ noʎ ǝɹɐu ǝɯɐu ʎuɐ pƃuᴉsɐɔɐ, ǝʎuoɾ oʇ ʎɐʍ ʎuɐ",
+      "form": {
+        "friendlyName": {
+          "label": "ǝlɐqǝ˥ ǝɯɐu puᴉlǝuᴉɹɟ",
+          "placeholder": "ʇoԐ ʇɐɹɔɐuǝᴉɯ ʎW",
+          "description": ".ǝɔuɐʇsᴉ sᴉɥʇ oʇ ǝʌᴉƃ oʇ ʇuɐʍ noʎ ǝɯɐu ǝɥ┴",
+          "min": ".ƃuo˥ sɹǝʇɔɐɹɐɥɔ 3 ʇsɐǝ˥ ǝq ʇsᴉ ʇsnɯ ǝɯɐu ʎlpuᴉɹɟ ǝɥ┴",
+          "max": ".ƃuo˥ sɹǝʇɔɐɹɐɥɔ 23 ʇsɐǝ˥ ǝq ʇsᴉ ʇsnɯ ǝɯɐu ʎlpuᴉɹɟ ǝɥ┴",
+          "regex": "sǝɔɐds puɐ sɹǝqɯnu ,sɹǝʇʇǝl ʎluno 'ʎlpuᴉɹɟ ǝɯɐu ʎlƃuᴉuɐʇuoɔ"
+        },
+        "cancel": "˥˥ǝɔuɐↃ",
+        "create": "ǝʇɐɹɔ"
+      },
+      "createToast": {
+        "loading": "...ǝɔuɐʇsᴉ ƃuᴉʇɐǝɹɔ",
+        "success": "ʎllnɟssǝɔɔn sǝɔuɐʇsᴉ pǝʇɐǝɹɔ",
+        "error": "ǝɔuɐʇsᴉ ǝʇɐǝɹɔ oʇ pǝʇlᴉɐɟ"
+      }
+    },
+    "import": {
+      "main": {
+        "fromFile": "ǝlᴉɟ ɯoɹɟ",
+        "fromUrl": "˥ɹn ɯoɹɟ",
+        "firstClipboardItem": ".ǝuo oʇ uᴉlʇsɹᴉɟ ƃuᴉsᴉn ʎlno ,pɹɐoqdᴉʟ ǝɥʇ uᴉ sɯǝʇᴉ lןɐdlᴉʇlnɯ pɐɥ no⅄",
+        "fromClipboard": "pɹɐoqdᴉʟ ɯoɹɟ",
+        "textarea": {
+          "placeholder": "...ǝɹǝɥ ʇxǝʇ ʇnԀ",
+          "submit": "ʇxǝʇ ɯoɹɟ pɐo˥"
+        }
+      },
+      "url": {
+        "description": ".ɐʇɐp ǝɥʇ sɐ ǝsno puɐ ɹǝʌɹǝs ǝɹᴉɟ˥noS ǝɥʇ ǝɯɐƃɹos ʇʇǝƃ ɐ ǝʞɐɯ llᴉʍ ˥ɹ∩ ɯoɹɟ ƃuᴉpɐo˥",
+        "form": {
+          "url": {
+            "placeholder": "...ǝɹǝɥ ˥ɹ∩ ʇnԀ",
+            "empty": "˥ɹ∩ pᴉlɐʌ ɐ ɹǝʇuǝ ǝsɐǝʎ sǝlɐǝ˥"
+          }
+        },
+        "submit": "˥ɹ∩ ɯoɹɟ pɐo˥",
+        "toast": {
+          "loading": "...ɐʇɐp ƃuᴉpɐo˥",
+          "success": "!pǝpɐo˥ ɐʇɐp",
+          "error": "ɐʇɐp pɐo˥ oʇ pǝlᴉɐɟ"
+        }
+      }
+    }
+  },
+  "commandInput": {
+    "placeholder": "˙)ʇsᴉl ɹoɟ dlǝɥ( 'dlɥǝ ǝdʎʇ pouɐɯɯoƆ ɹǝʇuƎ",
+    "emptySuggestions": ".ǝqɹᴉsǝp o┴ ɹoɟ qǝd oʇ suoᴉʇɔǝƃƃns ʇsǝnbǝɹ do sǝʇsǝnbǝɹ ǝʇɐpd oʇ ǝdʎ┴",
+    "noSuggestions": ".ǝlqɐlᴉɐʌ sǝlʇɔǝlǝS oN"
+  },
+  "controls": {
+    "start": "ʇɹɐ┴S",
+    "resume": "ǝɯnsǝᴚ",
+    "pause": "ǝsnsɐԀ",
+    "stop": "do┴S",
+    "startToast": {
+      "loading": "...uoᴉssǝs ƃuᴉʇɹɐʇS",
+      "success": "ʎllnɟssǝɔɔns pǝʇɹɐʇs uoᴉssǝS",
+      "error": "uoᴉssǝs ʇɹɐʇs oʇ pǝlᴉɐɟ"
+    },
+    "resumeToast": {
+      "loading": "...uoᴉssǝs ƃuᴉɯnsǝᴚ",
+      "success": "ʎllnɟssǝɔɔns pǝɯnsǝɹ uoᴉssǝS",
+      "error": "uoᴉssǝs ǝɯnsǝɹ oʇ pǝlᴉɐɟ"
+    },
+    "pauseToast": {
+      "loading": "...uoᴉssǝs ƃuᴉsnsɐԀ",
+      "success": "ʎllnɟssǝɔɔns pǝpoolԀ uoᴉssǝS",
+      "error": "uoᴉssǝs ǝsnsɐԀ oʇ pǝlᴉɐɟ"
+    },
+    "stopToast": {
+      "loading": "...uoᴉssǝs ƃuᴉddo┴S",
+      "success": "ʎllnɟssǝɔɔns pǝddo┴S uoᴉssǝS",
+      "error": "uoᴉssǝs do┴S oʇ pǝlᴉɐɟ"
+    },
+    "accountWarning": {
+      "noAccountsTitle": "pǝɹnɟᴉƃɟuoↃ sʇunoɔɔ∀ oN",
+      "noAccountsDescription": ".sʇunoɔɔ∀ {{required}} pǝʇsǝnbǝɹ noʎ .uoᴉssǝs ƃuᴉʇɹɐʇs ǝɹoɟǝq pǝʇɹodɯᴉ ǝʌɐɥ oʇ pǝǝu noʎ",
+      "notEnoughTitle": "ǝlqɐlᴉɐʌ∀ ʇunoɔɔ∀ ɥƃnoǝu ʇoN",
+      "notEnoughDescription": ".pǝʇɹodɯᴉ sʇunoɔɔ∀ {{available}} ʎluo ʇnsᴉq {{required}} pǝʇsǝnbǝɹ noʎ",
+      "hint": ".ǝƃɐd sƃuᴉʇʇǝS ʇunoɔɔ∀ ǝɥʇ ɯoɹɟ sʇunoɔɔ∀ ʇuǝllᴉɟɟo ǝʇɐɹǝuǝƃ uɐɔ noʎ",
+      "continueWithExisting": "sʇunoɔɔ∀ {{count}} ɥʇᴉʍ ǝnuᴉɐuʇuoↃ ǝnᴉnlᴉ┴",
+      "generateAccounts": "sʇunoɔɔ∀ ǝʇɐɹǝuǝƃ"
+    }
+  },
+  "icon": {
+    "invalidName": "{{name}} :ǝɯɐu uoɔᴉ 'pᴉlɐʌuI"
+  },
+  "dataTable": {
+    "noResults": ".sʇlnsǝɹ oN",
+    "rowsSelected": "pǝʇɔǝlǝs s)ʍoɹ {total}} ɟo {{amount}}",
+    "rowsPerPage": "ǝƃɐd sʍoɹ ɹǝd sʍoᴚ",
+    "currentPage": "{{total}} ɟo {{page}} ǝƃɐԀ",
+    "goFirst": "ǝƃɐd ʇsɹᴉɟ oʇ oƃ",
+    "goPrevious": "ǝƃɐd snoᴉʌǝɹd oʇ oƃ",
+    "goNext": "ǝƃɐd ʇxǝu oʇ oƃ",
+    "goLast": "ǝƃɐd ʇsɐʇ oʇ oƃ",
+    "selectAll": "llɐ ʇɔǝlǝS",
+    "selectRow": "ʍoɹ ʇɔǝlǝS",
+    "selected": "pǝʇɔǝlǝs {{count}}",
+    "clearSelection": "uoᴉʇɔǝlǝs ɹɐǝ˥Ↄ",
+    "escape": "ɔsƎ",
+    "filter": "ɹǝʇlᴉℲ",
+    "filters": "sɹǝʇlᴉℲ",
+    "noFiltersApplied": "pǝʇɐᴉʅddɐ sɹǝʇlᴉℲ oN",
+    "modifyFilters": ".sʍoɹ ɹnoʎ ǝuᴉɟǝɹ oʇ sɹǝʇlᴉɟ ʎɟᴉpoɯ",
+    "addFilters": ".sʍoɹ ɹnoʎ ǝuᴉɟǝɹ oʇ sɹǝʇlᴉɟ pp∀",
+    "addFilter": "ɹǝʇlᴉɟ pp∀",
+    "resetFilters": "sɹǝʇlᴉℲ ʇǝsǝᴚ",
+    "reset": "ʇǝsǝᴚ",
+    "where": "ǝɹǝɥＭ",
+    "selectField": "pʅǝᴉɟ ʇɔǝlǝS",
+    "searchFields": "...sploɟ ɥɔɹɐǝS",
+    "noFieldsFound": ".punoɟ sploɟ oN",
+    "enterValue": "...ǝnlɐʌ ɐ ɹǝʇuǝ",
+    "enterValueShort": "...ǝnlɐʌ ɹǝʇuǝ",
+    "true": "ǝnlɐɹ┴",
+    "false": "ǝslɐɟ",
+    "selectOption": "...uoᴉʇdo ʇɔǝlǝS",
+    "selectOptions": "...suoᴉʇdo ʇɔǝlǝS",
+    "searchOptions": "...suoᴉʇdo ɥɔɹɐǝS",
+    "noOptionsFound": ".punoɟ suoᴉʇdo oN",
+    "pickDateShort": "...ʇɐp ʞɔᴉԀ",
+    "typeToFilter": "...ɹǝʇlᴉɟ pp∀ oʇ ǝdʎ┴",
+    "filterByValue": "\"{{value}}\" ʎq ɹǝʇlᴉℲ",
+    "view": "ʍǝᴉΛ",
+    "searchColumns": "...snuɯɐɹolɔ ɥɔɹɐǝS",
+    "noColumnsFound": ".punoɟ snuɯɐɹolɔ oN",
+    "toggleColumns": "snuɯɐɹolɔ ǝƃƃlo┴",
+    "sort": "ʇɹoS",
+    "sortBy": "ʎq ʇɹoS",
+    "noSortingApplied": "pǝlᴉǝddɐ ƃuᴉʇɹos oN",
+    "modifySorting": ".sʍoɹ ɹnoʎ ǝzᴉuɐƃɹo oʇ ƃuᴉʇɹos ʎɟᴉpoɯ",
+    "addSorting": ".sʍoɹ ɹnoʎ ǝzᴉuɐƃɹo oʇ ƃuᴉʇɹos pp∀",
+    "addSort": "ʇɹos pp∀",
+    "resetSorting": "ƃuᴉʇɹos ʇǝsǝᴚ",
+    "columnHeader": {
+      "asc": "ɔs∀",
+      "desc": "ɔsǝᗡ",
+      "reset": "ʇǝsǝᴚ",
+      "hide": "ǝpᴉH"
+    },
+    "operators": {
+      "iLike": "s,uᴉɐʇuᴉɐʇuoↃ",
+      "notILike": "s,uᴉɐʇuᴉɐʇuoᗡ",
+      "eq": "sI",
+      "ne": "Ton sI",
+      "isEmpty": "ʎʇdɯƎ sI",
+      "isNotEmpty": "ʎʇdɯƎ Ton sI",
+      "lt": "o┴ sɐ sI",
+      "lte": "o┴ lɐnbǝʌI sɐ sI",
+      "gt": "uɐɥʇ ɹǝʇɐǝɹƃ sI",
+      "gte": "uɐɥʇ ɹǝʇɐǝɹƃ lɐnbǝʌI sI",
+      "isBetween": "uǝǝʍǝʇ sI",
+      "isRelativeToToday": "ʎɐp o ʇɐʌᴉʇnlǝɹ sI",
+      "ltDate": "ǝɹoɟǝq sI",
+      "gtDate": "ɹǝʇɐ  sI",
+      "lteDate": "ǝɹoɟǝ q ʇuo o sI",
+      "gteDate": "ɹǝʇɐ  q ʇuo o sI",
+      "inArray": "ɟo ʎuɐ sɐɥ",
+      "notInArray": "ɟo ǝuon sɐɥ"
+    },
+    "sortOrders": {
+      "asc": "ɔs∀",
+      "desc": "ɔsǝᗡ"
+    }
+  },
+  "pluginCard": {
+    "version": "{{version}} :uoᴉsɹǝΛ",
+    "author": "{{author}} :ɹoɥʇn∀",
+    "license": "{{license}} :ǝsɔuǝɔᴉ˥",
+    "website": "ǝʇᴉsqǝM"
+  },
+  "settingsPage": {
+    "namespacesNotFound": "punoɟ ʇoN sǝɯɐu sǝƃuᴉʇʇǝS",
+    "stringList": {
+      "placeholder": "...ʎɹʇuǝ ʍǝu ɐ ppp∀",
+      "add": "pp∀",
+      "remove": "ǝʌoɯǝᴚ"
+    },
+    "invalidNumberToast": {
+      "title": "!ɹǝqɯnu pᴉlɐʌuI",
+      "description": "{{max}} puɐ {{min}} uǝǝʇʍǝq ǝq ʇsnɯ ǝnlɐʌ ǝɥ┴"
+    }
+  },
+  "terminal": {
+    "noLogs": "!spuɐɯɯoɔ ǝɯos ƃuᴉuunɹ ʎɹʇ ;ʎɐldᴉs pɐ ʎlƃos pɐol oʇ sƃol oN ǝɹɐ ǝɹɐ noʎ ǝʞᴉן ʞool sǝo˥ ɹɐǝԀ",
+    "demo-1": "!🧪 ǝpoɯ oɯǝp ǝɯoפ o┴ oɯoɔןǝM",
+    "demo-2": "ɹǝɹᴉɟ˥noS ɟo ǝɔuɐʇsᴉ uoʎluo ʎlᴉuʎ ɐ sᴉ sᴉɥ┴",
+    "demo-3": ":ᗡ ɹǝɹᴉɟ˥noS ןןɐʇsni oʇ ƃuᴉpǝpᴉɔǝp ǝɹoɟǝq sǝɹnʇɐǝɟ puɐ snǝunɯ ʒlןɐ ɗnoʎ ʇno ʞɔǝɥↃ",
+    "demo-4": ";pɹɐoɔsᴉᗡ ɹno uoɾ oʇ ǝʞᴉl plnoʍ noʎ ɟᴉ ɹǝʌɹǝs pɹɐoɔsᴉᗡ ɹno ƃuᴉuoɾ oʇ ǝǝɹɟ ʅǝǝℲ"
+  },
+  "uiBreadcrumb": {
+    "more": "ǝɹoɯ"
+  },
+  "uiDialog": {
+    "close": "ǝsolↃ"
+  },
+  "uiSheet": {
+    "close": "ǝsolↃ"
+  },
+  "uiSidebar": {
+    "toggle": "ɹɐqǝpᴉS ǝƃƃlo┴"
+  },
+  "castMenu": {
+    "title": "ʇsɐↃ",
+    "disconnected": "{{device}} ɯoɹɟ pǝppǝɔɹǝᴉʌsᴉp",
+    "alreadyConnected": "{{device}} oʇ pǝʇɔǝuuoɔ ʎpɐǝɹ˥∀",
+    "connectToast": {
+      "loading": "...{{device}} oʇ ƃuᴉʇɔǝuuoↃ",
+      "success": "{{device}} oʇ pǝʇɔǝuuoↃ",
+      "error": "{{device}} oʇ ʇɔǝuuoɔ oʇ pǝlᴉɐɟ"
+    },
+    "noDevices": "punoɟ sǝɔᴉʌǝp oN",
+    "broadcastLabel": "ʇsǝ┴ ʇsɐpodɐoɹԐ",
+    "broadcastToast": {
+      "loading": "...ǝƃɐssǝɯ ƃuᴉʇsɐpodɐoɹԐ",
+      "success": "!pǝƃɐssǝɯ pǝʇsɐpodɐoɹԐ",
+      "error": "ǝƃɐssǝɯ ʇsɐpodɐoɹp oʇ pǝlᴉɐɟ"
+    }
+  },
+  "instanceSidebar": {
+    "readDocumentation": "uoᴉʇɐʇuǝɯnɔoᗡ pɐǝᴚ",
+    "backToDashboard": "pɹɐoqɥsɐp ʇo ʞɔɐq",
+    "deleteToast": {
+      "loading": "...ǝɔuɐʇsᴉ ƃuᴉʇǝlǝp",
+      "success": "pǝʇǝlǝp ǝɔuɐʇsᴉ",
+      "error": "ǝɔuɐʇsᴉ ǝʇǝlǝp oʇ pǝlᴉɐɟ"
+    },
+    "instancesGroup": "sǝɔuɐʇsᴉ",
+    "createInstance": "ǝɔuɐʇsᴉ ǝʇɐǝɹↃ",
+    "loadProfileToast": {
+      "loading": "...ǝlᴉɟ ɯoɹɟ ƃuᴉpɐo˥",
+      "success": "pǝpɐo˥ ǝlᴉɟoɹԀ",
+      "error": "ǝlᴉɟoɹԀ pɐo˥ oʇ pǝlᴉɐɟ"
+    },
+    "loadProfile": "ǝlᴉɟoɹԀ pɐo˥",
+    "loadFromFile": "ǝlᴉɟ ɯoɹɟ pɐo˥",
+    "profileSaved": "pǝʌɐs ǝlᴉɟoɹԀ",
+    "saveProfile": "ǝlᴉɟoɹԀ ǝʌɐS",
+    "deleteInstance": "ǝɔuɐʇsᴉ ǝʇǝlǝpǝᗡ",
+    "controlsGroup": "sdoɹʇuoↃ",
+    "overview": "ʍǝɹʌǝᴚ ǝʌᴉǝʌɹƆ",
+    "terminal": "ןɐuᴉɯɹǝ┴",
+    "bots": "sʇoԐ",
+    "audit-log": "ƃo˥-ʇᴉp∩∀ ƃo˥-ʇᴉp∩∀",
+    "settingsGroup": "sƃuᴉʇʇǝS",
+    "extensionsGroup": "sᴎoᴉsᴎɐᴉʇxƎ",
+    "botSettings": "sƃuᴉʇʇǝS ʇoԐ",
+    "accountSettings": "sƃuᴉʇʇǝS ʇunoɔɔ∀",
+    "metaSettings": "sƃuᴉʇʇǝS ǝɔuɐʇsᴉ",
+    "proxySettings": "sƃuᴉʇʇǝS ʎxoɹԀ",
+    "aiSettings": "sƃuᴉʇʇǝS I∀",
+    "pathfindingSettings": "sƃuᴉʇʇǝS ƃuᴉpunɟɥʇɐԀ",
+    "discoverPlugins": "sƃuᴉƃnlԀ",
+    "instanceScripts": "sʇdᴉɹɔS"
+  },
+  "userSidebar": {
+    "readDocumentation": "uoᴉʇɐʇuǝɯnɔoᗡ pɐǝᴚ",
+    "userGroup": "ɹǝs∩",
+    "instances": "sǝɔuɐʇsᴉ",
+    "access": "ssǝɔɔ∀",
+    "createInstance": "ǝɔuɐʇsᴉ ǝʇɐǝɹↃ",
+    "settings": "sƃuᴉʇʇǝS",
+    "adminGroup": "uᴉɯp∀",
+    "adminOverview": "ʍǝɹʌǝᴚ ǝʌᴉǝʌɹƆ",
+    "adminLogs": "sƃo˥",
+    "adminTerminal": "ןɐuᴉɯɹǝ┴",
+    "users": "\u00073\u00072\u00065\u00073",
+    "adminScripts": "sʇdᴉɹɔS",
+    "serverSettings": "sƃuᴉʇʇǝS ɹǝʌɹǝS",
+    "devSettings": "sƃuᴉʇʇǝS ʌǝᗡ",
+    "theme": {
+      "title": "ǝɯǝɥ┴",
+      "system": "ɯǝʇsʎS",
+      "light": "ʇɥƃᴉ˥",
+      "dark": "ʞɹɐᗡ"
+    },
+    "terminal": {
+      "title": "ןɐuᴉɯɹǝ┴"
+    },
+    "configDir": "ʎɹoʇɔǝɹᴉp ƃᴉɟᴉƆ",
+    "dataDir": "ʎɹoʇɔǝɹᴉp ɐʇɐᗡ",
+    "about": "ʇnoq∀",
+    "logOut": "ʇno ƃo˥",
+    "logOutToast": {
+      "loading": "...ƃuᴉƃo˥ ʇno",
+      "success": "ʇno ƃo˥",
+      "error": "ʇno ƃo˥ oʇ pǝlᴉɐɟ"
+    },
+    "exit": "ʇᴉxƎ",
+    "stopImpersonating": "ƃuᴉʇɐʇuǝɔɹǝʇuᴉ ɥʇoԀ",
+    "helpTranslate": "ǝʇɐslɐɹɐɥʇ ɥʇᴉʍ ǝɹᴉɟ˥noS"
+  },
+  "sidebar": {
+    "documentation": "uoᴉʇɐʇuǝɯnɔoᗡ",
+    "supportSoulFire": "ǝǝɟɟoɔ ɐ ǝɯ ʎnq",
+    "discord": "poɹɔsᴉᗡ"
+  },
+  "breadcrumbs": {
+    "admin": "uᴉɯp∀",
+    "settings": "sƃuᴉʇʇǝS",
+    "controls": "sdoɹʇuoↃ",
+    "extensions": "sᴎoᴉsᴎɐᴉʇxƎ",
+    "bots": "sʇoԐ"
+  },
+  "noInstancesFound": "punoɟ sǝɔuɐʇsᴉ oN",
+  "pageName": {
+    "terminal": "ןɐuᴉɯɹǝ┴",
+    "logs": "sƃo˥",
+    "audit-log": "ƃo˥-ʇᴉp∩∀ ƃo˥-ʇᴉp∩∀",
+    "bots": "sʇoԐ",
+    "botDetail": "ןᴉɐʇǝᗡ ʇoԐ",
+    "instances": "sǝɔuɐʇsᴉ",
+    "access": "ssǝɔɔ∀",
+    "settings": "sƃuᴉʇʇǝS",
+    "proxySettings": "sƃuᴉʇʇǝS ʎxoɹԀ",
+    "overview": "ʍǝɹʌǝᴚ ǝʌᴉǝʌɹƆ",
+    "users": "\u00073\u00072\u00065\u00073",
+    "accountSettings": "sƃuᴉʇʇǝS ʇunoɔɔ∀",
+    "metaSettings": "sƃuᴉʇʇǝS ǝɔuɐʇsᴉ",
+    "discoverPlugins": "sƃuᴉƃnlԀ",
+    "adminScripts": "sʇdᴉɹɔS",
+    "instanceScripts": "sʇdᴉɹɔS"
+  },
+  "access": {
+    "webdav": {
+      "title": "ssǝɔɔ∀ ɯɐqpǝMႨ",
+      "description": ".˙ɯɐqpǝM ʍǝɥʇ ʎƃuᴉsᴉlᴉɟ ,sǝlᴉɟ ɹǝɥʇo pu∀ ,ǝɔuɐʇsᴉ sssǝɔɔ∀ noʎ sʍollo sǝɹᴉɟ˥noS",
+      "publicAddress": "ssǝɹpp∀ ɯɐqpǝM ɔᴉʇlᴉqnԀ",
+      "personalToken": "uǝʞo┴ lɐuoɹǝԀ ɯɐqpǝM",
+      "securityWarning": ".ƃuᴉɔɐuǝʇuǝɥʇ ǝsǝn oʇ .ǝuoʎuɐ ɥʇᴉM ɥʇᴉʍ ʇᴉ ǝɹɐɥs ʇou op .ʇuɐɹʇɹoԀ ʎɹoʇuos ʎɯllɐ ɯɐqpǝM lɐuoɹǝd ɹno .uǝʞo┴ ǝs∩ ɥʇᴉʍ puǝʇɔǝuuoɔ ƃuᴉuǝʞɔoɔ uǝɥʍ pǝʇdoɯ ǝɹɐ noʎ ,ʇuɐʍ noʎ ǝnlᴉɥʍ ǝnlʎuɐ noʎ uǝɥʇ ǝnlʎuɐ uɐɔ noʎ ,pǝɹᴉnɹbǝɹ sᴉ ǝɯɐuɹǝs∩ .pǝɹᴉɹnø ʇoN .uǝɯɐu ɐ sɐ ǝsn oʎ ɥʇᴉʍ uǝʞo┴ ɯɐqpǝM ɥɔʇnʇ ɥʇᴉʍ ǝs∩ .ɥO sɔᴉʇ",
+      "addressDescription": ".//:)s(ʇdɥ ɟo pɐǝʇsǝ uǝʇǝɟo sǝɯᴉʇǝɯos .sǝlᴉɟ ɹnoʎ sʌǝʇɐɔo oʇ ǝs∩ oʇ pǝǝu noʎ sǝssǝɹpp∀ sᴉ sᴉɥ┴"
+    },
+    "api": {
+      "title": "ǝlᴉʇᴉ┴ IԀ∀",
+      "description": ".sʇsǝnbǝɹ ʇǝuɹǝʇuᴉ ɹǝƃɴɐuɐɯɐɹƃoɹd ʎlʎlǝʇɐɯɯɐɹƃoɹd ǝɔuɐʇsᴉ ɹno ɥʇᴉʍ pɐɯ sǝʇsǝnbǝɹ ǝɯos ƃuᴉdsn sǝpǝuoɷʇs ǝʌɐʍ ʎq sǝɔuɐʇsᴉ ɹnoʎ ɥʇᴉʍ spuᴉsɐ ʇdɯǝs' ƃuᴉloɹןɐ ʎlʇᴉsɐ ᴉԀ∀ sᴉɹǝɟ˥noS",
+      "publicAddress": "ssǝɹpp∀ IԀ∀ ɔᴉʇlᴉqnԀ",
+      "personalToken": "uǝʞo┴ IԀ∀ lɐuoɹǝԀ",
+      "securityWarning": ".IԀ∀ ǝɥʇ ɥɔʇɐ pǝssǝɔɔɐ uǝɥʇ uǝɥʇuǝɯʇǝ ǝsǝn oʇ .ǝuoʎuɐ ɥʇᴉW ɥʇᴉʍ ǝɹɐɥs ʇou op .ʇuɐɹʇɹoԀ ʎɯllɐ ɹnoʎ si ǝʞo┴ IԀ∀ lɐuoɹǝd ɹno⅄",
+      "addressDescription": ".IԀ∀ ǝɥʇ s sǝssǝɹpp∀ ǝɥ┴"
+    },
+    "token": {
+      "generate": "uǝʞo┴ ǝʇɐɹǝuǝ⅁",
+      "placeholder": "'uǝʞo┴ ǝʇɐɹǝuǝ⅁' ʍoʅǝq",
+      "generating": "...uǝʞo┴ ƃuᴉʇɐɹǝuǝ⅁",
+      "success": "uǝʞo┴ pǝʇɐɹǝuǝƃ ʎllnɟssǝɔɔn",
+      "error": "uǝʞo┴ ǝʇɐɹǝuǝᗡ  oʇ pǝlᴉɐɟ",
+      "copy": "uǝʞo┴ ʎdoↃ"
+    },
+    "address": {
+      "copy": "ssǝɹpp∀ ʎdoↃ"
+    },
+    "documentation": "uoᴉʇɐʇuǝɯnɔoᗡ",
+    "howToConnect": "ʇɔǝuuoↃ oʇ ʍoɥ"
+  },
+  "uploadToMcLogs": "sƃo˥ɔɯ oʇ pɐoʅdn",
+  "mcLogsUpload": {
+    "loading": "...sƃo˥ɔɯ oʇ ƃuᴉpɐoʅdn",
+    "success": "{{url}} :ǝɹǝɥ ʇᴉ ʍǝᴉ  !sƃo˥ɔɯ oʇ pǝpɐoʅdn",
+    "error": "sƃo˥ɔɯ oʇ pɐoʅdn oʇ pǝlᴉɐɟ"
+  },
+  "searchWithGoogle": "ǝlƃooƃ ɥʇᴉM ɥɔɹɐǝS",
+  "copyToClipboard": "pɹɐoqdᴉʟ oʇ ʎdoↃ",
+  "clipboardCopy": {
+    "loading": "...pɹɐoqdᴉʟ oʇ ƃuᴉʎdoↃ",
+    "success": "pɹɐoqdᴉʟ oʇ \"{{content}}\" pǝᴉdoↃ",
+    "error": "pɹɐoqdᴉʟ oʇ ʎdoↃ oʇ pǝlᴉɐɟ"
+  },
+  "userSettings": {
+    "avatar": {
+      "title": "ɹɐʇɐʌ∀",
+      "description": "ʇɐɥM ǝpɐɹƃ ʇɐ ɹɐɹɐʌɐ ɹno ǝʇɐpdn ǝƃuɐɥɔ uɐɔ noʎ .ssɐɹpɐ pᴉɐʇunuoɔ ɹno uo sǝsɐɹpɐ ɹno ǝsɐq sᴉ ɹɐʇɐʌɐ ɹno ɹǝs∩",
+      "gravatar": "ɹɐʇɐʌɐɹƃ"
+    },
+    "username": {
+      "uiName": "ǝɯɐuɹǝs∩",
+      "description": ".sƃol puɐ IU ǝɥʇ uᴉ noʎ ʎɟᴉʇuǝpᴉ oʇ pǝs∩ sǝɯɐu ɹǝs∩"
+    },
+    "email": {
+      "uiName": "lᴉɐɯǝ",
+      "description": ".suoᴉʇɐɔᴉɟᴉɟᴉʇoN puɐ uᴉƃo˥ ɹoɟ sᴉ ʅᴉɐɯǝ ɹno⅄"
+    }
+  },
+  "auditLog": {
+    "filterPlaceholder": "...sƃo˥ ʇᴉp∩∀ ɹǝʇlᴉℲ",
+    "user": "ɹǝs∩",
+    "action": "uoᴉʇɔ∀",
+    "type": "ǝԀʎ┴",
+    "timestamp": "dǝɯɐʇsǝɯᴛ",
+    "searchUsers": "...sɹǝsn ɥɔɹɐǝS",
+    "searchTimestamps": "...sǝƃuɐdsǝɯ ɥɔɹɐǝS",
+    "executedCommand": "{{data}} :puɐɯɯoɔ pǝʇnɔǝxƎ",
+    "contextMenu": {
+      "copyUsername": "ǝɯɐuǝɯɐu ʎdoↃ",
+      "copyCommand": "puɐɯɯoↃ ʎdoↃ"
+    }
+  },
+  "toggleTheme": "ǝɯǝɥ┴ ǝƃƃlo┴",
+  "pickADate": "ǝʇɐp  ɐ ʞɔᴉԀ",
+  "scripts": {
+    "filterPlaceholder": "...sʇdᴉɹɔs ɹǝʇlᴉℲ",
+    "baseScriptDialog": {
+      "form": {
+        "scriptName": {
+          "min": "sɹǝʇɔɐɹɐɥɔ 3 ʇsɐǝ˥ ǝq sʇnɯ sǝɯɐu ʇdᴉɹɔs",
+          "max": "sɹǝʇɔɐɹɐɥɔ 23 ʇsɐǝ˥ ǝq sʇnɯ sǝɯɐu ʇdᴉɹɔs",
+          "regex": ".ɹǝʇɔɐɹɐɥɔ ɔᴉɹǝɯunɐ uɐƃǝq sǝuᴉɹɐɥɔ ɥɔᴉɥʍ op ,sɐɥsɐp ɹo sɹǝʇɔɐɹɐɥɔ ᴉɥɐW ,sɹǝʇɔɐɹɐɥɔ ᴉɥɐW ɥʇᴉʍ uᴉƃuᴉƃǝq ,ɹǝʇɔɐɹɐɥɔ ǝsɐɔʇǝɯılɐ sɹǝqɯnu ǝq ʇsnɯ sǝɯɐu ʇdᴉɹɔs .pǝsɐɔɹǝʌ ǝq sǝɯɐu ʇdᴉɹɔs",
+          "label": "ןǝqɐ˥ ǝɯɐu",
+          "placeholder": "ʇdᴉɹɔS ʎW",
+          "description": ".ʇdᴉɹɔs ǝɥʇ ɟo ǝɯɐu"
+        },
+        "elevatedPermissions": {
+          "label": "sᴉuoᴉssᴉɯɹǝԀ pǝʇɐʇǝʌǝ˥",
+          "description": ".uoᴉʇdo sᴉɥʇ ǝlqɐuǝ uɐɔ sʇuᴉɯpɐ sʎluo .suoᴉssᴉɯɹǝd pǝʇɐʇǝʌǝ psnlɐ ʇluoɥs"
+        }
+      }
+    },
+    "addScriptDialog": {
+      "title": "ʇdᴉɹɔs ʍǝu ɐ pp∀",
+      "description": ".ǝɹoɯ puɐ ,ɹnoᴉʌɚǝן ɯoɔ noᴉʇɐɹǝuǝƃ ǝʇɐǝɹ ɔuɐ noʎ 'ɹǝʌɐɥǝq ɯoʇsns ǝʇɐǝɹɔ oʇ sǝɯɐɹƃoɹd llɐɯ sǝɹɐ sʇdᴉɹɔS",
+      "form": {
+        "cancel": "˥˥ǝɔuɐↃ",
+        "add": "pp∀"
+      }
+    },
+    "updateScriptDialog": {
+      "title": "ʇdᴉɹɔs ǝʇɐpd∩",
+      "description": ".uoᴉʇɐɯɹoɟuᴉ sʇdᴉɹɔs ǝɥʇ ǝʇɐpdn ƃuᴉʎɹ ǝlᴉɥʍ",
+      "form": {
+        "cancel": "˥˥ǝɔuɐↃ",
+        "update": "ǝʇɐpd∩"
+      }
+    },
+    "removeToast": {
+      "loading": "...sʇdᴉɹɔs ƃuᴉʌoɯǝᴚ",
+      "success": "!sʇdᴉɹɔs pǝʌoɯǝᴚ",
+      "error": "sʇdᴉɹɔs ǝʌoɯǝᴚ oʇ pǝlᴉɐɟ"
+    },
+    "addToast": {
+      "loading": "...ƃuᴉpp∀ ʇdᴉɹɔs",
+      "success": "!pǝpp∀ ʇdᴉɹɔs",
+      "error": "ʇdᴉɹɔs pp∀ oʇ pǝlᴉɐɟ"
+    },
+    "updateToast": {
+      "loading": "...ƃuᴉʇɐpdn ʇdᴉɹɔs",
+      "success": "!pǝʇɐpdn ʇdᴉɹɔs",
+      "error": "ʇdᴉɹɔs ǝʇɐpdn oʇ pǝlᴉɐɟ"
+    },
+    "restartToast": {
+      "loading": "...ƃuᴉʇɹɐʇsǝɹ ʇdᴉɹɔs",
+      "success": "!pǝʇɹɐʇsǝɹ ʇdᴉɹɔs",
+      "error": "ʇdᴉɹɔs ʇɹɐʇsǝɹ oʇ pǝlᴉɐɟ"
+    },
+    "table": {
+      "type": "ǝԀʎ┴",
+      "scriptName": "ןǝqɐ˥ ǝɯɐu",
+      "language": "ǝƃɐnƃuɐ˥",
+      "elevatedPermissions": "sᴉuoᴉssᴉɯɹǝԀ pǝʇɐʇǝʌǝ˥",
+      "createdAt": "\u00064\u00065\u00074\u00061\u00065\u00072\u00043",
+      "actions": "\u00073\u0006e\u0006f\u00069\u00074\u00063\u00041\u00002e\u00072"
+    },
+    "globalScript": "lɐqol⅁",
+    "instanceScript": "ǝɔuɐʇsᴉuI"
+  },
+  "contextMenu": {
+    "instance": {
+      "goToInstance": "ǝɔuɐʇsᴉ I oʇ oƃ",
+      "copyInstanceId": "pᴉpnI ǝɔuɐʇsᴉ ʎdoↃ",
+      "copyInstanceName": "ǝɯɐN ǝɔuɐʇsᴉ ʎdoↃ",
+      "deleteInstance": "ǝɔuɐʇsᴉ ǝʇǝlǝpǝᗡ"
+    },
+    "bot": {
+      "goToBot": "ʇoԐ oʇ oƃ",
+      "copyUsername": "ǝɯɐuǝɯɐu ʎdoↃ",
+      "copyUuid": "pᴉun∩ ʎdoↃ",
+      "copyCoordinates": "sǝʇɐuᴉɹoopɹoo⊥ ʎdoↃ"
+    },
+    "plugin": {
+      "enable": "ǝlqɐu ǝlqɐu ǝlqɐu ǝlqɐu ǝlqɐu ǝlqɐu ǝlɐ",
+      "disable": ".ƃuiʇʇǝlᴉ ff oƆ O N",
+      "openSettings": "sƃuᴉʇʇǝS uǝdo uO",
+      "copyPluginName": "ǝɯɐN uᴉƃılԀ ʎdoↃ",
+      "copyVersion": "uoᴉsɹǝΛ ʎdoↃ",
+      "openWebsite": "ǝʇᴉsqǝM uǝdo ǝpo"
+    }
+  }
+}

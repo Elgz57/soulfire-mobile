@@ -1,0 +1,540 @@
+{
+  "locale": "ภาษาโลแคล (Locale)",
+  "close": "ปิด",
+  "cancel": "ยกเลิก",
+  "save": "บันทึก",
+  "saving": "กำลังบันทึก...",
+  "error": {
+    "noAddressOrToken": "ไม่พบที่อยู่เซิร์ฟเวอร์หรือโทเค็น",
+    "page": {
+      "title": "ข้อผิดพลาด",
+      "description": "เกิดข้อผิดพลาดขณะพยายามโหลดหน้า ดูข้อมูลเพิ่มเติมได้ที่คอนโซล",
+      "logOut": "ออกจากระบบ",
+      "reloadPage": "โหลดหน้านี้ใหม่",
+      "showDetails": "แสดงรายละเอียด"
+    },
+    "connectionFailed": "เชื่อมต่อกับเซิร์ฟเวอร์ SoulFire ไม่สำเร็จ"
+  },
+  "notFound": {
+    "page": {
+      "title": "ไม่พบ",
+      "description": "ไม่พบหน้าที่ตำแหน่งนี้",
+      "logOut": "ออกจากระบบ",
+      "reloadPage": "โหลดหน้านี้ใหม่"
+    }
+  },
+  "pending": {
+    "connecting": "กำลังเชื่อมต่อ..."
+  },
+  "dialog": {
+    "about": {
+      "title": "เกี่ยวกับ SoulFire",
+      "description": "คุณกำลังใช้งาน SoulFire client เวอร์ชัน {{version}}.",
+      "type": "ประเภท",
+      "value": "ค่า",
+      "fields": {
+        "serverVersion": "เวอร์ชันเซิร์ฟเวอร์",
+        "serverCommit": "คอมมิตของเซิร์ฟเวอร์",
+        "serverBranch": "สาขาของเซิร์ฟเวอร์",
+        "minecraftVersion": "เวอร์ชัน Minecraft",
+        "operatingSystem": "ระบบปฏิบัติการ",
+        "platform": "แพลตฟอร์ม",
+        "locale": "ภาษาโลแคล (Locale)",
+        "architecture": "สถาปัตยกรรม",
+        "environment": "สภาพแวดล้อม",
+        "browser": "เบราว์เซอร์"
+      },
+      "close": "ปิด"
+    },
+    "createInstance": {
+      "title": "สร้างอินสแตนซ์ใหม่",
+      "description": "อินสแตนซ์แต่ละรายการต้องมีชื่อที่จดจำง่ายเพื่อให้คุณแยกแยะได้ อาจตั้งชื่ออะไรก็ได้ เช่น \"My Minecraft Bot\"",
+      "form": {
+        "friendlyName": {
+          "label": "ชื่อที่จดจำง่าย",
+          "placeholder": "My Minecraft Bot",
+          "description": "ชื่อที่คุณต้องการตั้งให้กับอินสแตนซ์นี้",
+          "min": "ชื่อที่จดจำง่ายต้องมีอย่างน้อย 3 ตัวอักษร",
+          "max": "ชื่อที่จดจำง่ายต้องมีไม่เกิน 32 ตัวอักษร",
+          "regex": "ชื่อที่จดจำง่ายต้องมีเฉพาะตัวเลข ตัวอักษร และช่องว่างเท่านั้น"
+        },
+        "cancel": "ยกเลิก",
+        "create": "สร้าง"
+      },
+      "createToast": {
+        "loading": "กำลังสร้างอินสแตนซ์...",
+        "success": "สร้างอินสแตนซ์สำเร็จ",
+        "error": "สร้างอินสแตนซ์ไม่สำเร็จ"
+      }
+    },
+    "import": {
+      "main": {
+        "fromFile": "จากไฟล์",
+        "fromUrl": "จาก URL",
+        "firstClipboardItem": "คุณมีหลายรายการในคลิปบอร์ด จะใช้รายการแรกเท่านั้น",
+        "fromClipboard": "จากคลิปบอร์ด",
+        "textarea": {
+          "placeholder": "ใส่ข้อความที่นี่...",
+          "submit": "โหลดจากข้อความ"
+        }
+      },
+      "url": {
+        "description": "การโหลดจาก URL จะให้เซิร์ฟเวอร์ SoulFire ทำ GET ไปยังเซิร์ฟเวอร์เป้าหมายและใช้ผลลัพธ์เป็นข้อมูล",
+        "form": {
+          "url": {
+            "placeholder": "ใส่ URL ที่นี่...",
+            "empty": "กรุณาใส่ URL ที่ถูกต้อง"
+          }
+        },
+        "submit": "โหลดจาก URL",
+        "toast": {
+          "loading": "กำลังดาวน์โหลดข้อมูล...",
+          "success": "โหลดข้อมูลเรียบร้อย!",
+          "error": "ดาวน์โหลดข้อมูลไม่สำเร็จ"
+        }
+      }
+    }
+  },
+  "commandInput": {
+    "placeholder": "ใส่คำสั่ง (พิมพ์ 'help' เพื่อดูรายการ)",
+    "emptySuggestions": "พิมพ์เพื่อขอรับคำแนะนำหรือกด Tab",
+    "noSuggestions": "ไม่มีคำแนะนำที่พร้อมใช้งาน"
+  },
+  "controls": {
+    "start": "เริ่มต้น",
+    "resume": "ดำเนินการต่อ",
+    "pause": "หยุดชั่วคราว",
+    "stop": "หยุด",
+    "startToast": {
+      "loading": "กำลังเริ่มเซสชัน...",
+      "success": "เริ่มเซสชันสำเร็จ",
+      "error": "ไม่สามารถเริ่มเซสชันได้"
+    },
+    "resumeToast": {
+      "loading": "กำลังดำเนินการต่อเซสชัน...",
+      "success": "ดำเนินการต่อเซสชันสำเร็จ",
+      "error": "ไม่สามารถดำเนินการต่อเซสชันได้"
+    },
+    "pauseToast": {
+      "loading": "กำลังหยุดชั่วคราวเซสชัน...",
+      "success": "หยุดชั่วคราวเซสชันเรียบร้อยแล้ว",
+      "error": "หยุดชั่วคราวเซสชันไม่สำเร็จ"
+    },
+    "stopToast": {
+      "loading": "กำลังหยุดเซสชัน...",
+      "success": "หยุดเซสชันเรียบร้อยแล้ว",
+      "error": "หยุดเซสชันไม่สำเร็จ"
+    },
+    "accountWarning": {
+      "noAccountsTitle": "ไม่มีบัญชีตั้งค่าไว้",
+      "noAccountsDescription": "คุณต้องนำเข้าบัญชีก่อนเริ่มเซสชัน คุณร้องขอ {{required}} บอท",
+      "notEnoughTitle": "บัญชีไม่เพียงพอ",
+      "notEnoughDescription": "คุณต้องการบอท {{required}} ตัว แต่มีบัญชีที่นำเข้าเพียง {{available}} บัญชี",
+      "hint": "คุณสามารถสร้างบัญชีออฟไลน์หรือ นำเข้าบัญชีได้จากหน้าตั้งค่าบัญชีผู้ใช้",
+      "continueWithExisting": "ดำเนินการต่อด้วยบัญชี {{count}} รายการ",
+      "generateAccounts": "สร้างไอดี"
+    }
+  },
+  "icon": {
+    "invalidName": "ชื่อไอคอนไม่ถูกต้อง: {{name}}"
+  },
+  "dataTable": {
+    "noResults": "ไม่พบผลลัพธ์",
+    "rowsSelected": "เลือก {{amount}} จากทั้งหมด {{total}} แถว",
+    "rowsPerPage": "จำนวนแถวต่อหน้า",
+    "currentPage": "หน้า {{page}} จาก {{total}}",
+    "goFirst": "ไปยังหน้าด้านแรก",
+    "goPrevious": "ไปยังหน้าก่อนหน้า",
+    "goNext": "ไปยังหน้าถัดไป",
+    "goLast": "ไปยังหน้าสุดท้าย",
+    "selectAll": "เลือกทั้งหมด",
+    "selectRow": "เลือกแถว",
+    "selected": "เลือกแล้ว {{count}}",
+    "clearSelection": "ล้างการเลือก",
+    "escape": "Esc",
+    "filter": "กรอง",
+    "filters": "ตัวกรอง",
+    "noFiltersApplied": "ยังไม่ได้ใช้ตัวกรอง",
+    "modifyFilters": "ปรับตัวกรองเพื่อปรับแต่งแถวของคุณ",
+    "addFilters": "เพิ่มตัวกรองเพื่อปรับแต่งแถวของคุณ",
+    "addFilter": "เพิ่มตัวกรอง",
+    "resetFilters": "รีเซ็ตตัวกรอง",
+    "reset": "รีเซ็ต",
+    "where": "ตรงที่",
+    "selectField": "เลือกฟิลด์",
+    "searchFields": "ค้นหาฟิลด์...",
+    "noFieldsFound": "ไม่พบฟิลด์",
+    "enterValue": "กรอกค่า...",
+    "enterValueShort": "กรอกค่า...",
+    "true": "จริง",
+    "false": "เท็จ",
+    "selectOption": "เลือกตัวเลือก...",
+    "selectOptions": "เลือกตัวเลือก...",
+    "searchOptions": "ค้นหาตัวเลือก...",
+    "noOptionsFound": "ไม่พบตัวเลือก",
+    "pickDateShort": "เลือกวันที่...",
+    "typeToFilter": "พิมพ์เพื่อเพิ่มตัวกรอง...",
+    "filterByValue": "กรองโดย \"{{value}}\"",
+    "view": "ดู",
+    "searchColumns": "ค้นหาคอลัมน์...",
+    "noColumnsFound": "ไม่พบคอลัมน์",
+    "toggleColumns": "สลับคอลัมน์",
+    "sort": "เรียงลำดับ",
+    "sortBy": "เรียงตาม",
+    "noSortingApplied": "ยังไม่มีการเรียงลำดับ",
+    "modifySorting": "ปรับการเรียงลำดับเพื่อจัดระเบียบแถวของคุณ",
+    "addSorting": "เพิ่มการเรียงลำดับเพื่อจัดระเบียบแถวของคุณ",
+    "addSort": "เพิ่มเงื่อนไขการเรียงลำดับ",
+    "resetSorting": "รีเซ็ตการเรียงลำดับ",
+    "columnHeader": {
+      "asc": "น้อยไปมาก",
+      "desc": "มากไปน้อย",
+      "reset": "รีเซ็ต",
+      "hide": "ซ่อน"
+    },
+    "operators": {
+      "iLike": "มีคำว่า",
+      "notILike": "ไม่มีคำว่า",
+      "eq": "คือ",
+      "ne": "ไม่ใช่",
+      "isEmpty": "ว่างเปล่า",
+      "isNotEmpty": "ไม่ว่างเปล่า",
+      "lt": "น้อยกว่า",
+      "lte": "น้อยกว่าหรือเท่ากับ",
+      "gt": "มากกว่า",
+      "gte": "มากกว่าหรือเท่ากับ",
+      "isBetween": "อยู่ระหว่าง",
+      "isRelativeToToday": "สัมพันธ์กับวันนี้",
+      "ltDate": "ก่อน",
+      "gtDate": "หลัง",
+      "lteDate": "ตรงหรือก่อน",
+      "gteDate": "ตรงหรือหลัง",
+      "inArray": "มีสิ่งใดในนี้",
+      "notInArray": "ไม่มีสิ่งใดในนี้"
+    },
+    "sortOrders": {
+      "asc": "น้อยไปมาก",
+      "desc": "มากไปน้อย"
+    }
+  },
+  "pluginCard": {
+    "version": "เวอร์ชัน: {{version}}",
+    "author": "ผู้พัฒนา: {{author}}",
+    "license": "สัญญาอนุญาต: {{license}}",
+    "website": "เว็บไซต์"
+  },
+  "settingsPage": {
+    "namespacesNotFound": "ไม่พบ namespaces ของการตั้งค่า",
+    "stringList": {
+      "placeholder": "เพิ่มรายการใหม่...",
+      "add": "เพิ่ม",
+      "remove": "ลบ"
+    },
+    "invalidNumberToast": {
+      "title": "ตัวเลขไม่ถูกต้อง!",
+      "description": "ค่าต้องอยู่ระหว่าง {{min}} ถึง {{max}}"
+    }
+  },
+  "terminal": {
+    "noLogs": "🧙 ดูเหมือนว่าจะไม่มีบันทึกให้แสดง ลองรันคำสั่งบางอย่างดูสิ!",
+    "demo-1": "ยินดีต้อนรับสู่โหมดทดลอง! 🧪",
+    "demo-2": "นี่คืออินสแตนซ์ SoulFire แบบอ่านอย่างเดียว",
+    "demo-3": "ลองดูทุกเมนูและฟีเจอร์ก่อนจะตัดสินใจติดตั้ง SoulFire :D",
+    "demo-4": "สามารถเข้าร่วม Discord ของเราได้ หากต้องการติดต่อ: https://soulfiremc.com/discord"
+  },
+  "uiBreadcrumb": {
+    "more": "เพิ่มเติม"
+  },
+  "uiDialog": {
+    "close": "ปิด"
+  },
+  "uiSheet": {
+    "close": "ปิด"
+  },
+  "uiSidebar": {
+    "toggle": "สลับแถบด้านข้าง"
+  },
+  "castMenu": {
+    "title": "Cast",
+    "disconnected": "ตัดการเชื่อมต่อจาก {{device}}",
+    "alreadyConnected": "เชื่อมต่อกับ {{device}} อยู่แล้ว",
+    "connectToast": {
+      "loading": "กำลังเชื่อมต่อกับ {{device}}...",
+      "success": "เชื่อมต่อกับ {{device}} สำเร็จ",
+      "error": "เชื่อมต่อกับ {{device}} ไม่สำเร็จ"
+    },
+    "noDevices": "ไม่พบอุปกรณ์",
+    "broadcastLabel": "ทดสอบการกระจายสัญญาณ",
+    "broadcastToast": {
+      "loading": "กำลังส่งข้อความ...",
+      "success": "ส่งข้อความแล้ว!",
+      "error": "ส่งข้อความไม่สำเร็จ"
+    }
+  },
+  "instanceSidebar": {
+    "readDocumentation": "อ่านเอกสารคู่มือ",
+    "backToDashboard": "กลับไปแดชบอร์ด",
+    "deleteToast": {
+      "loading": "กำลังลบอินสแตนซ์...",
+      "success": "ลบอินสแตนซ์แล้ว",
+      "error": "ลบอินสแตนซ์ไม่สำเร็จ"
+    },
+    "instancesGroup": "อินสแตนซ์",
+    "createInstance": "สร้างอินสแตนซ์",
+    "loadProfileToast": {
+      "loading": "กำลังโหลดโปรไฟล์...",
+      "success": "โหลดโปรไฟล์เรียบร้อย",
+      "error": "โหลดโปรไฟล์ไม่สำเร็จ"
+    },
+    "loadProfile": "โหลดโปรไฟล์",
+    "loadFromFile": "โหลดจากไฟล์",
+    "profileSaved": "บันทึกโปรไฟล์แล้ว",
+    "saveProfile": "บันทึกโปรไฟล์",
+    "deleteInstance": "ลบอินสแตนซ์",
+    "controlsGroup": "ส่วนควบคุม",
+    "overview": "ภาพรวม",
+    "terminal": "เทอร์มินัล",
+    "bots": "บอท",
+    "audit-log": "บันทึกตรวจสอบ",
+    "settingsGroup": "การตั้งค่า",
+    "extensionsGroup": "ส่วนขยาย",
+    "botSettings": "ตั้งค่าบอท",
+    "accountSettings": "ตั้งค่าบัญชีผู้ใช้",
+    "metaSettings": "ตั้งค่าอินสแตนซ์",
+    "proxySettings": "ตั้งค่าพร็อกซี่",
+    "aiSettings": "ตั้งค่า AI",
+    "pathfindingSettings": "ตั้งค่าการค้นหาเส้นทาง",
+    "discoverPlugins": "ปลั๊กอิน",
+    "instanceScripts": "สคริปต์"
+  },
+  "userSidebar": {
+    "readDocumentation": "อ่านเอกสารคู่มือ",
+    "userGroup": "ผู้ใช้",
+    "instances": "อินสแตนซ์",
+    "access": "การเข้าถึง",
+    "createInstance": "สร้างอินสแตนซ์",
+    "settings": "การตั้งค่า",
+    "adminGroup": "แอดมิน",
+    "adminOverview": "ภาพรวม",
+    "adminLogs": "บันทึก",
+    "adminTerminal": "เทอร์มินัล",
+    "users": "ผู้ใช้",
+    "adminScripts": "สคริปต์",
+    "serverSettings": "ตั้งค่าเซิร์ฟเวอร์",
+    "devSettings": "ตั้งค่านักพัฒนา",
+    "theme": {
+      "title": "ธีม",
+      "system": "ระบบ",
+      "light": "สว่าง",
+      "dark": "มืด"
+    },
+    "terminal": {
+      "title": "เทอร์มินัล"
+    },
+    "configDir": "ไดเรกทอรี config",
+    "dataDir": "ไดเรกทอรีข้อมูล",
+    "about": "เกี่ยวกับ",
+    "logOut": "ออกจากระบบ",
+    "logOutToast": {
+      "loading": "กำลังออกจากระบบ...",
+      "success": "ออกจากระบบแล้ว",
+      "error": "ออกจากระบบไม่สำเร็จ"
+    },
+    "exit": "ออก",
+    "stopImpersonating": "หยุดเลียนแบบ",
+    "helpTranslate": "แปล SoulFire"
+  },
+  "sidebar": {
+    "documentation": "เอกสารคู่มือ",
+    "supportSoulFire": "Buy me a coffee",
+    "discord": "Discord"
+  },
+  "breadcrumbs": {
+    "admin": "แอดมิน",
+    "settings": "การตั้งค่า",
+    "controls": "ส่วนควบคุม",
+    "extensions": "ส่วนขยาย",
+    "bots": "บอท"
+  },
+  "noInstancesFound": "ไม่พบบัญชีอินสแตนซ์",
+  "pageName": {
+    "terminal": "เทอร์มินัล",
+    "logs": "บันทึก",
+    "audit-log": "บันทึกตรวจสอบ",
+    "bots": "บอท",
+    "botDetail": "รายละเอียดบอท",
+    "instances": "อินสแตนซ์",
+    "access": "การเข้าถึง",
+    "settings": "การตั้งค่า",
+    "proxySettings": "ตั้งค่าพร็อกซี่",
+    "overview": "ภาพรวม",
+    "users": "ผู้ใช้",
+    "accountSettings": "ตั้งค่าบัญชีผู้ใช้",
+    "metaSettings": "ตั้งค่าอินสแตนซ์",
+    "discoverPlugins": "ปลั๊กอิน",
+    "adminScripts": "สคริปต์",
+    "instanceScripts": "สคริปต์"
+  },
+  "access": {
+    "webdav": {
+      "title": "เข้าถึง WebDAV",
+      "description": "SoulFire อนุญาตให้คุณเข้าถึงอินสแตนซ์, สคริปต์ และไฟล์อื่น ๆ ด้วยโปรโตคอล WebDAV",
+      "publicAddress": "ที่อยู่อินเทอร์เน็ต WebDAV สาธารณะ",
+      "personalToken": "โทเค็น WebDAV ส่วนตัว",
+      "securityWarning": "โทเค็น WebDAV ส่วนตัวของคุณมีความสำคัญมาก ห้ามบอกให้ใครทราบ ใช้สำหรับยืนยันตัวตนเวลาคุณเข้าถึงไฟล์ ใช้เป็นรหัสผ่าน WebDAV ได้เลยโดยไม่ต้องใช้ชื่อผู้ใช้ (หากระบบขอชื่อผู้ใช้ให้ใส่ค่าใดก็ได้ เช่น 'soulfire')",
+      "addressDescription": "นี่คือที่อยู่ที่คุณต้องใช้สำหรับเข้าถึงไฟล์ บางครั้งคุณจำเป็นต้องใช้ dav:// หรือ davs:// แทน http(s)://"
+    },
+    "api": {
+      "title": "เข้าถึง API",
+      "description": "API SoulFire gRPC HTTP ให้คุณโต้ตอบกับอินสแตนซ์ผ่านเว็บรีเควสได้โดยอัตโนมัติ",
+      "publicAddress": "ที่อยู่ API สาธารณะ",
+      "personalToken": "โทเค็น API ส่วนตัว",
+      "securityWarning": "โทเค็น API ส่วนตัวของคุณมีความสำคัญมาก ห้ามบอกให้ใคร ควรใช้สำหรับยืนยันตัวตนเมื่อเข้าถึง API เท่านั้น",
+      "addressDescription": "นี่คือที่อยู่ที่คุณต้องใช้ในการเข้าถึง API"
+    },
+    "token": {
+      "generate": "สร้างโทเค็น",
+      "placeholder": "คลิก 'สร้างโทเค็น' ด้านล่าง",
+      "generating": "กำลังสร้างโทเค็น...",
+      "success": "สร้างโทเค็นสำเร็จ",
+      "error": "สร้างโทเค็นไม่สำเร็จ",
+      "copy": "คัดลอกโทเค็น"
+    },
+    "address": {
+      "copy": "คัดลอกที่อยู่"
+    },
+    "documentation": "เอกสารคู่มือ",
+    "howToConnect": "วิธีเชื่อมต่อ"
+  },
+  "uploadToMcLogs": "อัปโหลดไปที่ mclo.gs",
+  "mcLogsUpload": {
+    "loading": "กำลังอัปโหลดไปที่ mclo.gs...",
+    "success": "อัปโหลดไปที่ mclo.gs สำเร็จ! ดูได้ที่นี่: {{url}}",
+    "error": "อัปโหลดไปที่ mclo.gs ไม่สำเร็จ"
+  },
+  "searchWithGoogle": "ค้นหาด้วย Google",
+  "copyToClipboard": "คัดลอกไปยังคลิปบอร์ด",
+  "clipboardCopy": {
+    "loading": "กำลังคัดลอกไปยังคลิปบอร์ด...",
+    "success": "คัดลอก \"{{content}}\" ไปยังคลิปบอร์ดแล้ว",
+    "error": "คัดลอกไปยังคลิปบอร์ดไม่สำเร็จ"
+  },
+  "userSettings": {
+    "avatar": {
+      "title": "อวตาร",
+      "description": "อวตารผู้ใช้ของคุณจะอิงจากอีเมลบัญชีของคุณ คุณสามารถเปลี่ยนรูปอวตารสำหรับอีเมลของคุณได้ที่",
+      "gravatar": "Gravatar"
+    },
+    "username": {
+      "uiName": "ชื่อผู้ใช้",
+      "description": "ชื่อผู้ใช้ของคุณจะถูกใช้เพื่อระบุคุณใน UI และในบันทึก"
+    },
+    "email": {
+      "uiName": "อีเมล",
+      "description": "อีเมลของคุณจะใช้สำหรับเข้าสู่ระบบและการแจ้งเตือน"
+    }
+  },
+  "auditLog": {
+    "filterPlaceholder": "กรองบันทึกการตรวจสอบ...",
+    "user": "ผู้ใช้",
+    "action": "การกระทำ",
+    "type": "ประเภท",
+    "timestamp": "เวลาบันทึก",
+    "searchUsers": "ค้นหาผู้ใช้...",
+    "searchTimestamps": "ค้นหาวันเวลา...",
+    "executedCommand": "ดำเนินการคำสั่ง: {{data}}",
+    "contextMenu": {
+      "copyUsername": "คัดลอกชื่อผู้ใช้",
+      "copyCommand": "คัดลอกคำสั่ง"
+    }
+  },
+  "toggleTheme": "สลับธีม",
+  "pickADate": "เลือกวันที่",
+  "scripts": {
+    "filterPlaceholder": "กรองสคริปต์...",
+    "baseScriptDialog": {
+      "form": {
+        "scriptName": {
+          "min": "ชื่อสคริปต์ต้องมีอย่างน้อย 3 ตัวอักษร",
+          "max": "ชื่อสคริปต์ต้องมีไม่เกิน 32 ตัวอักษร",
+          "regex": "ชื่อสคริปต์ต้องเป็นอักษรตัวเล็ก เริ่มและจบด้วยอักขระ a-z หรือ 0-9 และจะคั่นด้วยอักขระ - หรือเลข-ตัวอักษรเท่านั้น",
+          "label": "ชื่อ",
+          "placeholder": "My Script",
+          "description": "ชื่อของสคริปต์"
+        },
+        "elevatedPermissions": {
+          "label": "สิทธิ์สูงสุด",
+          "description": "ระบุว่าสคริปต์ควรทำงานด้วยสิทธิ์สูงสุดหรือไม่ มีได้เฉพาะแอดมินเท่านั้นที่เปิดใช้งานได้"
+        }
+      }
+    },
+    "addScriptDialog": {
+      "title": "เพิ่มสคริปต์ใหม่",
+      "description": "สคริปต์เป็นโปรแกรมขนาดเล็กที่รันบนเซิร์ฟเวอร์ SoulFire ใช้สำหรับงานอัตโนมัติ สร้างพฤติกรรมกำหนดเอง ฯลฯ",
+      "form": {
+        "cancel": "ยกเลิก",
+        "add": "เพิ่ม"
+      }
+    },
+    "updateScriptDialog": {
+      "title": "อัปเดตสคริปต์",
+      "description": "อัปเดตข้อมูลของสคริปต์",
+      "form": {
+        "cancel": "ยกเลิก",
+        "update": "อัปเดต"
+      }
+    },
+    "removeToast": {
+      "loading": "กำลังลบสคริปต์...",
+      "success": "ลบสคริปต์แล้ว!",
+      "error": "ลบสคริปต์ไม่สำเร็จ"
+    },
+    "addToast": {
+      "loading": "กำลังเพิ่มสคริปต์...",
+      "success": "เพิ่มสคริปต์แล้ว!",
+      "error": "เพิ่มสคริปต์ไม่สำเร็จ"
+    },
+    "updateToast": {
+      "loading": "กำลังอัปเดตสคริปต์...",
+      "success": "อัปเดตสคริปต์แล้ว!",
+      "error": "อัปเดตสคริปต์ไม่สำเร็จ"
+    },
+    "restartToast": {
+      "loading": "กำลังรีสตาร์ทสคริปต์...",
+      "success": "รีสตาร์ทสคริปต์แล้ว!",
+      "error": "รีสตาร์ทสคริปต์ไม่สำเร็จ"
+    },
+    "table": {
+      "type": "ประเภท",
+      "scriptName": "ชื่อ",
+      "language": "ภาษา",
+      "elevatedPermissions": "สิทธิ์สูงสุด",
+      "createdAt": "วันที่สร้าง",
+      "actions": "การดำเนินการ"
+    },
+    "globalScript": "โกลบอล",
+    "instanceScript": "อินสแตนซ์"
+  },
+  "contextMenu": {
+    "instance": {
+      "goToInstance": "ไปที่อินสแตนซ์",
+      "copyInstanceId": "คัดลอก Instance ID",
+      "copyInstanceName": "คัดลอกชื่อ Instance",
+      "deleteInstance": "ลบอินสแตนซ์"
+    },
+    "bot": {
+      "goToBot": "ไปที่บอท",
+      "copyUsername": "คัดลอกชื่อผู้ใช้",
+      "copyUuid": "คัดลอก UUID",
+      "copyCoordinates": "คัดลอกพิกัด"
+    },
+    "plugin": {
+      "enable": "เปิดใช้งาน",
+      "disable": "ปิดใช้งาน",
+      "openSettings": "เปิดการตั้งค่า",
+      "copyPluginName": "คัดลอกชื่อปลั๊กอิน",
+      "copyVersion": "คัดลอกเวอร์ชัน",
+      "openWebsite": "เปิดเว็บไซต์"
+    }
+  }
+}

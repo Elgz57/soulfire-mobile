@@ -1,0 +1,128 @@
+{
+  "overview": {
+    "welcome": "WELCUM BAK, {{name}} 🧙",
+    "serverMetrics": {
+      "sectionTitle": "Servur Metrikzz!",
+      "summary": {
+        "cpu": "CPUZ",
+        "heapUsed": "Heap UZED",
+        "threads": "THR3DZ",
+        "botsOnline": "BOTS ONLAIIN",
+        "uptime": "UPTAIM"
+      },
+      "cpuUsage": {
+        "title": "CPU Usaj (%)"
+      },
+      "memoryUsage": {
+        "title": "Heap Memry (MB)"
+      },
+      "threadCount": {
+        "title": "Thred Counz"
+      },
+      "aggregateBots": {
+        "title": "Bots Onlinez (All Instunces)"
+      }
+    },
+    "instancesChart": {
+      "title": "Total instansz on dis server",
+      "instances": "Instances",
+      "label": {
+        "state": "Stait",
+        "active": "Actiev",
+        "stopped": "Stopped",
+        "other": "Othr"
+      }
+    },
+    "usersChart": {
+      "title": "Total hoomans on dis server",
+      "users": "Hoomans",
+      "label": {
+        "role": "Roel",
+        "user": "Uzer",
+        "admin": "Admin",
+        "other": "Othr"
+      }
+    }
+  },
+  "users": {
+    "filterPlaceholder": "Filtur hoomans...",
+    "baseUserDialog": {
+      "form": {
+        "username": {
+          "min": "Usernamez must be at leest 3 charactrz",
+          "max": "Usernamez must be at most 32 charactrz",
+          "regex": "Usernamez must bee lowercase, beginz wif alphanuumerik letter, moar alphanuumerik or dashes, endz wif alphanuumerik letter.",
+          "label": "Usernamez",
+          "placeholder": "Enter usernamez",
+          "description": "A speshul usernamez dat markz da hooman"
+        },
+        "email": {
+          "label": "EMAYL",
+          "placeholder": "Enter emailz",
+          "description": "Da emailz adress of da hooman, used fur notifikayshuns an loginz"
+        },
+        "role": {
+          "label": "Roel",
+          "description": "Da roel of da hooman. Adminz kin manaj hoomans n all instansz. Hoomans kin only manaj their own instansz.",
+          "user": "Uzer",
+          "admin": "Admin"
+        }
+      }
+    },
+    "addUserDialog": {
+      "title": "Ad a new hooman",
+      "description": "Ad a new hooman to dis server",
+      "form": {
+        "cancel": "cancel k?",
+        "add": "AD Hooman"
+      }
+    },
+    "updateUserDialog": {
+      "title": "Updet hooman",
+      "description": "Updet da hooman's info",
+      "form": {
+        "cancel": "cancel k?",
+        "update": "Updet Hooman"
+      }
+    },
+    "addToast": {
+      "loading": "Addin hooman...",
+      "success": "Hooman added!",
+      "error": "Fayld to ad hooman"
+    },
+    "updateToast": {
+      "loading": "Updatin hooman...",
+      "success": "Hooman updatd!",
+      "error": "Fayld to updet hooman"
+    },
+    "removeToast": {
+      "loading": "Remuvin hoomans...",
+      "success": "Hoomans remuved!",
+      "error": "Fayld to remuv hoomans"
+    },
+    "invalidateToast": {
+      "loading": "Loggin hoomans owt...",
+      "success": "Hoomans loggd owt!",
+      "error": "Fayld to log owt hoomans"
+    },
+    "table": {
+      "username": "Usernamez",
+      "email": "EMAYL",
+      "role": "Roel",
+      "createdAt": "Makd",
+      "minIssuedAt": "Min Login",
+      "actions": "Akshuns",
+      "searchUsernames": "Seerch usernams...",
+      "searchEmails": "Seerch emailz...",
+      "searchCreatedAts": "Seerch created ats...",
+      "searchMinIssuedAts": "Seerch min issued ats..."
+    },
+    "removeSelectedTooltip": "Remoov selekted users",
+    "logOutSelectedTooltip": "Logz owt selekted users",
+    "contextMenu": {
+      "editUser": "Edits Usr",
+      "impersonate": "Impurrrsonaet",
+      "copyUserId": "Coppy Usr ID"
+    }
+  }
+}

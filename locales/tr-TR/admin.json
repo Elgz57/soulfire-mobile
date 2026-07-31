@@ -1,0 +1,128 @@
+{
+  "overview": {
+    "welcome": "Hoş geldiniz, {{name}} 🧙",
+    "serverMetrics": {
+      "sectionTitle": "Sunucu Metrikleri",
+      "summary": {
+        "cpu": "CPU",
+        "heapUsed": "Kullanılan Yığın",
+        "threads": "İş Parçacıkları",
+        "botsOnline": "Çevrimiçi Botlar",
+        "uptime": "Çalışma Süresi"
+      },
+      "cpuUsage": {
+        "title": "CPU Kullanımı (%)"
+      },
+      "memoryUsage": {
+        "title": "Yığın Bellek (MB)"
+      },
+      "threadCount": {
+        "title": "İş Parçacığı Sayısı"
+      },
+      "aggregateBots": {
+        "title": "Botlar Çevrimiçi (Tüm Sunucular)"
+      }
+    },
+    "instancesChart": {
+      "title": "Bu sunucudaki toplam Olay sayısı",
+      "instances": "Örnekler",
+      "label": {
+        "state": "Durum",
+        "active": "Aktif",
+        "stopped": "Durduruldu",
+        "other": "Diğer"
+      }
+    },
+    "usersChart": {
+      "title": "Bu sunucudaki toplam kullanıcı sayısı",
+      "users": "Kullanıcılar",
+      "label": {
+        "role": "Rol",
+        "user": "Kullanıcı",
+        "admin": "Yönetici",
+        "other": "Diğer"
+      }
+    }
+  },
+  "users": {
+    "filterPlaceholder": "Kullanıcıları filtrele...",
+    "baseUserDialog": {
+      "form": {
+        "username": {
+          "min": "Kullanıcı adları en az 3 karakter olmalıdır",
+          "max": "Kullanıcı adları en fazla 32 karakter olmalıdır",
+          "regex": "Kullanıcı adları küçük harflerden oluşmalı, bir alfasayısal karakter ile başlamalı, devamında alfasayısal karakterler veya tireler kullanılmalı ve yine bir alfasayısal karakter ile bitmelidir.",
+          "label": "Kullanıcı Adı",
+          "placeholder": "Kullanıcı adı girin",
+          "description": "Kullanıcıyı tanımlayan benzersiz bir kullanıcı adı"
+        },
+        "email": {
+          "label": "Mail Adresi",
+          "placeholder": "E-posta girin",
+          "description": "Kullanıcının bildirimler ve giriş yapmak için kullanılan e-posta adresi"
+        },
+        "role": {
+          "label": "Rol",
+          "description": "Kullanıcının rolü. Yöneticiler kullanıcıları ve tüm örnekleri yönetebilir. Kullanıcılar yalnızca kendi örneklerini yönetebilir.",
+          "user": "Kullanıcı",
+          "admin": "Yönetici"
+        }
+      }
+    },
+    "addUserDialog": {
+      "title": "Yeni bir kullanıcı ekle",
+      "description": "Bu sunucuya yeni bir kullanıcı ekleyin",
+      "form": {
+        "cancel": "İptal",
+        "add": "Kullanıcı Ekle"
+      }
+    },
+    "updateUserDialog": {
+      "title": "Kullanıcıyı güncelle",
+      "description": "Kullanıcının bilgilerini güncelleyin",
+      "form": {
+        "cancel": "İptal",
+        "update": "Kullanıcıyı Güncelle"
+      }
+    },
+    "addToast": {
+      "loading": "Kullanıcı ekleniyor...",
+      "success": "Kullanıcı eklendi!",
+      "error": "Kullanıcı eklenemedi"
+    },
+    "updateToast": {
+      "loading": "Kullanıcı güncelleniyor...",
+      "success": "Kullanıcı güncellendi!",
+      "error": "Kullanıcı güncellenemedi"
+    },
+    "removeToast": {
+      "loading": "Kullanıcılar kaldırılıyor...",
+      "success": "Kullanıcılar kaldırıldı!",
+      "error": "Kullanıcılar kaldırılamadı"
+    },
+    "invalidateToast": {
+      "loading": "Kullanıcılar çıkış yaptırılıyor...",
+      "success": "Kullanıcılar çıkış yaptı!",
+      "error": "Kullanıcıların çıkışı yapılamadı"
+    },
+    "table": {
+      "username": "Kullanıcı Adı",
+      "email": "Mail Adresi",
+      "role": "Rol",
+      "createdAt": "Oluşturulma",
+      "minIssuedAt": "Min. Giriş",
+      "actions": "İşlemler",
+      "searchUsernames": "Kullanıcı adlarında ara...",
+      "searchEmails": "E-postalarda ara...",
+      "searchCreatedAts": "Oluşturulma tarihlerinde ara...",
+      "searchMinIssuedAts": "Minimum oluşturulma tarihlerinde ara..."
+    },
+    "removeSelectedTooltip": "Seçili kullanıcıları kaldır",
+    "logOutSelectedTooltip": "Seçili kullanıcıların oturumunu kapat",
+    "contextMenu": {
+      "editUser": "Kullanıcıyı Düzenle",
+      "impersonate": "Kimliğe Bürün",
+      "copyUserId": "Kullanıcı Kimliğini Kopyala"
+    }
+  }
+}

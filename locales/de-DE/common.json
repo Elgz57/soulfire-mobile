@@ -1,0 +1,540 @@
+{
+  "locale": "Sprache",
+  "close": "Schließen",
+  "cancel": "Abbrechen",
+  "save": "Speichern",
+  "saving": "Wird gespeichert...",
+  "error": {
+    "noAddressOrToken": "Keine Serveradresse oder Token gefunden",
+    "page": {
+      "title": "Fehler",
+      "description": "Beim Laden der Seite ist ein Fehler aufgetreten. Weitere Informationen finden Sie in der Konsole.",
+      "logOut": "Ausloggen",
+      "reloadPage": "Seite neu laden",
+      "showDetails": "Details anzeigen"
+    },
+    "connectionFailed": "Verbindung zum SoulFire-Server fehlgeschlagen."
+  },
+  "notFound": {
+    "page": {
+      "title": "Nicht gefunden",
+      "description": "Konnte an diesem Ort keine Seite finden",
+      "logOut": "Ausloggen",
+      "reloadPage": "Seite neu laden"
+    }
+  },
+  "pending": {
+    "connecting": "Verbinde..."
+  },
+  "dialog": {
+    "about": {
+      "title": "Über SoulFire",
+      "description": "Du verwendest Version {{version}} des SoulFire Clients.",
+      "type": "Typ",
+      "value": "Wert",
+      "fields": {
+        "serverVersion": "Server-Version",
+        "serverCommit": "Server-Commit",
+        "serverBranch": "Server-Branch",
+        "minecraftVersion": "Minecraft-Version",
+        "operatingSystem": "Betriebssystem",
+        "platform": "Plattform",
+        "locale": "Sprache",
+        "architecture": "Architektur",
+        "environment": "Umgebung",
+        "browser": "Browser"
+      },
+      "close": "Schließen"
+    },
+    "createInstance": {
+      "title": "Neue Instanz erstellen",
+      "description": "Instanzen benötigen Anzeigenamen, um sie zu unterscheiden. Es kann jeder Name sein, den du möchtest, zum Beispiel \"Mein Minecraft-Bot\".",
+      "form": {
+        "friendlyName": {
+          "label": "Anzeigename",
+          "placeholder": "Mein Minecraft-Bot",
+          "description": "Der Name, den Sie dieser Instanz geben möchten.",
+          "min": "Der Name muss mindestens 3 Zeichen lang sein.",
+          "max": "Der Name darf höchstens 32 Zeichen lang sein.",
+          "regex": "Der Anzeigename kann nur Buchstaben, Zahlen und Leerzeichen enthalten"
+        },
+        "cancel": "Abbrechen",
+        "create": "Erstellen"
+      },
+      "createToast": {
+        "loading": "Instanz wird erstellt...",
+        "success": "Instanz erfolgreich erstellt",
+        "error": "Fehler beim Erstellen der Instanz"
+      }
+    },
+    "import": {
+      "main": {
+        "fromFile": "Aus Datei",
+        "fromUrl": "Von URL",
+        "firstClipboardItem": "Du hast mehrere Elemente in der Zwischenablage gehabt, verwende nur den ersten Eintrag.",
+        "fromClipboard": "Aus Zwischenablage",
+        "textarea": {
+          "placeholder": "Text hier eingeben...",
+          "submit": "Von Text laden"
+        }
+      },
+      "url": {
+        "description": "Beim Laden von URL wird der SoulFire Server eine GET-Anfrage an den Zielserver senden und die Antwort als die Daten verwenden.",
+        "form": {
+          "url": {
+            "placeholder": "URL hier eingeben...",
+            "empty": "Bitte geben Sie eine gültige URL ein"
+          }
+        },
+        "submit": "Von URL laden",
+        "toast": {
+          "loading": "Daten werden heruntergeladen...",
+          "success": "Daten geladen!",
+          "error": "Fehler beim Herunterladen der Daten"
+        }
+      }
+    }
+  },
+  "commandInput": {
+    "placeholder": "Befehl eingeben (\"help\" für Liste tippen)",
+    "emptySuggestions": "Tippen Sie, um Vorschläge anzufordern, oder drücken Sie die Tabulatortaste.",
+    "noSuggestions": "Keine Vorschläge verfügbar."
+  },
+  "controls": {
+    "start": "Start",
+    "resume": "Fortsetzen",
+    "pause": "Pausieren",
+    "stop": "Stopp",
+    "startToast": {
+      "loading": "Starte Sitzung...",
+      "success": "Sitzung erfolgreich gestartet",
+      "error": "Fehler beim Starten der Sitzung"
+    },
+    "resumeToast": {
+      "loading": "Sitzung wird fortgesetzt...",
+      "success": "Sitzung erfolgreich fortgesetzt",
+      "error": "Fehler beim Fortsetzen der Sitzung"
+    },
+    "pauseToast": {
+      "loading": "Sitzung wird pausiert...",
+      "success": "Sitzung erfolgreich pausiert",
+      "error": "Fehler beim Pausieren der Sitzung"
+    },
+    "stopToast": {
+      "loading": "Sitzung wird gestoppt...",
+      "success": "Sitzung erfolgreich gestoppt",
+      "error": "Fehler beim Stoppen der Sitzung"
+    },
+    "accountWarning": {
+      "noAccountsTitle": "Keine Konten konfiguriert",
+      "noAccountsDescription": "Sie müssen Konten importieren, bevor Sie eine Sitzung starten. Sie haben {{required}} Bots angefordert.",
+      "notEnoughTitle": "Nicht genügend Konten",
+      "notEnoughDescription": "Sie haben {{required}} Bots angefordert, aber nur {{available}} Konten importiert.",
+      "hint": "Sie können Offline-Konten generieren oder Konten auf der Seite Kontoeinstellungen importieren.",
+      "continueWithExisting": "Mit {{count}} Konten fortfahren",
+      "generateAccounts": "Konten generieren"
+    }
+  },
+  "icon": {
+    "invalidName": "Ungültiger Symbolname: {{name}}"
+  },
+  "dataTable": {
+    "noResults": "Keine Ergebnisse.",
+    "rowsSelected": "{{amount}} von {{total}} Zeile(n) ausgewählt",
+    "rowsPerPage": "Zeilen pro Seite",
+    "currentPage": "Seite {{page}} von {{total}}",
+    "goFirst": "Zur erste Seite gehen",
+    "goPrevious": "Zur vorherigen Seite gehen",
+    "goNext": "Zur nächsten Seite gehen",
+    "goLast": "Zur letzten Seite gehen",
+    "selectAll": "Alle auswählen",
+    "selectRow": "Zeile auswählen",
+    "selected": "{count, plural, one {# ausgewählt} other {# ausgewählt}}",
+    "clearSelection": "Auswahl löschen",
+    "escape": "Esc",
+    "filter": "Filter",
+    "filters": "Filter",
+    "noFiltersApplied": "Keine Filter angewendet",
+    "modifyFilters": "Passen Sie die Filter an, um Ihre Zeilen zu verfeinern.",
+    "addFilters": "Fügen Sie Filter hinzu, um Ihre Zeilen zu verfeinern.",
+    "addFilter": "Filter hinzufügen",
+    "resetFilters": "Filter zurücksetzen",
+    "reset": "Zurücksetzen",
+    "where": "Wo",
+    "selectField": "Feld auswählen",
+    "searchFields": "Felder durchsuchen...",
+    "noFieldsFound": "Keine Felder gefunden.",
+    "enterValue": "Wert eingeben...",
+    "enterValueShort": "Wert eingeben...",
+    "true": "Wahr",
+    "false": "Falsch",
+    "selectOption": "Option auswählen...",
+    "selectOptions": "Optionen auswählen...",
+    "searchOptions": "Optionen durchsuchen...",
+    "noOptionsFound": "Keine Optionen gefunden.",
+    "pickDateShort": "Datum wählen...",
+    "typeToFilter": "Tippen, um Filter hinzuzufügen...",
+    "filterByValue": "Filtern nach \"{{value}}\"",
+    "view": "Ansicht",
+    "searchColumns": "Spalten durchsuchen...",
+    "noColumnsFound": "Keine Spalten gefunden.",
+    "toggleColumns": "Spalten umschalten",
+    "sort": "Sortieren",
+    "sortBy": "Sortieren nach",
+    "noSortingApplied": "Keine Sortierung angewendet",
+    "modifySorting": "Ändern Sie die Sortierung, um Ihre Zeilen zu ordnen.",
+    "addSorting": "Fügen Sie eine Sortierung hinzu, um Ihre Zeilen zu ordnen.",
+    "addSort": "Sortierung hinzufügen",
+    "resetSorting": "Sortierung zurücksetzen",
+    "columnHeader": {
+      "asc": "Aufsteigend",
+      "desc": "Absteigend",
+      "reset": "Zurücksetzen",
+      "hide": "Ausblenden"
+    },
+    "operators": {
+      "iLike": "Enthält",
+      "notILike": "Enthält nicht",
+      "eq": "Ist",
+      "ne": "Ist nicht",
+      "isEmpty": "Ist leer",
+      "isNotEmpty": "Ist nicht leer",
+      "lt": "Ist kleiner als",
+      "lte": "Ist kleiner oder gleich",
+      "gt": "Ist größer als",
+      "gte": "Ist größer oder gleich",
+      "isBetween": "Liegt zwischen",
+      "isRelativeToToday": "Ist relativ zu heute",
+      "ltDate": "Ist vor",
+      "gtDate": "Ist nach",
+      "lteDate": "Ist am oder vor",
+      "gteDate": "Ist am oder nach",
+      "inArray": "Hat eines von",
+      "notInArray": "Hat keines von"
+    },
+    "sortOrders": {
+      "asc": "Aufsteigend",
+      "desc": "Absteigend"
+    }
+  },
+  "pluginCard": {
+    "version": "Version: {{version}}",
+    "author": "Autor: {{author}}",
+    "license": "Lizenz: {{license}}",
+    "website": "Webseite"
+  },
+  "settingsPage": {
+    "namespacesNotFound": "Einstellungs-Namensräume nicht gefunden",
+    "stringList": {
+      "placeholder": "Neuen Eintrag hinzufügen...",
+      "add": "Hinzufügen",
+      "remove": "Entfernen"
+    },
+    "invalidNumberToast": {
+      "title": "Ungültige Zahl!",
+      "description": "Der Wert muss zwischen {{min}} und {{max}} liegen"
+    }
+  },
+  "terminal": {
+    "noLogs": "🧙 Es sieht so aus, als gäbe es keine Logs zum Anzeigen; Versuche ein paar Befehle auszuführen!",
+    "demo-1": "Willkommen im Demo Modus! 🧪",
+    "demo-2": "Dies ist eine schreibgeschützte Instanz von SoulFire",
+    "demo-3": "Schau dir alle Menüs und Funktionen an, bevor du SoulFire installierst :D",
+    "demo-4": "Du kannst unserem Discord Server beitreten, wenn du uns anschreiben möchtest: https://soulfiremc.com/discord"
+  },
+  "uiBreadcrumb": {
+    "more": "Mehr"
+  },
+  "uiDialog": {
+    "close": "Schließen"
+  },
+  "uiSheet": {
+    "close": "Schließen"
+  },
+  "uiSidebar": {
+    "toggle": "Seitenleiste umschalten"
+  },
+  "castMenu": {
+    "title": "Cast",
+    "disconnected": "Verbindung zu {{device}} getrennt",
+    "alreadyConnected": "Bereits mit {{device}} verbunden",
+    "connectToast": {
+      "loading": "Verbinde mit {{device}}...",
+      "success": "Mit {{device}} verbunden",
+      "error": "Verbindung zu {{device}} fehlgeschlagen"
+    },
+    "noDevices": "Keine Geräte gefunden",
+    "broadcastLabel": "Übertragungstest",
+    "broadcastToast": {
+      "loading": "Nachricht wird übertragen...",
+      "success": "Nachricht verbreitet!",
+      "error": "Senden der Nachricht fehlgeschlagen"
+    }
+  },
+  "instanceSidebar": {
+    "readDocumentation": "Dokumentation lesen",
+    "backToDashboard": "Zurück zum Dashboard",
+    "deleteToast": {
+      "loading": "Instanz wird gelöscht...",
+      "success": "Instanz gelöscht",
+      "error": "Fehler beim Löschen der Instanz"
+    },
+    "instancesGroup": "Instanzen",
+    "createInstance": "Instanz erstellen",
+    "loadProfileToast": {
+      "loading": "Lade Profil...",
+      "success": "Profil geladen",
+      "error": "Laden des Profils fehlgeschlagen"
+    },
+    "loadProfile": "Profil laden",
+    "loadFromFile": "Aus Datei laden",
+    "profileSaved": "Profil gespeichert",
+    "saveProfile": "Profil speichern",
+    "deleteInstance": "Instanz löschen",
+    "controlsGroup": "Steuerung",
+    "overview": "Übersicht",
+    "terminal": "Terminal",
+    "bots": "Bots",
+    "audit-log": "Audit-Log",
+    "settingsGroup": "Einstellungen",
+    "extensionsGroup": "Erweiterungen",
+    "botSettings": "Bot Einstellungen",
+    "accountSettings": "Konto Einstellungen",
+    "metaSettings": "Instanzeinstellungen",
+    "proxySettings": "Proxy Einstellungen",
+    "aiSettings": "KI Einstellungen",
+    "pathfindingSettings": "Pathfinding-Einstellungen",
+    "discoverPlugins": "Plugins",
+    "instanceScripts": "Skripte"
+  },
+  "userSidebar": {
+    "readDocumentation": "Dokumentation lesen",
+    "userGroup": "Nutzer",
+    "instances": "Instanzen",
+    "access": "Zugriff",
+    "createInstance": "Instanz erstellen",
+    "settings": "Einstellungen",
+    "adminGroup": "Admin",
+    "adminOverview": "Übersicht",
+    "adminLogs": "Protokolle",
+    "adminTerminal": "Terminal",
+    "users": "Nutzer",
+    "adminScripts": "Skripte",
+    "serverSettings": "Server Einstellungen",
+    "devSettings": "Entwickler Einstellungen",
+    "theme": {
+      "title": "Farbschema",
+      "system": "System",
+      "light": "Hell",
+      "dark": "Dunkel"
+    },
+    "terminal": {
+      "title": "Terminal"
+    },
+    "configDir": "Konfigverzeichnis",
+    "dataDir": "Datenverzeichnis",
+    "about": "Über",
+    "logOut": "Ausloggen",
+    "logOutToast": {
+      "loading": "Ausloggen...",
+      "success": "Ausgeloggt",
+      "error": "Ausloggen fehlgeschlagen"
+    },
+    "exit": "Beenden",
+    "stopImpersonating": "Imitieren beenden",
+    "helpTranslate": "SoulFire übersetzen"
+  },
+  "sidebar": {
+    "documentation": "Dokumentation",
+    "supportSoulFire": "Kauf mir einen Kaffee",
+    "discord": "Discord"
+  },
+  "breadcrumbs": {
+    "admin": "Admin",
+    "settings": "Einstellungen",
+    "controls": "Steuerung",
+    "extensions": "Erweiterungen",
+    "bots": "Bots"
+  },
+  "noInstancesFound": "Keine Instanzen gefunden",
+  "pageName": {
+    "terminal": "Terminal",
+    "logs": "Protokolle",
+    "audit-log": "Audit-Log",
+    "bots": "Bots",
+    "botDetail": "Botdetails",
+    "instances": "Instanzen",
+    "access": "Zugriff",
+    "settings": "Einstellungen",
+    "proxySettings": "Proxy Einstellungen",
+    "overview": "Übersicht",
+    "users": "Nutzer",
+    "accountSettings": "Konto Einstellungen",
+    "metaSettings": "Instanzeinstellungen",
+    "discoverPlugins": "Plugins",
+    "adminScripts": "Skripte",
+    "instanceScripts": "Skripte"
+  },
+  "access": {
+    "webdav": {
+      "title": "WebDAV-Zugriff",
+      "description": "SoulFire ermöglicht dir über das WebDAV-Protokoll den Zugriff auf Instanzen-, Skript- und andere Dateien.",
+      "publicAddress": "Öffentliche WebDAV-Adresse",
+      "personalToken": "Persönliches WebDAV-Token",
+      "securityWarning": "Dein persönliches WebDAV-Token ist sehr wichtig. Gib es niemandem weiter. Es dient zur Authentifizierung beim Zugriff auf deine Dateien. Verwende es als dein WebDAV-Passwort beim Verbinden. Ein Nutzername ist nicht erforderlich; falls einer abgefragt wird, kann ein beliebiger Wert verwendet werden (z.&#x2F;.B. \"soulfire\").",
+      "addressDescription": "Das ist die Adresse, mit der du auf deine Dateien zugreifen kannst. Manchmal ist es nötig, dav:// oder davs:// anstelle von http(s):// zu verwenden."
+    },
+    "api": {
+      "title": "API-Zugriff",
+      "description": "Die gRPC HTTP API von SoulFire ermöglicht es dir, programmgesteuert über Webanfragen mit deinen Instanzen zu interagieren.",
+      "publicAddress": "Öffentliche API-Adresse",
+      "personalToken": "Persönliches API-Token",
+      "securityWarning": "Dein persönliches API-Token ist sehr wichtig. Gib es niemandem weiter. Es dient zur Authentifizierung beim Zugriff auf die API.",
+      "addressDescription": "Das ist die Adresse, die du für den Zugriff auf die API verwenden musst."
+    },
+    "token": {
+      "generate": "Token generieren",
+      "placeholder": "Unten auf \"Token generieren\" klicken",
+      "generating": "Token wird generiert...",
+      "success": "Token erfolgreich generiert",
+      "error": "Token konnte nicht generiert werden",
+      "copy": "Token kopieren"
+    },
+    "address": {
+      "copy": "Adresse kopieren"
+    },
+    "documentation": "Dokumentation",
+    "howToConnect": "Verbindungsanleitung"
+  },
+  "uploadToMcLogs": "Zu mclo.gs hochladen",
+  "mcLogsUpload": {
+    "loading": "Wird zu mclo.gs hochgeladen...",
+    "success": "Zu mclo.gs hochgeladen! Hier ansehen: {{url}}",
+    "error": "Hochladen zu mclo.gs fehlgeschlagen"
+  },
+  "searchWithGoogle": "Mit Google suchen",
+  "copyToClipboard": "In die Zwischenablage kopieren",
+  "clipboardCopy": {
+    "loading": "Wird in die Zwischenablage kopiert...",
+    "success": "\"{{content}}\" wurde in die Zwischenablage kopiert",
+    "error": "Kopieren in die Zwischenablage fehlgeschlagen"
+  },
+  "userSettings": {
+    "avatar": {
+      "title": "Avatar",
+      "description": "Ihr Benutzer-Avatar basiert auf Ihrer Kontoe-Mail. Sie können das Avatar-Bild für Ihre E-Mail-Adresse ändern bei",
+      "gravatar": "Gravatar"
+    },
+    "username": {
+      "uiName": "Benutzername",
+      "description": "Ihr Benutzername wird zur Identifikation in der Benutzeroberfläche und in Protokollen verwendet."
+    },
+    "email": {
+      "uiName": "E-Mail",
+      "description": "Ihre E-Mail wird für die Anmeldung und Benachrichtigungen verwendet."
+    }
+  },
+  "auditLog": {
+    "filterPlaceholder": "Audit-Logs filtern...",
+    "user": "Nutzer",
+    "action": "Aktion",
+    "type": "Typ",
+    "timestamp": "Zeitstempel",
+    "searchUsers": "Benutzer suchen...",
+    "searchTimestamps": "Zeitstempel suchen...",
+    "executedCommand": "Ausgeführter Befehl: {{data}}",
+    "contextMenu": {
+      "copyUsername": "Benutzernamen kopieren",
+      "copyCommand": "Befehl kopieren"
+    }
+  },
+  "toggleTheme": "Theme umschalten",
+  "pickADate": "Datum auswählen",
+  "scripts": {
+    "filterPlaceholder": "Skripte filtern...",
+    "baseScriptDialog": {
+      "form": {
+        "scriptName": {
+          "min": "Skriptnamen müssen mindestens 3 Zeichen enthalten",
+          "max": "Skriptnamen dürfen höchstens 32 Zeichen enthalten",
+          "regex": "Skriptnamen müssen klein geschrieben, mit einem alphanumerischen Zeichen beginnen, darauf folgende alphanumerische Zeichen oder Bindestriche enthalten und mit einem alphanumerischen Zeichen enden.",
+          "label": "Name",
+          "placeholder": "Mein Skript",
+          "description": "Der Name des Skripts."
+        },
+        "elevatedPermissions": {
+          "label": "Erhöhte Berechtigungen",
+          "description": "Ob das Skript mit erhöhten Berechtigungen ausgeführt werden soll. Nur Administratoren können diese Option aktivieren."
+        }
+      }
+    },
+    "addScriptDialog": {
+      "title": "Neues Skript hinzufügen",
+      "description": "Skripte sind kleine Programme, die auf dem SoulFire-Server ausgeführt werden. Sie können verwendet werden, um Aufgaben zu automatisieren, benutzerdefiniertes Verhalten zu erstellen und mehr.",
+      "form": {
+        "cancel": "Abbrechen",
+        "add": "Hinzufügen"
+      }
+    },
+    "updateScriptDialog": {
+      "title": "Skript aktualisieren",
+      "description": "Aktualisiere die Informationen des Skripts.",
+      "form": {
+        "cancel": "Abbrechen",
+        "update": "Aktualisieren"
+      }
+    },
+    "removeToast": {
+      "loading": "Skripte werden entfernt...",
+      "success": "Skripte entfernt!",
+      "error": "Fehler beim Entfernen der Skripte"
+    },
+    "addToast": {
+      "loading": "Skript wird hinzugefügt...",
+      "success": "Skript hinzugefügt!",
+      "error": "Fehler beim Hinzufügen des Skripts"
+    },
+    "updateToast": {
+      "loading": "Skript wird aktualisiert...",
+      "success": "Skript aktualisiert!",
+      "error": "Fehler beim Aktualisieren des Skripts"
+    },
+    "restartToast": {
+      "loading": "Skript wird neu gestartet...",
+      "success": "Skript neu gestartet!",
+      "error": "Fehler beim Neustart des Skripts"
+    },
+    "table": {
+      "type": "Typ",
+      "scriptName": "Name",
+      "language": "Sprache",
+      "elevatedPermissions": "Erhöhte Berechtigungen",
+      "createdAt": "Erstellt",
+      "actions": "Aktionen"
+    },
+    "globalScript": "Global",
+    "instanceScript": "Instanz"
+  },
+  "contextMenu": {
+    "instance": {
+      "goToInstance": "Zur Instanz gehen",
+      "copyInstanceId": "Instanz-ID kopieren",
+      "copyInstanceName": "Instanznamen kopieren",
+      "deleteInstance": "Instanz löschen"
+    },
+    "bot": {
+      "goToBot": "Zum Bot gehen",
+      "copyUsername": "Benutzernamen kopieren",
+      "copyUuid": "UUID kopieren",
+      "copyCoordinates": "Koordinaten kopieren"
+    },
+    "plugin": {
+      "enable": "Aktivieren",
+      "disable": "Deaktivieren",
+      "openSettings": "Einstellungen öffnen",
+      "copyPluginName": "Plugin-Namen kopieren",
+      "copyVersion": "Version kopieren",
+      "openWebsite": "Website öffnen"
+    }
+  }
+}
