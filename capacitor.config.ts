@@ -31,6 +31,14 @@ const config: CapacitorConfig = {
       showSpinner: false,
     },
     Keyboard: {
+      // iOS only — the plugin ignores `resize` on Android. Pinned rather than
+      // left to the default because src/lib/mobile.ts depends on it: `native`
+      // resizes the WebView, so the visual viewport shrinks and iOS needs no
+      // manual --keyboard-height offset. Changing this breaks that assumption.
+      //
+      // Android deliberately does NOT set `resizeOnFullScreen`. Enabling it
+      // would resize the WebView there too, which would then double-count
+      // against the --keyboard-height offset the same UI relies on.
       resize: "native",
     },
   },

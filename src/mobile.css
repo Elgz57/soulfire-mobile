@@ -74,6 +74,12 @@ html.native-app [data-slot="drawer-content"][data-vaul-drawer-direction="top"] {
  */
 html.native-app [data-slot="dialog-content"] {
   max-height: calc(100dvh - var(--safe-top) - var(--safe-bottom) - 2rem);
+  /*
+   * Required, not decorative: ui/dialog.tsx sets no max-height and no
+   * overflow of its own, so capping the height without this clips anything
+   * taller than the screen with no way to reach it.
+   */
+  overflow-y: auto;
 }
 
 /*
@@ -98,11 +104,16 @@ html.native-app {
   user-select: none;
 }
 
+/*
+ * `.select-text` is what actually re-enables selection for the terminal and
+ * log output — those components carry the Tailwind utility rather than a
+ * data-slot, so do not add a [data-slot="terminal"] selector here; nothing
+ * renders one.
+ */
 html.native-app input,
 html.native-app textarea,
 html.native-app [contenteditable="true"],
-html.native-app .select-text,
-html.native-app [data-slot="terminal"] {
+html.native-app .select-text {
   user-select: text;
   -webkit-user-select: text;
   -webkit-touch-callout: default;

@@ -32,12 +32,23 @@ const mirroredKeySet = new Set<string>(MIRRORED_KEYS);
  * Must be awaited before anything reads auth state (`isAuthenticated()`) or
  * the app will render its logged-out state for a logged-in user.
  */
+/**
+ * Upper bound on how long boot may wait for native storage.
+ *
+ * This runs behind a top-level await, so anything that leaves it pending
+ * leaves the user staring at a blank screen with no error and no way forward.
+ * Reading a handful of preferences is sub-millisecond work; if the bridge is
+ * not answering in a second it is not going to, and rendering signed-out is a
+ * far better outcome than never rendering at all.
+ */
+const HYDRATE_TIMEOUT_MS = 1000;
+
 export async function hydrateNativeStorage(): Promise<void> {
   if (!isNativeApp()) {
     return;
   }
 
-  await Promise.all(
+  const read = Promise.all(
     MIRRORED_KEYS.map(async (key) => {
       try {
         const { value } = await Preferences.get({ key });
@@ -51,6 +62,13 @@ export async function hydrateNativeStorage(): Promise<void> {
       }
     }),
   );
+
+  await Promise.race([
+    read,
+    new Promise<void>((resolve) => {
+      setTimeout(resolve, HYDRATE_TIMEOUT_MS);
+    }),
+  ]);
 }
 
 /**

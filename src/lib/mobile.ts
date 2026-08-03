@@ -53,11 +53,30 @@ function watchThemeChanges(): void {
 }
 
 /**
- * Android raises the software keyboard over the WebView. Exposing its height
- * as a CSS variable lets sticky footers (the terminal input, dialog actions)
- * lift above it instead of being covered.
+ * Publishes the software keyboard height as `--keyboard-height` so that
+ * fixed-position UI (the script editor's quick-add panel) can lift above it.
+ *
+ * Android only, deliberately. The keyboard plugin resizes the Android WebView
+ * only when `resizeOnFullScreen` is enabled, and Capacitor 8 draws
+ * edge-to-edge — which counts as full screen — so by default the keyboard
+ * simply covers the WebView: the viewport keeps its full height, `dvh` does
+ * not shrink, and anything pinned to the bottom needs lifting by hand.
+ *
+ * iOS behaves the opposite way. `Keyboard.resize` defaults to `native` (and
+ * capacitor.config.ts pins it) which resizes the WebView itself, so the
+ * visual viewport already shrinks and `bottom` is already measured above the
+ * keyboard. Publishing a height there too would lift that UI a second time,
+ * by a full keyboard, pushing it into the middle of the screen. Leaving the
+ * variable at its 0px default keeps iOS correct.
+ *
+ * If `Keyboard.resize` is ever changed away from `native`/`body` on iOS, this
+ * assumption has to be revisited.
  */
 function watchKeyboard(): void {
+  if (getNativePlatform() !== "android") {
+    return;
+  }
+
   const setHeight = (height: number) => {
     document.documentElement.style.setProperty(
       "--keyboard-height",
