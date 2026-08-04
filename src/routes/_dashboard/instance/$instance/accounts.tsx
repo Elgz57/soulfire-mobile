@@ -1211,9 +1211,24 @@ function Content() {
   const { data: instanceInfo } = useSuspenseQuery(instanceInfoQueryOptions);
   const profile = instanceInfo.profile;
   const isMobile = useIsMobile();
+  // The toolbar renders a filter for every filterable column regardless of
+  // visibility, so hiding profileId below would otherwise leave a
+  // "Search profile IDs" box on screen searching a column that is not there —
+  // a full row of a short screen spent on a control that looks broken.
+  const tableColumns = useMemo(
+    () =>
+      isMobile
+        ? columns.map((column) =>
+            column.id === "profileId"
+              ? { ...column, enableColumnFilter: false }
+              : column,
+          )
+        : columns,
+    [isMobile],
+  );
   const { table } = useDataTable({
     data: profile.accounts,
-    columns,
+    columns: tableColumns,
     getRowId: (row) => row.profileId,
     initialState: {
       // A profile UUID is 36 characters and stretches the table to ~583px
@@ -1249,6 +1264,7 @@ function Content() {
       </div>
       <DataTable
         table={table}
+        compactPagination={isMobile}
         onRowContextMenu={handleContextMenu}
         actionBar={
           <DataTableActionBar table={table}>

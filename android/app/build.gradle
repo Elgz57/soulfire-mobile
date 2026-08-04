@@ -10,8 +10,8 @@ android {
         // Bump both on every build handed to a tester. Android will refuse to
         // downgrade, and a matching versionCode makes it impossible to tell
         // whether a reinstall actually replaced the previous APK.
-        versionCode 7
-        versionName "2.9.7"
+        versionCode 8
+        versionName "2.9.8"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.

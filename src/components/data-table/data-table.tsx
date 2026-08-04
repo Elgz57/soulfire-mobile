@@ -19,12 +19,15 @@ interface DataTableProps<TData extends RowData>
   table: ReactTable<typeof dataTableFeatures, TData>;
   actionBar?: React.ReactNode;
   onRowContextMenu?: (e: React.MouseEvent, row: TData) => void;
+  /** Forwarded to DataTablePagination; see `compact` there. Off by default. */
+  compactPagination?: boolean;
 }
 
 export function DataTable<TData extends RowData>({
   table,
   actionBar,
   onRowContextMenu,
+  compactPagination,
   children,
   className,
   ...props
@@ -96,7 +99,7 @@ export function DataTable<TData extends RowData>({
         </Table>
       </div>
       <div className="flex flex-col gap-2.5">
-        <DataTablePagination table={table} />
+        <DataTablePagination table={table} compact={compactPagination} />
         {actionBar ? (
           <table.Subscribe
             selector={(state) => ({
