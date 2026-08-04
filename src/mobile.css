@@ -61,59 +61,36 @@ html.native-app [data-slot="sidebar"][data-mobile="true"] {
 /*
  * vaul drawers are edge-anchored; only the anchored edge needs insetting.
  *
- * A bottom drawer must also clear the software keyboard. Credenza renders every
- * dialog as a bottom drawer on mobile, so any dialog with a text field — the
- * account import dialog, for one — puts its content and its submit button in
- * exactly the region the keyboard covers. Android does not resize the WebView
- * (see watchKeyboard in src/lib/mobile.ts), so nothing moves aside on its own
- * and the button is simply unreachable.
+ * Credenza renders every dialog as a bottom drawer on mobile, so a dialog with
+ * a text field puts its content in the region the software keyboard covers, and
+ * Android does not resize the WebView (see watchKeyboard in src/lib/mobile.ts)
+ * so nothing moves aside on its own.
  *
- * margin-bottom rather than padding: it lifts the whole panel instead of
- * growing it, and does not fight vaul's drag transform. max-height drops by the
- * same amount so a tall drawer cannot run off the top once lifted.
- * --keyboard-height is 0px unless an Android keyboard is open.
+ * This is deliberately the minimal intervention. Earlier versions lifted the
+ * panel with margin-bottom and recomputed its max-height against a keyboard
+ * budget, and that produced three separate regressions: a drawer collapsed to
+ * its drag handle, then one whose content spilled off-screen unreachably, then
+ * one so short it showed an arbitrary slice of the dialog. Reserving space
+ * inside the panel does the same job without touching where it sits or how tall
+ * it may be:
+ *
+ * - padding-bottom keeps the *content* clear of the keyboard. Content lays out
+ *   from the top, so the padding pushes the last elements — the submit button —
+ *   up above it.
+ * - vaul's own 80vh cap is left alone, so with no keyboard this renders exactly
+ *   as upstream plus the safe-area inset. That matters: the no-keyboard case is
+ *   the common one and it now cannot regress.
+ * - overflow-y keeps anything past the cap reachable rather than clipped.
+ *
+ * The keyboard term is bounded here as well as clamped in watchKeyboard, so a
+ * bad value cannot reserve the entire panel.
  */
 html.native-app
 [data-slot="drawer-content"][data-vaul-drawer-direction="bottom"] {
-  padding-bottom: var(--safe-bottom);
-  /*
-   * Bounded independently of the JS clamp: this rule decides where the panel
-   * sits, so an oversized value must not be able to lift it clean off the top
-   * of the screen. Belt and braces with the clamp in watchKeyboard.
-   */
-  margin-bottom: min(var(--keyboard-height, 0px), 60dvh);
-  /*
-   * Height is budgeted from what is actually free: the viewport minus the
-   * keyboard, minus the status bar, minus a little breathing room. Without the
-   * safe-top term a lifted drawer runs up under the status bar.
-   *
-   * The max() floor is load-bearing. A plain calc() subtraction goes negative
-   * once the reported keyboard exceeds the viewport, CSS clamps a negative
-   * max-height to 0, and the drawer collapses to its 25px drag handle — an open
-   * dialog with nothing in it. The min() keeps vaul's usual 80vh ceiling when
-   * there is no keyboard.
-   */
-  max-height: min(
-    80dvh,
-    max(
-      /*
-       * 30dvh, not more: the floor only applies once the budget calculation
-       * has gone implausibly small, and at the clamp ceiling in watchKeyboard
-       * (60% of the viewport) a 35dvh floor still nudged the drawer a couple
-       * of pixels under the status bar. 30dvh clears it for every value the
-       * clamp permits, and the content scrolls either way.
-       */
-      30dvh,
-      calc(100dvh - var(--keyboard-height, 0px) - var(--safe-top, 0px) - 1rem)
-    )
+  padding-bottom: calc(
+    var(--safe-bottom) +
+    min(var(--keyboard-height, 0px), 50dvh)
   );
-  /*
-   * Mandatory alongside max-height, and its absence is what made the import
-   * dialog unusable: DrawerContent sets no overflow of its own, so content
-   * taller than the cap simply spilled past the bottom of the screen. The
-   * textarea was cut in half and the submit button was not on screen at all,
-   * with no way to scroll to it.
-   */
   overflow-y: auto;
 }
 
