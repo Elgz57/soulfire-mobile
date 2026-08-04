@@ -23,10 +23,12 @@ import { CreateInstanceProvider } from "@/components/dialog/create-instance-dial
 import { ErrorComponent } from "@/components/error-component.tsx";
 import { TransportContext } from "@/components/providers/transport-context.tsx";
 import { demoClientData } from "@/demo-data.ts";
+import { diagnoseConnectionFailure } from "@/lib/connection-error.ts";
 import { desktop, isDesktopApp } from "@/lib/desktop.ts";
 import { smartEntries } from "@/lib/utils.tsx";
 import {
   createTransport,
+  getServerAddress,
   isAuthenticated,
   isImpersonating,
   logOut,
@@ -233,7 +235,21 @@ function DashboardLayout() {
   const { t } = useTranslation("common");
   const loaderData = Route.useLoaderData();
   if (!loaderData.success) {
-    return <ErrorComponent error={new Error(t("error.connectionFailed"))} />;
+    // Say which address failed and why. The previous fixed string plus "check
+    // the console" was unactionable on a phone, and threw the real error away —
+    // wrong address, nothing listening, firewall and rejected token all looked
+    // identical despite needing completely different fixes.
+    const diagnosis = diagnoseConnectionFailure(
+      loaderData.connectionError,
+      getServerAddress(),
+    );
+    const lines = [
+      t("error.connectionFailed"),
+      t(diagnosis.reasonKey, diagnosis.values),
+      ...(diagnosis.hintKey ? [t(diagnosis.hintKey, diagnosis.values)] : []),
+    ];
+
+    return <ErrorComponent error={new Error(lines.join("\n\n"))} />;
   }
 
   return (

@@ -13,7 +13,15 @@
       "reloadPage": "Reload page",
       "showDetails": "Show details"
     },
-    "connectionFailed": "Connection to the SoulFire server failed."
+    "connectionFailed": "Connection to the SoulFire server failed.",
+    "connection": {
+      "timedOut": "No response from {{address}} within 6 seconds.",
+      "unreachable": "Could not reach {{address}}.",
+      "rejected": "{{address}} refused the connection ({{code}}). Log out and sign in again.",
+      "other": "{{address}} failed with {{code}}: {{message}}",
+      "loopbackHint": "This address points at this phone, not at your computer. Use the computer's address on your network instead, for example http://192.168.1.20:{{port}}.",
+      "firewallHint": "Check that the SoulFire server is running, that both devices are on the same network, and that port {{port}} is allowed through its firewall."
+    }
   },
   "notFound": {
     "page": {

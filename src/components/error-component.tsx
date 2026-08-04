@@ -96,7 +96,13 @@ export function ErrorComponent({ error, reset }: ErrorComponentProps) {
         <CardContent>
           <Collapsible open={expanded} onOpenChange={setExpanded}>
             <div className="flex flex-col gap-2">
-              <p className="select-text break-words text-red-500">
+              {/*
+                whitespace-pre-line so a multi-line diagnosis keeps its
+                paragraph breaks — the connection error is now reason plus hint
+                rather than one sentence, and without this it collapses into a
+                wall of text.
+              */}
+              <p className="select-text whitespace-pre-line break-words text-red-500">
                 {error.message}
               </p>
               {hasStack && (

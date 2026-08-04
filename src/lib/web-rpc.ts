@@ -37,6 +37,16 @@ export const setAuthentication = (
   localStorage.setItem(LOCAL_STORAGE_SERVER_TOKEN_KEY, token);
 };
 
+/**
+ * The configured server address, for diagnostics.
+ *
+ * Read-only on purpose: the connection error screen needs to tell the user
+ * which address failed, which is most of what makes that screen actionable.
+ */
+export const getServerAddress = () => {
+  return localStorage.getItem(LOCAL_STORAGE_SERVER_ADDRESS_KEY);
+};
+
 export const getServerType = () => {
   return localStorage.getItem(
     LOCAL_STORAGE_SERVER_TYPE_KEY,
