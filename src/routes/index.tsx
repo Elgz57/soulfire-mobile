@@ -4,7 +4,7 @@ import {
   NextAuthFlowResponse_Failure_Reason,
 } from "@soulfiremc/sdk/generated/soulfire/login_pb";
 import { useForm } from "@tanstack/react-form";
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, redirect, useNavigate } from "@tanstack/react-router";
 import { REGEXP_ONLY_DIGITS } from "input-otp";
 import {
   ArrowLeftIcon,
@@ -121,8 +121,28 @@ const LOCAL_STORAGE_FORM_MOBILE_INTEGRATED_SERVER_TOKEN_KEY =
   "form-mobile-integrated-server-token";
 
 export const Route = createFileRoute("/")({
-  beforeLoad: () =>
-    staticRouteChrome(() => i18n.t("login:connect.title"), SOULFIRE_LOGO_ICON),
+  beforeLoad: () => {
+    // Resume a stored dedicated-server session instead of showing the connect
+    // form again.
+    //
+    // The app always cold-starts at "/", so without this a returning user was
+    // asked to log in on every launch even though a valid token was sitting in
+    // storage. (The redirect in src/index.tsx cannot do this: it is gated on
+    // window.location.pathname === "", which is never true in a browser — the
+    // path is "/" at minimum.)
+    //
+    // No redirect loop: _dashboard's guard calls logOut() before sending an
+    // unauthenticated user here, so isAuthenticated() is already false
+    // whenever we arrive from there.
+    if (isAuthenticated() && getServerType() === "dedicated") {
+      throw redirect({ to: "/user", replace: true });
+    }
+
+    return staticRouteChrome(
+      () => i18n.t("login:connect.title"),
+      SOULFIRE_LOGO_ICON,
+    );
+  },
   component: Index,
 });
 

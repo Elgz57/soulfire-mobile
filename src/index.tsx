@@ -18,7 +18,6 @@ import {
   hydrateNativeStorage,
   installNativeStorageMirror,
 } from "@/lib/mobile-storage.ts";
-import { getServerType, isAuthenticated } from "@/lib/web-rpc.ts";
 import { routeTree } from "./routeTree.gen";
 
 window.addEventListener("vite:preloadError", () => {
@@ -98,13 +97,12 @@ declare module "@tanstack/react-router" {
   }
 }
 
-if (
-  isAuthenticated() &&
-  getServerType() === "dedicated" &&
-  window.location.pathname === ""
-) {
-  window.location.pathname = "/user";
-}
+// Upstream resumed a saved session here, but the condition it used
+// (window.location.pathname === "") can never be true in a browser — the path
+// is "/" at minimum — so it never ran, and on mobile every cold start landed
+// back on the connect form. The "/" route's beforeLoad guard now handles this,
+// which also avoids the full page reload that assigning to location.pathname
+// would cause.
 
 // Render the app
 const rootElement = document.getElementById("root");
