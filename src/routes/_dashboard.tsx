@@ -68,12 +68,27 @@ export const Route = createFileRoute("/_dashboard")({
             {},
             {
               signal: props.signal,
+              // Bounded so an address that black-holes (a LAN IP that no
+              // longer answers, say) fails instead of hanging on the OS TCP
+              // timeout — this query gates the whole dashboard, so hanging it
+              // means an endless spinner with no way back to the connect
+              // screen. Set per call rather than on the transport, which would
+              // also cut off the long-lived log and live-feed streams.
+              timeoutMs: 6_000,
             },
           );
 
           return result;
         },
-        refetchInterval: 3_000,
+        // Polling stops once the query is failing. While it kept polling every
+        // three seconds, a suspense query that had just errored was immediately
+        // put back into a pending state, so the error boundary never got to
+        // render: instead of an error screen with "Log out", the dashboard sat
+        // on an empty shell spinning forever, with no route back to the connect
+        // screen. Recovery is by the error screen's Reload, or a successful
+        // refetch after a manual retry.
+        refetchInterval: (query) =>
+          query.state.error === null ? 3_000 : false,
       });
       props.abortController.signal.addEventListener("abort", () => {
         void props.context.queryClient.cancelQueries({
@@ -92,7 +107,10 @@ export const Route = createFileRoute("/_dashboard")({
           const result = await clientService.getClientData(
             {},
             {
+              // Same reasoning as listInstances above: this gates the
+              // dashboard, so it must fail rather than hang.
               signal: props.signal,
+              timeoutMs: 6_000,
             },
           );
 
@@ -123,9 +141,9 @@ export const Route = createFileRoute("/_dashboard")({
       });
     }
   },
-  loader: (
+  loader: async (
     props,
-  ):
+  ): Promise<
     | {
         success: true;
         transport: Transport | null;
@@ -133,7 +151,8 @@ export const Route = createFileRoute("/_dashboard")({
     | {
         success: false;
         connectionError: object;
-      } => {
+      }
+  > => {
     const transport = createTransport();
     if (transport === null) {
       return {
@@ -143,12 +162,26 @@ export const Route = createFileRoute("/_dashboard")({
     }
 
     try {
-      void props.context.queryClient.prefetchQuery(
-        props.context.instanceListQueryOptions,
-      );
-      void props.context.queryClient.prefetchQuery(
-        props.context.clientDataQueryOptions,
-      );
+      // Awaited, and ensureQueryData rather than prefetchQuery.
+      //
+      // The success: false branch below — and the "connectionFailed" string it
+      // renders — were unreachable: prefetchQuery swallows its own errors and
+      // these calls were additionally fire-and-forget via void, so the catch
+      // could never run and the loader always reported success. The dashboard
+      // then mounted against a server it could not reach, its suspense queries
+      // failed, were refetched from scratch, and the user sat on a spinner with
+      // no way back to the connect screen.
+      //
+      // Awaiting here means an unreachable server surfaces as the connection
+      // error screen, which carries "Log out" and "Reload page".
+      await Promise.all([
+        props.context.queryClient.ensureQueryData(
+          props.context.instanceListQueryOptions,
+        ),
+        props.context.queryClient.ensureQueryData(
+          props.context.clientDataQueryOptions,
+        ),
+      ]);
 
       // We need this as demo data
       // if (APP_ENVIRONMENT === 'development') {

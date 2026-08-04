@@ -2,27 +2,25 @@ import { Preferences } from "@capacitor/preferences";
 import { isNativeApp } from "@/lib/mobile.ts";
 
 /**
- * Keys that must survive the WebView's storage being cleared.
+ * Preferences mirrored into durable native storage.
  *
- * A WebView's `localStorage` lives in the app's cache-adjacent web data, which
- * Android may evict and which some OEM "clear cache" flows wipe outright. That
- * would silently sign the user out and lose their server address. Capacitor's
- * Preferences plugin writes to SharedPreferences (Android) / UserDefaults
- * (iOS), which is durable and included in device backups.
+ * Deliberately excludes the auth keys (`server-type`, `server-address`,
+ * `server-token`, `server-webdav-token`).
  *
- * The values are mirrored rather than moved: the rest of the app keeps reading
- * `localStorage` synchronously, exactly like upstream, so no route loader has
- * to become async.
+ * They used to be here, as insurance against Android evicting the WebView's
+ * `localStorage`. That was speculative — the eviction was never observed — and
+ * it created a worse bug than the one it guarded against: `logOut()` removes
+ * the keys synchronously from `localStorage` but the matching
+ * `Preferences.remove` is async, so an app killed straight after signing out
+ * left the credentials in native storage, and the next launch copied them back.
+ * The user was signed in again with a dead token, redirected past the connect
+ * screen, and left staring at a loading dashboard with no way back.
+ *
+ * Login already survives restarts without this: WebView `localStorage` is
+ * persistent storage, not cache. Only cosmetic preferences are mirrored now,
+ * where a stale value is harmless.
  */
-const MIRRORED_KEYS = [
-  "server-type",
-  "server-address",
-  "server-token",
-  "server-webdav-token",
-  "theme",
-  "terminal-theme",
-  "i18nextLng",
-] as const;
+const MIRRORED_KEYS = ["theme", "terminal-theme", "i18nextLng"] as const;
 
 const mirroredKeySet = new Set<string>(MIRRORED_KEYS);
 

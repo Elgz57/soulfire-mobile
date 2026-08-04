@@ -54,6 +54,30 @@ const queryClient = new QueryClient({
         ) {
           return false;
         }
+        // An aborted call is not a failure to retry.
+        if (code === Code.Canceled) {
+          return false;
+        }
+        // Connection-level failures: the server could not be reached at all —
+        // wrong address, or a LAN server while the phone is on mobile data.
+        // That is the most likely failure on a phone and it will not fix
+        // itself. Retrying five times with exponential backoff only buys a
+        // minute of spinner before the error screen — which is where the
+        // "log out / change server" button lives — finally appears, and the
+        // user cannot reach the connect screen until it does. One retry still
+        // covers a server that is genuinely mid-restart.
+        //
+        // All three codes matter here, and assuming Unavailable alone was
+        // enough is why a dead address still hung: connect-es reports a
+        // rejected fetch as Unknown, and a call that exceeds its timeoutMs as
+        // DeadlineExceeded. Unavailable is the least likely of the three.
+        if (
+          code === Code.Unavailable ||
+          code === Code.Unknown ||
+          code === Code.DeadlineExceeded
+        ) {
+          return failureCount < 1;
+        }
         return failureCount < 5;
       },
       structuralSharing: (prev: unknown, next: unknown) =>

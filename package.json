@@ -1,6 +1,6 @@
 {
   "name": "soulfire-mobile",
-  "version": "2.9.11",
+  "version": "2.9.12",
   "description": "Mobile client for SoulFire.",
   "type": "module",
   "private": true,
