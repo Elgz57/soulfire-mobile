@@ -1,4 +1,5 @@
 import { useAptabase } from "@aptabase/react";
+import { Clipboard } from "@capacitor/clipboard";
 import { createClient } from "@connectrpc/connect";
 import { InstancePermission } from "@soulfiremc/sdk/generated/soulfire/common_pb";
 import { DownloadService } from "@soulfiremc/sdk/generated/soulfire/download_pb";
@@ -28,6 +29,7 @@ import { Input } from "@/components/ui/input.tsx";
 import { Separator } from "@/components/ui/separator.tsx";
 import { Textarea } from "@/components/ui/textarea.tsx";
 import { desktop, isDesktopApp } from "@/lib/desktop.ts";
+import { isNativeApp } from "@/lib/mobile.ts";
 import { hasInstancePermission, runAsync } from "@/lib/utils.tsx";
 
 export type TextInput = {
@@ -311,6 +313,24 @@ function MainDialog(
                         props.listener(
                           (await desktop.clipboard.readText()) ?? "",
                         );
+                      } else if (isNativeApp()) {
+                        // Android's WebView does not implement the read half
+                        // of the async Clipboard API, so the browser branch
+                        // below throws there — and runAsync only logs, so the
+                        // button appeared to do nothing at all. Capacitor's
+                        // Clipboard plugin goes through the native clipboard
+                        // manager instead.
+                        try {
+                          const { value } = await Clipboard.read();
+                          if (!value) {
+                            toast.error(t("dialog.import.main.clipboardEmpty"));
+                            return;
+                          }
+                          props.listener(value);
+                        } catch (e) {
+                          console.error(e);
+                          toast.error(t("dialog.import.main.clipboardFailed"));
+                        }
                       } else {
                         const mimeTypes = props.filters.map((f) => f.mimeType);
                         const matcher = new MimeMatcher(...mimeTypes);

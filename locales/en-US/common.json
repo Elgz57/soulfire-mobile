@@ -95,6 +95,8 @@
         "fromUrl": "From URL",
         "firstClipboardItem": "You had multiple items in the clipboard, only using first one.",
         "fromClipboard": "From clipboard",
+        "clipboardEmpty": "Nothing to paste — the clipboard is empty.",
+        "clipboardFailed": "Could not read the clipboard. Paste into the text box below instead.",
         "textarea": {
           "placeholder": "Put text here...",
           "submit": "Load from text"
