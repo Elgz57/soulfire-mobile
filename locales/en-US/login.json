@@ -98,7 +98,8 @@
     "toast": {
       "loading": "Checking code...",
       "success": "Logged in",
-      "error": "Code is invalid"
+      "error": "Code is invalid",
+      "errorNetwork": "The server did not answer. Check it is still running, then try again."
     },
     "back": "Back"
   },

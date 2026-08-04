@@ -87,6 +87,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group.tsx";
 import { Scroller } from "@/components/ui/scroller.tsx";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group.tsx";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard.ts";
+import { isConnectionFailure } from "@/lib/connection-error.ts";
 import { desktop, isDesktopApp } from "@/lib/desktop.ts";
 import type {
   DesktopCustomSoulFireServerJar,
@@ -119,6 +120,17 @@ const LOCAL_STORAGE_FORM_INTEGRATED_SERVER_CUSTOM_JAR_ID =
   "form-integrated-server-custom-jar-id";
 const LOCAL_STORAGE_FORM_MOBILE_INTEGRATED_SERVER_TOKEN_KEY =
   "form-mobile-integrated-server-token";
+
+/**
+ * Deadline for the two login RPCs.
+ *
+ * createAddressOnlyTransport sets no default timeout, so a server that accepts
+ * the connection but never answers left both steps hanging forever — and the
+ * code-entry step disables its input while in flight, so the only way out was
+ * force-quitting the app. Generous rather than tight: Login sends an email
+ * server-side, and a slow-but-working server should not be declared dead.
+ */
+const LOGIN_TIMEOUT_MS = 20_000;
 
 export const Route = createFileRoute("/")({
   beforeLoad: () => {
@@ -1483,9 +1495,15 @@ function EmailForm({
       );
       toast.promise(
         loginService
-          .login({
-            email: email,
-          })
+          .login(
+            {
+              email: email,
+            },
+            // Bounded so a server that accepts the connection but never answers
+            // cannot leave the toast spinning indefinitely. Generous, because
+            // this call sends the email server-side.
+            { timeoutMs: LOGIN_TIMEOUT_MS },
+          )
           .then((response) => {
             setAuthFlowData({
               email: email,
@@ -1776,10 +1794,17 @@ function EmailCodeMenu(props: {
         LoginService,
         createAddressOnlyTransport(props.authFlowData.address),
       )
-        .emailCode({
-          code: code,
-          authFlowToken: props.authFlowData.flowToken,
-        })
+        .emailCode(
+          {
+            code: code,
+            authFlowToken: props.authFlowData.flowToken,
+          },
+          // Without this the "Checking code..." toast spins forever if the
+          // server accepts the request and never replies: this transport has no
+          // default timeout, and the code entry is disabled while it is in
+          // flight, so there is no way out except restarting the app.
+          { timeoutMs: LOGIN_TIMEOUT_MS },
+        )
         .then((response) => {
           if (response.next.case === "success") {
             void props.redirectWithCredentials(
@@ -1809,7 +1834,13 @@ function EmailCodeMenu(props: {
           setInputDisabled(false);
           setCodeValue("");
           console.error(e);
-          return t("emailCode.toast.error");
+          // "Code is invalid" is wrong and misleading when the server simply
+          // stopped answering — the user retypes a perfectly good code and
+          // gets the same message. Only claim the code is bad when the server
+          // actually said so.
+          return isConnectionFailure(e)
+            ? t("emailCode.toast.errorNetwork")
+            : t("emailCode.toast.error");
         },
       },
     );

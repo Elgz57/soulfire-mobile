@@ -47,6 +47,22 @@ function parseAddress(address: string | null): {
   }
 }
 
+/**
+ * True when the failure is the connection rather than the request's contents.
+ *
+ * Lets callers avoid blaming the user for something the network did — the login
+ * code step reported "Code is invalid" for a server that had simply stopped
+ * answering, which sends people retyping a perfectly good code.
+ */
+export function isConnectionFailure(error: unknown): boolean {
+  const { code } = ConnectError.from(error);
+  return (
+    code === Code.DeadlineExceeded ||
+    code === Code.Unavailable ||
+    code === Code.Unknown
+  );
+}
+
 export function diagnoseConnectionFailure(
   error: unknown,
   address: string | null,
