@@ -93,6 +93,7 @@ import {
 import { useContextMenu } from "@/hooks/use-context-menu.ts";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard.ts";
 import { useDataTable } from "@/hooks/use-data-table.ts";
+import { useIsMobile } from "@/hooks/use-mobile.ts";
 import {
   accountTypeToIcon,
   translateAccountType,
@@ -1209,10 +1210,20 @@ function Content() {
   const { instanceInfoQueryOptions } = Route.useRouteContext();
   const { data: instanceInfo } = useSuspenseQuery(instanceInfoQueryOptions);
   const profile = instanceInfo.profile;
+  const isMobile = useIsMobile();
   const { table } = useDataTable({
     data: profile.accounts,
     columns,
     getRowId: (row) => row.profileId,
+    initialState: {
+      // A profile UUID is 36 characters and stretches the table to ~583px
+      // inside a ~378px viewport, which pushes the row's action menu off
+      // screen — the account row becomes unusable rather than merely cramped.
+      // Hiding it by default leaves type, name and actions visible. This is
+      // only a default: the column can be switched back on from the table's
+      // column menu, and the UUID is still available from the row's actions.
+      columnVisibility: isMobile ? { profileId: false } : {},
+    },
   });
   const { contextMenu, handleContextMenu, dismiss, menuRef } =
     useContextMenu<ProfileAccount>();

@@ -38,7 +38,11 @@ export function DataTableToolbar<TData extends RowData>({
       role="toolbar"
       aria-orientation="horizontal"
       className={cn(
-        "flex w-full items-start justify-between gap-2 p-1",
+        // flex-wrap is required, not cosmetic: at phone widths the action
+        // group below would otherwise overflow past the right edge with no
+        // way to scroll to it, putting the primary actions (add/import) out
+        // of reach entirely.
+        "flex w-full flex-wrap items-start justify-between gap-2 p-1",
         className,
       )}
       {...props}
@@ -64,7 +68,7 @@ export function DataTableToolbar<TData extends RowData>({
           }
         </table.Subscribe>
       </div>
-      <div className="flex items-center gap-2">
+      <div className="flex flex-wrap items-center justify-end gap-2">
         {children}
         <DataTableViewOptions table={table} align="end" />
       </div>
