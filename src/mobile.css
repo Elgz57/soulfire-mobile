@@ -83,14 +83,38 @@ html.native-app
    */
   margin-bottom: min(var(--keyboard-height, 0px), 60dvh);
   /*
-   * The max() floor is load-bearing. A plain calc(80dvh - keyboard) goes
-   * negative once the reported keyboard exceeds 80dvh, CSS clamps a negative
-   * max-height to 0, and the drawer collapses to its 25px drag handle — an
-   * open dialog with nothing in it. Flooring it means a bad or stale keyboard
-   * height can at worst overlap the keyboard (content still scrolls), never
-   * erase the dialog.
+   * Height is budgeted from what is actually free: the viewport minus the
+   * keyboard, minus the status bar, minus a little breathing room. Without the
+   * safe-top term a lifted drawer runs up under the status bar.
+   *
+   * The max() floor is load-bearing. A plain calc() subtraction goes negative
+   * once the reported keyboard exceeds the viewport, CSS clamps a negative
+   * max-height to 0, and the drawer collapses to its 25px drag handle — an open
+   * dialog with nothing in it. The min() keeps vaul's usual 80vh ceiling when
+   * there is no keyboard.
    */
-  max-height: max(40dvh, calc(80dvh - var(--keyboard-height, 0px)));
+  max-height: min(
+    80dvh,
+    max(
+      /*
+       * 30dvh, not more: the floor only applies once the budget calculation
+       * has gone implausibly small, and at the clamp ceiling in watchKeyboard
+       * (60% of the viewport) a 35dvh floor still nudged the drawer a couple
+       * of pixels under the status bar. 30dvh clears it for every value the
+       * clamp permits, and the content scrolls either way.
+       */
+      30dvh,
+      calc(100dvh - var(--keyboard-height, 0px) - var(--safe-top, 0px) - 1rem)
+    )
+  );
+  /*
+   * Mandatory alongside max-height, and its absence is what made the import
+   * dialog unusable: DrawerContent sets no overflow of its own, so content
+   * taller than the cap simply spilled past the bottom of the screen. The
+   * textarea was cut in half and the submit button was not on screen at all,
+   * with no way to scroll to it.
+   */
+  overflow-y: auto;
 }
 
 html.native-app [data-slot="drawer-content"][data-vaul-drawer-direction="top"] {
