@@ -58,10 +58,26 @@ html.native-app [data-slot="sidebar"][data-mobile="true"] {
   padding-bottom: var(--safe-bottom);
 }
 
-/* vaul drawers are edge-anchored; only the anchored edge needs insetting. */
+/*
+ * vaul drawers are edge-anchored; only the anchored edge needs insetting.
+ *
+ * A bottom drawer must also clear the software keyboard. Credenza renders every
+ * dialog as a bottom drawer on mobile, so any dialog with a text field — the
+ * account import dialog, for one — puts its content and its submit button in
+ * exactly the region the keyboard covers. Android does not resize the WebView
+ * (see watchKeyboard in src/lib/mobile.ts), so nothing moves aside on its own
+ * and the button is simply unreachable.
+ *
+ * margin-bottom rather than padding: it lifts the whole panel instead of
+ * growing it, and does not fight vaul's drag transform. max-height drops by the
+ * same amount so a tall drawer cannot run off the top once lifted.
+ * --keyboard-height is 0px unless an Android keyboard is open.
+ */
 html.native-app
 [data-slot="drawer-content"][data-vaul-drawer-direction="bottom"] {
   padding-bottom: var(--safe-bottom);
+  margin-bottom: var(--keyboard-height);
+  max-height: calc(80dvh - var(--keyboard-height));
 }
 
 html.native-app [data-slot="drawer-content"][data-vaul-drawer-direction="top"] {

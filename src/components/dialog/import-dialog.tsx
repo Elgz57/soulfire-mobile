@@ -28,6 +28,7 @@ import { Field, FieldError, FieldLabel } from "@/components/ui/field.tsx";
 import { Input } from "@/components/ui/input.tsx";
 import { Separator } from "@/components/ui/separator.tsx";
 import { Textarea } from "@/components/ui/textarea.tsx";
+import { useIsMobile } from "@/hooks/use-mobile.ts";
 import { desktop, isDesktopApp } from "@/lib/desktop.ts";
 import { isNativeApp } from "@/lib/mobile.ts";
 import { hasInstancePermission, runAsync } from "@/lib/utils.tsx";
@@ -401,12 +402,18 @@ function TextInput(
   const { t } = useTranslation("common");
   const [inputText, setInputText] = useState(props.textInput.defaultValue);
   const { trackEvent } = useAptabase();
+  const isMobile = useIsMobile();
   return (
     <>
       <Separator orientation="horizontal" />
       <div className="flex flex-col gap-4">
         <Textarea
-          autoFocus
+          // Not focused automatically on mobile. Credenza renders this dialog
+          // as a bottom drawer there, so grabbing focus opens the keyboard
+          // over the drawer the moment it appears — hiding the file, URL and
+          // clipboard buttons and the submit button below. Tapping the field
+          // is an explicit choice to type.
+          autoFocus={!isMobile}
           placeholder={t("dialog.import.main.textarea.placeholder")}
           defaultValue={inputText}
           onChange={(e) => setInputText(e.currentTarget.value)}
