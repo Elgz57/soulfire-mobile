@@ -76,8 +76,21 @@ html.native-app [data-slot="sidebar"][data-mobile="true"] {
 html.native-app
 [data-slot="drawer-content"][data-vaul-drawer-direction="bottom"] {
   padding-bottom: var(--safe-bottom);
-  margin-bottom: var(--keyboard-height);
-  max-height: calc(80dvh - var(--keyboard-height));
+  /*
+   * Bounded independently of the JS clamp: this rule decides where the panel
+   * sits, so an oversized value must not be able to lift it clean off the top
+   * of the screen. Belt and braces with the clamp in watchKeyboard.
+   */
+  margin-bottom: min(var(--keyboard-height, 0px), 60dvh);
+  /*
+   * The max() floor is load-bearing. A plain calc(80dvh - keyboard) goes
+   * negative once the reported keyboard exceeds 80dvh, CSS clamps a negative
+   * max-height to 0, and the drawer collapses to its 25px drag handle — an
+   * open dialog with nothing in it. Flooring it means a bad or stale keyboard
+   * height can at worst overlap the keyboard (content still scrolls), never
+   * erase the dialog.
+   */
+  max-height: max(40dvh, calc(80dvh - var(--keyboard-height, 0px)));
 }
 
 html.native-app [data-slot="drawer-content"][data-vaul-drawer-direction="top"] {

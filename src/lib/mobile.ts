@@ -78,9 +78,20 @@ function watchKeyboard(): void {
   }
 
   const setHeight = (height: number) => {
+    // Clamped, and not just for tidiness: layout consumes this to shrink
+    // bottom-anchored panels, and an implausible value there can erase a
+    // dialog entirely. The plugin reports density-independent pixels, so a
+    // real keyboard is a few hundred; anything past 60% of the viewport is
+    // wrong, and a negative or non-finite value is meaningless.
+    const viewport = window.innerHeight;
+    const safe =
+      Number.isFinite(height) && height > 0
+        ? Math.min(Math.round(height), Math.round(viewport * 0.6))
+        : 0;
+
     document.documentElement.style.setProperty(
       "--keyboard-height",
-      `${height}px`,
+      `${safe}px`,
     );
   };
 
@@ -88,6 +99,15 @@ function watchKeyboard(): void {
     setHeight(info.keyboardHeight);
   });
   void Keyboard.addListener("keyboardWillHide", () => {
+    setHeight(0);
+  });
+  // keyboardWillHide is not guaranteed to arrive — a gesture-dismissed keyboard
+  // or an app switch can skip it, and a stale height left behind would shrink
+  // every bottom drawer from then on. These are the belt to that brace.
+  void Keyboard.addListener("keyboardDidHide", () => {
+    setHeight(0);
+  });
+  void CapacitorApp.addListener("resume", () => {
     setHeight(0);
   });
 }
