@@ -59,7 +59,11 @@ export function isConnectionFailure(error: unknown): boolean {
   return (
     code === Code.DeadlineExceeded ||
     code === Code.Unavailable ||
-    code === Code.Unknown
+    code === Code.Unknown ||
+    // Our own deadlines are enforced by aborting the call (see withDeadline),
+    // which surfaces as Canceled rather than DeadlineExceeded. Without this a
+    // timed-out login would be reported as a bad code.
+    code === Code.Canceled
   );
 }
 
@@ -83,9 +87,11 @@ export function diagnoseConnectionFailure(
   };
 
   switch (connectError.code) {
+    case Code.Canceled:
     case Code.DeadlineExceeded:
       // Reached something, got no answer in time: a wrong host that silently
-      // drops packets, or a server too busy to reply.
+      // drops packets, or a server too busy to reply. Canceled lands here
+      // because withDeadline enforces deadlines by aborting.
       return {
         reasonKey: "error.connection.timedOut",
         hintKey: isLoopback

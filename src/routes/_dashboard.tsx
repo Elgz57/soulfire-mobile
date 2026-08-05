@@ -24,6 +24,7 @@ import { ErrorComponent } from "@/components/error-component.tsx";
 import { TransportContext } from "@/components/providers/transport-context.tsx";
 import { demoClientData } from "@/demo-data.ts";
 import { diagnoseConnectionFailure } from "@/lib/connection-error.ts";
+import { withDeadline } from "@/lib/deadline.ts";
 import { desktop, isDesktopApp } from "@/lib/desktop.ts";
 import { smartEntries } from "@/lib/utils.tsx";
 import {
@@ -33,6 +34,9 @@ import {
   isImpersonating,
   logOut,
 } from "@/lib/web-rpc.ts";
+
+/** Deadline for the two queries that gate the dashboard. */
+const BOOTSTRAP_TIMEOUT_MS = 6_000;
 
 export const Route = createFileRoute("/_dashboard")({
   beforeLoad: async (props) => {
@@ -69,14 +73,16 @@ export const Route = createFileRoute("/_dashboard")({
           const result = await instanceService.listInstances(
             {},
             {
-              signal: props.signal,
-              // Bounded so an address that black-holes (a LAN IP that no
-              // longer answers, say) fails instead of hanging on the OS TCP
-              // timeout — this query gates the whole dashboard, so hanging it
-              // means an endless spinner with no way back to the connect
-              // screen. Set per call rather than on the transport, which would
-              // also cut off the long-lived log and live-feed streams.
-              timeoutMs: 6_000,
+              // Bounded so an address that black-holes fails instead of
+              // hanging on the OS TCP timeout — this query gates the whole
+              // dashboard, so hanging it means an endless spinner with no way
+              // back to the connect screen.
+              //
+              // Via an abort signal, NOT Connect's timeoutMs: that sends a
+              // Grpc-Timeout header, which the server's CORS policy does not
+              // allow, so the preflight is refused with 403 and the call never
+              // happens. See withDeadline.
+              signal: withDeadline(props.signal, BOOTSTRAP_TIMEOUT_MS),
             },
           );
 
@@ -111,8 +117,7 @@ export const Route = createFileRoute("/_dashboard")({
             {
               // Same reasoning as listInstances above: this gates the
               // dashboard, so it must fail rather than hang.
-              signal: props.signal,
-              timeoutMs: 6_000,
+              signal: withDeadline(props.signal, BOOTSTRAP_TIMEOUT_MS),
             },
           );
 

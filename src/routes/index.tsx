@@ -88,6 +88,7 @@ import { Scroller } from "@/components/ui/scroller.tsx";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group.tsx";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard.ts";
 import { isConnectionFailure } from "@/lib/connection-error.ts";
+import { withDeadline } from "@/lib/deadline.ts";
 import { desktop, isDesktopApp } from "@/lib/desktop.ts";
 import type {
   DesktopCustomSoulFireServerJar,
@@ -1502,7 +1503,7 @@ function EmailForm({
             // Bounded so a server that accepts the connection but never answers
             // cannot leave the toast spinning indefinitely. Generous, because
             // this call sends the email server-side.
-            { timeoutMs: LOGIN_TIMEOUT_MS },
+            { signal: withDeadline(undefined, LOGIN_TIMEOUT_MS) },
           )
           .then((response) => {
             setAuthFlowData({
@@ -1803,7 +1804,7 @@ function EmailCodeMenu(props: {
           // server accepts the request and never replies: this transport has no
           // default timeout, and the code entry is disabled while it is in
           // flight, so there is no way out except restarting the app.
-          { timeoutMs: LOGIN_TIMEOUT_MS },
+          { signal: withDeadline(undefined, LOGIN_TIMEOUT_MS) },
         )
         .then((response) => {
           if (response.next.case === "success") {
