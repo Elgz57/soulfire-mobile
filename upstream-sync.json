@@ -1,0 +1,30 @@
+{
+  "comment": "Fork ledger. scripts/check-upstream.mjs reads this; UPSTREAM.md explains the procedure. Bump syncedCommit only after the upstream diff has actually been applied.",
+  "client": {
+    "repo": "https://github.com/soulfiremc-com/SoulFireClient.git",
+    "ref": "main",
+    "syncedCommit": "7b1cd2133a4307a99686b338dcd4763b602850ce",
+    "syncedVersion": "2.9.1"
+  },
+  "server": {
+    "repo": "https://github.com/soulfiremc-com/SoulFire.git",
+    "knownVersion": "2.9.1"
+  },
+  "sdk": {
+    "package": "@soulfiremc/sdk",
+    "pinned": "0.1.1"
+  },
+  "excludePaths": [
+    "electron/",
+    "electron-builder.json",
+    ".github/",
+    ".husky/",
+    ".idea/",
+    "build/",
+    "crowdin.yml",
+    "vercel.json",
+    "renovate.json",
+    "pnpm-workspace.yaml",
+    "com.soulfiremc.soulfire.metainfo.xml"
+  ]
+}
