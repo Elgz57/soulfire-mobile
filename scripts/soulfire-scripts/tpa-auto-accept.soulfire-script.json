@@ -1,0 +1,245 @@
+{
+  "version": 1,
+  "name": "TPA Auto Accept",
+  "description": "Auto-accepts teleport requests from an allowlist of players. Edit the 'Allowed players' String node: comma-separated names, case-insensitive. Edit the Regex Match 'pattern' if your server words the request differently.",
+  "paused": false,
+  "nodes": [
+    {
+      "id": "on_chat",
+      "type": "trigger.on_chat",
+      "position": { "x": 0, "y": 0 },
+      "data": { "label": "On Chat" }
+    },
+    {
+      "id": "match",
+      "type": "string.regex_match",
+      "position": { "x": 300, "y": 140 },
+      "data": {
+        "label": "Is this a TPA request?",
+        "pattern": "(?:^|\\s)([A-Za-z0-9_]{3,16})\\s+(?:has requested to teleport to you|has requested that you teleport to (?:them|him|her)|sent you a (?:teleport|tpa) request|wants to teleport to you|is requesting to teleport to you)",
+        "flags": "i"
+      }
+    },
+    {
+      "id": "name",
+      "type": "list.get_at",
+      "position": { "x": 620, "y": 200 },
+      "data": { "label": "Requesting player", "index": 0 }
+    },
+    {
+      "id": "name_lower",
+      "type": "string.to_lower_case",
+      "position": { "x": 880, "y": 200 },
+      "data": { "label": "Normalise name" }
+    },
+    {
+      "id": "allowlist",
+      "type": "constant.string",
+      "position": { "x": 300, "y": 460 },
+      "data": {
+        "label": "Allowed players",
+        "value": "Friend1,Friend2"
+      }
+    },
+    {
+      "id": "allow_lower",
+      "type": "string.to_lower_case",
+      "position": { "x": 560, "y": 460 },
+      "data": { "label": "Normalise allowlist" }
+    },
+    {
+      "id": "allow_split",
+      "type": "string.split",
+      "position": { "x": 820, "y": 460 },
+      "data": { "label": "Split on comma", "delimiter": "," }
+    },
+    {
+      "id": "allowed",
+      "type": "list.contains",
+      "position": { "x": 1120, "y": 340 },
+      "data": { "label": "Is player allowed?" }
+    },
+    {
+      "id": "and",
+      "type": "logic.and",
+      "position": { "x": 1380, "y": 200 },
+      "data": { "label": "TPA request AND allowed" }
+    },
+    {
+      "id": "branch",
+      "type": "flow.branch",
+      "position": { "x": 1620, "y": 40 },
+      "data": { "label": "Accept?" }
+    },
+    {
+      "id": "limit",
+      "type": "flow.rate_limit",
+      "position": { "x": 1880, "y": 40 },
+      "data": {
+        "label": "Anti-spam",
+        "key": "tpa-auto-accept",
+        "maxTokens": 3,
+        "refillRate": 0.2,
+        "tokensRequired": 1
+      }
+    },
+    {
+      "id": "cmd",
+      "type": "string.concat",
+      "position": { "x": 1620, "y": 340 },
+      "data": { "label": "Build command", "a": "/tpaccept " }
+    },
+    {
+      "id": "send",
+      "type": "action.send_chat",
+      "position": { "x": 2180, "y": 40 },
+      "data": { "label": "Run /tpaccept" }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_chat_branch",
+      "source": "on_chat",
+      "sourceHandle": "out",
+      "target": "branch",
+      "targetHandle": "in",
+      "type": "execution",
+      "data": { "edgeType": "execution" }
+    },
+    {
+      "id": "e_chat_match",
+      "source": "on_chat",
+      "sourceHandle": "messagePlainText",
+      "target": "match",
+      "targetHandle": "input",
+      "type": "data",
+      "data": { "edgeType": "data" }
+    },
+    {
+      "id": "e_match_name",
+      "source": "match",
+      "sourceHandle": "groups",
+      "target": "name",
+      "targetHandle": "list",
+      "type": "data",
+      "data": { "edgeType": "data" }
+    },
+    {
+      "id": "e_name_lower",
+      "source": "name",
+      "sourceHandle": "item",
+      "target": "name_lower",
+      "targetHandle": "text",
+      "type": "data",
+      "data": { "edgeType": "data" }
+    },
+    {
+      "id": "e_allowlist_lower",
+      "source": "allowlist",
+      "sourceHandle": "value",
+      "target": "allow_lower",
+      "targetHandle": "text",
+      "type": "data",
+      "data": { "edgeType": "data" }
+    },
+    {
+      "id": "e_lower_split",
+      "source": "allow_lower",
+      "sourceHandle": "result",
+      "target": "allow_split",
+      "targetHandle": "text",
+      "type": "data",
+      "data": { "edgeType": "data" }
+    },
+    {
+      "id": "e_split_contains",
+      "source": "allow_split",
+      "sourceHandle": "result",
+      "target": "allowed",
+      "targetHandle": "list",
+      "type": "data",
+      "data": { "edgeType": "data" }
+    },
+    {
+      "id": "e_name_contains",
+      "source": "name_lower",
+      "sourceHandle": "result",
+      "target": "allowed",
+      "targetHandle": "item",
+      "type": "data",
+      "data": { "edgeType": "data" }
+    },
+    {
+      "id": "e_match_and",
+      "source": "match",
+      "sourceHandle": "matches",
+      "target": "and",
+      "targetHandle": "a",
+      "type": "data",
+      "data": { "edgeType": "data" }
+    },
+    {
+      "id": "e_allowed_and",
+      "source": "allowed",
+      "sourceHandle": "result",
+      "target": "and",
+      "targetHandle": "b",
+      "type": "data",
+      "data": { "edgeType": "data" }
+    },
+    {
+      "id": "e_and_branch",
+      "source": "and",
+      "sourceHandle": "result",
+      "target": "branch",
+      "targetHandle": "condition",
+      "type": "data",
+      "data": { "edgeType": "data" }
+    },
+    {
+      "id": "e_branch_limit",
+      "source": "branch",
+      "sourceHandle": "exec_true",
+      "target": "limit",
+      "targetHandle": "in",
+      "type": "execution",
+      "data": { "edgeType": "execution" }
+    },
+    {
+      "id": "e_name_cmd",
+      "source": "name",
+      "sourceHandle": "item",
+      "target": "cmd",
+      "targetHandle": "b",
+      "type": "data",
+      "data": { "edgeType": "data" }
+    },
+    {
+      "id": "e_cmd_send",
+      "source": "cmd",
+      "sourceHandle": "result",
+      "target": "send",
+      "targetHandle": "message",
+      "type": "data",
+      "data": { "edgeType": "data" }
+    },
+    {
+      "id": "e_chat_bot",
+      "source": "on_chat",
+      "sourceHandle": "bot",
+      "target": "send",
+      "targetHandle": "bot",
+      "type": "data",
+      "data": { "edgeType": "data" }
+    },
+    {
+      "id": "e_limit_send",
+      "source": "limit",
+      "sourceHandle": "exec_allowed",
+      "target": "send",
+      "targetHandle": "in",
+      "type": "execution",
+      "data": { "edgeType": "execution" }
+    }
+  ]
+}
