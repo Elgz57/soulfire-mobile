@@ -24,16 +24,37 @@ a file. It is the less elegant option but it costs nothing to deploy.
 
 ## Installing
 
+### The easy way: let CI build it
+
+Run the **Build SoulFire server with plugins** workflow
+(`.github/workflows/build-server.yml`) from the Actions tab, leaving the
+version at `2.9.1` unless your server runs something else. It clones SoulFire,
+copies in every `.java` file from this directory, builds, and **fails the run if
+the plugin class is not actually in the jar**.
+
+Download the artifact, unzip it, and upload the jar to your host in place of the
+stock SoulFire jar. Then restart the server.
+
+The jar is around 433 MB, which is why this is a CI artifact rather than
+something committed or handed over directly.
+
+### Or build it locally
+
 ```sh
-git clone https://github.com/soulfiremc-com/SoulFire.git
+git clone --depth=1 --branch 2.9.1 https://github.com/soulfiremc-com/SoulFire.git
 cd SoulFire
-git checkout 2.9.1            # match the version your client expects
 cp /path/to/AutoTpAccept.java mod/src/main/java/com/soulfiremc/server/plugins/
-./gradlew build               # needs JDK 25; Gradle can fetch it via foojay
+./gradlew :dedicated-launcher:uberJar    # needs JDK 25; Gradle fetches it via foojay
 ```
 
-The runnable JAR lands under `dedicated/build/libs/`. Upload that to your host in
-place of the stock SoulFire JAR and restart the server.
+The runnable jar lands at `dedicated-launcher/build/libs/SoulFireDedicated-2.9.1.jar`.
+
+Use `uberJar`, not `build` or `assemble` — those only produce the `-unshaded`
+launcher jar, which will not run on its own.
+
+Match the SoulFire version to the one your client expects (2.9.1 for this app
+build). Building `main` gives you a `2.9.2-SNAPSHOT` server, which may drift
+from the protos the client's pinned `@soulfiremc/sdk` was generated against.
 
 Nothing needs to be registered anywhere — ClassGraph finds the class by its
 annotation and package.

@@ -1,0 +1,80 @@
+name: Build SoulFire server with plugins
+
+# The Auto TP Accept plugin cannot be dropped into a running server: SoulFire
+# compiles plugins in (see server-plugin/README.md). So the server has to be
+# rebuilt, and the resulting jar is ~433 MB — too big to pass around by hand.
+#
+# This builds it here and leaves it as a downloadable artifact.
+
+on:
+  workflow_dispatch:
+    inputs:
+      soulfire_ref:
+        description: "SoulFire tag/branch to build (must match your client version)"
+        required: true
+        default: "2.9.1"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Check out this repo (for the plugin source)
+        uses: actions/checkout@v6
+
+      - name: Clone SoulFire at ${{ inputs.soulfire_ref }}
+        run: |
+          git clone --depth=1 --branch "${{ inputs.soulfire_ref }}" \
+            https://github.com/soulfiremc-com/SoulFire.git soulfire
+
+      - name: Add the plugins
+        run: |
+          # ClassGraph finds plugins by annotation within this package, so
+          # dropping the file in is the whole installation step.
+          cp server-plugin/*.java soulfire/mod/src/main/java/com/soulfiremc/server/plugins/
+          ls -1 soulfire/mod/src/main/java/com/soulfiremc/server/plugins/ | grep -F .java
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 25
+
+      - uses: gradle/actions/setup-gradle@v5
+
+      - name: Build the runnable server jar
+        working-directory: soulfire
+        # uberJar, not assemble: assemble only produces the unshaded launcher,
+        # which is not runnable on its own.
+        run: ./gradlew :dedicated-launcher:uberJar --console=plain
+
+      - name: Verify the plugins are actually in the jar
+        working-directory: soulfire
+        run: |
+          JAR="$(ls dedicated-launcher/build/libs/SoulFireDedicated-*.jar | grep -v -- '-unshaded' | grep -v -- '-sources' | grep -v -- '-javadoc')"
+          echo "Built $JAR ($(du -h "$JAR" | cut -f1))"
+          # The mod is a nested jar inside the uber jar, so the plugin classes
+          # are one level down. A jar that builds but ships no plugin is the
+          # failure worth catching here.
+          unzip -o -q "$JAR" 'META-INF/jars/mod-*.jar' -d nested
+          MOD="$(ls nested/META-INF/jars/mod-*.jar)"
+          for src in ../server-plugin/*.java; do
+            cls="$(basename "$src" .java)"
+            if unzip -l "$MOD" | grep -q "com/soulfiremc/server/plugins/$cls.class"; then
+              echo "ok: $cls.class present"
+            else
+              echo "MISSING: $cls.class is not in the built jar"
+              exit 1
+            fi
+          done
+          mkdir -p ../out && cp "$JAR" ../out/
+
+      - uses: actions/upload-artifact@v5
+        with:
+          name: soulfire-server-${{ inputs.soulfire_ref }}-with-plugins
+          path: out/*.jar
+          # The jar is large and only needed until it is on the host.
+          retention-days: 7
+          compression-level: 0
