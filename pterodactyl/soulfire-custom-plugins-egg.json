@@ -63,7 +63,7 @@
             "name": "Jar download URL",
             "description": "Release asset URL of the jar built by the 'Build SoulFire server with plugins' workflow. Used only during installation/reinstallation.",
             "env_variable": "SF_JAR_URL",
-            "default_value": "https://api.github.com/repos/Elgz57/soulfire-mobile/releases/assets/LATEST_ASSET_ID",
+            "default_value": "https://api.github.com/repos/Elgz57/soulfire-mobile/releases/assets/531883892",
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|string|max:500",
