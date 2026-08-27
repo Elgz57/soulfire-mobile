@@ -15,7 +15,10 @@ on:
         default: "2.9.1"
 
 permissions:
-  contents: read
+  # write, because the jar is published as a release asset: workflow artifacts
+  # expire after a few days and cannot be fetched by a Pterodactyl install
+  # script, which needs a stable URL.
+  contents: write
 
 jobs:
   build:
@@ -78,3 +81,35 @@ jobs:
           # The jar is large and only needed until it is on the host.
           retention-days: 7
           compression-level: 0
+
+      - name: Publish as a release asset
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="server-${{ inputs.soulfire_ref }}-plugins"
+          JAR="$(ls out/*.jar)"
+
+          # A fixed tag that gets overwritten, so the egg's SF_JAR_URL keeps
+          # working across rebuilds instead of needing an edit each time.
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "$JAR" --clobber
+          else
+            gh release create "$TAG" "$JAR" \
+              --title "SoulFire ${{ inputs.soulfire_ref }} with custom plugins" \
+              --notes "SoulFire ${{ inputs.soulfire_ref }} built with the plugins in server-plugin/. Point the Pterodactyl egg's SF_JAR_URL at the asset URL below."
+          fi
+
+          ASSET_ID="$(gh api "repos/${{ github.repository }}/releases/tags/$TAG" \
+            --jq '.assets[] | select(.name | endswith(".jar")) | .id')"
+
+          {
+            echo "## Pterodactyl"
+            echo
+            echo "Set the egg variable \`SF_JAR_URL\` to:"
+            echo
+            echo '```'
+            echo "https://api.github.com/repos/${{ github.repository }}/releases/assets/$ASSET_ID"
+            echo '```'
+            echo
+            echo "While this repository is private, \`SF_GITHUB_TOKEN\` must also be set to a token with read access."
+          } >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,93 @@
+{
+    "_comment": "SoulFire with custom plugins. Based on the official SoulFire egg by mail@pistonmaster.net (AGPL-3.0). Differs only in that the jar is downloaded into the server directory instead of using the one baked into the Docker image, so a rebuilt jar carrying extra plugins can be used.",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2026-08-27T00:00:00+00:00",
+    "name": "SoulFire (custom plugins)",
+    "author": "mail@pistonmaster.net",
+    "uuid": "a914c19d-e658-44ad-915a-1ada3eaf7987",
+    "description": "Runs a SoulFire dedicated server from a jar built with extra plugins (e.g. Auto TP Accept). The official image supplies Java and start.sh; the jar comes from this repo's build workflow.",
+    "features": null,
+    "docker_images": {
+        "ghcr.io/soulfiremc-com/soulfire": "ghcr.io/soulfiremc-com/soulfire"
+    },
+    "file_denylist": [],
+    "startup": "/bin/sh /soulfire/start.sh",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"Finished loading!\"\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!/bin/bash\n# SoulFire (with custom plugins) installation script\n#\n# Downloads a SoulFire dedicated jar built by this repo's\n# \"Build SoulFire server with plugins\" workflow into the server directory.\n#\n# Server Files: /mnt/server\n\napt update\napt install -y curl unzip\n\ncd /mnt/server || exit 1\n\nif [ -z \"${SF_JAR_URL}\" ]; then\n  echo \"SF_JAR_URL is empty. Set it to the release asset URL of your built jar.\"\n  exit 1\nfi\n\nAUTH=()\nif [ -n \"${SF_GITHUB_TOKEN}\" ]; then\n  # A private repo needs both the token and the octet-stream Accept header;\n  # without the header the API returns JSON metadata instead of the file.\n  AUTH=(-H \"Authorization: Bearer ${SF_GITHUB_TOKEN}\" -H \"Accept: application/octet-stream\")\nfi\n\necho \"Downloading SoulFire jar...\"\nif ! curl -fL --retry 3 --retry-delay 5 \"${AUTH[@]}\" -o soulfire.jar \"${SF_JAR_URL}\"; then\n  echo \"Download failed. If the repository is private, set SF_GITHUB_TOKEN.\"\n  exit 1\nfi\n\n# The common failure is a private-repo URL fetched without a token: curl saves\n# the HTML or JSON error body as soulfire.jar and the server then dies at\n# startup with something unrelated. Fail here instead, where the cause is clear.\nif ! unzip -tq soulfire.jar >/dev/null 2>&1; then\n  echo \"The downloaded file is not a valid jar. It starts with:\"\n  head -c 300 soulfire.jar\n  echo\n  exit 1\nfi\n\n# The dedicated jar carries the server as a nested jar. Catching its absence\n# here distinguishes \"wrong file entirely\" from \"jar without the plugin\".\nif ! unzip -l soulfire.jar | grep -q \"META-INF/jars/mod-\"; then\n  echo \"This jar has no nested mod jar, so it is not a SoulFire dedicated jar.\"\n  echo \"Make sure you used the uberJar artifact, not the -unshaded one.\"\n  exit 1\nfi\n\necho \"Installed soulfire.jar ($(du -h soulfire.jar | cut -f1)) into the server directory.\"\n",
+            "container": "ghcr.io/parkervcp/yolks:debian",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "JVM RAM",
+            "description": "How much RAM should the JVM use? (e.g. 2G)",
+            "env_variable": "SF_RAM",
+            "default_value": "2G",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:15",
+            "field_type": "text"
+        },
+        {
+            "name": "JVM FLAGS",
+            "description": "Extra flags for the JVM (e.g. -Dsf.prometheus.enabled=true)",
+            "env_variable": "SF_JVM_FLAGS",
+            "default_value": "-Dterminal.jline=false -Dterminal.ansi=true",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string|max:2000",
+            "field_type": "text"
+        },
+        {
+            "name": "Jar path",
+            "description": "Which jar to run. Points at the downloaded jar in the server directory rather than the one inside the Docker image.",
+            "env_variable": "SF_JAR",
+            "default_value": "/home/container/soulfire.jar",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Jar download URL",
+            "description": "Release asset URL of the jar built by the 'Build SoulFire server with plugins' workflow. Used only during installation/reinstallation.",
+            "env_variable": "SF_JAR_URL",
+            "default_value": "https://api.github.com/repos/Elgz57/soulfire-mobile/releases/assets/LATEST_ASSET_ID",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:500",
+            "field_type": "text"
+        },
+        {
+            "name": "GitHub token",
+            "description": "Personal access token with read access to the repository. Required while the repository is private. Leave empty for a public repository.",
+            "env_variable": "SF_GITHUB_TOKEN",
+            "default_value": "",
+            "user_viewable": false,
+            "user_editable": true,
+            "rules": "nullable|string|max:255",
+            "field_type": "text"
+        },
+        {
+            "name": "Working directory",
+            "description": "Where SoulFire stores its data.",
+            "env_variable": "SF_PWD",
+            "default_value": "/home/container",
+            "user_viewable": true,
+            "user_editable": false,
+            "rules": "required|string|max:255",
+            "field_type": "text"
+        }
+    ]
+}
