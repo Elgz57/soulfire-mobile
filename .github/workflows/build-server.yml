@@ -126,6 +126,13 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Work out the image name
+        id: image
+        # Docker requires a lowercase repository name and github.repository
+        # preserves the owner's capitalisation, so it cannot be used directly.
+        # Actions has no lowercase function, hence doing it here.
+        run: echo "name=ghcr.io/${GITHUB_REPOSITORY,,}/soulfire-plugins" >> "$GITHUB_OUTPUT"
+
       - name: Build and push the server image
         uses: docker/build-push-action@v6
         with:
@@ -134,16 +141,16 @@ jobs:
           push: true
           build-args: |
             SF_VERSION=${{ inputs.soulfire_ref }}
-          tags: ghcr.io/${{ github.repository }}/soulfire-plugins:${{ inputs.soulfire_ref }}
+          tags: ${{ steps.image.outputs.name }}:${{ inputs.soulfire_ref }}
 
       - name: Report the image and the one manual step
         run: |
-          IMAGE="ghcr.io/${{ github.repository }}/soulfire-plugins:${{ inputs.soulfire_ref }}"
+          IMAGE="${{ steps.image.outputs.name }}:${{ inputs.soulfire_ref }}"
           {
             echo "## Docker image"
             echo
             echo '```'
-            echo "${IMAGE,,}"
+            echo "$IMAGE"
             echo '```'
             echo
             echo "GHCR packages inherit the repository's visibility, and a node cannot pull"
