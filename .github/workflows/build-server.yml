@@ -15,10 +15,15 @@ on:
         default: "2.9.1"
 
 permissions:
-  # write, because the jar is published as a release asset: workflow artifacts
-  # expire after a few days and cannot be fetched by a Pterodactyl install
-  # script, which needs a stable URL.
+  # contents: write, because the jar is published as a release asset: workflow
+  # artifacts expire after a few days and cannot be fetched by a Pterodactyl
+  # install script, which needs a stable URL.
   contents: write
+  # packages: write, for the Docker image. On the target host the panel caps
+  # request bodies (413 on a ~430 MB write) and Wings' remote-pull is broken
+  # (DaemonConnectionException on every URL), so baking the jar into an image
+  # that the node pulls itself is the only route needing no file transfer.
+  packages: write
 
 jobs:
   build:
@@ -112,4 +117,39 @@ jobs:
             echo '```'
             echo
             echo "While this repository is private, \`SF_GITHUB_TOKEN\` must also be set to a token with read access."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push the server image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: docker/Dockerfile
+          push: true
+          build-args: |
+            SF_VERSION=${{ inputs.soulfire_ref }}
+          tags: ghcr.io/${{ github.repository }}/soulfire-plugins:${{ inputs.soulfire_ref }}
+
+      - name: Report the image and the one manual step
+        run: |
+          IMAGE="ghcr.io/${{ github.repository }}/soulfire-plugins:${{ inputs.soulfire_ref }}"
+          {
+            echo "## Docker image"
+            echo
+            echo '```'
+            echo "${IMAGE,,}"
+            echo '```'
+            echo
+            echo "GHCR packages inherit the repository's visibility, and a node cannot pull"
+            echo "a private image, so this needs making public once:"
+            echo
+            echo "Profile -> Packages -> soulfire-plugins -> Package settings -> Change visibility -> Public"
+            echo
+            echo "Then point the Pterodactyl server at the image above and restart it."
           } >> "$GITHUB_STEP_SUMMARY"
