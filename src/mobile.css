@@ -165,6 +165,16 @@ html.native-app [data-slot="scroll-area-viewport"],
 html.native-app .overflow-y-auto,
 html.native-app .overflow-auto {
   -webkit-overflow-scrolling: touch;
+  /*
+   * `contain`, not `none`. The page-level rule above uses `none` because
+   * pull-to-refresh would reload the bundle and drop every open gRPC stream.
+   * Inside a scroller there is no such hazard, and `none` would remove the
+   * platform's overscroll stretch — the affordance that says "there is nothing
+   * more here". A hard stop at the end of a list reads as frozen rather than
+   * finished. `contain` keeps the stretch and still blocks scroll chaining out
+   * to the page.
+   */
+  overscroll-behavior: contain;
 }
 
 /*
@@ -177,6 +187,44 @@ html.native-app .overflow-auto {
   html.native-app [data-slot="select-item"],
   html.native-app [data-slot="tabs-trigger"] {
     min-height: 2.75rem;
+  }
+}
+
+/*
+ * Press feedback, on touch-down rather than on release.
+ *
+ * Upstream already nudges buttons 1px down on :active, which is legible under a
+ * mouse where the cursor stays visible. Under a fingertip the press point is
+ * covered by the finger, so 1px of travel at the one place you cannot see is
+ * effectively no feedback at all — the button reads as dead until the action
+ * completes. A small uniform scale is visible around the finger instead.
+ *
+ * :active fires on touch-down in the Android WebView, so this is immediate and
+ * needs no JS. It also cancels correctly when the finger slides off the target,
+ * which is the behaviour a tap should have.
+ *
+ * Note for iOS: WKWebView only applies :active to elements the page has made
+ * touch-interactive. If the iOS build ever ships and presses look dead there,
+ * that is the cause — the fix is a no-op touchstart listener, not more CSS.
+ */
+@media (pointer: coarse) {
+  html.native-app [data-slot="button"]:active,
+  html.native-app [data-slot="sidebar-menu-button"]:active,
+  html.native-app [data-slot="tabs-trigger"]:active {
+    transform: scale(0.97);
+  }
+
+  /*
+   * Upstream buttons carry `transition-all`, which animates layout-affecting
+   * properties too. Restricting the animated set keeps the press on the
+   * compositor, so feedback cannot be delayed by a layout pass on a slow
+   * device — the one place latency is least affordable.
+   */
+  html.native-app [data-slot="button"] {
+    transition-property:
+      transform, opacity, background-color, border-color, color, box-shadow;
+    transition-duration: 100ms;
+    transition-timing-function: ease-out;
   }
 }
 
@@ -239,4 +287,121 @@ html.native-app [data-mobile-keyboard-aware="true"] {
 html.native-app .react-flow__pane,
 html.native-app .react-flow__viewport {
   touch-action: none;
+}
+
+/*
+ * Accessibility preferences. All three were previously unhandled, which on a
+ * phone matters more than on a desktop: the OS-level setting is right there in
+ * Settings and people who turn it on have a reason.
+ *
+ * Reduced motion does not mean no feedback. Sliding, zooming and parallax are
+ * the vestibular triggers; opacity and colour changes still carry meaning, so
+ * they stay. Overlays cross-fade in place instead of travelling.
+ */
+@media (prefers-reduced-motion: reduce) {
+  /*
+   * Sheets and the mobile sidebar are positioned with insets, so their only
+   * transform is the entrance travel and it can be dropped outright.
+   *
+   * No !important is needed to beat the Tailwind utilities that set that
+   * travel (data-starting-style:translate-*): App.css pulls Tailwind in with
+   * `@import "tailwindcss"`, which puts every utility in a cascade layer, and
+   * this file is imported unlayered from __root.tsx. Unlayered styles outrank
+   * layered ones whatever their specificity.
+   */
+  html.native-app [data-slot="sheet-content"],
+  html.native-app [data-slot="sidebar"][data-mobile="true"] {
+    transform: none;
+    animation: none;
+    transition: opacity 150ms ease;
+  }
+
+  /*
+   * Dialogs need only `animation: none`. Their entrance is entirely
+   * keyframe-driven (data-open:animate-in, fade-in-0, zoom-in-95), so
+   * stopping the animation removes all of the motion.
+   *
+   * Nothing here touches `translate`, and that is what keeps them centred:
+   * Tailwind v4 compiles `-translate-x-1/2 -translate-y-1/2` to the standalone
+   * `translate: -50% -50%` property, not into `transform` — verified in the
+   * browser, where a dialog computes `translate: -50% -50%` with
+   * `transform: none`. So the centring survives regardless of what the motion
+   * rules do to transform.
+   */
+  html.native-app [data-slot="dialog-content"] {
+    animation: none;
+  }
+
+  /*
+   * Drawers are deliberately absent. vaul writes the panel's transform inline
+   * from JS to follow the drag, so clearing it here would not remove motion,
+   * it would break positioning — the panel would sit at its open position
+   * while the finger moved. A drag the user performs with their own finger is
+   * also not the kind of motion this setting is about.
+   *
+   * Overlay fades need nothing either: they are already opacity-only, which
+   * this setting does not ask us to remove.
+   */
+
+  /*
+   * Press feedback survives, in a form with no movement in it. Dropping it
+   * would remove feedback rather than motion, and leave the button reading as
+   * dead — but a scale is still travel, so it becomes an opacity dip instead.
+   */
+  html.native-app [data-slot="button"]:active,
+  html.native-app [data-slot="sidebar-menu-button"]:active,
+  html.native-app [data-slot="tabs-trigger"]:active {
+    transform: none;
+    opacity: 0.7;
+  }
+}
+
+/*
+ * Translucency is decoration on these surfaces, never the thing that makes
+ * text legible, so it can be dropped outright. Raising opacity and removing
+ * the blur is also cheaper to composite.
+ */
+@media (prefers-reduced-transparency: reduce) {
+  html.native-app [data-slot="dialog-overlay"],
+  html.native-app [data-slot="sheet-overlay"],
+  html.native-app [data-slot="drawer-overlay"] {
+    backdrop-filter: none;
+    background-color: rgb(0 0 0 / 0.4);
+  }
+
+  html.native-app [data-slot="dialog-content"],
+  html.native-app [data-slot="sheet-content"],
+  html.native-app [data-slot="drawer-content"] {
+    backdrop-filter: none;
+    background-color: var(--popover);
+  }
+}
+
+/*
+ * Higher contrast asks for a defined edge rather than a soft shadow. Uses the
+ * existing --border/--foreground tokens so this follows the theme instead of
+ * introducing a colour of its own.
+ */
+@media (prefers-contrast: more) {
+  html.native-app [data-slot="dialog-content"],
+  html.native-app [data-slot="sheet-content"],
+  html.native-app [data-slot="drawer-content"],
+  html.native-app [data-slot="sidebar"][data-mobile="true"] {
+    border: 1px solid var(--foreground);
+    box-shadow: none;
+  }
+}
+
+/*
+ * Respect the OS text-size setting instead of letting the WebView rescale text
+ * on its own: the shell is a fixed-size app, so an autoscaled font changes
+ * layout without changing anything that depends on it.
+ *
+ * optical-sizing is a no-op on fonts without an optical axis and a small win on
+ * the system font, which has one.
+ */
+html.native-app {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-optical-sizing: auto;
 }
