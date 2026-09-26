@@ -42,3 +42,6 @@ xcuserdata/
 *.log
 npm-debug.log*
 pnpm-debug.log*
+
+# Video render intermediates (630 PNG frames + WAV, ~85MB)
+brag-output/work/

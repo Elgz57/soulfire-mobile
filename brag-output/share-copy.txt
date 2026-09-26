@@ -1,0 +1,1 @@
+SoulFire's control panel was a desktop app. This is the same dashboard — same React code, same design tokens, same screens — running natively on Android. Point it at your own server and every bot, script and setting is in your pocket.
